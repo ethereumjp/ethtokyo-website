@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>hatena/renovate-config",
+    ":automergePatch",
+    ":disableRateLimiting"
+  ],
+  "schedule": ["before 8am on Saturday"],
+  "labels": ["dependencies"],
+  "platformAutomerge": true,
+  "separateMultipleMajor": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "commitMessagePrefix": "chore: ",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "groupName": "linters",
+      "extends": ["packages:linters"],
+      "matchPackagePatterns": ["^@typescript-eslint/", "prettier", "stylelint"],
+      "automerge": true,
+      "major": { "automerge": false }
+    },
+    {
+      "groupName": "storybook",
+      "extends": ["monorepo:storybook"],
+      "matchPackagePatterns": ["^@storybook/", "^storybook-"],
+      "automerge": true,
+      "major": { "automerge": false }
+    }
+  ]
+}
