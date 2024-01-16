@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "ethtokyo.com",
     images: [
       {
-        url: "https://ethereumjapan.org/logo/ej.png",
+        url: "https://ethtokyo.com/logo/ETHTokyoLogo.png",
         width: 800,
         height: 600,
       },

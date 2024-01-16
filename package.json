@@ -1,15 +1,15 @@
 {
-  "name": "ethereumjapan.org",
+  "name": "ethtokyo.com",
   "version": "1.0.0",
   "description": "Ethereum JP website",
   "main": "src/pages/_app.tsx",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereumjp/site.git"
+    "url": "git+https://github.com/ethereumjp/ethtokyo-website.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethereumjp/site/issues"
+    "url": "https://github.com/ethereumjp/ethtokyo-website/issues"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

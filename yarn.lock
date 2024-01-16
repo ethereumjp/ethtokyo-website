@@ -7476,9 +7476,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethereumjapan.org@workspace:.":
+"ethtokyo.com@workspace:.":
   version: 0.0.0-use.local
-  resolution: "ethereumjapan.org@workspace:."
+  resolution: "ethtokyo.com@workspace:."
   dependencies:
     "@biomejs/biome": ^1.4.1
     "@emotion/babel-plugin": ^11.11.0
