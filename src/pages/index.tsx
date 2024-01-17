@@ -17,8 +17,8 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     const jpWaveBackgroundStyle = css`
       background: linear-gradient(
         to right,
-        #622d58 50%,
-        #622d58 50%,
+        #773E6B 50%,
+        #773E6B 50%,
         ${brand.Miyabi} 50%,
         ${brand.Miyabi} 100%
       );
