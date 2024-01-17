@@ -1,8 +1,10 @@
 import { css } from "@emotion/react";
+import { GoGlobe } from "react-icons/go";
 import { SocialIcon } from "react-social-icons";
 
 export const Socials = () => {
   const container = css`
+    align-items: center;
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -10,6 +12,14 @@ export const Socials = () => {
 
   return (
     <div css={container}>
+      <a
+        href="https://ethereumjapan.org/"
+        target="_blank"
+        rel="noreferrer"
+        css={css`line-height: 0;`}
+      >
+        <GoGlobe size={25} css={css`margin: 12.5px;`} />
+      </a>
       <SocialIcon
         url="https://x.com/Ethereum_JP"
         bgColor="transparent"
