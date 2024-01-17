@@ -24,7 +24,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
           }
         `}
       >
-        © 2024 ETHTokyo - Ethereum Community Hackathon.
+        © 2024 ETHTokyo - Ethereum Japan.
       </span>
     </footer>
   );
