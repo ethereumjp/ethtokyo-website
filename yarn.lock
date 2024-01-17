@@ -7476,51 +7476,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethtokyo.com@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ethtokyo.com@workspace:."
-  dependencies:
-    "@biomejs/biome": ^1.4.1
-    "@emotion/babel-plugin": ^11.11.0
-    "@emotion/react": ^11.11.0
-    "@emotion/styled": ^11.11.0
-    "@mui/icons-material": ^5.14.3
-    "@mui/material": ^5.14.5
-    "@storybook/addon-actions": ^7.0.6
-    "@storybook/addon-essentials": ^7.0.6
-    "@storybook/addon-interactions": ^7.0.6
-    "@storybook/addon-links": ^7.0.6
-    "@storybook/nextjs": ^7.0.6
-    "@types/node": ^18.15.11
-    "@types/react": ^18.2.47
-    "@types/react-dom": ^18.2.18
-    "@typescript-eslint/eslint-plugin": ^5.57.1
-    hamburger-react: ^2.5.0
-    lint-staged: ^13.0.3
-    lru-cache: ^10.0.1
-    next: ^13.4.19
-    postcss-styled-syntax: ^0.4.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-hook-form: ^7.45.4
-    react-icons: ^4.9.0
-    react-social-icons: ^6.7.0
-    serve: ^14.2.1
-    simple-git-hooks: ^2.8.0
-    storybook: ^7.0.6
-    storybook-addon-designs: ^6.3.1
-    storybook-addon-turbo-build: ^2.0.0
-    stylelint: ^16.1.0
-    stylelint-config-prettier: ^9.0.5
-    stylelint-config-standard: ^36.0.0
-    stylelint-config-styled-components: ^0.1.1
-    stylelint-order: ^6.0.4
-    stylelint-prettier: ^5.0.0
-    turbo: ^1.9.3
-    typescript: ^5.0.3
-  languageName: unknown
-  linkType: soft
-
 "event-target-shim@npm:^5.0.0":
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
@@ -13822,6 +13777,51 @@ __metadata:
   checksum: feb3eecd2bae82fa8a8beef800290ce437d8b8063bdc69712725f21aef77c49cb2ff45c6e5e7fce622248f9c7abaee506bae0a9064067ffd6935460c7357321b
   languageName: node
   linkType: hard
+
+"www.ethtokyo.com@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "www.ethtokyo.com@workspace:."
+  dependencies:
+    "@biomejs/biome": ^1.4.1
+    "@emotion/babel-plugin": ^11.11.0
+    "@emotion/react": ^11.11.0
+    "@emotion/styled": ^11.11.0
+    "@mui/icons-material": ^5.14.3
+    "@mui/material": ^5.14.5
+    "@storybook/addon-actions": ^7.0.6
+    "@storybook/addon-essentials": ^7.0.6
+    "@storybook/addon-interactions": ^7.0.6
+    "@storybook/addon-links": ^7.0.6
+    "@storybook/nextjs": ^7.0.6
+    "@types/node": ^18.15.11
+    "@types/react": ^18.2.47
+    "@types/react-dom": ^18.2.18
+    "@typescript-eslint/eslint-plugin": ^5.57.1
+    hamburger-react: ^2.5.0
+    lint-staged: ^13.0.3
+    lru-cache: ^10.0.1
+    next: ^13.4.19
+    postcss-styled-syntax: ^0.4.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-hook-form: ^7.45.4
+    react-icons: ^4.9.0
+    react-social-icons: ^6.7.0
+    serve: ^14.2.1
+    simple-git-hooks: ^2.8.0
+    storybook: ^7.0.6
+    storybook-addon-designs: ^6.3.1
+    storybook-addon-turbo-build: ^2.0.0
+    stylelint: ^16.1.0
+    stylelint-config-prettier: ^9.0.5
+    stylelint-config-standard: ^36.0.0
+    stylelint-config-styled-components: ^0.1.1
+    stylelint-order: ^6.0.4
+    stylelint-prettier: ^5.0.0
+    turbo: ^1.9.3
+    typescript: ^5.0.3
+  languageName: unknown
+  linkType: soft
 
 "xtend@npm:^4.0.2, xtend@npm:~4.0.1":
   version: 4.0.2

@@ -23,11 +23,11 @@ export const metadata = {
   openGraph: {
     title: "ETHTokyo 2024",
     description: "The Japanese Ethereum Community Hackathon & Conference",
-    url: "https://ethtokyo.com",
-    siteName: "ethtokyo.com",
+    url: "https://www.ethtokyo.com",
+    siteName: "www.ethtokyo.com",
     images: [
       {
-        url: "https://ethtokyo.com/logo/ETHTokyoLogo.png",
+        url: "https://www.ethtokyo.com/logo/ETHTokyoLogo.png",
         width: 800,
         height: 600,
       },
@@ -42,7 +42,7 @@ export const metadata = {
     siteId: "1511737631948034048",
     creator: "@Ethereum_JP",
     creatorId: "1511737631948034048",
-    images: ["https://ethereumjapan.org/ej.png"],
+    images: ["https://www.ethtokyo.com/logo/ETHTokyoLogo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#B8FAF6" },
@@ -76,8 +76,7 @@ const fontInter = Inter({
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'24";
 
-  const baseLayoutStyle = css`
-  `;
+  const baseLayoutStyle = css``;
 
   return (
     <>

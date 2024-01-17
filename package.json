@@ -1,5 +1,5 @@
 {
-  "name": "ethtokyo.com",
+  "name": "www.ethtokyo.com",
   "version": "1.0.0",
   "description": "Ethereum JP website",
   "main": "src/pages/_app.tsx",
