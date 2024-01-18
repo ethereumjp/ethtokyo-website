@@ -29,6 +29,7 @@ const CustomDocument = (props: NoncedDocument) => {
           name="description"
           content="ETHTokyo 2024 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
         />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@Ethereum_JP" />
         <meta property="csp-nonce" content={props.nonce} />
