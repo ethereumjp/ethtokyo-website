@@ -19,7 +19,7 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta property="og:title" content="ETHTokyo 2024" />
         <meta
           property="og:image"
-          content="https://www.ethtokyo.com/images/hero-top.png"
+          content="https://www.ethtokyo.com/images/hero_top.jpg"
         />
         <meta
           property="og:description"
