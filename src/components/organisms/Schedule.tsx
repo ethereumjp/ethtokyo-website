@@ -1,5 +1,7 @@
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
+import Image from "next/image";
+import EJLogoFace from "public/logo/EJLogoFace.png";
 import seikaiha from "public/seikaiha.png";
 import { Socials } from "./Socials";
 
@@ -20,7 +22,16 @@ const ScheduleSection = () => {
     >
       <p>Save the date!</p>
       <h2>Aug 23-26, 2024</h2>
-      <br />
+
+      <Image
+        src={EJLogoFace}
+        alt="Ethereum Japan"
+        css={css`
+          height: auto;
+          max-width: 128px;
+        `}
+      />
+
       <p>Follow us for updates</p>
       <Socials />
     </section>
