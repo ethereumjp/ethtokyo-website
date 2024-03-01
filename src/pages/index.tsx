@@ -7,10 +7,9 @@ import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 import { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import topHero from "public/images/hero_top.jpg";
+import seikaiha from "public/images/seikaiha.png";
 import ETHTokyoLogo from "public/logo/ETHTokyoLogo.png";
-import seikaiha from "public/seikaiha.png";
 
 const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   const TriangleJpWaveBackground = ({ children }: ComponentProps) => {
@@ -50,7 +49,8 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
         css={css`
           height: auto;
           max-width: 256px;
-          padding-top: 1rem
+          padding-left: 11px;
+          padding-top: 1rem;
         `}
       />
     );
