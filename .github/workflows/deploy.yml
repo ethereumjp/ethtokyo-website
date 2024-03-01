@@ -7,7 +7,7 @@ on:
 
 jobs:
   ci:
-    uses: ./.github/workflows/_ci.yml
+    uses: ./.github/workflows/_setup.yml
 
   build-page:
     runs-on: ubuntu-latest
