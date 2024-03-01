@@ -3,7 +3,7 @@ export const en = {
   MENU: {
     ABOUT: "About",
     EVENTS: "Events",
-    LANGUAGE: "🇯🇵",
+    LANGUAGE: "日本語",
   },
   FORM: {
     NAME: "Name*",
