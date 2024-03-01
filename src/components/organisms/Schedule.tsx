@@ -1,8 +1,8 @@
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
+import seikaiha from "public/images/seikaiha.png";
 import EJLogoFace from "public/logo/EJLogoFace.png";
-import seikaiha from "public/seikaiha.png";
 import { Socials } from "./Socials";
 
 const ScheduleSection = () => {

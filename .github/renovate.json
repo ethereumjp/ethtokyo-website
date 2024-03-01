@@ -25,14 +25,7 @@
     {
       "groupName": "linters",
       "extends": ["packages:linters"],
-      "matchPackagePatterns": ["^@typescript-eslint/", "prettier", "stylelint"],
-      "automerge": true,
-      "major": { "automerge": false }
-    },
-    {
-      "groupName": "storybook",
-      "extends": ["monorepo:storybook"],
-      "matchPackagePatterns": ["^@storybook/", "^storybook-"],
+      "matchPackagePatterns": ["^@typescript-eslint/", "biome", "stylelint"],
       "automerge": true,
       "major": { "automerge": false }
     }
