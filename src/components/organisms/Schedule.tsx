@@ -1,4 +1,4 @@
-import { brand } from "@/themes/settings/color";
+import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import seikaiha from "public/images/seikaiha.png";
@@ -34,6 +34,24 @@ const ScheduleSection = () => {
 
       <p>Follow us for updates</p>
       <Socials />
+
+      <div css={css`margin-top: 2rem;`}>
+        <p css={css`font-size: 1rem;`}>
+          Looking to sponsor or partner with us?{" "}
+          <a
+            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
+            css={css`
+                color: ${info.Attention};
+
+                &:hover {
+                  color: ${brand.Shuiro}
+                }
+            `}
+          >
+            Check here
+          </a>
+        </p>
+      </div>
     </section>
   );
 };
