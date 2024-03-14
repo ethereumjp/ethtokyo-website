@@ -18,7 +18,7 @@ export const Socials = () => {
         rel="noreferrer"
         css={css`line-height: 0;`}
       >
-        <GoGlobe size={25} css={css`margin: 12.5px;`} />
+        <GoGlobe size={36} css={css`margin: 12.5px;`} />
       </a>
       <SocialIcon
         url="https://x.com/Ethereum_JP"
@@ -27,6 +27,7 @@ export const Socials = () => {
         label="Twitter/X"
         target="_blank"
         rel="noreferrer"
+        style={{ height: 72, width: 72 }}
       />
       <SocialIcon
         url="https://discord.gg/Tm5jU3DSCE"
@@ -35,6 +36,7 @@ export const Socials = () => {
         label="Discord"
         target="_blank"
         rel="noreferrer"
+        style={{ height: 72, width: 72 }}
       />
       <SocialIcon
         url="https://github.com/ethereumjp"
@@ -43,6 +45,7 @@ export const Socials = () => {
         label="Github"
         target="_blank"
         rel="noreferrer"
+        style={{ height: 72, width: 72 }}
       />
     </div>
   );
