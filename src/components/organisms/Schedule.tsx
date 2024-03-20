@@ -1,3 +1,4 @@
+import { mq } from "@/themes/settings/breakpoints";
 import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
@@ -29,6 +30,10 @@ const ScheduleSection = () => {
         css={css`
           height: auto;
           max-width: 128px;
+
+          ${mq.laptop} {
+            max-width: 256px;
+          }
         `}
       />
 
