@@ -1,6 +1,8 @@
 import Layout from "@/components/layouts/base";
+import { CountdownPanel } from "@/components/organisms/Countdown";
 import ScheduleSection from "@/components/organisms/Schedule";
 import StatementSection from "@/components/organisms/Statement";
+import SupportersSection from "@/components/organisms/Supporters";
 import { brand } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
 import type { ComponentProps } from "@/types";
@@ -24,9 +26,8 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       clip-path: polygon(calc(50% - 380px) 0, calc(50% + 380px) 0, 50% 500px);
       height: 500px;
       text-align: center;
-
-
     `;
+
     return (
       <div css={jpWaveBackgroundStyle}>
         <div
@@ -79,6 +80,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
             <h1>Tokyo, Japan</h1>
           </div>
         </TriangleJpWaveBackground>
+        <CountdownPanel />
       </section>
     );
   };
@@ -88,6 +90,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <div>
         <TopSection />
         <StatementSection />
+        <SupportersSection />
         <ScheduleSection />
       </div>
     </Layout>

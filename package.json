@@ -46,6 +46,7 @@
     "@storybook/addon-interactions": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
     "@storybook/nextjs": "^7.0.6",
+    "@styled/typescript-styled-plugin": "^1.0.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
@@ -68,6 +69,6 @@
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.0",
     "turbo": "^1.9.3",
-    "typescript": "^5.0.3"
+    "typescript": "^5.4.2"
   }
 }
