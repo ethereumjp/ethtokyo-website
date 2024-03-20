@@ -47,6 +47,8 @@ const StatementSection = () => {
           foster the creation of amazing new innovations for the future. Join us
           and be a part of shaping what's next in the Ethereum universe!
         </p>
+
+        {/* Apply button here */}
       </div>
     </section>
   );
