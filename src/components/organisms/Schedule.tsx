@@ -52,21 +52,24 @@ const Info = () => {
           </p>
         </a>
       </div>
-      {/* <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
+      <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
       <div css={css`align-self:center;`}>
         <GoInfo size={60} />
       </div>
       <div css={css`padding: 0 1rem;`}>
         <h2 css={css`margin:0;`}>Side Events</h2>
-        <a
-          css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-          href="/"
-        > // link to side event spreadsheet
-          <p css={css`font-size: 1rem; margin:0;`}>Click to see 10+ events</p>
-        </a>
+
+        <p css={css`font-size: 1rem; margin:0;`}>
+          <a
+            css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
+            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQROWEw0KAnb5Npxv6Qvsn1crcDlPagVQgBLcFBCigYG99dEaFtEoE4FmVmmi0P5sQtaq5BGFn4d1Yz/pubhtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Click to see 10+ events
+          </a>
+        </p>
       </div>
-      // create link to submit side event too maybe
-      */}
     </div>
   );
 };
