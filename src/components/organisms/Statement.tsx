@@ -15,10 +15,6 @@ const StatementSection = () => {
         clip-path:  ellipse(120% 100% at 50% 100%);
         margin-top: -4rem;
         z-index: 10;
-
-        ${mq.laptop}{
-          margin-top: -16rem;
-        }
       `}
     >
       <div

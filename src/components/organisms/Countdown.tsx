@@ -26,6 +26,7 @@ const NumberPanel = (props: { no: number; text: string }) => {
     font-weight: 600;
     margin: 0 0.25rem;
     padding: 0 0.75rem;
+    z-index: 20;
 
     ${mq.laptop}{
       font-size: 8rem;

@@ -64,7 +64,6 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       background-size: cover;
       height: 100vh;
       width: 100%;
-      z-index: -1;
     `;
 
     return (
