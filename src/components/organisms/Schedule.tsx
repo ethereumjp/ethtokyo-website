@@ -66,7 +66,7 @@ const Info = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Click to see 10+ events
+            Click to see all events
           </a>
         </p>
       </div>
