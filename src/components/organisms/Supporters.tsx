@@ -46,9 +46,8 @@ const SupportersSection = () => {
         background-position: center;
         background-repeat: repeat;
         background-size: cover;
-        padding: 2rem 0;
+        padding: 2rem;
         text-align: center;
-        width: 100%;
       `}
     >
       {/* <h2 css={css`color: black; font-weight: 600;`}>sponsors</h2> */}
