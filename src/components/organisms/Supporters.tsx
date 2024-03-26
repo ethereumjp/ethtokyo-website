@@ -1,5 +1,5 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { neutral } from "@/themes/settings/color";
+import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
 import seikaiha from "public/images/seikaiha.png";
@@ -108,6 +108,33 @@ const SupportersSection = () => {
           text="Tangem"
           link="https://tangem.com/"
         />
+      </div>
+      <div css={css``}>
+        <p
+          css={css`
+          font-size: 0.75rem;
+          margin-top: 2rem;
+
+          ${mq.laptop} {
+            font-size: 1rem;
+          }
+        `}
+        >
+          <a
+            css={css`
+            color: blue;
+
+            :hover {
+              color: ${brand.Shuiro}
+            }
+            `}
+            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Looking to sponsor or partner with us?
+          </a>
+        </p>
       </div>
     </section>
   );

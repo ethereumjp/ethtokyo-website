@@ -104,25 +104,6 @@ const ScheduleSection = () => {
         `}
       />
       <Socials />
-      <div css={css`margin-top: 2rem;`}>
-        <p css={css`font-size: 1rem;`}>
-          Looking to sponsor or partner with us?{" "}
-          <a
-            css={css`
-            color: ${info.Attention};
-
-            :hover {
-              color: ${brand.Shuiro}
-            }
-            `}
-            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Check here
-          </a>
-        </p>
-      </div>
     </section>
   );
 };
