@@ -108,14 +108,16 @@ const ScheduleSection = () => {
         <p css={css`font-size: 1rem;`}>
           Looking to sponsor or partner with us?{" "}
           <a
-            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
             css={css`
-                color: ${info.Attention};
+            color: ${info.Attention};
 
-                &:hover {
-                  color: ${brand.Shuiro}
-                }
+            :hover {
+              color: ${brand.Shuiro}
+            }
             `}
+            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
+            target="_blank"
+            rel="noreferrer"
           >
             Check here
           </a>

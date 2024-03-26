@@ -44,6 +44,21 @@ const StatementSection = () => {
           and be a part of shaping what's next in the Ethereum universe!
         </p>
 
+        <div>
+          <p>
+            ❗
+            <a
+              css={css`:hover {color: blue};`}
+              href="https://forms.gle/HCwpXAZVXXF5BFj2A"
+              target="_blank"
+              rel="noreferrer"
+            >
+              We are currently accepting speaker applications
+            </a>
+            ❗
+          </p>
+        </div>
+
         {/* Apply button here */}
       </div>
     </section>
