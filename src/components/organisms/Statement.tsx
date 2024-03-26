@@ -49,7 +49,7 @@ const StatementSection = () => {
             ❗
             <a
               css={css`:hover {color: blue};`}
-              href="https://forms.gle/HCwpXAZVXXF5BFj2A"
+              href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
               target="_blank"
               rel="noreferrer"
             >
