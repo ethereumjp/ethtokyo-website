@@ -10,6 +10,7 @@ import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import EFLogo from "public/logo/EFLogo.png";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
+import GMOLogo from "public/logo/GMOLogo.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
 
 const SupportersSection = () => {
@@ -50,8 +51,27 @@ const SupportersSection = () => {
         text-align: center;
       `}
     >
-      {/* <h2 css={css`color: black; font-weight: 600;`}>sponsors</h2> */}
+      <h2 css={css`color: black; font-weight: 600;`}>Sponsors</h2>
+      <div
+        css={css`
+          align-items:center;
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(auto-fill, 128px);
+          justify-content: center;
 
+          ${mq.laptop} {
+            gap: 6rem;
+            grid-template-columns: repeat(auto-fill, 256px);
+          }
+        `}
+      >
+        <SupporterLogo
+          source={GMOLogo}
+          text="GMO Internet Group, Inc."
+          link="https://www.gmo.jp/"
+        />
+      </div>
       <h2 css={css`color: black; font-weight: 600;`}>Our Partners</h2>
       <div
         css={css`
