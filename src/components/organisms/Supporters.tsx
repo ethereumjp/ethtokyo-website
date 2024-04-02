@@ -10,8 +10,8 @@ import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import EFLogo from "public/logo/EFLogo.png";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
-import TangemLogo from "public/logo/TangemLogo.svg";
 import GMOLogo from "public/logo/GMOLogo.svg";
+import TangemLogo from "public/logo/TangemLogo.svg";
 
 const SupportersSection = () => {
   const SupporterLogo = (props: {
