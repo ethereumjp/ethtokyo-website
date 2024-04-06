@@ -51,18 +51,27 @@ const SupportersSection = () => {
         text-align: center;
       `}
     >
-      <h2 css={css`color: black; font-weight: 600;`}>Sponsors</h2>
+      <h2
+        css={css`
+          color: black;
+          font-size: 2rem;
+          font-weight: 600;
+          ${mq.laptop} {
+            font-size: 3rem;
+          }`}
+      >
+        Sponsored by
+      </h2>
       <div
         css={css`
-          align-items:center;
-          display: grid;
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
           gap: 2rem;
-          grid-template-columns: repeat(auto-fill, 128px);
           justify-content: center;
 
           ${mq.laptop} {
-            gap: 6rem;
-            grid-template-columns: repeat(auto-fill, 256px);
+            gap: 4rem;
           }
         `}
       >
@@ -72,62 +81,150 @@ const SupportersSection = () => {
           link="https://www.gmo.jp/"
         />
       </div>
-      <h2 css={css`color: black; font-weight: 600;`}>Our Partners</h2>
+      <div css={css`padding: 2rem 0;`} />
       <div
         css={css`
-          align-items:center;
-          display: grid;
+          background-color: #FF554433;
+          border-radius: 0.75rem;
+          padding: 0.5rem;
+        `}
+      >
+        <h2
+          css={css`
+          color: black;
+          font-size: 1.2rem;
+          font-weight: 500;
+          ${mq.laptop} {
+            font-size: 1.6rem;
+          }
+        `}
+        >
+          Operational partners
+        </h2>
+        <div
+          css={css`
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
           gap: 2rem;
-          grid-template-columns: repeat(auto-fill, 128px);
           justify-content: center;
 
           ${mq.laptop} {
-            gap: 6rem;
-            grid-template-columns: repeat(auto-fill, 256px);
+            gap: 4rem;
+          }
+      `}
+        >
+          <SupporterLogo
+            source={FractonLogo}
+            text="Fracton Ventures"
+            link="https://fracton.ventures/"
+          />
+          <SupporterLogo
+            source={CoinpostLogo}
+            text="Coinpost"
+            link="https://coinpost.jp/"
+          />
+          <SupporterLogo
+            source={CentrumLogo}
+            text="Centrum"
+            link="https://centrum.studio/"
+          />
+          <SupporterLogo
+            source={AkindoLogo}
+            text="Akindo"
+            link="https://akindo.io/"
+          />
+        </div>
+      </div>
+      <div css={css`padding: 1rem 0;`} />
+      <div
+        css={css`
+          background-color: #FFFF0033;
+          border-radius: 0.75rem;
+          padding: 0.5rem;`}
+      >
+        <h2
+          css={css`
+          color: black;
+          font-size: 1.2rem;
+          font-weight: 500;
+          ${mq.laptop} {
+            font-size: 1.6rem;
           }
         `}
-      >
-        <SupporterLogo
-          source={AkindoLogo}
-          text="Akindo"
-          link="https://akindo.io/"
-        />
-        <SupporterLogo
-          source={BunzzLogo}
-          text="Bunzz"
-          link="https://www.bunzz.dev/"
-        />
+        >
+          Community partners
+        </h2>
 
-        <SupporterLogo
-          source={CentrumLogo}
-          text="Centrum"
-          link="https://centrum.studio/"
-        />
-        <SupporterLogo
-          source={CoinpostLogo}
-          text="Coinpost"
-          link="https://coinpost.jp/"
-        />
-        <SupporterLogo
-          source={EFLogo}
-          text="Ethereum Foundation"
-          link="https://ethereum.foundation/"
-        />
-        <SupporterLogo
-          source={ETHTaipeiLogo}
-          text="ETH Taipei"
-          link="https://ethtaipei.org/"
-        />
-        <SupporterLogo
-          source={FractonLogo}
-          text="Fracton Ventures"
-          link="https://fracton.ventures/"
-        />
-        <SupporterLogo
-          source={TangemLogo}
-          text="Tangem"
-          link="https://tangem.com/"
-        />
+        <div
+          css={css`
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
+          gap: 2rem;
+          justify-content: center;
+
+          ${mq.laptop} {
+            gap: 4rem;
+          }
+        `}
+        >
+          <SupporterLogo
+            source={ETHTaipeiLogo}
+            text="ETH Taipei"
+            link="https://ethtaipei.org/"
+          />
+          <SupporterLogo
+            source={EFLogo}
+            text="Ethereum Foundation"
+            link="https://ethereum.foundation/"
+          />
+        </div>
+      </div>
+      <div css={css`padding: 1rem 0;`} />
+      <div
+        css={css`
+          background-color: #1C1CFF33;
+          border-radius: 0.75rem;
+          padding: 0.5rem;`}
+      >
+        <h2
+          css={css`
+          color: black;
+          font-size: 1.2rem;
+          font-weight: 500;
+          ${mq.laptop} {
+            font-size: 1.6rem;
+          }
+        `}
+        >
+          Technology partners
+        </h2>
+        <div
+          css={css`
+          align-items: center;
+
+          display: flex;
+          flex-flow: row wrap;
+          gap: 2rem;
+          justify-content: center;
+
+          ${mq.laptop} {
+            gap: 4rem;
+          }
+        `}
+        >
+          <SupporterLogo
+            source={TangemLogo}
+            text="Tangem"
+            link="https://tangem.com/"
+          />
+          <SupporterLogo
+            source={BunzzLogo}
+            text="Bunzz"
+            link="https://www.bunzz.dev/"
+          />
+        </div>
       </div>
       <div css={css``}>
         <p
