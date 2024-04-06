@@ -43,27 +43,33 @@ const SupportersSection = () => {
       id="Supporters"
       css={css`
         background-color: ${neutral.White};
-        background-image: url(${seikaiha.src});
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
         padding: 2rem;
         text-align: center;
       `}
     >
-      <h2
+      <div
         css={css`
+          background-image: url(${seikaiha.src});
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
+          border-radius: 0.75rem;
+          padding: 0.5rem;
+        `}
+      >
+        <h2
+          css={css`
           color: black;
           font-size: 2rem;
           font-weight: 600;
           ${mq.laptop} {
             font-size: 3rem;
           }`}
-      >
-        Sponsored by
-      </h2>
-      <div
-        css={css`
+        >
+          Sponsored by
+        </h2>
+        <div
+          css={css`
           align-items: center;
           display: flex;
           flex-flow: row wrap;
@@ -74,17 +80,22 @@ const SupportersSection = () => {
             gap: 4rem;
           }
         `}
-      >
-        <SupporterLogo
-          source={GMOLogo}
-          text="GMO Internet Group, Inc."
-          link="https://www.gmo.jp/"
-        />
+        >
+          <SupporterLogo
+            source={GMOLogo}
+            text="GMO Internet Group, Inc."
+            link="https://www.gmo.jp/"
+          />
+        </div>
       </div>
       <div css={css`padding: 2rem 0;`} />
       <div
         css={css`
           background-color: #FF554433;
+          background-image: url(${seikaiha.src});
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
           border-radius: 0.75rem;
           padding: 0.5rem;
         `}
@@ -140,6 +151,10 @@ const SupportersSection = () => {
       <div
         css={css`
           background-color: #FFFF0033;
+          background-image: url(${seikaiha.src});
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
           border-radius: 0.75rem;
           padding: 0.5rem;`}
       >
@@ -185,6 +200,10 @@ const SupportersSection = () => {
       <div
         css={css`
           background-color: #1C1CFF33;
+          background-image: url(${seikaiha.src});
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
           border-radius: 0.75rem;
           padding: 0.5rem;`}
       >
