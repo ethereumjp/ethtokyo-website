@@ -8,6 +8,7 @@ import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import EFLogo from "public/logo/EFLogo.png";
+import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.svg";
@@ -57,6 +58,9 @@ const SupportersSection = () => {
           padding: 0.5rem;
         `}
       >
+        {/* bronze #cd7f3233 */}
+        {/* silver #c0c0c033 */}
+        {/* gold #FFD70033 */}
         <h2
           css={css`
           color: black;
@@ -188,6 +192,11 @@ const SupportersSection = () => {
             source={ETHTaipeiLogo}
             text="ETH Taipei"
             link="https://ethtaipei.org/"
+          />
+          <SupporterLogo
+            source={ETHRiyadhLogo}
+            text="ETH Riyadh"
+            link="https://ethriyadh.com/"
           />
           <SupporterLogo
             source={EFLogo}
