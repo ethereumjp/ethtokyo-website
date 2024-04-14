@@ -15,17 +15,16 @@ import GMOLogo from "public/logo/GMOLogo.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
 
 const SupportersSection = () => {
-  const SupporterLogo = (props: {
+  const SupporterLogo: React.FC<{
     source: StaticImageData;
     text: string;
     link: string;
-  }) => {
-    return (
-      <a href={props.link} target="_blank" rel="noreferrer">
-        <Image
-          src={props.source}
-          alt={props.text}
-          css={css`
+  }> = ({ source, text, link }) => (
+    <a href={link} target="_blank" rel="noreferrer">
+      <Image
+        src={source}
+        alt={text}
+        css={css`
             height: auto;
             width:128px;
 
@@ -34,78 +33,68 @@ const SupportersSection = () => {
               width: 256px;
             }
           `}
-        />
-      </a>
+      />
+    </a>
+  );
+
+  const SponsorTier: React.FC<{
+    tier: "platinum" | "gold" | "silver" | "bronze";
+    children?: React.ReactNode;
+  }> = ({ tier, children }) => {
+    const tierColor = {
+      platinum: "#e5e4e255",
+      gold: "#FFD70055",
+      silver: "#c0c0c055",
+      bronze: "#cd7f3255",
+    };
+
+    return (
+      <div
+        css={css`
+          background-color: ${tierColor[tier]};
+          background-image: url(${seikaiha.src});
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
+          border-radius: 0.75rem;
+          padding: 1rem 0.5rem;
+
+          ${mq.laptop}{
+            padding: 2rem 1rem;
+          }
+        `}
+      >
+        <div
+          css={css`
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 2rem;
+            justify-content: center;
+
+            ${mq.laptop} {
+              gap: 4rem;
+            }
+          `}
+        >
+          {children}
+        </div>
+      </div>
     );
   };
 
-  return (
-    <section
-      id="Supporters"
+  const PartnerCategory: React.FC<{
+    category: string;
+    bgColor: string;
+    children?: React.ReactNode;
+  }> = ({ category, bgColor, children }) => (
+    <div
       css={css`
-        background-color: ${neutral.White};
-        padding: 2rem;
-        text-align: center;
-      `}
+          border: 4px double ${bgColor};
+          border-radius: 0.75rem;`}
     >
-      <div
+      <h2
         css={css`
-          background-image: url(${seikaiha.src});
-          background-position: center;
-          background-repeat: repeat;
-          background-size: cover;
-          border-radius: 0.75rem;
-          padding: 0.5rem;
-        `}
-      >
-        {/* bronze #cd7f3233 */}
-        {/* silver #c0c0c033 */}
-        {/* gold #FFD70033 */}
-        <h2
-          css={css`
-          color: black;
-          font-size: 2rem;
-          font-weight: 600;
-          ${mq.laptop} {
-            font-size: 3rem;
-          }`}
-        >
-          Sponsored by
-        </h2>
-        <div
-          css={css`
-          align-items: center;
-          display: flex;
-          flex-flow: row wrap;
-          gap: 2rem;
-          justify-content: center;
-
-          ${mq.laptop} {
-            gap: 4rem;
-          }
-        `}
-        >
-          <SupporterLogo
-            source={GMOLogo}
-            text="GMO Internet Group, Inc."
-            link="https://www.gmo.jp/"
-          />
-        </div>
-      </div>
-      <div css={css`padding: 2rem 0;`} />
-      <div
-        css={css`
-          background-color: #FF554433;
-          background-image: url(${seikaiha.src});
-          background-position: center;
-          background-repeat: repeat;
-          background-size: cover;
-          border-radius: 0.75rem;
-          padding: 0.5rem;
-        `}
-      >
-        <h2
-          css={css`
           color: black;
           font-size: 1.2rem;
           font-weight: 500;
@@ -113,12 +102,13 @@ const SupportersSection = () => {
             font-size: 1.6rem;
           }
         `}
-        >
-          Operational partners
-        </h2>
-        <div
-          css={css`
+      >
+        {category} partners
+      </h2>
+      <div
+        css={css`
           align-items: center;
+
           display: flex;
           flex-flow: row wrap;
           gap: 2rem;
@@ -127,8 +117,45 @@ const SupportersSection = () => {
           ${mq.laptop} {
             gap: 4rem;
           }
+        `}
+      >
+        {children}
+      </div>
+    </div>
+  );
+
+  return (
+    <section
+      id="Supporters"
+      css={css`
+        background-color: ${neutral.Grey1};
+        padding: 2rem;
+        text-align: center;
       `}
+    >
+      <section id="sponsors">
+        <h2
+          css={css`
+          color: black;
+          font-size: 2rem;
+          font-weight: 500;
+          ${mq.laptop} {
+            font-size: 3rem;
+          }`}
         >
+          Sponsored by
+        </h2>
+        <SponsorTier tier="platinum">
+          <SupporterLogo
+            source={GMOLogo}
+            text="GMO Internet Group, Inc."
+            link="https://www.gmo.jp/"
+          />
+        </SponsorTier>
+      </section>
+      <div css={css`padding: 2rem 0;`} />
+      <section id="partners">
+        <PartnerCategory category="Operation" bgColor="#FF554455">
           <SupporterLogo
             source={FractonLogo}
             text="Fracton Ventures"
@@ -149,45 +176,9 @@ const SupportersSection = () => {
             text="Akindo"
             link="https://akindo.io/"
           />
-        </div>
-      </div>
-      <div css={css`padding: 1rem 0;`} />
-      <div
-        css={css`
-          background-color: #FFFF0033;
-          background-image: url(${seikaiha.src});
-          background-position: center;
-          background-repeat: repeat;
-          background-size: cover;
-          border-radius: 0.75rem;
-          padding: 0.5rem;`}
-      >
-        <h2
-          css={css`
-          color: black;
-          font-size: 1.2rem;
-          font-weight: 500;
-          ${mq.laptop} {
-            font-size: 1.6rem;
-          }
-        `}
-        >
-          Community partners
-        </h2>
-
-        <div
-          css={css`
-          align-items: center;
-          display: flex;
-          flex-flow: row wrap;
-          gap: 2rem;
-          justify-content: center;
-
-          ${mq.laptop} {
-            gap: 4rem;
-          }
-        `}
-        >
+        </PartnerCategory>
+        <div css={css`padding: 1rem 0;`} />
+        <PartnerCategory category="Community" bgColor="#ffea00">
           <SupporterLogo
             source={ETHTaipeiLogo}
             text="ETH Taipei"
@@ -203,45 +194,9 @@ const SupportersSection = () => {
             text="Ethereum Foundation"
             link="https://ethereum.foundation/"
           />
-        </div>
-      </div>
-      <div css={css`padding: 1rem 0;`} />
-      <div
-        css={css`
-          background-color: #1C1CFF33;
-          background-image: url(${seikaiha.src});
-          background-position: center;
-          background-repeat: repeat;
-          background-size: cover;
-          border-radius: 0.75rem;
-          padding: 0.5rem;`}
-      >
-        <h2
-          css={css`
-          color: black;
-          font-size: 1.2rem;
-          font-weight: 500;
-          ${mq.laptop} {
-            font-size: 1.6rem;
-          }
-        `}
-        >
-          Technology partners
-        </h2>
-        <div
-          css={css`
-          align-items: center;
-
-          display: flex;
-          flex-flow: row wrap;
-          gap: 2rem;
-          justify-content: center;
-
-          ${mq.laptop} {
-            gap: 4rem;
-          }
-        `}
-        >
+        </PartnerCategory>
+        <div css={css`padding: 1rem 0;`} />
+        <PartnerCategory category="Technology" bgColor="#1C1CFF55">
           <SupporterLogo
             source={TangemLogo}
             text="Tangem"
@@ -252,35 +207,31 @@ const SupportersSection = () => {
             text="Bunzz"
             link="https://www.bunzz.dev/"
           />
-        </div>
-      </div>
-      <div css={css``}>
-        <p
-          css={css`
+        </PartnerCategory>
+      </section>
+      <p
+        css={css`
           font-size: 0.75rem;
           margin-top: 2rem;
-
           ${mq.laptop} {
             font-size: 1rem;
           }
         `}
-        >
-          <a
-            css={css`
+      >
+        <a
+          css={css`
             color: blue;
-
             :hover {
               color: ${brand.Shuiro}
             }
-            `}
-            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Looking to sponsor or partner with us?
-          </a>
-        </p>
-      </div>
+          `}
+          href="https://forms.gle/9wLvkR1Fw2VyKVM66"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Looking to sponsor or partner with us?
+        </a>
+      </p>
     </section>
   );
 };
