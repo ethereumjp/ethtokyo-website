@@ -3,10 +3,10 @@ import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
 import AyaPic from "public/images/ayamiyaguchi.png";
-import EdmundPic from "public/images/edmundedgar.jpg";
-import ShogoPic from "public/images/shogoochiai.jpg";
-import TomaszPic from "public/images/tomaszstanczak.png";
-import VitalikPic from "public/images/vitalik.jpg";
+import EdmundPic from "public/images/speakers/edmundedgar.jpg";
+import ShogoPic from "public/images/speakers/shogoochiai.jpg";
+import TomaszPic from "public/images/speakers/tomaszstanczak.png";
+import VitalikPic from "public/images/speakers/vitalik.jpg";
 
 const SpeakersSection = () => {
   const SpeakerIcon: React.FC<{
