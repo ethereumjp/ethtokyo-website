@@ -1,6 +1,7 @@
 import Layout from "@/components/layouts/base";
 import { CountdownPanel } from "@/components/organisms/Countdown";
 import ScheduleSection from "@/components/organisms/Schedule";
+import SpeakersSection from "@/components/organisms/Speakers";
 import StatementSection from "@/components/organisms/Statement";
 import SupportersSection from "@/components/organisms/Supporters";
 import { brand } from "@/themes/settings/color";
@@ -89,6 +90,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <div>
         <TopSection />
         <StatementSection />
+        <SpeakersSection />
         <SupportersSection />
         <ScheduleSection />
       </div>
