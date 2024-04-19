@@ -12,11 +12,17 @@ const SpeakersSection = () => {
   const SpeakerIcon: React.FC<{
     source: StaticImageData;
     name: string;
-    org: string;
     link: string;
-  }> = ({ source, name, org, link }) => (
+    org: string;
+    orgUrl: string;
+  }> = ({ source, name, link, org, orgUrl }) => (
     <div>
-      <a href={link} target="_blank" rel="noreferrer">
+      <a
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        css={css`text-decoration: none; :hover{text-decoration: underline;};`}
+      >
         <Image
           src={source}
           alt={name}
@@ -32,9 +38,16 @@ const SpeakersSection = () => {
             }
           `}
         />
+        <p css={css`margin-bottom:0;`}>{name}</p>
       </a>
-      <p css={css`margin-bottom:0;`}>{name}</p>
-      <p css={css`font-size: 1rem; line-height:1; margin-top:0;`}>{org}</p>
+      <a
+        href={orgUrl}
+        target="_blank"
+        rel="noreferrer"
+        css={css`text-decoration: none; :hover{color: ${brand.JordyBlue};};`}
+      >
+        <p css={css`font-size: 1rem; line-height:1; margin-top:0;`}>{org}</p>
+      </a>
     </div>
   );
 
@@ -73,32 +86,37 @@ const SpeakersSection = () => {
         <SpeakerIcon
           source={AyaPic}
           name="Aya Miyaguchi"
-          org="Ethereum Foundation"
           link="https://twitter.com/AyaMiyagotchi/"
+          org="Ethereum Foundation"
+          orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
           source={EdmundPic}
           name="Edmund Edgar"
+          link="https://twitter.com/edmundedgar/"
           org="Reality.eth"
-          link="https://twitter.com/edmundedgar/media"
+          orgUrl="https://reality.eth.link/"
         />
         <SpeakerIcon
           source={VitalikPic}
           name="Vitalik Buterin"
-          org="Ethereum"
           link="https://vitalik.eth.limo/"
+          org="Ethereum"
+          orgUrl="https://ethereum.org/"
         />
         <SpeakerIcon
           source={TomaszPic}
           name="Tomasz Stańczak"
-          org="Nethermind"
           link="https://twitter.com/tkstanczak"
+          org="Nethermind"
+          orgUrl="https://www.nethermind.io/"
         />
         <SpeakerIcon
           source={ShogoPic}
           name="Shogo Ochiai"
-          org="Solidity House"
           link="https://twitter.com/_sgtn/"
+          org="Solidity House"
+          orgUrl="https://www.solidityhouse.com/"
         />
       </div>
     </section>
