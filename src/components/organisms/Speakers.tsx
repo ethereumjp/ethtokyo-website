@@ -25,10 +25,10 @@ const SpeakersSection = () => {
             height: auto;
             outline: 4px solid white;
             outline-offset: -4px;
-            width:128px;
+            width:64px;
 
             ${mq.laptop}{
-              width: 256px;
+              width: 128px;
             }
           `}
         />
