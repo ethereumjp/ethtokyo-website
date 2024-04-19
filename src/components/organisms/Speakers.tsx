@@ -4,6 +4,8 @@ import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
 import AyaPic from "public/images/speakers/ayamiyaguchi.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
+import PeterPic from "public/images/speakers/peterszilagyi.png";
+import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
@@ -29,16 +31,28 @@ const SpeakersSection = () => {
           css={css`
             border-radius: 50%;
             height: auto;
-            outline: 4px solid white;
-            outline-offset: -4px;
-            width:64px;
+            outline: 2px solid white;
+            outline-offset: -2px;
+            width: 96px;
 
             ${mq.laptop}{
-              width: 128px;
+              outline: 4px solid white;
+              outline-offset: -4px;
+              width: 192px;
             }
           `}
         />
-        <p css={css`margin-bottom:0;`}>{name}</p>
+        <p
+          css={css`
+            font-size: 0.8rem;
+            margin-bottom:0;
+            ${mq.laptop}{
+              font-size: 1rem;
+            };
+          `}
+        >
+          {name}
+        </p>
       </a>
       <a
         href={orgUrl}
@@ -46,7 +60,18 @@ const SpeakersSection = () => {
         rel="noreferrer"
         css={css`text-decoration: none; :hover{color: ${brand.JordyBlue};};`}
       >
-        <p css={css`font-size: 1rem; line-height:1; margin-top:0;`}>{org}</p>
+        <p
+          css={css`
+            font-size: 0.8rem;
+            line-height:1;
+            margin-top:0;
+            ${mq.laptop}{
+              font-size: 1rem;
+            };
+          `}
+        >
+          {org}
+        </p>
       </a>
     </div>
   );
@@ -56,7 +81,7 @@ const SpeakersSection = () => {
       id="speakers"
       css={css`
         background-color: ${brand.Miyabi};
-        padding: 2rem;
+        padding: 2rem 2rem;
         text-align: center;
       `}
     >
@@ -87,15 +112,15 @@ const SpeakersSection = () => {
           source={AyaPic}
           name="Aya Miyaguchi"
           link="https://twitter.com/AyaMiyagotchi/"
-          org="Ethereum Foundation"
+          org="EF, Director"
           orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
-          source={EdmundPic}
-          name="Edmund Edgar"
-          link="https://twitter.com/edmundedgar/"
-          org="Reality.eth"
-          orgUrl="https://reality.eth.link/"
+          source={PeterPic}
+          name="Péter Szilágyi"
+          link="https://twitter.com/peter_szilagyi/"
+          org="EF, Geth Lead"
+          orgUrl="https://geth.ethereum.org/"
         />
         <SpeakerIcon
           source={VitalikPic}
@@ -112,11 +137,25 @@ const SpeakersSection = () => {
           orgUrl="https://www.nethermind.io/"
         />
         <SpeakerIcon
+          source={EdmundPic}
+          name="Edmund Edgar"
+          link="https://twitter.com/edmundedgar/"
+          org="Reality.eth"
+          orgUrl="https://reality.eth.link/"
+        />
+        <SpeakerIcon
           source={ShogoPic}
           name="Shogo Ochiai"
           link="https://twitter.com/_sgtn/"
           org="Solidity House"
           orgUrl="https://www.solidityhouse.com/"
+        />
+        <SpeakerIcon
+          source={SamuelPic}
+          name="Samuel Chong"
+          link="https://linktr.ee/stakesaurus/"
+          org="Stakesaurus"
+          orgUrl="https://stakesaurus.com/"
         />
       </div>
     </section>
