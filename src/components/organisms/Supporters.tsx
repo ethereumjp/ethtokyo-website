@@ -103,7 +103,7 @@ const SupportersSection = () => {
           }
         `}
       >
-        {category} partners
+        {category} supporters
       </h2>
       <div
         css={css`
