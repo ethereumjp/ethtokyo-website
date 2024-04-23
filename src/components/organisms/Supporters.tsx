@@ -229,7 +229,7 @@ const SupportersSection = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Looking to sponsor or partner with us?
+          Looking to sponsor or support us?
         </a>
       </p>
     </section>
