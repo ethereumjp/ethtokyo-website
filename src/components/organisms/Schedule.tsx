@@ -57,7 +57,7 @@ const Info = () => {
         <GoInfo size={60} />
       </div>
       <div css={css`padding: 0 1rem;`}>
-        <h2 css={css`margin:0;`}>Side Events</h2>
+        <h2 css={css`margin:0;`}>Nearby Events</h2>
 
         <p css={css`font-size: 1rem; margin:0;`}>
           <a
