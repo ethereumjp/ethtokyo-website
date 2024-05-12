@@ -12,6 +12,7 @@ import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.svg";
+import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
 
 const SupportersSection = () => {
@@ -193,6 +194,11 @@ const SupportersSection = () => {
             source={EFLogo}
             text="Ethereum Foundation"
             link="https://ethereum.foundation/"
+          />
+          <SupporterLogo
+            source={ShibuyaLogo}
+            text="Shibuya City"
+            link="https://www.city.shibuya.tokyo.jp/"
           />
         </PartnerCategory>
         <div css={css`padding: 1rem 0;`} />
