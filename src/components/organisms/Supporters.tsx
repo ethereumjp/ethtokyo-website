@@ -8,12 +8,14 @@ import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import EFLogo from "public/logo/EFLogo.png";
+import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
+import ZeloLogo from "public/logo/ZeloLogo.png";
 
 const SupportersSection = () => {
   const SupporterLogo: React.FC<{
@@ -86,26 +88,10 @@ const SupportersSection = () => {
 
   const PartnerCategory: React.FC<{
     category: string;
-    bgColor: string;
-    children?: React.ReactNode;
-  }> = ({ category, bgColor, children }) => (
-    <div
-      css={css`
-          border: 4px double ${bgColor};
-          border-radius: 0.75rem;`}
-    >
-      <h2
-        css={css`
-          color: black;
-          font-size: 1.2rem;
-          font-weight: 500;
-          ${mq.laptop} {
-            font-size: 1.6rem;
-          }
-        `}
-      >
-        {category} supporters
-      </h2>
+    children: React.ReactNode;
+  }> = ({ category, children }) => (
+    <div>
+      <h2 css={css`color: black; font-weight:400;`}>{category}</h2>
       <div
         css={css`
           align-items: center;
@@ -156,30 +142,17 @@ const SupportersSection = () => {
       </section>
       <div css={css`padding: 2rem 0;`} />
       <section id="partners">
-        <PartnerCategory category="Operation" bgColor="#FF554455">
+        <PartnerCategory category="Supporters">
           <SupporterLogo
-            source={FractonLogo}
-            text="Fracton Ventures"
-            link="https://fracton.ventures/"
+            source={ShibuyaLogo}
+            text="Shibuya City"
+            link="https://www.city.shibuya.tokyo.jp/"
           />
           <SupporterLogo
-            source={CoinpostLogo}
-            text="Coinpost"
-            link="https://coinpost.jp/"
+            source={EFLogo}
+            text="Ethereum Foundation"
+            link="https://ethereum.foundation/"
           />
-          <SupporterLogo
-            source={CentrumLogo}
-            text="Centrum"
-            link="https://centrum.studio/"
-          />
-          <SupporterLogo
-            source={AkindoLogo}
-            text="Akindo"
-            link="https://akindo.io/"
-          />
-        </PartnerCategory>
-        <div css={css`padding: 1rem 0;`} />
-        <PartnerCategory category="Community" bgColor="#ffea00">
           <SupporterLogo
             source={ETHTaipeiLogo}
             text="ETH Taipei"
@@ -191,53 +164,81 @@ const SupportersSection = () => {
             link="https://ethriyadh.com/"
           />
           <SupporterLogo
-            source={EFLogo}
-            text="Ethereum Foundation"
-            link="https://ethereum.foundation/"
+            source={FractonLogo}
+            text="Fracton Ventures"
+            link="https://fracton.ventures/"
           />
           <SupporterLogo
-            source={ShibuyaLogo}
-            text="Shibuya City"
-            link="https://www.city.shibuya.tokyo.jp/"
+            source={CoinpostLogo}
+            text="Coinpost"
+            link="https://coinpost.jp/"
           />
-        </PartnerCategory>
-        <div css={css`padding: 1rem 0;`} />
-        <PartnerCategory category="Technology" bgColor="#1C1CFF55">
           <SupporterLogo
-            source={TangemLogo}
-            text="Tangem"
-            link="https://tangem.com/"
+            source={AkindoLogo}
+            text="Akindo"
+            link="https://akindo.io/"
+          />
+          <SupporterLogo
+            source={CentrumLogo}
+            text="Centrum"
+            link="https://centrum.studio/"
           />
           <SupporterLogo
             source={BunzzLogo}
             text="Bunzz"
             link="https://www.bunzz.dev/"
           />
+          <SupporterLogo
+            source={TangemLogo}
+            text="Tangem"
+            link="https://tangem.com/"
+          />
+          <SupporterLogo
+            source={ZeloLogo}
+            text="Zelo"
+            link="https://zelojapan.com/"
+          />
         </PartnerCategory>
-      </section>
-      <p
-        css={css`
+        <p
+          css={css`
           font-size: 0.75rem;
           margin-top: 2rem;
           ${mq.laptop} {
             font-size: 1rem;
           }
         `}
-      >
-        <a
-          css={css`
+        >
+          <a
+            css={css`
             color: blue;
             :hover {
               color: ${brand.Shuiro}
             }
           `}
-          href="https://forms.gle/9wLvkR1Fw2VyKVM66"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Looking to sponsor or support us?
-        </a>
-      </p>
+            href="https://forms.gle/9wLvkR1Fw2VyKVM66"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Looking to sponsor or support us?
+          </a>
+        </p>
+        <div css={css`padding: 1rem 0;`} />
+        <PartnerCategory category="">
+          <Image
+            src={EJLogoFace}
+            alt="Ethereum Japan"
+            css={css`
+              height: auto;
+              max-width: 128px;
+
+              ${mq.laptop} {
+                max-width: 256px;
+              }
+            `}
+          />
+        </PartnerCategory>
+        <div css={css`padding: 1rem 0;`} />
+      </section>
     </section>
   );
 };
