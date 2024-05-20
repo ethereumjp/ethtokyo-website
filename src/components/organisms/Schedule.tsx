@@ -1,9 +1,8 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, info } from "@/themes/settings/color";
+import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import seikaiha from "public/images/seikaiha.png";
-import EJLogoFace from "public/logo/EJLogoFace.png";
 import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Socials } from "./Socials";
@@ -90,19 +89,6 @@ const ScheduleSection = () => {
       `}
     >
       <Info />
-
-      <Image
-        src={EJLogoFace}
-        alt="Ethereum Japan"
-        css={css`
-          height: auto;
-          max-width: 128px;
-
-          ${mq.laptop} {
-            max-width: 256px;
-          }
-        `}
-      />
       <Socials />
     </section>
   );
