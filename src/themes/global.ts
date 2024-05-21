@@ -6,7 +6,6 @@ import {} from "./settings/spaces";
 export const globalStyles = css({
   "html, body": {
     margin: "0",
-    backgroundColor: brand.Shuiro,
     color: neutral.White,
   },
 

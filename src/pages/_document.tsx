@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -35,7 +36,7 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta property="csp-nonce" content={props.nonce} />
       </Head>
 
-      <body nonce={props.nonce}>
+      <body nonce={props.nonce} css={css`background-color: #000000;`}>
         <Main />
         <NextScript nonce={props.nonce} />
       </body>

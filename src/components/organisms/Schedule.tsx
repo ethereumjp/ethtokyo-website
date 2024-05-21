@@ -1,16 +1,68 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand } from "@/themes/settings/color";
+import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
+import Link from "next/link";
 import seikaiha from "public/images/seikaiha.png";
 import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Socials } from "./Socials";
 
 const Info = () => {
-  return (
+  const ApplyLink = () => (
     <div
       css={css`
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: fit-content;
+
+      ${mq.tablet}{
+        margin: 1rem auto;
+      }
+
+      ${mq.laptop}{
+        margin: 2rem auto;
+      }
+    `}
+    >
+      <Link href="/apply">
+        <button
+          type="button"
+          css={css`
+        background-color: ${brand.Shuiro};
+        border: none;
+        border-radius: 12px;
+        color: ${neutral.White};
+        cursor: pointer;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        ${mq.tablet}{
+          font-size: 3rem;
+          padding: 1rem 2rem;
+        }
+
+        &:hover {
+          background-color: ${themeLight.PrimaryHover};
+        }
+      `}
+        >
+          Get tickets
+        </button>
+      </Link>
+    </div>
+  );
+
+  return (
+    <div>
+      {/* <ApplyLink /> */}
+      <div
+        css={css`
         display:flex;
         flex-direction:column;
         justify-content: center;
@@ -22,52 +74,53 @@ const Info = () => {
           text-align: start;
         }
       `}
-    >
-      <div css={css`align-self:center;`}>
-        <HiCalendarDays size={60} />
-      </div>
-      <div css={css`padding: 0 1rem;`}>
-        <h2 css={css`margin:0;`}>Hackathon</h2>
-        <p css={css`font-size: 1rem; margin:0;`}>23-25 August 2024</p>
-      </div>
-      <div css={css`padding: 0 1rem;`}>
-        <h2 css={css`margin:0;`}>Conference</h2>
-        <p css={css`font-size: 1rem; margin:0;`}>26 August 2024</p>
-      </div>
-      <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
-      <div css={css`align-self:center;`}>
-        <HiOutlineMapPin size={60} />
-      </div>
-      <div css={css`padding: 0 1rem;`}>
-        <h2 css={css`margin:0;`}>Digital Garage</h2>
-        <a
-          css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-          href="https://maps.app.goo.gl/aCRdR2pX4qRaUz6MA"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p css={css`font-size: 1rem; margin:0;`}>
-            15-1 Udagawacho, Shibuya City, Tokyo
-          </p>
-        </a>
-      </div>
-      <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
-      <div css={css`align-self:center;`}>
-        <GoInfo size={60} />
-      </div>
-      <div css={css`padding: 0 1rem;`}>
-        <h2 css={css`margin:0;`}>Nearby Events</h2>
-
-        <p css={css`font-size: 1rem; margin:0;`}>
+      >
+        <div css={css`align-self:center;`}>
+          <HiCalendarDays size={60} />
+        </div>
+        <div css={css`padding: 0 1rem;`}>
+          <h2 css={css`margin:0;`}>Hackathon</h2>
+          <p css={css`font-size: 1rem; margin:0;`}>23-25 August 2024</p>
+        </div>
+        <div css={css`padding: 0 1rem;`}>
+          <h2 css={css`margin:0;`}>Conference</h2>
+          <p css={css`font-size: 1rem; margin:0;`}>26 August 2024</p>
+        </div>
+        <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
+        <div css={css`align-self:center;`}>
+          <HiOutlineMapPin size={60} />
+        </div>
+        <div css={css`padding: 0 1rem;`}>
+          <h2 css={css`margin:0;`}>Digital Garage</h2>
           <a
             css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQROWEw0KAnb5Npxv6Qvsn1crcDlPagVQgBLcFBCigYG99dEaFtEoE4FmVmmi0P5sQtaq5BGFn4d1Yz/pubhtml"
+            href="https://maps.app.goo.gl/aCRdR2pX4qRaUz6MA"
             target="_blank"
             rel="noreferrer"
           >
-            Click to see all events
+            <p css={css`font-size: 1rem; margin:0;`}>
+              15-1 Udagawacho, Shibuya City, Tokyo
+            </p>
           </a>
-        </p>
+        </div>
+        <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
+        <div css={css`align-self:center;`}>
+          <GoInfo size={60} />
+        </div>
+        <div css={css`padding: 0 1rem;`}>
+          <h2 css={css`margin:0;`}>Nearby Events</h2>
+
+          <p css={css`font-size: 1rem; margin:0;`}>
+            <a
+              css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
+              href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQROWEw0KAnb5Npxv6Qvsn1crcDlPagVQgBLcFBCigYG99dEaFtEoE4FmVmmi0P5sQtaq5BGFn4d1Yz/pubhtml"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Click to see all events
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

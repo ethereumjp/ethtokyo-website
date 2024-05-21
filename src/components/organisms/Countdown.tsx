@@ -59,6 +59,7 @@ export const CountdownPanel = () => {
 
     ${mq.laptop}{
       justify-content: space-evenly;
+      margin: -4rem 0;
       padding: 4rem;
     }
   `;
