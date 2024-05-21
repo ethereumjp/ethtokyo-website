@@ -52,7 +52,7 @@ const Info = () => {
         }
       `}
         >
-          Get tickets
+          Hacker registration
         </button>
       </Link>
     </div>
@@ -60,7 +60,7 @@ const Info = () => {
 
   return (
     <div>
-      {/* <ApplyLink /> */}
+      <ApplyLink />
       <div
         css={css`
         display:flex;

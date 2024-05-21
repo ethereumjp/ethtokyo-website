@@ -104,7 +104,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           }
         `}
         >
-          Get tickets
+          Hacker registration
         </button>
       </Link>
     </div>
@@ -133,7 +133,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           </div>
         </TriangleJpWaveBackground>
         <CountdownPanel />
-        {/* <ApplyLink /> */}
+        <ApplyLink />
       </section>
     );
   };
