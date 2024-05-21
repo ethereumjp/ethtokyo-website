@@ -27,7 +27,7 @@ const HackerChallenge: NextPage = () => {
         `}
       >
         <li>
-          ETHTokyo2024へのチケット購入リンクは、Ethereumスマートコントラクトの中に隠されています。
+          ETHTokyo2024への参加登録方法は、Ethereumスマートコントラクトの中に隠されています。
         </li>
         <li>
           コントラクトは{" "}
@@ -44,12 +44,15 @@ const HackerChallenge: NextPage = () => {
           </a>{" "}
           にデプロイされており、アドレスは{" "}
           <span css={css`color: ${brand.Shuiro};`}>
-            0xd367775be28552cBFA989b746A662F69E3380121
+            0x4C80b90BeECE732C6ec4EdeE0298799d67eB48cD
           </span>
           です。
         </li>
         <li>
-          チケット購入ページのURLを見つけたら、そのリンクにアクセスすることで、入場チケットを購入できます。
+          参加登録フォームのURLを見つけたら、自身のプロフィールを提出してください。
+        </li>
+        <li>
+          プロフィールを提出したハッカーへ、当日の参加証となるNFTを送付します。
         </li>
       </ol>
 
@@ -64,8 +67,8 @@ const HackerChallenge: NextPage = () => {
         `}
       >
         <li>
-          The link to the <em>ticket purchase page</em> is hidden inside an
-          Ethereum smart contract.
+          To participate as a hacker in ETHTokoy, you must find the hidden
+          registration form inside an Ethereum smart contract.
         </li>
         <li>
           The contract is deployed on{" "}
@@ -82,13 +85,17 @@ const HackerChallenge: NextPage = () => {
           </a>
           , at{" "}
           <span css={css`color: ${brand.Shuiro};`}>
-            0xd367775be28552cBFA989b746A662F69E3380121
+            0x4C80b90BeECE732C6ec4EdeE0298799d67eB48cD
           </span>
           .
         </li>
         <li>
-          Once you find out the <em>ticket purchase page</em> URL, head to the
-          link to purchase your admissions ticket.
+          Once you discover the registration form link, head to the URL submit
+          your profile.
+        </li>
+        <li>
+          We will airdrop an NFT to those who have successfully submitted the
+          registration form. The NFT will act as your registration pass.
         </li>
       </ol>
 
