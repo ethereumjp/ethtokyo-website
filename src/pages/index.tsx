@@ -4,12 +4,15 @@ import ScheduleSection from "@/components/organisms/Schedule";
 import SpeakersSection from "@/components/organisms/Speakers";
 import StatementSection from "@/components/organisms/Statement";
 import SupportersSection from "@/components/organisms/Supporters";
-import { brand } from "@/themes/settings/color";
+import { mq } from "@/themes/settings/breakpoints";
+import { brand, neutral, themeLight } from "@/themes/settings/color";
+import { zIndex } from "@/themes/settings/zindex";
 import type { PageProps } from "@/types";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 import { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import topHero from "public/images/hero_top.jpg";
 import seikaiha from "public/images/seikaiha.png";
 import ETHTokyoLogo from "public/logo/ETHTokyoLogo.png";
@@ -58,6 +61,55 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     );
   };
 
+  const ApplyLink = () => (
+    <div
+      css={css`
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: fit-content;
+
+        ${mq.tablet}{
+          margin: 2rem auto;
+        }
+
+        ${mq.laptop}{
+          margin: 4rem auto;
+        }
+      `}
+    >
+      <Link href="/apply">
+        <button
+          type="button"
+          css={css`
+          background-color: ${brand.Shuiro};;
+          border: none;
+          border-radius: 12px;
+          color: ${neutral.White};
+          cursor: pointer;
+          font-size: 2rem;
+          margin: 0;
+          padding: 0.5rem 1rem;
+
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          ${mq.tablet}{
+            font-size: 3rem;
+            padding: 1rem 2rem;
+          }
+
+          &:hover {
+            background-color: ${themeLight.PrimaryHover};
+          }
+        `}
+        >
+          Get tickets
+        </button>
+      </Link>
+    </div>
+  );
+
   const TopSection = () => {
     const topBackgroundStyle = css`
       background-image: url(${topHero.src});
@@ -81,6 +133,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           </div>
         </TriangleJpWaveBackground>
         <CountdownPanel />
+        {/* <ApplyLink /> */}
       </section>
     );
   };
