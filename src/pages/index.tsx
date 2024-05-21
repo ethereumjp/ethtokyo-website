@@ -61,55 +61,6 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     );
   };
 
-  const ApplyLink = () => (
-    <div
-      css={css`
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: fit-content;
-
-        ${mq.tablet}{
-          margin: 2rem auto;
-        }
-
-        ${mq.laptop}{
-          margin: 4rem auto;
-        }
-      `}
-    >
-      <Link href="/apply">
-        <button
-          type="button"
-          css={css`
-          background-color: ${brand.Shuiro};;
-          border: none;
-          border-radius: 12px;
-          color: ${neutral.White};
-          cursor: pointer;
-          font-size: 2rem;
-          margin: 0;
-          padding: 0.5rem 1rem;
-
-          text-decoration: none;
-          transition: background-color 0.3s ease;
-
-          ${mq.tablet}{
-            font-size: 3rem;
-            padding: 1rem 2rem;
-          }
-
-          &:hover {
-            background-color: ${themeLight.PrimaryHover};
-          }
-        `}
-        >
-          Hacker registration
-        </button>
-      </Link>
-    </div>
-  );
-
   const TopSection = () => {
     const topBackgroundStyle = css`
       background-image: url(${topHero.src});
@@ -133,16 +84,107 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           </div>
         </TriangleJpWaveBackground>
         <CountdownPanel />
-        <ApplyLink />
       </section>
     );
   };
+
+  const LinkedButton = (props: {
+    href: string;
+    text: string;
+    color: string;
+  }) => (
+    <Link href={props.href}>
+      <button
+        type="button"
+        css={css`
+          background-color: ${props.color};
+          border: none;
+          border-radius: 12px;
+          color: ${neutral.White};
+          cursor: pointer;
+          font-size: 2rem;
+          margin: 0;
+          padding: 0.5rem 1rem;
+
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          ${mq.tablet}{
+            font-size: 3rem;
+            padding: 1rem 2rem;
+          }
+
+          &:hover {
+            background-color: ${themeLight.PrimaryHover};
+          }
+        `}
+      >
+        {props.text}
+      </button>
+    </Link>
+  );
+
+  const GetTicketsSection = () => (
+    <div
+      css={css`background-color:black; background-image: url(${seikaiha.src}); padding: 4rem;`}
+    >
+      <h2
+        css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem; text-align: center;`}
+      >
+        Participate
+      </h2>
+      <br />
+      <div
+        css={css`
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+          width: fit-content;
+
+          ${mq.tablet} {
+            margin: 2rem auto;
+          }
+
+          ${mq.laptop} {
+            flex-direction: row;
+            margin: 4rem auto;
+          }
+
+          & > *:not(:last-child) {
+            margin-bottom: 2rem;
+            ${mq.tablet} {
+              margin-bottom: 0;
+              margin-right: 2rem;
+            }
+          }
+        `}
+      >
+        <LinkedButton
+          href="https://app.moongate.id/e/eth-tokyo-2024"
+          text="Volunteer pass"
+          color="green"
+        />
+        <LinkedButton
+          href="/apply"
+          text="Hackathon registration"
+          color={brand.BluePantone}
+        />
+        <LinkedButton
+          href="https://app.moongate.id/e/eth-tokyo-2024"
+          text="Conference tickets"
+          color="brown"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <Layout pageTitle="">
       <div>
         <TopSection />
         <StatementSection />
+        <GetTicketsSection />
         <SpeakersSection />
         <SupportersSection />
         <ScheduleSection />

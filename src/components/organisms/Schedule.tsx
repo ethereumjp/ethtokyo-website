@@ -9,58 +9,8 @@ import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Socials } from "./Socials";
 
 const Info = () => {
-  const ApplyLink = () => (
-    <div
-      css={css`
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
-
-      ${mq.tablet}{
-        margin: 1rem auto;
-      }
-
-      ${mq.laptop}{
-        margin: 2rem auto;
-      }
-    `}
-    >
-      <Link href="/apply">
-        <button
-          type="button"
-          css={css`
-        background-color: ${brand.Shuiro};
-        border: none;
-        border-radius: 12px;
-        color: ${neutral.White};
-        cursor: pointer;
-        font-size: 2rem;
-        margin: 0;
-        padding: 0.5rem 1rem;
-
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-
-        ${mq.tablet}{
-          font-size: 3rem;
-          padding: 1rem 2rem;
-        }
-
-        &:hover {
-          background-color: ${themeLight.PrimaryHover};
-        }
-      `}
-        >
-          Hacker registration
-        </button>
-      </Link>
-    </div>
-  );
-
   return (
     <div>
-      <ApplyLink />
       <div
         css={css`
         display:flex;
