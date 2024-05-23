@@ -173,7 +173,7 @@ const SpeakersSection = () => {
           source={DanielPic}
           name="Daniel Hwang"
           link="https://twitter.com/danhwang88"
-          org="Kintsugi Technologies"
+          org="Kintsugi"
           orgUrl="https://kintsugi.tech/"
         />
         <SpeakerIcon
