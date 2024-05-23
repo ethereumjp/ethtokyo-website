@@ -67,7 +67,7 @@ const HackerChallenge: NextPage = () => {
         `}
       >
         <li>
-          To participate as a hacker in ETHTokoy, you must find the hidden
+          To participate as a hacker in ETHTokyo, you must find the hidden
           registration form inside an Ethereum smart contract.
         </li>
         <li>

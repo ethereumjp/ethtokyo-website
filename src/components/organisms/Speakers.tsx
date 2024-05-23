@@ -2,9 +2,14 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
+import AudreyPic from "public/images/speakers/audrey.png";
 import AyaPic from "public/images/speakers/ayamiyaguchi.png";
+import DanielPic from "public/images/speakers/danielhwang.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
+import JuliePic from "public/images/speakers/juliebettens.jpg";
+import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
+import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
@@ -109,20 +114,6 @@ const SpeakersSection = () => {
         `}
       >
         <SpeakerIcon
-          source={AyaPic}
-          name="Aya Miyaguchi"
-          link="https://twitter.com/AyaMiyagotchi/"
-          org="EF, Director"
-          orgUrl="https://ethereum.foundation/"
-        />
-        <SpeakerIcon
-          source={PeterPic}
-          name="Péter Szilágyi"
-          link="https://twitter.com/peter_szilagyi/"
-          org="EF, Geth Lead"
-          orgUrl="https://geth.ethereum.org/"
-        />
-        <SpeakerIcon
           source={VitalikPic}
           name="Vitalik Buterin"
           link="https://vitalik.eth.limo/"
@@ -130,11 +121,60 @@ const SpeakersSection = () => {
           orgUrl="https://ethereum.org/"
         />
         <SpeakerIcon
+          source={AyaPic}
+          name="Aya Miyaguchi"
+          link="https://twitter.com/AyaMiyagotchi/"
+          org="Ethereum Foundation"
+          orgUrl="https://ethereum.foundation/"
+        />
+        <SpeakerIcon
+          source={PeterPic}
+          name="Péter Szilágyi"
+          link="https://twitter.com/peter_szilagyi/"
+          org="EF, Geth lead"
+          orgUrl="https://geth.ethereum.org/"
+        />
+        {/* <SpeakerIcon
+          source={AudreyPic}
+          name="Audrey Tang"
+          link="https://twitter.com/audreyt"
+          org="Digital Minister of Taiwan"
+          orgUrl="https://moda.gov.tw/"
+        /> */}
+        <SpeakerIcon
           source={TomaszPic}
           name="Tomasz Stańczak"
           link="https://twitter.com/tkstanczak"
           org="Nethermind"
           orgUrl="https://www.nethermind.io/"
+        />
+        {/* <SpeakerIcon
+          source={JuliePic}
+          name="Julie Bettens"
+          link="https://linktr.ee/stakesaurus/"
+          org="EPFL, DEDIS Laboratory"
+          orgUrl="https://www.epfl.ch/labs/dedis/"
+        /> */}
+        <SpeakerIcon
+          source={ShogoPic}
+          name="Shogo Ochiai"
+          link="https://twitter.com/_sgtn/"
+          org="Solidity House"
+          orgUrl="https://www.solidityhouse.com/"
+        />
+        <SpeakerIcon
+          source={NiklasPic}
+          name="Niklas Kunkel"
+          link="https://clever-salsa-671.notion.site/Niklas-Kunkel-f7647e0e067f4712a85a5750ab479d64"
+          org="Chronicle Labs"
+          orgUrl="https://chroniclelabs.org/"
+        />
+        <SpeakerIcon
+          source={DanielPic}
+          name="Daniel Hwang"
+          link="https://twitter.com/danhwang88"
+          org="Kintsugi Technologies"
+          orgUrl="https://kintsugi.tech/"
         />
         <SpeakerIcon
           source={EdmundPic}
@@ -144,11 +184,11 @@ const SpeakersSection = () => {
           orgUrl="https://reality.eth.link/"
         />
         <SpeakerIcon
-          source={ShogoPic}
-          name="Shogo Ochiai"
-          link="https://twitter.com/_sgtn/"
-          org="Solidity House"
-          orgUrl="https://www.solidityhouse.com/"
+          source={PiyushPic}
+          name="Piyush Gururani"
+          link="https://www.linkedin.com/in/gururani/"
+          org="TECHFUND Inc"
+          orgUrl="https://techfund.jp/"
         />
         <SpeakerIcon
           source={SamuelPic}
