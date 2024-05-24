@@ -98,7 +98,7 @@ const SpeakersSection = () => {
             font-size: 3rem;
           }`}
       >
-        Speakers
+        Conference Speakers
       </h2>
       <div
         css={css`
@@ -115,7 +115,7 @@ const SpeakersSection = () => {
       >
         <SpeakerIcon
           source={VitalikPic}
-          name="Vitalik Buterin"
+          name="Vitalik Buterin (online)"
           link="https://vitalik.eth.limo/"
           org="Ethereum"
           orgUrl="https://ethereum.org/"
@@ -197,6 +197,20 @@ const SpeakersSection = () => {
           org="Stakesaurus"
           orgUrl="https://stakesaurus.com/"
         />
+      </div>
+      <div>
+        <p>
+          ❗
+          <a
+            css={css`:hover {color: blue};`}
+            href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
+            target="_blank"
+            rel="noreferrer"
+          >
+            We are currently accepting speaker applications
+          </a>
+          ❗
+        </p>
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ import StatementSection from "@/components/organisms/Statement";
 import SupportersSection from "@/components/organisms/Supporters";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import { zIndex } from "@/themes/settings/zindex";
 import type { PageProps } from "@/types";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";

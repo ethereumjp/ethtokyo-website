@@ -29,11 +29,9 @@ const StatementSection = () => {
       `}
       >
         <Image src={ETHDiamondLogo} alt="Ethereum diamond" />
-
         <h2 css={css`color: ${brand.Miyabi}; font-weight: 300;`}>
           Welcome and join us!
         </h2>
-
         <p css={css`text-align: justify;`}>
           ETHTokyo is a engaging hackathon for the global Ethereum community
           where people with all sorts of backgrounds, ideas, and skills come
@@ -43,23 +41,6 @@ const StatementSection = () => {
           foster the creation of amazing new innovations for the future. Join us
           and be a part of shaping what's next in the Ethereum universe!
         </p>
-
-        <div>
-          <p>
-            ❗
-            <a
-              css={css`:hover {color: blue};`}
-              href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              We are currently accepting speaker applications
-            </a>
-            ❗
-          </p>
-        </div>
-
-        {/* Apply button here */}
       </div>
     </section>
   );
