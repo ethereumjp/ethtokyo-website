@@ -43,7 +43,7 @@ const HackerChallenge: NextPage = () => {
             Sepoliaテストネット
           </a>{" "}
           にデプロイされており、アドレスは{" "}
-          <span css={css`color: ${brand.Shuiro};`}>
+          <span css={css`color: ${brand.Shuiro}; word-wrap: break-word;`}>
             0x4C80b90BeECE732C6ec4EdeE0298799d67eB48cD
           </span>
           です。
@@ -84,7 +84,7 @@ const HackerChallenge: NextPage = () => {
             Sepolia testnet
           </a>
           , at{" "}
-          <span css={css`color: ${brand.Shuiro};`}>
+          <span css={css`color: ${brand.Shuiro}; word-wrap: break-word;`}>
             0x4C80b90BeECE732C6ec4EdeE0298799d67eB48cD
           </span>
           .
