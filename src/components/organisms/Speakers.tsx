@@ -2,6 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import AudreyPic from "public/images/speakers/audrey.png";
 import AyaPic from "public/images/speakers/ayamiyaguchi.png";
 import DanielPic from "public/images/speakers/danielhwang.png";
@@ -14,8 +15,26 @@ import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
+import { ReactNode } from "react";
 
 const SpeakersSection = () => {
+  const HackathonTrackCard = (props: {
+    children: ReactNode;
+  }) => (
+    <div
+      css={css`
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: black;
+            padding: 2rem;
+            text-align: center;
+          `}
+    >
+      {props.children}
+    </div>
+  );
+
   const SpeakerIcon: React.FC<{
     source: StaticImageData;
     name: string;
@@ -98,7 +117,74 @@ const SpeakersSection = () => {
             font-size: 3rem;
           }`}
       >
-        Conference Speakers
+        Hackathon tracks
+      </h2>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          ${mq.laptop} {
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 4rem;
+          }
+        `}
+      >
+        <HackathonTrackCard>
+          <h2 css={css`color: ${brand.Miyabi};`}>Freedom of transacting</h2>
+          <p css={css`text-align: left;`}>
+            This track is for hackers who want to ensure that anyone, anywhere,
+            anytime can facilitate unrestricted transactions. We look for
+            projects that promote financial inclusion and enable people to
+            access and send tokens across borders without restrictions. If you
+            want to hack on p2p solutions, build censorship-resistant
+            applications, and ensure that transactions can be private and
+            secure, this track is for you.
+          </p>
+        </HackathonTrackCard>
+        <HackathonTrackCard>
+          <h2 css={css`color: ${brand.Miyabi};`}>Robust democracy</h2>
+          <p css={css`text-align: left;`}>
+            This track is about building platforms and tools that counter
+            disproportionate influence of centralized powers to enable informed
+            and collective decision-making, credibly neutral and transparent
+            governance, and collaboration and coordination among communities.
+            Other ideas you could hack on are quadratic funding, sybil
+            resistance, and decentralized social reputation.
+          </p>
+        </HackathonTrackCard>
+        <HackathonTrackCard>
+          <h2 css={css`color: ${brand.Miyabi};`}>Infrastructure and tooling</h2>
+          <p css={css`text-align: left;`}>
+            This track is for the architects working on the underlying
+            infrastructures on which distributed public applications can run
+            efficiently and reliably. Possible ideas include protocol
+            specification and implementations, networking, developer tools, and
+            hardware. Contributions to developer experience, such as debugging
+            tools, testing frameworks, and comprehensive documentation, are
+            highly valued.
+          </p>
+        </HackathonTrackCard>
+      </div>
+      {/* <p>
+        ℹ️{" "}
+        <Link href="/hacker-guide" css={css`:hover {color: ${brand.Shuiro};}`}>
+          Learn more about the hackathon
+        </Link>
+      </p> */}
+
+      <h2
+        css={css`
+          font-size: 2rem;
+          font-weight: 400;
+          ${mq.laptop} {
+            font-size: 3rem;
+          }`}
+      >
+        Event Speakers
       </h2>
       <div
         css={css`
@@ -202,7 +288,7 @@ const SpeakersSection = () => {
         <p>
           ❗
           <a
-            css={css`:hover {color: blue};`}
+            css={css`:hover {color: ${brand.Shuiro}};`}
             href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
             target="_blank"
             rel="noreferrer"
