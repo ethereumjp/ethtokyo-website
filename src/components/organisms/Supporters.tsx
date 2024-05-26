@@ -1,5 +1,5 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, info, neutral } from "@/themes/settings/color";
+import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
 import seikaiha from "public/images/seikaiha.png";
@@ -199,15 +199,7 @@ const SupportersSection = () => {
             link="https://zelojapan.com/"
           />
         </PartnerCategory>
-        <p
-          css={css`
-          font-size: 0.75rem;
-          margin-top: 2rem;
-          ${mq.laptop} {
-            font-size: 1rem;
-          }
-        `}
-        >
+        <p>
           <a
             css={css`
             color: blue;

@@ -12,10 +12,6 @@ export const globalStyles = css({
   h1: {
     fontWeight: 500,
     letterSpacing: "0.07rem",
-
-    [mq.laptop]: {
-      fontSize: "1.5rem",
-    },
   },
 
   h2: {
@@ -36,6 +32,10 @@ export const globalStyles = css({
 
     [mq.laptop]: {
       fontSize: "1.25rem",
+    },
+
+    [mq.desktop]: {
+      fontSize: "1.5rem",
     },
   },
 
