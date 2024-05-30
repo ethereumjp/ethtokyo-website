@@ -2,6 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { StaticImageData } from "next/image";
+import MoongateLogo from "public/images/logo/MoongateLogo.png";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
@@ -207,6 +208,12 @@ const SupportersSection = () => {
             source={BunzzLogo}
             text="Bunzz"
             link="https://www.bunzz.dev/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={MoongateLogo}
+            text="Moongate"
+            link="https://www.moongate.id/"
             tier="partner"
           />
           <SupporterLogo
