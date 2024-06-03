@@ -141,24 +141,24 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           margin: 0 auto;
           width: fit-content;
 
-          ${mq.tablet} {
-            margin: 2rem auto;
-          }
-
           ${mq.laptop} {
             flex-direction: row;
-            margin: 4rem auto;
           }
 
           & > *:not(:last-child) {
             margin-bottom: 2rem;
-            ${mq.tablet} {
+            ${mq.laptop} {
               margin-bottom: 0;
               margin-right: 2rem;
             }
           }
         `}
       >
+        <LinkedButton
+          href="https://app.moongate.id/e/eth-tokyo-2024"
+          text="Volunteer pass"
+          color="green"
+        />
         <LinkedButton
           href="/apply"
           text="Hackathon registration"
@@ -168,11 +168,6 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           href="https://app.moongate.id/e/eth-tokyo-2024"
           text="Conference tickets"
           color="brown"
-        />{" "}
-        <LinkedButton
-          href="https://app.moongate.id/e/eth-tokyo-2024"
-          text="Volunteer pass"
-          color="green"
         />
       </div>
     </div>

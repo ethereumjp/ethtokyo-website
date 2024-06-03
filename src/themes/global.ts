@@ -5,8 +5,9 @@ import {} from "./settings/spaces";
 
 export const globalStyles = css({
   "html, body": {
-    margin: "0",
     color: neutral.White,
+    margin: "0",
+    padding: "0",
   },
 
   h1: {

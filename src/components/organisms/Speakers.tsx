@@ -105,8 +105,12 @@ const SpeakersSection = () => {
       id="speakers"
       css={css`
         background-color: ${brand.Miyabi};
-        padding: 2rem 2rem;
+        padding: 1rem;
         text-align: center;
+
+        ${mq.laptop}{
+          padding: 1rem 2rem;
+        }
       `}
     >
       <h2
@@ -129,7 +133,6 @@ const SpeakersSection = () => {
             align-items: stretch;
             flex-direction: row;
             justify-content: space-around;
-            margin: 0 4rem;
           }
         `}
       >
