@@ -193,12 +193,6 @@ const SupportersSection = () => {
             link="https://scroll.io/"
             tier="platinum"
           />
-          <SupporterLogo
-            source={ESPLogo}
-            text="ESP"
-            link="https://esp.ethereum.foundation/"
-            tier="gold"
-          />
         </SponsorTier>
         <div css={css`padding: 1rem 0;`} />
         <h3
@@ -228,6 +222,12 @@ const SupportersSection = () => {
             source={EFLogo}
             text="Ethereum Foundation"
             link="https://ethereum.foundation/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={ESPLogo}
+            text="ESP"
+            link="https://esp.ethereum.foundation/"
             tier="partner"
           />
           <SupporterLogo
