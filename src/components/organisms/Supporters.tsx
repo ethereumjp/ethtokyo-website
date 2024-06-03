@@ -15,8 +15,10 @@ import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
+import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
+import TechfundLogo from "public/logo/TechfundLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
 const SupportersSection = () => {
@@ -27,28 +29,59 @@ const SupportersSection = () => {
     tier: "platinum" | "gold" | "silver" | "bronze" | "partner";
   }> = ({ source, text, link, tier }) => {
     const sizes = {
-      platinum: 172,
-      gold: 156,
-      silver: 144,
-      bronze: 132,
-      partner: 120,
+      mobile: {
+        platinum: "66.666666%",
+        gold: "35%",
+        silver: "25%",
+        bronze: "20%",
+        partner: "20%",
+      },
+      tablet: {
+        platinum: "30%",
+        gold: "25%",
+        silver: "20%",
+        bronze: "16.666666%",
+        partner: "16.666666%",
+      },
+      laptop: {
+        platinum: "25%",
+        gold: "16.666666%",
+        silver: "12.5%",
+        bronze: "12.5%",
+        partner: "10%",
+      },
     };
-    return (
-      <a href={link} target="_blank" rel="noreferrer">
-        <Image
-          src={source}
-          alt={text}
-          css={css`
-            height: auto;
-            width: ${sizes[tier]}px;
 
-            ${mq.laptop}{
-              max-height: ${sizes[tier]}px;
-              width: ${sizes[tier] * 2}px;
-            }
-          `}
-        />
-      </a>
+    const padding = {
+      platinum: "2rem",
+      gold: "1.5rem",
+      silver: "1rem",
+      bronze: "1rem",
+      partner: "1rem",
+    };
+
+    return (
+      <div
+        css={css`
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          padding: ${padding[tier]};
+          width: ${sizes.mobile[tier]};
+
+          ${mq.tablet}{
+            width: ${sizes.tablet[tier]};
+          }
+
+          ${mq.laptop}{
+            width: ${sizes.laptop[tier]};
+          }
+      `}
+      >
+        <a href={link} target="_blank" rel="noreferrer">
+          <Image src={source} alt={text} layout="responsive" />
+        </a>
+      </div>
     );
   };
 
@@ -61,7 +94,9 @@ const SupportersSection = () => {
           padding: 1rem 0.5rem;
 
           ${mq.laptop}{
+            margin: 0 auto;
             padding: 2rem 1rem;
+            width: 75%;
           }
         `}
       >
@@ -70,12 +105,7 @@ const SupportersSection = () => {
             align-items: center;
             display: flex;
             flex-flow: row wrap;
-            gap: 2rem;
             justify-content: center;
-
-            ${mq.laptop} {
-              gap: 4rem;
-            }
           `}
         >
           {children}
@@ -89,22 +119,28 @@ const SupportersSection = () => {
     children: React.ReactNode;
   }> = ({ category, children }) => (
     <div>
-      <h2 css={css`color: black; font-weight:400;`}>{category}</h2>
       <div
         css={css`
-          align-items: center;
+          padding: 1rem 0.5rem;
 
-          display: flex;
-          flex-flow: row wrap;
-          gap: 2rem;
-          justify-content: center;
-
-          ${mq.laptop} {
-            gap: 4rem;
+          ${mq.laptop}{
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            width: 75%;
           }
         `}
       >
-        {children}
+        <h2 css={css`color: black; font-weight:400;`}>{category}</h2>
+        <div
+          css={css`
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+        `}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -114,22 +150,30 @@ const SupportersSection = () => {
       id="Supporters"
       css={css`
         background-color: ${neutral.Grey1};
-        padding: 2rem;
         text-align: center;
       `}
     >
       <section id="sponsors">
         <h2
           css={css`
-          color: black;
-          font-size: 2rem;
-          font-weight: 500;
-          ${mq.laptop} {
-            font-size: 3rem;
-          }`}
+            color: black;
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0;
+            padding: 2rem 0;
+
+            ${mq.laptop} {
+              font-size: 3rem;
+            }
+          `}
         >
-          Sponsored by
+          Our supporters
         </h2>
+        <h3
+          css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
+        >
+          Platinum Sponsor
+        </h3>
         <SponsorTier>
           <SupporterLogo
             source={GMOLogo}
@@ -143,8 +187,12 @@ const SupportersSection = () => {
             link="https://cbnt.co.jp/"
             tier="platinum"
           />
-        </SponsorTier>
-        <SponsorTier>
+          <SupporterLogo
+            source={ScrollLogo}
+            text="Scroll"
+            link="https://scroll.io/"
+            tier="platinum"
+          />
           <SupporterLogo
             source={ESPLogo}
             text="ESP"
@@ -152,10 +200,24 @@ const SupportersSection = () => {
             tier="gold"
           />
         </SponsorTier>
+        <div css={css`padding: 1rem 0;`} />
+        <h3
+          css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
+        >
+          Gold Sponsor
+        </h3>
+        <SponsorTier>
+          <SupporterLogo
+            source={TechfundLogo}
+            text="TechFund"
+            link="https://esp.ethereum.foundation/"
+            tier="partner" // 縦長ロゴなのでサイズ調整ハック
+          />
+        </SponsorTier>
       </section>
       <div css={css`padding: 2rem 0;`} />
       <section id="partners">
-        <PartnerCategory category="Supporters">
+        <PartnerCategory category="Event Partners">
           <SupporterLogo
             source={ShibuyaLogo}
             text="Shibuya City"
@@ -254,7 +316,7 @@ const SupportersSection = () => {
               max-width: 128px;
 
               ${mq.laptop} {
-                max-width: 256px;
+                max-width: 160px;
               }
             `}
           />
