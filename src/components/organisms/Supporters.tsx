@@ -13,7 +13,7 @@ import ESPLogo from "public/logo/ESPLogo.svg";
 import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
-import GMOLogo from "public/logo/GMOLogo.svg";
+import GMOLogo from "public/logo/GMOLogo.png";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
@@ -48,7 +48,7 @@ const SupportersSection = () => {
         gold: "16.666666%",
         silver: "12.5%",
         bronze: "12.5%",
-        partner: "10%",
+        partner: "12.5%",
       },
     };
 
