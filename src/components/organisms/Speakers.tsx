@@ -232,7 +232,7 @@ const SpeakersSection = () => {
           name="Özgür Armanc Yiğit"
           link="https://www.linkedin.com/in/oay/"
           org="EF, PSE"
-          orgUrl="https://www.nethermind.io/"
+          orgUrl="https://pse.dev/"
         />
         <SpeakerIcon
           source={TomaszPic}
