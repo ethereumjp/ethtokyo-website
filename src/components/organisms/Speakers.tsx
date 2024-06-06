@@ -9,6 +9,7 @@ import DanielPic from "public/images/speakers/danielhwang.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
 import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
+import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
@@ -55,13 +56,9 @@ const SpeakersSection = () => {
           css={css`
             border-radius: 50%;
             height: auto;
-            outline: 2px solid white;
-            outline-offset: -2px;
             width: 96px;
 
             ${mq.laptop}{
-              outline: 4px solid white;
-              outline-offset: -4px;
               width: 192px;
             }
           `}
@@ -204,16 +201,23 @@ const SpeakersSection = () => {
       >
         <SpeakerIcon
           source={VitalikPic}
-          name="Vitalik Buterin (online)"
+          name="Vitalik Buterin"
           link="https://vitalik.eth.limo/"
           org="Ethereum"
           orgUrl="https://ethereum.org/"
         />
         <SpeakerIcon
+          source={AudreyPic}
+          name="Audrey Tang"
+          link="https://twitter.com/audreyt"
+          org="數位 Plurality"
+          orgUrl="https://www.plurality.net/"
+        />
+        <SpeakerIcon
           source={AyaPic}
           name="Aya Miyaguchi"
           link="https://twitter.com/AyaMiyagotchi/"
-          org="Ethereum Foundation"
+          org="EF, Director"
           orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
@@ -223,13 +227,13 @@ const SpeakersSection = () => {
           org="EF, Geth lead"
           orgUrl="https://geth.ethereum.org/"
         />
-        {/* <SpeakerIcon
-          source={AudreyPic}
-          name="Audrey Tang"
-          link="https://twitter.com/audreyt"
-          org="Digital Minister of Taiwan"
-          orgUrl="https://moda.gov.tw/"
-        /> */}
+        <SpeakerIcon
+          source={OzgurPic}
+          name="Özgür Armanc Yiğit"
+          link="https://www.linkedin.com/in/oay/"
+          org="EF, PSE"
+          orgUrl="https://www.nethermind.io/"
+        />
         <SpeakerIcon
           source={TomaszPic}
           name="Tomasz Stańczak"
