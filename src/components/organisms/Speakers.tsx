@@ -55,13 +55,9 @@ const SpeakersSection = () => {
           css={css`
             border-radius: 50%;
             height: auto;
-            outline: 2px solid white;
-            outline-offset: -2px;
             width: 96px;
 
             ${mq.laptop}{
-              outline: 4px solid white;
-              outline-offset: -4px;
               width: 192px;
             }
           `}
@@ -204,16 +200,23 @@ const SpeakersSection = () => {
       >
         <SpeakerIcon
           source={VitalikPic}
-          name="Vitalik Buterin (online)"
+          name="Vitalik Buterin"
           link="https://vitalik.eth.limo/"
           org="Ethereum"
           orgUrl="https://ethereum.org/"
         />
         <SpeakerIcon
+          source={AudreyPic}
+          name="Audrey Tang"
+          link="https://twitter.com/audreyt"
+          org="數位 Plurality"
+          orgUrl="https://www.plurality.net/"
+        />
+        <SpeakerIcon
           source={AyaPic}
           name="Aya Miyaguchi"
           link="https://twitter.com/AyaMiyagotchi/"
-          org="Ethereum Foundation"
+          org="EF, Director"
           orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
@@ -223,13 +226,6 @@ const SpeakersSection = () => {
           org="EF, Geth lead"
           orgUrl="https://geth.ethereum.org/"
         />
-        {/* <SpeakerIcon
-          source={AudreyPic}
-          name="Audrey Tang"
-          link="https://twitter.com/audreyt"
-          org="Digital Minister of Taiwan"
-          orgUrl="https://moda.gov.tw/"
-        /> */}
         <SpeakerIcon
           source={TomaszPic}
           name="Tomasz Stańczak"

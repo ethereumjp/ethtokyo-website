@@ -15,6 +15,7 @@ import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
+import PluralityLogo from "public/logo/PluralityLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TangemLogo from "public/logo/TangemLogo.svg";
@@ -189,6 +190,12 @@ const SupportersSection = () => {
           />
           <SupporterLogo
             source={ScrollLogo}
+            text="Scroll"
+            link="https://scroll.io/"
+            tier="platinum"
+          />
+          <SupporterLogo
+            source={PluralityLogo}
             text="Scroll"
             link="https://scroll.io/"
             tier="platinum"
