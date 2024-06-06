@@ -9,6 +9,7 @@ import DanielPic from "public/images/speakers/danielhwang.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
 import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
+import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
@@ -225,6 +226,13 @@ const SpeakersSection = () => {
           link="https://twitter.com/peter_szilagyi/"
           org="EF, Geth lead"
           orgUrl="https://geth.ethereum.org/"
+        />
+        <SpeakerIcon
+          source={OzgurPic}
+          name="Özgür Armanc Yiğit"
+          link="https://www.linkedin.com/in/oay/"
+          org="EF, PSE"
+          orgUrl="https://www.nethermind.io/"
         />
         <SpeakerIcon
           source={TomaszPic}
