@@ -7,6 +7,7 @@ import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
+import DeFormLogo from "public/logo/DeFormLogo.png";
 import EFLogo from "public/logo/EFLogo.png";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ESPLogo from "public/logo/ESPLogo.svg";
@@ -270,6 +271,12 @@ const SupportersSection = () => {
             source={BunzzLogo}
             text="Bunzz"
             link="https://www.bunzz.dev/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={DeFormLogo}
+            text="DeForm"
+            link="https://www.deform.cc/"
             tier="partner"
           />
           <SupporterLogo
