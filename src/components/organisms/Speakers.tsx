@@ -68,9 +68,9 @@ const SpeakersSection = () => {
             width: 96px;
 
             ${mq.laptop}{
-              width: 192px;
+              width: 144px;
             }
-          `} // width: 144px;
+          `}
         />
         <p
           css={css`
@@ -135,11 +135,18 @@ const SpeakersSection = () => {
           display: flex;
           flex-direction: column;
           gap: 2rem;
+          margin: 0 auto;
+          width: 80%;
+
+          ${mq.tablet}{
+            width: 66%;
+          }
 
           ${mq.laptop} {
             align-items: stretch;
             flex-direction: row;
             justify-content: space-around;
+            width: 100%;
           }
         `}
         >
@@ -181,7 +188,7 @@ const SpeakersSection = () => {
             </p>
           </HackathonTrackCard>
         </div>
-        <div css={css`padding: 0 0 2rem;`}>
+        <div>
           <p css={css`font-size: 1.2rem;`}>
             ✋
             <a
@@ -193,9 +200,10 @@ const SpeakersSection = () => {
             </a>
           </p>
         </div>
+        {/* <br />
         <div>
           <Link
-            href="/hacker-guide"
+            href="https://www.notion.so/ETHTokyo-Hacker-Guide-0b6683568f4b4b00a1f02a2da7b4a4c9?pvs=4"
             css={css`
               border: solid 1px;
               border-radius: 8px;
@@ -214,7 +222,7 @@ const SpeakersSection = () => {
           >
             💡 Learn more about the hackathon
           </Link>
-        </div>
+        </div> */}
       </div>
       <h2
         css={css`
