@@ -185,7 +185,6 @@ const SpeakersSection = () => {
           <p css={css`font-size: 1.2rem;`}>
             ✋
             <a
-              css={css`:hover {color: ${info.Attention}};`}
               href="https://forms.gle/nv1DFjb9GBXKZmAf9"
               target="_blank"
               rel="noreferrer"
@@ -201,11 +200,15 @@ const SpeakersSection = () => {
               border: solid 1px;
               border-radius: 8px;
               cursor: pointer;
-              font-size: 1.5rem;
               padding: 1rem;
               text-decoration: none;
               &:hover {
                 background-color: ${brand.Shuiro};
+                color: white;
+              }
+
+              ${mq.laptop} {
+                font-size: 1.5rem;
               }
             `}
           >

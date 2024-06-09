@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import { globalStyles } from "@/themes/global";
+import { brand } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
 import { Global, css } from "@emotion/react";
 import { Inter } from "next/font/google";
@@ -75,8 +76,10 @@ const fontInter = Inter({
 
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'24";
-
   const baseLayoutStyle = css``;
+  const mainLayoutStyle = css`
+    background-color: ${brand.Miyabi};
+  `;
 
   return (
     <>
@@ -87,7 +90,7 @@ const Layout: FC<PageProps> = ({ pageTitle, children }) => {
       </Head>
 
       <div className={fontInter.className} css={baseLayoutStyle}>
-        <main>{children}</main>
+        <main css={mainLayoutStyle}>{children}</main>
         <Footer />
       </div>
     </>

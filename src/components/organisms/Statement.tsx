@@ -32,7 +32,7 @@ const StatementSection = () => {
         <h2 css={css`color: ${brand.Miyabi}; font-weight: 300;`}>
           Welcome and join us!
         </h2>
-        <p css={css`text-align: justify;`}>
+        <p css={css`text-align: justify; ${mq.laptop}{font-size: 1.25rem;}`}>
           ETHTokyo is a engaging hackathon for the global Ethereum community
           where people with all sorts of backgrounds, ideas, and skills come
           together to share their love for Ethereum and its world. Whether
