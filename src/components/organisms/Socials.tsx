@@ -1,3 +1,4 @@
+import { info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import { GoGlobe } from "react-icons/go";
 import { SocialIcon } from "react-social-icons";
@@ -21,27 +22,30 @@ export const Socials = () => {
         <GoGlobe size={36} css={css`margin: 12.5px;`} />
       </a>
       <SocialIcon
+        css={css`:hover {fill: ${info.Attention};}`}
         url="https://x.com/Ethereum_JP"
         bgColor="transparent"
-        fgColor="white"
+        fgColor="currentColor"
         label="Twitter/X"
         target="_blank"
         rel="noreferrer"
         style={{ height: 72, width: 72 }}
       />
       <SocialIcon
+        css={css`:hover {fill: ${info.Attention};}`}
         url="https://discord.gg/Tm5jU3DSCE"
         bgColor="transparent"
-        fgColor="white"
+        fgColor="currentColor"
         label="Discord"
         target="_blank"
         rel="noreferrer"
         style={{ height: 72, width: 72 }}
       />
       <SocialIcon
+        css={css`:hover {fill: ${info.Attention};}`}
         url="https://github.com/ethereumjp"
         bgColor="transparent"
-        fgColor="white"
+        fgColor="currentColor"
         label="Github"
         target="_blank"
         rel="noreferrer"

@@ -101,7 +101,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           border-radius: 12px;
           color: ${neutral.White};
           cursor: pointer;
-          font-size: 2rem;
+          font-size: 1.5rem;
           margin: 0;
           padding: 0.5rem 1rem;
 
@@ -109,7 +109,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           transition: background-color 0.3s ease;
 
           ${mq.tablet}{
-            font-size: 3rem;
+            font-size: 2rem;
             padding: 1rem 2rem;
           }
 
@@ -146,7 +146,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           }
 
           & > *:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             ${mq.laptop} {
               margin-bottom: 0;
               margin-right: 2rem;

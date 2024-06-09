@@ -195,7 +195,6 @@ const SupportersSection = () => {
             tier="platinum"
           />
         </SponsorTier>
-        <div css={css`padding: 1rem 0;`} />
         <h3
           css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
         >
@@ -210,7 +209,6 @@ const SupportersSection = () => {
           />
         </SponsorTier>
       </section>
-      <div css={css`padding: 2rem 0;`} />
       <section id="partners">
         <PartnerCategory category="Event Partners">
           <SupporterLogo
@@ -313,7 +311,6 @@ const SupportersSection = () => {
             Looking to sponsor or support us?
           </a>
         </p>
-        <div css={css`padding: 1rem 0;`} />
         <PartnerCategory category="">
           <Image
             src={EJLogoFace}
@@ -328,7 +325,6 @@ const SupportersSection = () => {
             `}
           />
         </PartnerCategory>
-        <div css={css`padding: 1rem 0;`} />
       </section>
     </section>
   );

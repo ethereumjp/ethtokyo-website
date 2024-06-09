@@ -29,7 +29,7 @@ export const info = {
   SuccessLight: "#DDF4E4", // success background
   Error: "#B80000", // error message, error border
   ErrorLight: "#F7C8C8", // error background
-  Attention: "#B8FAF6", // notifications, announcement border
+  Attention: "#00e7e7", // notifications, announcement border
   AttentionLight: "#FFF8DF", // notifications background,  announcement background
 } as const;
 

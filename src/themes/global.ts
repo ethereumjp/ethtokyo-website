@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { mq } from "./settings/breakpoints";
-import { brand, neutral } from "./settings/color";
+import { info, neutral } from "./settings/color";
 import {} from "./settings/spaces";
 
 export const globalStyles = css({
@@ -30,17 +30,9 @@ export const globalStyles = css({
     fontWeight: 300,
     lineHeight: 2,
     letterSpacing: "0.07rem",
-
-    [mq.laptop]: {
-      fontSize: "1.25rem",
-    },
-
-    [mq.desktop]: {
-      fontSize: "1.5rem",
-    },
   },
 
-  a: { color: neutral.White },
+  a: { color: neutral.White, "&:hover": { color: info.Attention } },
 
-  "*": {},
+  li: { margin: "12px 0;" },
 });
