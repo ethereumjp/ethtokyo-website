@@ -15,6 +15,7 @@ import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
+import IntmaxLogo from "public/logo/IntmaxLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
@@ -27,29 +28,32 @@ const SupportersSection = () => {
     source: StaticImageData;
     link: string;
     text: string;
-    tier: "platinum" | "gold" | "silver" | "bronze" | "partner";
+    tier: "platinum" | "gold" | "silver" | "bronze" | "partner" | "techfund";
   }> = ({ source, text, link, tier }) => {
     const sizes = {
       mobile: {
-        platinum: "66.666666%",
-        gold: "35%",
-        silver: "25%",
-        bronze: "20%",
-        partner: "20%",
+        platinum: 66.666666,
+        gold: 35,
+        silver: 25,
+        bronze: 20,
+        partner: 20,
+        techfund: 15,
       },
       tablet: {
-        platinum: "30%",
-        gold: "25%",
-        silver: "20%",
-        bronze: "16.666666%",
-        partner: "16.666666%",
+        platinum: 30,
+        gold: 25,
+        silver: 20,
+        bronze: 16.666666,
+        partner: 16.666666,
+        techfund: 10,
       },
       laptop: {
-        platinum: "25%",
-        gold: "16.666666%",
-        silver: "12.5%",
-        bronze: "12.5%",
-        partner: "12.5%",
+        platinum: 25,
+        gold: 16.666666,
+        silver: 12.5,
+        bronze: 12.5,
+        partner: 12.5,
+        techfund: 8,
       },
     };
 
@@ -59,6 +63,7 @@ const SupportersSection = () => {
       silver: "1rem",
       bronze: "1rem",
       partner: "1rem",
+      techfund: "1rem",
     };
 
     return (
@@ -67,20 +72,26 @@ const SupportersSection = () => {
           align-items: center;
           display: flex;
           justify-content: center;
+
           padding: ${padding[tier]};
-          width: ${sizes.mobile[tier]};
+          width: ${sizes.mobile[tier]}%;
 
-          ${mq.tablet}{
-            width: ${sizes.tablet[tier]};
+          ${mq.tablet} {
+            width: ${sizes.tablet[tier]}%;
           }
 
-          ${mq.laptop}{
-            width: ${sizes.laptop[tier]};
+          ${mq.laptop} {
+            width: ${sizes.laptop[tier]}%;
           }
-      `}
+        `}
       >
         <a href={link} target="_blank" rel="noreferrer">
-          <Image src={source} alt={text} layout="responsive" />
+          <Image
+            src={source}
+            alt={text}
+            layout="responsive"
+            css={css`object-fit: contain;`}
+          />
         </a>
       </div>
     );
@@ -173,7 +184,7 @@ const SupportersSection = () => {
         <h3
           css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
         >
-          Platinum Sponsor
+          Platinum Sponsors
         </h3>
         <SponsorTier>
           <SupporterLogo
@@ -198,14 +209,20 @@ const SupportersSection = () => {
         <h3
           css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
         >
-          Gold Sponsor
+          Gold Sponsors
         </h3>
         <SponsorTier>
+          <SupporterLogo
+            source={IntmaxLogo}
+            text="Intmax"
+            link="https://www.intmax.io/"
+            tier="gold"
+          />
           <SupporterLogo
             source={TechfundLogo}
             text="TechFund"
             link="https://esp.ethereum.foundation/"
-            tier="partner" // 縦長ロゴなのでサイズ調整ハック
+            tier="techfund"
           />
         </SponsorTier>
       </section>
