@@ -222,7 +222,7 @@ const SupportersSection = () => {
           <SupporterLogo
             source={TechfundLogo}
             text="TechFund"
-            link="https://esp.ethereum.foundation/"
+            link="https://techfund.jp/"
             tier="techfund"
           />
           <SupporterLogo
