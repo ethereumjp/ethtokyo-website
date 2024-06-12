@@ -16,6 +16,7 @@ import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
 import IntmaxLogo from "public/logo/IntmaxLogo.svg";
+import MercoinLogo from "public/logo/MercoinLogo.png";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
@@ -213,9 +214,9 @@ const SupportersSection = () => {
         </h3>
         <SponsorTier>
           <SupporterLogo
-            source={IntmaxLogo}
-            text="Intmax"
-            link="https://www.intmax.io/"
+            source={MercoinLogo}
+            text="Mercoin"
+            link="https://about.mercoin.com/"
             tier="gold"
           />
           <SupporterLogo
@@ -224,16 +225,16 @@ const SupportersSection = () => {
             link="https://esp.ethereum.foundation/"
             tier="techfund"
           />
+          <SupporterLogo
+            source={IntmaxLogo}
+            text="Intmax"
+            link="https://www.intmax.io/"
+            tier="gold"
+          />
         </SponsorTier>
       </section>
       <section id="partners">
         <PartnerCategory category="Event Partners">
-          <SupporterLogo
-            source={ShibuyaLogo}
-            text="Shibuya City"
-            link="https://www.city.shibuya.tokyo.jp/"
-            tier="partner"
-          />
           <SupporterLogo
             source={EFLogo}
             text="Ethereum Foundation"
@@ -271,15 +272,15 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
-            source={AkindoLogo}
-            text="Akindo"
-            link="https://akindo.io/"
-            tier="partner"
-          />
-          <SupporterLogo
             source={CentrumLogo}
             text="Centrum"
             link="https://centrum.studio/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={AkindoLogo}
+            text="Akindo"
+            link="https://akindo.io/"
             tier="partner"
           />
           <SupporterLogo
@@ -310,6 +311,12 @@ const SupportersSection = () => {
             source={ZeloLogo}
             text="Zelo"
             link="https://zelojapan.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={ShibuyaLogo}
+            text="Shibuya City"
+            link="https://www.city.shibuya.tokyo.jp/"
             tier="partner"
           />
         </PartnerCategory>
