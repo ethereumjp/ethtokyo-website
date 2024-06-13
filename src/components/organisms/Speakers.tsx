@@ -356,7 +356,7 @@ const SpeakersSection = () => {
         <SpeakerIcon
           source={NiklasPic}
           name="Niklas Kunkel"
-          link="https://clever-salsa-671.notion.site/Niklas-Kunkel-f7647e0e067f4712a85a5750ab479d64"
+          link="https://twitter.com/nomos_paradox"
           org="Chronicle Labs"
           orgUrl="https://chroniclelabs.org/"
         />
