@@ -20,7 +20,6 @@ import MercoinLogo from "public/logo/MercoinLogo.png";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
-import TangemLogo from "public/logo/TangemLogo.svg";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
@@ -299,12 +298,6 @@ const SupportersSection = () => {
             source={MoongateLogo}
             text="Moongate"
             link="https://www.moongate.id/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={TangemLogo}
-            text="Tangem"
-            link="https://tangem.com/"
             tier="partner"
           />
           <SupporterLogo
