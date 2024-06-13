@@ -1,7 +1,7 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";

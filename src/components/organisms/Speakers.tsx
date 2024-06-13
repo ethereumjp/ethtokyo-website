@@ -1,8 +1,7 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import Image, { type StaticImageData } from "next/image";
 import AggrePic from "public/images/speakers/aggre.jpg";
 import AudreyPic from "public/images/speakers/audrey.png";
 import AyaPic from "public/images/speakers/ayamiyaguchi.png";
@@ -12,7 +11,6 @@ import EdmundPic from "public/images/speakers/edmundedgar.jpg";
 import FrancescoPic from "public/images/speakers/francescoandreoli.jpg";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
 import MeinaPic from "public/images/speakers/meinazhou.jpg";
-import MichelePic from "public/images/speakers/micheledaliessi.png";
 import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
 import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
@@ -25,7 +23,7 @@ import ShogoPic from "public/images/speakers/shogoochiai.jpg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import VarunPic from "public/images/speakers/varundoshi.jpg";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const SpeakersSection = () => {
   const HackathonTrackCard = (props: {
@@ -300,7 +298,7 @@ const SpeakersSection = () => {
         <SpeakerIcon
           source={JuliePic}
           name="Julie Bettens"
-          link="https://linktr.ee/stakesaurus/"
+          link="https://blog.bbjubjub.fr/about-me/"
           org="EPFL, DEDIS Lab"
           orgUrl="https://www.epfl.ch/labs/dedis/"
         />
@@ -324,13 +322,6 @@ const SpeakersSection = () => {
           link="https://twitter.com/_sgtn/"
           org="Solidity House"
           orgUrl="https://www.solidityhouse.com/"
-        />
-        <SpeakerIcon
-          source={MichelePic}
-          name="Michele D'Aliessi"
-          link="https://twitter.com/micheleDaliessi"
-          org="Superfluid"
-          orgUrl="https://www.superfluid.finance/"
         />
         {/* <SpeakerIcon
           source={RanPic}
