@@ -2,7 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import { FC } from "react";
+import type { FC } from "react";
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`

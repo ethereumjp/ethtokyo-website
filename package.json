@@ -20,7 +20,7 @@
     "build-static": "next build && next export",
     "start": "serve out",
     "lint": "yarn run biome lint ./src",
-    "lint:fix": "yarn run biome lint ./src --apply",
+    "lint:fix": "yarn run biome lint ./src --write",
     "lint:fix:css": "stylelint --fix \"**/*.{js,jsx,ts,tsx}\"",
     "format": "yarn run biome format ./src --write",
     "check": "yarn run biome check ./src",

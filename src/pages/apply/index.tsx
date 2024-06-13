@@ -1,6 +1,6 @@
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
-import { type NextPage } from "next";
+import type { NextPage } from "next";
 import Link from "next/link";
 
 const HackerChallenge: NextPage = () => {

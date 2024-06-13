@@ -9,7 +9,7 @@ import { brand, neutral, themeLight } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import topHero from "public/images/hero_top.jpg";

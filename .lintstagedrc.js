@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("node:path");
 
 const buildLintCommand = (filenames) =>
   `npx yarn run biome lint --no-errors-on-unmatched ${filenames
