@@ -296,7 +296,7 @@ const SpeakersSection = () => {
           link="https://www.francesco-andreoli.com/"
           org="MetaMask"
           orgUrl="https://metamask.io/"
-        />
+        /> */}
         <SpeakerIcon
           source={JuliePic}
           name="Julie Bettens"
@@ -304,7 +304,7 @@ const SpeakersSection = () => {
           org="EPFL, DEDIS Lab"
           orgUrl="https://www.epfl.ch/labs/dedis/"
         />
-        <SpeakerIcon
+        {/* <SpeakerIcon
           source={DavidPic}
           name="David cao"
           link="https://twitter.com/davidfucius"
@@ -325,20 +325,20 @@ const SpeakersSection = () => {
           org="Solidity House"
           orgUrl="https://www.solidityhouse.com/"
         />
-        {/* <SpeakerIcon
+        <SpeakerIcon
           source={MichelePic}
           name="Michele D'Aliessi"
           link="https://twitter.com/micheleDaliessi"
           org="Superfluid"
           orgUrl="https://www.superfluid.finance/"
         />
-        <SpeakerIcon
+        {/* <SpeakerIcon
           source={RanPic}
           name="Ran Yi"
           link="https://www.linkedin.com/in/ran-yi-b722696/"
           org="Orderly Network"
           orgUrl="https://orderly.network/"
-        />
+        /> */}
         <SpeakerIcon
           source={AggrePic}
           name="Aggre"
@@ -352,7 +352,7 @@ const SpeakersSection = () => {
           link="https://x.com/Varunx10"
           org="Chainrisk"
           orgUrl="https://www.chainrisk.cloud/"
-        /> */}
+        />
         <SpeakerIcon
           source={NiklasPic}
           name="Niklas Kunkel"
@@ -366,7 +366,7 @@ const SpeakersSection = () => {
           link="https://x.com/CryptoMeina"
           org="Native"
           orgUrl="https://native.org/"
-        />
+        /> */}
         <SpeakerIcon
           source={RohitPic}
           name="Rohit Ramesh"
@@ -380,7 +380,7 @@ const SpeakersSection = () => {
           link="https://x.com/ryoheikomy"
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
-        /> */}
+        />
         <SpeakerIcon
           source={DanielPic}
           name="Daniel Hwang"
