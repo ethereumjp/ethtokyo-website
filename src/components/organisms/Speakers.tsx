@@ -367,7 +367,7 @@ const SpeakersSection = () => {
         />
         <SpeakerIcon
           source={RyoheiPic}
-          name="Ryohei Komiyama"
+          name="Ryo Komiyama"
           link="https://x.com/ryoheikomy"
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
