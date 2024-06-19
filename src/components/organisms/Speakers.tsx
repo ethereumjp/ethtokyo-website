@@ -3,26 +3,36 @@ import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
 import AggrePic from "public/images/speakers/aggre.jpg";
+import AllenPic from "public/images/speakers/allenjoseph.jpg";
 import AudreyPic from "public/images/speakers/audrey.png";
 import AyaPic from "public/images/speakers/ayamiyaguchi.png";
+import ChuazhengPic from "public/images/speakers/chuazhenglong.jpeg";
 import DanielPic from "public/images/speakers/danielhwang.png";
 import DavidPic from "public/images/speakers/davidcao.jpeg";
+import DeliPic from "public/images/speakers/deligong.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
 import FrancescoPic from "public/images/speakers/francescoandreoli.jpg";
+import JoshPic from "public/images/speakers/joshguha.png";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
 import MeinaPic from "public/images/speakers/meinazhou.jpg";
+import MelisaPic from "public/images/speakers/melisakurtcan.jpg";
 import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
 import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
+import QinenPic from "public/images/speakers/qinenlooi.jpg";
+import QiPic from "public/images/speakers/qizhou.png";
 import RanPic from "public/images/speakers/ranyi.jpeg";
 import RohitPic from "public/images/speakers/rohitramesh.jpg";
 import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
+import JackPic from "public/images/speakers/siyujia.jpeg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import VarunPic from "public/images/speakers/varundoshi.jpg";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
+import YukiPic from "public/images/speakers/yukiyuminaga.jpeg";
+import YuroitakiPic from "public/images/speakers/yuroitaki.jpeg";
 import type { ReactNode } from "react";
 
 const SpeakersSection = () => {
@@ -55,7 +65,7 @@ const SpeakersSection = () => {
         href={link}
         target="_blank"
         rel="noreferrer"
-        css={css`text-decoration: none; :hover{text-decoration: underline;};`}
+        css={css`text-decoration: none; :hover{color: ${brand.Shuiro};};`}
       >
         <Image
           src={source}
@@ -288,13 +298,13 @@ const SpeakersSection = () => {
           org="Nethermind"
           orgUrl="https://www.nethermind.io/"
         />
-        {/* <SpeakerIcon
+        <SpeakerIcon
           source={FrancescoPic}
           name="Francesco Andreoli"
           link="https://www.francesco-andreoli.com/"
           org="MetaMask"
           orgUrl="https://metamask.io/"
-        /> */}
+        />
         <SpeakerIcon
           source={JuliePic}
           name="Julie Bettens"
@@ -302,13 +312,34 @@ const SpeakersSection = () => {
           org="EPFL, DEDIS Lab"
           orgUrl="https://www.epfl.ch/labs/dedis/"
         />
-        {/* <SpeakerIcon
-          source={DavidPic}
-          name="David cao"
-          link="https://twitter.com/davidfucius"
-          org="Layer N"
-          orgUrl="https://www.layern.com/"
-        /> */}
+        <SpeakerIcon
+          source={DeliPic}
+          name="Deli Gong"
+          link="https://x.com/deligong"
+          org="Automata Network"
+          orgUrl="https://www.ata.network/"
+        />
+        <SpeakerIcon
+          source={ChuazhengPic}
+          name="Chua Zheng Long"
+          link="https://x.com/melynx"
+          org="Automata Network"
+          orgUrl="https://www.ata.network/"
+        />
+        <SpeakerIcon
+          source={MelisaPic}
+          name="Melisa Kurtcan"
+          link="https://www.linkedin.com/in/melissa-kurtcan-81b20115a"
+          org="Satoshi Twenty One"
+          orgUrl="https://satoshitwenty.one/"
+        />
+        <SpeakerIcon
+          source={QiPic}
+          name="Qi Zhou"
+          link="https://www.linkedin.com/in/qi-zhou-9a668715/"
+          org="EthStorage"
+          orgUrl="https://ethstorage.io/"
+        />
         <SpeakerIcon
           source={EdmundPic}
           name="Edmund Edgar"
@@ -323,19 +354,47 @@ const SpeakersSection = () => {
           org="Solidity House"
           orgUrl="https://www.solidityhouse.com/"
         />
-        {/* <SpeakerIcon
+        <SpeakerIcon
           source={RanPic}
           name="Ran Yi"
           link="https://www.linkedin.com/in/ran-yi-b722696/"
           org="Orderly Network"
           orgUrl="https://orderly.network/"
-        /> */}
+        />
         <SpeakerIcon
           source={AggrePic}
           name="Aggre"
           link="https://twitter.com/aggre_"
           org="Dev Protocol"
           orgUrl="https://www.devprotocol.xyz/"
+        />
+        <SpeakerIcon
+          source={YuroitakiPic}
+          name="yuroitaki"
+          link="https://github.com/yuroitaki"
+          org="PSE, TLSNotary"
+          orgUrl="https://tlsnotary.org/"
+        />
+        <SpeakerIcon
+          source={DavidPic}
+          name="David cao"
+          link="https://twitter.com/davidfucius"
+          org="Layer N"
+          orgUrl="https://www.layern.com/"
+        />
+        <SpeakerIcon
+          source={AllenPic}
+          name="Allen Joseph"
+          link="https://x.com/allenjosephaj"
+          org="Bitlayer"
+          orgUrl="https://www.bitlayer.org/"
+        />
+        <SpeakerIcon
+          source={JoshPic}
+          name="Josh Guha"
+          link="https://joshguha.xyz/"
+          org="Gyroscope"
+          orgUrl="https://gyro.finance/"
         />
         <SpeakerIcon
           source={VarunPic}
@@ -351,26 +410,12 @@ const SpeakersSection = () => {
           org="Chronicle Labs"
           orgUrl="https://chroniclelabs.org/"
         />
-        {/* <SpeakerIcon
-          source={MeinaPic}
-          name="Meina Zhou"
-          link="https://x.com/CryptoMeina"
-          org="Native"
-          orgUrl="https://native.org/"
-        /> */}
         <SpeakerIcon
-          source={RohitPic}
-          name="Rohit Ramesh"
-          link="https://x.com/Rohit7101"
-          org="Crossmint"
-          orgUrl="https://www.crossmint.com/"
-        />
-        <SpeakerIcon
-          source={RyoheiPic}
-          name="Ryo Komiyama"
-          link="https://x.com/ryoheikomy"
-          org="Kyuzan"
-          orgUrl="https://kyuzan.com/"
+          source={YukiPic}
+          name="Yuki Yuminaga"
+          link="https://twitter.com/ballsyalchemist"
+          org="Sorella Labs"
+          orgUrl="https://github.com/SorellaLabs"
         />
         <SpeakerIcon
           source={DanielPic}
@@ -380,11 +425,18 @@ const SpeakersSection = () => {
           orgUrl="https://kintsugi.tech/"
         />
         <SpeakerIcon
-          source={PiyushPic}
-          name="Piyush Gururani"
-          link="https://www.linkedin.com/in/gururani/"
-          org="TECHFUND Inc"
-          orgUrl="https://techfund.jp/"
+          source={MeinaPic}
+          name="Meina Zhou"
+          link="https://x.com/CryptoMeina"
+          org="Native"
+          orgUrl="https://native.org/"
+        />
+        <SpeakerIcon
+          source={RohitPic}
+          name="Rohit Ramesh"
+          link="https://x.com/Rohit7101"
+          org="Crossmint"
+          orgUrl="https://www.crossmint.com/"
         />
         <SpeakerIcon
           source={SamuelPic}
@@ -392,6 +444,34 @@ const SpeakersSection = () => {
           link="https://linktr.ee/stakesaurus/"
           org="Stakesaurus"
           orgUrl="https://stakesaurus.com/"
+        />
+        <SpeakerIcon
+          source={RyoheiPic}
+          name="Ryo Komiyama"
+          link="https://x.com/ryoheikomy"
+          org="Kyuzan"
+          orgUrl="https://kyuzan.com/"
+        />
+        <SpeakerIcon
+          source={PiyushPic}
+          name="Piyush Gururani"
+          link="https://www.linkedin.com/in/gururani/"
+          org="TECHFUND Inc"
+          orgUrl="https://techfund.jp/"
+        />
+        <SpeakerIcon
+          source={QinenPic}
+          name="Qin En Looi"
+          link="https://x.com/webthreedad"
+          org="Saison Capital"
+          orgUrl="https://www.saisoncapital.com/"
+        />
+        <SpeakerIcon
+          source={JackPic}
+          name="Jack Jia"
+          link="https://x.com/JackJia2021"
+          org="BayCurrent Consulting"
+          orgUrl="https://www.baycurrent.co.jp/"
         />
       </div>
       <div>
