@@ -16,7 +16,6 @@ import JoshPic from "public/images/speakers/joshguha.png";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
 import MeinaPic from "public/images/speakers/meinazhou.jpg";
 import MelisaPic from "public/images/speakers/melisakurtcan.jpg";
-import NiklasPic from "public/images/speakers/nikolaskunkel.jpg";
 import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
@@ -402,13 +401,6 @@ const SpeakersSection = () => {
           link="https://x.com/Varunx10"
           org="Chainrisk"
           orgUrl="https://www.chainrisk.cloud/"
-        />
-        <SpeakerIcon
-          source={NiklasPic}
-          name="Niklas Kunkel"
-          link="https://twitter.com/nomos_paradox"
-          org="Chronicle Labs"
-          orgUrl="https://chroniclelabs.org/"
         />
         <SpeakerIcon
           source={YukiPic}
