@@ -448,7 +448,7 @@ const SpeakersSection = () => {
           source={PiyushPic}
           name="Piyush Gururani"
           link="https://www.linkedin.com/in/gururani/"
-          org="TECHFUND Inc"
+          org="TECHFUND"
           orgUrl="https://techfund.jp/"
         />
         <SpeakerIcon
@@ -462,7 +462,7 @@ const SpeakersSection = () => {
           source={JackPic}
           name="Jack Jia"
           link="https://x.com/JackJia2021"
-          org="BayCurrent Consulting"
+          org="BayCurrent"
           orgUrl="https://www.baycurrent.co.jp/"
         />
       </div>
