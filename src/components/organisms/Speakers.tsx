@@ -21,7 +21,6 @@ import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
 import QinenPic from "public/images/speakers/qinenlooi.jpg";
 import QiPic from "public/images/speakers/qizhou.png";
-import RanPic from "public/images/speakers/ranyi.jpeg";
 import RohitPic from "public/images/speakers/rohitramesh.jpg";
 import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
@@ -354,13 +353,6 @@ const SpeakersSection = () => {
           orgUrl="https://www.solidityhouse.com/"
         />
         <SpeakerIcon
-          source={RanPic}
-          name="Ran Yi"
-          link="https://www.linkedin.com/in/ran-yi-b722696/"
-          org="Orderly Network"
-          orgUrl="https://orderly.network/"
-        />
-        <SpeakerIcon
           source={AggrePic}
           name="Aggre"
           link="https://twitter.com/aggre_"
@@ -376,7 +368,7 @@ const SpeakersSection = () => {
         />
         <SpeakerIcon
           source={DavidPic}
-          name="David cao"
+          name="David Cao"
           link="https://twitter.com/davidfucius"
           org="Layer N"
           orgUrl="https://www.layern.com/"

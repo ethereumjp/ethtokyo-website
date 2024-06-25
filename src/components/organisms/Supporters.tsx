@@ -8,7 +8,6 @@ import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import DeFormLogo from "public/logo/DeFormLogo.png";
-import EFLogo from "public/logo/EFLogo.png";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ESPLogo from "public/logo/ESPLogo.svg";
 import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
@@ -18,6 +17,7 @@ import GMOLogo from "public/logo/GMOLogo.png";
 import IntmaxLogo from "public/logo/IntmaxLogo.svg";
 import MercoinLogo from "public/logo/MercoinLogo.png";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
+import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TechfundLogo from "public/logo/TechfundLogo.png";
@@ -235,18 +235,6 @@ const SupportersSection = () => {
       <section id="partners">
         <PartnerCategory category="Event Partners">
           <SupporterLogo
-            source={EFLogo}
-            text="Ethereum Foundation"
-            link="https://ethereum.foundation/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={ESPLogo}
-            text="ESP"
-            link="https://esp.ethereum.foundation/"
-            tier="partner"
-          />
-          <SupporterLogo
             source={ETHTaipeiLogo}
             text="ETH Taipei"
             link="https://ethtaipei.org/"
@@ -256,24 +244,6 @@ const SupportersSection = () => {
             source={ETHRiyadhLogo}
             text="ETH Riyadh"
             link="https://ethriyadh.com/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={FractonLogo}
-            text="Fracton Ventures"
-            link="https://fracton.ventures/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={CoinpostLogo}
-            text="Coinpost"
-            link="https://coinpost.jp/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={CentrumLogo}
-            text="Centrum"
-            link="https://centrum.studio/"
             tier="partner"
           />
           <SupporterLogo
@@ -300,6 +270,40 @@ const SupportersSection = () => {
             link="https://www.moongate.id/"
             tier="partner"
           />
+          {/* <SupporterLogo
+            source={RedbullLogo}
+            text="Red Bull"
+            link="https://www.redbull.com"
+            tier="partner"
+          /> */}
+        </PartnerCategory>
+      </section>
+      <section id="supporters">
+        <PartnerCategory category="Supporters">
+          <SupporterLogo
+            source={ESPLogo}
+            text="ESP"
+            link="https://esp.ethereum.foundation/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={FractonLogo}
+            text="Fracton Ventures"
+            link="https://fracton.ventures/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CoinpostLogo}
+            text="Coinpost"
+            link="https://coinpost.jp/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CentrumLogo}
+            text="Centrum"
+            link="https://centrum.studio/"
+            tier="partner"
+          />
           <SupporterLogo
             source={ZeloLogo}
             text="Zelo"
@@ -313,6 +317,7 @@ const SupportersSection = () => {
             tier="partner"
           />
         </PartnerCategory>
+
         <p>
           <a
             css={css`
