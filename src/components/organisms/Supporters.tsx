@@ -21,6 +21,7 @@ import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import TechfundLogo from "public/logo/TechfundLogo.png";
+import TelosLogo from "public/logo/TelosLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
 const SupportersSection = () => {
@@ -48,7 +49,7 @@ const SupportersSection = () => {
         techfund: 10,
       },
       laptop: {
-        platinum: 25,
+        platinum: 20,
         gold: 16.666666,
         silver: 12.5,
         bronze: 12.5,
@@ -205,6 +206,12 @@ const SupportersSection = () => {
             link="https://scroll.io/"
             tier="platinum"
           />
+          {/* <SupporterLogo
+            source={TelosLogo}
+            text="Telos"
+            link="https://www.telos.net/"
+            tier="platinum"
+          /> */}
         </SponsorTier>
         <h3
           css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
