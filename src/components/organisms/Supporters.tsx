@@ -7,7 +7,9 @@ import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
+import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
+import DevconLogo from "public/logo/DevconLogo.svg";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ESPLogo from "public/logo/ESPLogo.svg";
 import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
@@ -59,12 +61,30 @@ const SupportersSection = () => {
     };
 
     const padding = {
-      platinum: "2rem",
-      gold: "1.5rem",
-      silver: "1rem",
-      bronze: "1rem",
-      partner: "1rem",
-      techfund: "1rem",
+      mobile: {
+        platinum: "1.5rem",
+        gold: "1rem",
+        silver: "1rem",
+        bronze: "1rem",
+        partner: "0.75rem",
+        techfund: "1rem",
+      },
+      tablet: {
+        platinum: "2rem",
+        gold: "1.5rem",
+        silver: "1.5rem",
+        bronze: "1.5rem",
+        partner: "1.5rem",
+        techfund: "1.5rem",
+      },
+      desktop: {
+        platinum: "2rem",
+        gold: "2rem",
+        silver: "2rem",
+        bronze: "2rem",
+        partner: "2rem",
+        techfund: "2rem",
+      },
     };
 
     return (
@@ -74,14 +94,16 @@ const SupportersSection = () => {
           display: flex;
           justify-content: center;
 
-          padding: ${padding[tier]};
+          padding: ${padding.mobile[tier]};
           width: ${sizes.mobile[tier]}%;
 
           ${mq.tablet} {
+            padding: ${padding.tablet[tier]};
             width: ${sizes.tablet[tier]}%;
           }
 
-          ${mq.laptop} {
+          ${mq.desktop} {
+            padding: ${padding.desktop[tier]};
             width: ${sizes.laptop[tier]}%;
           }
         `}
@@ -242,18 +264,6 @@ const SupportersSection = () => {
       <section id="partners">
         <PartnerCategory category="Event Partners">
           <SupporterLogo
-            source={ETHTaipeiLogo}
-            text="ETH Taipei"
-            link="https://ethtaipei.org/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={ETHRiyadhLogo}
-            text="ETH Riyadh"
-            link="https://ethriyadh.com/"
-            tier="partner"
-          />
-          <SupporterLogo
             source={AkindoLogo}
             text="Akindo"
             link="https://akindo.io/"
@@ -266,9 +276,33 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
+            source={CryptonomadsLogo}
+            text="Crypto Nomads Club"
+            link="https://cryptonomads.org/"
+            tier="partner"
+          />
+          <SupporterLogo
             source={DeFormLogo}
             text="DeForm"
             link="https://www.deform.cc/"
+            tier="partner"
+          />
+          {/* <SupporterLogo
+            source={DevconLogo}
+            text="Devcon"
+            link="https://devcon.org/"
+            tier="partner"
+          /> */}
+          <SupporterLogo
+            source={ETHTaipeiLogo}
+            text="ETH Taipei"
+            link="https://ethtaipei.org/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={ETHRiyadhLogo}
+            text="ETH Riyadh"
+            link="https://ethriyadh.com/"
             tier="partner"
           />
           <SupporterLogo
