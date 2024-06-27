@@ -91,22 +91,30 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     href: string;
     text: string;
     color: string;
+    disabled?: boolean;
   }) => (
-    <Link href={props.href}>
+    <Link
+      href={props.disabled ? "#" : props.href}
+      css={css`text-decoration: none;`}
+    >
       <button
         type="button"
         css={css`
-          background-color: ${props.color};
+          align-items: center;
+          background-color: ${props.disabled ? neutral.Grey4 : props.color};
           border: none;
           border-radius: 12px;
           color: ${neutral.White};
           cursor: pointer;
+          display: flex;
+          flex-direction: column;
           font-size: 1.5rem;
+          height: 100%;
+          justify-content: center;
           margin: 0;
           padding: 0.5rem 1rem;
-
-          text-decoration: none;
           transition: background-color 0.3s ease;
+          width: 100%;
 
           ${mq.tablet}{
             font-size: 2rem;
@@ -114,11 +122,13 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           }
 
           &:hover {
-            background-color: ${themeLight.PrimaryHover};
+            background-color: ${props.disabled ? neutral.Grey3 : themeLight.PrimaryHover};
           }
         `}
+        disabled={props.disabled}
       >
-        {props.text}
+        <span>{props.text}</span>
+        {props.disabled && <span css={css`font-size: 1rem;`}>[SOLD OUT]</span>}
       </button>
     </Link>
   );
@@ -135,7 +145,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <br />
       <div
         css={css`
-          align-items: center;
+          align-items: stretch;
           display: flex;
           flex-direction: column;
           margin: 0 auto;
@@ -158,6 +168,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           href="https://app.moongate.id/e/eth-tokyo-2024"
           text="Volunteer pass"
           color="green"
+          disabled={true}
         />
         <LinkedButton
           href="/apply"
