@@ -2,7 +2,10 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
+import API3Logo from "public/logo/API3Logo.svg";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
+import AvailLogo from "public/logo/AvailLogo.svg";
+import BitflyerLogo from "public/logo/BitflyerLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
@@ -11,6 +14,7 @@ import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
 import DevconLogo from "public/logo/DevconLogo.svg";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
+import ENSLogo from "public/logo/ENSLogo.svg";
 import ESPLogo from "public/logo/ESPLogo.svg";
 import ETHRiyadhLogo from "public/logo/ETHRiyadhLogo.svg";
 import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
@@ -31,7 +35,7 @@ const SupportersSection = () => {
     source: StaticImageData;
     link: string;
     text: string;
-    tier: "platinum" | "gold" | "silver" | "bronze" | "partner" | "techfund";
+    tier: "platinum" | "gold" | "silver" | "bronze" | "partner";
   }> = ({ source, text, link, tier }) => {
     const sizes = {
       mobile: {
@@ -40,7 +44,6 @@ const SupportersSection = () => {
         silver: 25,
         bronze: 20,
         partner: 20,
-        techfund: 15,
       },
       tablet: {
         platinum: 30,
@@ -48,7 +51,6 @@ const SupportersSection = () => {
         silver: 20,
         bronze: 16.666666,
         partner: 16.666666,
-        techfund: 10,
       },
       laptop: {
         platinum: 20,
@@ -56,7 +58,6 @@ const SupportersSection = () => {
         silver: 12.5,
         bronze: 12.5,
         partner: 12.5,
-        techfund: 8,
       },
     };
 
@@ -67,7 +68,6 @@ const SupportersSection = () => {
         silver: "1rem",
         bronze: "1rem",
         partner: "0.75rem",
-        techfund: "1rem",
       },
       tablet: {
         platinum: "2rem",
@@ -75,7 +75,6 @@ const SupportersSection = () => {
         silver: "1.5rem",
         bronze: "1.5rem",
         partner: "1.5rem",
-        techfund: "1.5rem",
       },
       desktop: {
         platinum: "2rem",
@@ -83,7 +82,6 @@ const SupportersSection = () => {
         silver: "2rem",
         bronze: "2rem",
         partner: "2rem",
-        techfund: "2rem",
       },
     };
 
@@ -94,17 +92,18 @@ const SupportersSection = () => {
           display: flex;
           justify-content: center;
 
+
+          max-width: ${sizes.mobile[tier]}%;
           padding: ${padding.mobile[tier]};
-          width: ${sizes.mobile[tier]}%;
 
           ${mq.tablet} {
+            max-width: ${sizes.tablet[tier]}%;
             padding: ${padding.tablet[tier]};
-            width: ${sizes.tablet[tier]}%;
           }
 
           ${mq.desktop} {
+            max-width: ${sizes.laptop[tier]}%;
             padding: ${padding.desktop[tier]};
-            width: ${sizes.laptop[tier]}%;
           }
         `}
       >
@@ -113,7 +112,7 @@ const SupportersSection = () => {
             src={source}
             alt={text}
             layout="responsive"
-            css={css`object-fit: contain;`}
+            css={css`max-height: ${sizes.laptop[tier] / 2}rem; object-fit: contain;`}
           />
         </a>
       </div>
@@ -195,20 +194,15 @@ const SupportersSection = () => {
             font-size: 2rem;
             font-weight: 500;
             margin: 0;
-            padding: 2rem 0;
+            padding: 4rem 0 0;
 
             ${mq.laptop} {
               font-size: 3rem;
             }
           `}
         >
-          Our supporters
-        </h2>
-        <h3
-          css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
-        >
           Platinum Sponsors
-        </h3>
+        </h2>
         <SponsorTier>
           <SupporterLogo
             source={GMOLogo}
@@ -235,38 +229,123 @@ const SupportersSection = () => {
             tier="platinum"
           /> */}
         </SponsorTier>
-        <h3
-          css={css`color: black; font-size: 2rem; font-weight: 400; margin:0;`}
+        <h2
+          css={css`
+            color: black;
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+
+            ${mq.laptop} {
+              font-size: 3rem;
+            }
+          `}
         >
           Gold Sponsors
-        </h3>
+        </h2>
         <SponsorTier>
-          <SupporterLogo
-            source={MercoinLogo}
-            text="Mercoin"
-            link="https://about.mercoin.com/"
+          {/* <SupporterLogo
+            source={API3Logo}
+            text="API3"
+            link="https://api3.org/"
             tier="gold"
           />
           <SupporterLogo
-            source={TechfundLogo}
-            text="TechFund"
-            link="https://techfund.jp/"
-            tier="techfund"
+            source={AvailLogo}
+            text="Avail"
+            link="https://www.availproject.org/"
+            tier="gold"
           />
+          <SupporterLogo
+            source={ENSLogo}
+            text="ENS"
+            link="https://ens.domains/"
+            tier="gold"
+          /> */}
           <SupporterLogo
             source={IntmaxLogo}
             text="Intmax"
             link="https://www.intmax.io/"
             tier="gold"
           />
+          <SupporterLogo
+            source={MercoinLogo}
+            text="Mercoin"
+            link="https://about.mercoin.com/"
+            tier="gold"
+          />
+          {/* <SupporterLogo
+            source={NeroLogo}
+            text="NEROchain"
+            link="https://nerochain.io/"
+            tier="gold"
+          /> */}
+          <SupporterLogo
+            source={TechfundLogo}
+            text="TechFund"
+            link="https://techfund.jp/"
+            tier="gold"
+          />
         </SponsorTier>
+        {/* <h3
+          css={css`
+            color: black;
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+
+            ${mq.laptop} {
+              font-size: 2.5rem;
+            }
+          `}
+        >
+          Silver Sponsors
+        </h3>
+        <SponsorTier>
+          <SupporterLogo
+            source={BitflyerLogo}
+            text="Bitflyer"
+            link="https://bitflyer.com/"
+            tier="silver"
+          />
+        </SponsorTier> */}
       </section>
-      <section id="partners">
-        <PartnerCategory category="Event Partners">
+      <section id="supporters">
+        <PartnerCategory category="Event Supporters">
+          {/* <SupporterLogo
+            source={DevconLogo}
+            text="Devcon"
+            link="https://devcon.org/"
+            tier="partner"
+          /> */}
+          <SupporterLogo
+            source={ESPLogo}
+            text="ESP"
+            link="https://esp.ethereum.foundation/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={FractonLogo}
+            text="Fracton Ventures"
+            link="https://fracton.ventures/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CoinpostLogo}
+            text="Coinpost"
+            link="https://coinpost.jp/"
+            tier="partner"
+          />
           <SupporterLogo
             source={AkindoLogo}
             text="Akindo"
             link="https://akindo.io/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CentrumLogo}
+            text="Centrum"
+            link="https://centrum.studio/"
             tier="partner"
           />
           <SupporterLogo
@@ -287,12 +366,6 @@ const SupportersSection = () => {
             link="https://www.deform.cc/"
             tier="partner"
           />
-          {/* <SupporterLogo
-            source={DevconLogo}
-            text="Devcon"
-            link="https://devcon.org/"
-            tier="partner"
-          /> */}
           <SupporterLogo
             source={ETHTaipeiLogo}
             text="ETH Taipei"
@@ -317,34 +390,6 @@ const SupportersSection = () => {
             link="https://www.redbull.com"
             tier="partner"
           /> */}
-        </PartnerCategory>
-      </section>
-      <section id="supporters">
-        <PartnerCategory category="Supporters">
-          <SupporterLogo
-            source={ESPLogo}
-            text="ESP"
-            link="https://esp.ethereum.foundation/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={FractonLogo}
-            text="Fracton Ventures"
-            link="https://fracton.ventures/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={CoinpostLogo}
-            text="Coinpost"
-            link="https://coinpost.jp/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={CentrumLogo}
-            text="Centrum"
-            link="https://centrum.studio/"
-            tier="partner"
-          />
           <SupporterLogo
             source={ZeloLogo}
             text="Zelo"
