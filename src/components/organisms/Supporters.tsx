@@ -9,6 +9,7 @@ import BitflyerLogo from "public/logo/BitflyerLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
+import CircleLogo from "public/logo/CircleLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
@@ -22,10 +23,12 @@ import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
 import IntmaxLogo from "public/logo/IntmaxLogo.svg";
 import MercoinLogo from "public/logo/MercoinLogo.png";
+import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
+import SolidityScanLogo from "public/logo/SolidityScanLogo.svg";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import TelosLogo from "public/logo/TelosLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
@@ -257,6 +260,12 @@ const SupportersSection = () => {
             tier="gold"
           />
           <SupporterLogo
+            source={CircleLogo}
+            text="Circle"
+            link="https://www.circle.com/"
+            tier="gold"
+          />
+          <SupporterLogo
             source={ENSLogo}
             text="ENS"
             link="https://ens.domains/"
@@ -312,12 +321,12 @@ const SupportersSection = () => {
       </section>
       <section id="supporters">
         <PartnerCategory category="Event Supporters">
-          {/* <SupporterLogo
+          <SupporterLogo
             source={DevconLogo}
             text="Devcon"
             link="https://devcon.org/"
             tier="partner"
-          /> */}
+          />
           <SupporterLogo
             source={ESPLogo}
             text="ESP"
@@ -337,15 +346,15 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
-            source={AkindoLogo}
-            text="Akindo"
-            link="https://akindo.io/"
-            tier="partner"
-          />
-          <SupporterLogo
             source={CentrumLogo}
             text="Centrum"
             link="https://centrum.studio/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={AkindoLogo}
+            text="Akindo"
+            link="https://akindo.io/"
             tier="partner"
           />
           <SupporterLogo
@@ -378,6 +387,12 @@ const SupportersSection = () => {
             link="https://ethriyadh.com/"
             tier="partner"
           />
+          {/* <SupporterLogo
+            source={MetamaskLogo}
+            text="Metamask"
+            link="https://metamask.io/"
+            tier="partner"
+          /> */}
           <SupporterLogo
             source={MoongateLogo}
             text="Moongate"
@@ -390,6 +405,12 @@ const SupportersSection = () => {
             link="https://www.redbull.com"
             tier="partner"
           /> */}
+          <SupporterLogo
+            source={SolidityScanLogo}
+            text="SolidityScan"
+            link="https://solidityscan.com/"
+            tier="partner"
+          />
           <SupporterLogo
             source={ZeloLogo}
             text="Zelo"
