@@ -25,6 +25,7 @@ import IntmaxLogo from "public/logo/IntmaxLogo.svg";
 import MercoinLogo from "public/logo/MercoinLogo.png";
 import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
+import NeroLogo from "public/logo/NeroLogo.svg";
 import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
@@ -56,8 +57,8 @@ const SupportersSection = () => {
         partner: 16.666666,
       },
       laptop: {
-        platinum: 20,
-        gold: 16.666666,
+        platinum: 22,
+        gold: 15,
         silver: 12.5,
         bronze: 12.5,
         partner: 12.5,
@@ -225,12 +226,12 @@ const SupportersSection = () => {
             link="https://scroll.io/"
             tier="platinum"
           />
-          {/* <SupporterLogo
+          <SupporterLogo
             source={TelosLogo}
             text="Telos"
             link="https://www.telos.net/"
             tier="platinum"
-          /> */}
+          />
         </SponsorTier>
         <h2
           css={css`
@@ -247,7 +248,7 @@ const SupportersSection = () => {
           Gold Sponsors
         </h2>
         <SponsorTier>
-          {/* <SupporterLogo
+          <SupporterLogo
             source={API3Logo}
             text="API3"
             link="https://api3.org/"
@@ -259,18 +260,18 @@ const SupportersSection = () => {
             link="https://www.availproject.org/"
             tier="gold"
           />
-          <SupporterLogo
+          {/* <SupporterLogo
             source={CircleLogo}
             text="Circle"
             link="https://www.circle.com/"
             tier="gold"
-          />
+          /> */}
           <SupporterLogo
             source={ENSLogo}
             text="ENS"
             link="https://ens.domains/"
             tier="gold"
-          /> */}
+          />
           <SupporterLogo
             source={IntmaxLogo}
             text="Intmax"
@@ -283,12 +284,12 @@ const SupportersSection = () => {
             link="https://about.mercoin.com/"
             tier="gold"
           />
-          {/* <SupporterLogo
+          <SupporterLogo
             source={NeroLogo}
             text="NEROchain"
             link="https://nerochain.io/"
             tier="gold"
-          /> */}
+          />
           <SupporterLogo
             source={TechfundLogo}
             text="TechFund"
@@ -296,7 +297,7 @@ const SupportersSection = () => {
             tier="gold"
           />
         </SponsorTier>
-        {/* <h3
+        <h3
           css={css`
             color: black;
             font-size: 2rem;
@@ -317,7 +318,7 @@ const SupportersSection = () => {
             link="https://bitflyer.com/"
             tier="silver"
           />
-        </SponsorTier> */}
+        </SponsorTier>
       </section>
       <section id="supporters">
         <PartnerCategory category="Event Supporters">
