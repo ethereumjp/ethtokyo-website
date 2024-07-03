@@ -25,7 +25,6 @@ import RohitPic from "public/images/speakers/rohitramesh.jpg";
 import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
-import JackPic from "public/images/speakers/siyujia.jpeg";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import VarunPic from "public/images/speakers/varundoshi.jpg";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
@@ -449,13 +448,6 @@ const SpeakersSection = () => {
           link="https://x.com/webthreedad"
           org="Saison Capital"
           orgUrl="https://www.saisoncapital.com/"
-        />
-        <SpeakerIcon
-          source={JackPic}
-          name="Jack Jia"
-          link="https://x.com/JackJia2021"
-          org="BayCurrent"
-          orgUrl="https://www.baycurrent.co.jp/"
         />
       </div>
       <div>
