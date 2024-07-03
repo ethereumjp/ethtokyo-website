@@ -2,6 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
+import AbhimanyuPic from "public/images/speakers/abhimanyunag.jpg";
 import AggrePic from "public/images/speakers/aggre.jpg";
 import AllenPic from "public/images/speakers/allenjoseph.jpg";
 import AudreyPic from "public/images/speakers/audrey.png";
@@ -12,20 +13,31 @@ import DavidPic from "public/images/speakers/davidcao.jpeg";
 import DeliPic from "public/images/speakers/deligong.png";
 import EdmundPic from "public/images/speakers/edmundedgar.jpg";
 import FrancescoPic from "public/images/speakers/francescoandreoli.jpg";
+import FriscoPic from "public/images/speakers/friscodanconia.jpeg";
+import GuruPic from "public/images/speakers/guru.jpg";
+import JamesPic from "public/images/speakers/jameshe.jpeg";
+import JehyukPic from "public/images/speakers/jehyukjang.jpg";
+import JosephPic from "public/images/speakers/josephschiarizzi.jpg";
 import JoshPic from "public/images/speakers/joshguha.png";
 import JuliePic from "public/images/speakers/juliebettens.jpg";
+import KolbyPic from "public/images/speakers/kolbymorozliebl.jpg";
 import MeinaPic from "public/images/speakers/meinazhou.jpg";
 import MelisaPic from "public/images/speakers/melisakurtcan.jpg";
+import MoazzamPic from "public/images/speakers/moazzamarif.png";
+import NaimPic from "public/images/speakers/naimashhab.jpeg";
 import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
+import QiangPic from "public/images/speakers/qiangju.png";
 import QinenPic from "public/images/speakers/qinenlooi.jpg";
 import QiPic from "public/images/speakers/qizhou.png";
 import RohitPic from "public/images/speakers/rohitramesh.jpg";
 import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
+import SundaramPic from "public/images/speakers/sundaramjha.png";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
+import UttamPic from "public/images/speakers/uttamsingh.png";
 import VarunPic from "public/images/speakers/varundoshi.jpg";
 import VitalikPic from "public/images/speakers/vitalik.jpg";
 import YukiPic from "public/images/speakers/yukiyuminaga.jpeg";
@@ -303,11 +315,39 @@ const SpeakersSection = () => {
           orgUrl="https://metamask.io/"
         />
         <SpeakerIcon
+          source={JosephPic}
+          name="Joseph Schiarizzi"
+          link="http://twitter.com/cupojoseph"
+          org="Open Dollar"
+          orgUrl="https://www.opendollar.com/"
+        />
+        <SpeakerIcon
+          source={MoazzamPic}
+          name="Moazzam Arif"
+          link="https://www.linkedin.com/in/moazzam-arif/"
+          org="BlockApex"
+          orgUrl="https://blockapex.io/"
+        />
+        <SpeakerIcon
+          source={NaimPic}
+          name="Naim Ashhab"
+          link="https://twitter.com/ashhanai"
+          org="PWN DAO"
+          orgUrl="https://pwn.xyz"
+        />
+        <SpeakerIcon
           source={JuliePic}
           name="Julie Bettens"
           link="https://blog.bbjubjub.fr/about-me/"
           org="EPFL, DEDIS Lab"
           orgUrl="https://www.epfl.ch/labs/dedis/"
+        />
+        <SpeakerIcon
+          source={GuruPic}
+          name="Guru"
+          link="https://x.com/hackyguru"
+          org="Status.im"
+          orgUrl="https://status.im/"
         />
         <SpeakerIcon
           source={DeliPic}
@@ -338,6 +378,13 @@ const SpeakersSection = () => {
           orgUrl="https://ethstorage.io/"
         />
         <SpeakerIcon
+          source={JehyukPic}
+          name="Jehyuk Jang"
+          link="http://linkedin.com/in/jehyuk-jang-a882062ba"
+          org="Tokamak Network"
+          orgUrl="https://www.tokamak.network/"
+        />
+        <SpeakerIcon
           source={EdmundPic}
           name="Edmund Edgar"
           link="https://twitter.com/edmundedgar/"
@@ -366,11 +413,60 @@ const SpeakersSection = () => {
           orgUrl="https://tlsnotary.org/"
         />
         <SpeakerIcon
+          source={KolbyPic}
+          name="Kolby Moroz Liebl"
+          link="https://x.com/Kolby_ML"
+          org="Portal Network"
+          orgUrl="https://www.ethportal.net/"
+        />
+        <SpeakerIcon
+          source={PiyushPic}
+          name="Piyush Gururani"
+          link="https://www.linkedin.com/in/gururani/"
+          org="TECHFUND"
+          orgUrl="https://techfund.jp/"
+        />
+        <SpeakerIcon
+          source={AbhimanyuPic}
+          name="Abhimanyu Nag"
+          link="https://www.linkedin.com/in/abhimanyu-nag-682747201"
+          org="Chainrisk Labs"
+          orgUrl="https://chainlinklabs.com/"
+        />
+        <SpeakerIcon
+          source={QiangPic}
+          name="Qiang Zhu"
+          link="https://www.linkedin.com/in/qiang-zhu-3a716731/"
+          org="Quarkchain"
+          orgUrl="https://quarkchain.io/"
+        />
+        <SpeakerIcon
+          source={SundaramPic}
+          name="Sundaram Jha"
+          link="https://sundaram.vercel.app/"
+          org="Eden Protocol"
+          orgUrl="https://www.joineden.ai/"
+        />
+        <SpeakerIcon
+          source={UttamPic}
+          name="Uttam Singh"
+          link="https://x.com/uttam_singhk"
+          org="Flare Network"
+          orgUrl="https://flare.network/"
+        />
+        <SpeakerIcon
           source={DavidPic}
           name="David Cao"
           link="https://twitter.com/davidfucius"
           org="Layer N"
           orgUrl="https://www.layern.com/"
+        />
+        <SpeakerIcon
+          source={FriscoPic}
+          name="Frisco d'Anconia"
+          link="https://x.com/CryptoTraveler1"
+          org="Timbuktu DAO"
+          orgUrl="https://timbuktudao.xyz/"
         />
         <SpeakerIcon
           source={AllenPic}
@@ -385,6 +481,13 @@ const SpeakersSection = () => {
           link="https://joshguha.xyz/"
           org="Gyroscope"
           orgUrl="https://gyro.finance/"
+        />
+        <SpeakerIcon
+          source={JamesPic}
+          name="James He"
+          link="https://x.com/jameshe_eth"
+          org="Offchain Labs"
+          orgUrl="https://www.offchainlabs.com/"
         />
         <SpeakerIcon
           source={VarunPic}
@@ -434,13 +537,6 @@ const SpeakersSection = () => {
           link="https://x.com/ryoheikomy"
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
-        />
-        <SpeakerIcon
-          source={PiyushPic}
-          name="Piyush Gururani"
-          link="https://www.linkedin.com/in/gururani/"
-          org="TECHFUND"
-          orgUrl="https://techfund.jp/"
         />
         <SpeakerIcon
           source={QinenPic}
