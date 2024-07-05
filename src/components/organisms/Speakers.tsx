@@ -294,11 +294,25 @@ const SpeakersSection = () => {
           orgUrl="https://geth.ethereum.org/"
         />
         <SpeakerIcon
+          source={KolbyPic}
+          name="Kolby Moroz Liebl"
+          link="https://x.com/Kolby_ML"
+          org="EF, Portal"
+          orgUrl="https://www.ethportal.net/"
+        />
+        <SpeakerIcon
           source={OzgurPic}
           name="Özgür Armanc Yiğit"
           link="https://www.linkedin.com/in/oay/"
           org="EF, PSE"
           orgUrl="https://pse.dev/"
+        />
+        <SpeakerIcon
+          source={YuroitakiPic}
+          name="yuroitaki"
+          link="https://github.com/yuroitaki"
+          org="PSE, TLSNotary"
+          orgUrl="https://tlsnotary.org/"
         />
         <SpeakerIcon
           source={TomaszPic}
@@ -404,20 +418,6 @@ const SpeakersSection = () => {
           link="https://twitter.com/aggre_"
           org="Dev Protocol"
           orgUrl="https://www.devprotocol.xyz/"
-        />
-        <SpeakerIcon
-          source={YuroitakiPic}
-          name="yuroitaki"
-          link="https://github.com/yuroitaki"
-          org="PSE, TLSNotary"
-          orgUrl="https://tlsnotary.org/"
-        />
-        <SpeakerIcon
-          source={KolbyPic}
-          name="Kolby Moroz Liebl"
-          link="https://x.com/Kolby_ML"
-          org="EF, Portal"
-          orgUrl="https://www.ethportal.net/"
         />
         <SpeakerIcon
           source={PiyushPic}
