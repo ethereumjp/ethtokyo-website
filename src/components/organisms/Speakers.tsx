@@ -416,7 +416,7 @@ const SpeakersSection = () => {
           source={KolbyPic}
           name="Kolby Moroz Liebl"
           link="https://x.com/Kolby_ML"
-          org="Portal Network"
+          org="EF, Portal"
           orgUrl="https://www.ethportal.net/"
         />
         <SpeakerIcon
