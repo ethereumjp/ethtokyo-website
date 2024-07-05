@@ -285,12 +285,6 @@ const SupportersSection = () => {
             tier="gold"
           />
           <SupporterLogo
-            source={NeroLogo}
-            text="NEROchain"
-            link="https://nerochain.io/"
-            tier="gold"
-          />
-          <SupporterLogo
             source={TechfundLogo}
             text="TechFund"
             link="https://techfund.jp/"
@@ -316,6 +310,12 @@ const SupportersSection = () => {
             source={BitflyerLogo}
             text="Bitflyer"
             link="https://bitflyer.com/"
+            tier="silver"
+          />
+          <SupporterLogo
+            source={NeroLogo}
+            text="NEROchain"
+            link="https://nerochain.io/"
             tier="silver"
           />
         </SponsorTier>
@@ -388,12 +388,12 @@ const SupportersSection = () => {
             link="https://ethriyadh.com/"
             tier="partner"
           />
-          {/* <SupporterLogo
+          <SupporterLogo
             source={MetamaskLogo}
             text="Metamask"
             link="https://metamask.io/"
             tier="partner"
-          /> */}
+          />
           <SupporterLogo
             source={MoongateLogo}
             text="Moongate"
