@@ -2,6 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
+// import FiveDollarVcLogo from "public/logo/5dollarvcLogo.png";
 import API3Logo from "public/logo/API3Logo.svg";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
 import AvailLogo from "public/logo/AvailLogo.svg";
@@ -13,6 +14,7 @@ import CircleLogo from "public/logo/CircleLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
+import DesciJapanLogo from "public/logo/DesciJapanLogo.png";
 import DevconLogo from "public/logo/DevconLogo.svg";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ENSLogo from "public/logo/ENSLogo.svg";
@@ -32,6 +34,7 @@ import ShibuyaLogo from "public/logo/Shibuya.svg";
 import SolidityScanLogo from "public/logo/SolidityScanLogo.svg";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import TelosLogo from "public/logo/TelosLogo.png";
+import UnchainLogo from "public/logo/UnchainLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
 const SupportersSection = () => {
@@ -377,6 +380,12 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
+            source={DesciJapanLogo}
+            text="DeSci Japan"
+            link="https://descijapan.org/"
+            tier="partner"
+          />
+          <SupporterLogo
             source={ETHTaipeiLogo}
             text="ETH Taipei"
             link="https://ethtaipei.org/"
@@ -400,16 +409,22 @@ const SupportersSection = () => {
             link="https://www.moongate.id/"
             tier="partner"
           />
-          {/* <SupporterLogo
+          <SupporterLogo
             source={RedbullLogo}
             text="Red Bull"
             link="https://www.redbull.com"
             tier="partner"
-          /> */}
+          />
           <SupporterLogo
             source={SolidityScanLogo}
             text="SolidityScan"
             link="https://solidityscan.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={UnchainLogo}
+            text="UNCHAIN"
+            link="https://www.unchain.tech/"
             tier="partner"
           />
           <SupporterLogo
