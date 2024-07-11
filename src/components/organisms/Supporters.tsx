@@ -32,6 +32,7 @@ import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import SolidityScanLogo from "public/logo/SolidityScanLogo.svg";
+import StreamEthLogo from "public/logo/StreamEthLogo.png";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import TelosLogo from "public/logo/TelosLogo.png";
 import UnchainLogo from "public/logo/UnchainLogo.png";
@@ -362,21 +363,51 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
+            source={MetamaskLogo}
+            text="Metamask"
+            link="https://metamask.io/"
+            tier="partner"
+          />
+          <SupporterLogo
             source={BunzzLogo}
             text="Bunzz"
             link="https://www.bunzz.dev/"
             tier="partner"
           />
           <SupporterLogo
-            source={CryptonomadsLogo}
-            text="Crypto Nomads Club"
-            link="https://cryptonomads.org/"
+            source={SolidityScanLogo}
+            text="SolidityScan"
+            link="https://solidityscan.com/"
             tier="partner"
           />
           <SupporterLogo
             source={DeFormLogo}
             text="DeForm"
             link="https://www.deform.cc/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={MoongateLogo}
+            text="Moongate"
+            link="https://www.moongate.id/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={StreamEthLogo}
+            text="StreamETH"
+            link="https://streameth.org/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={RedbullLogo}
+            text="Red Bull"
+            link="https://www.redbull.com"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CryptonomadsLogo}
+            text="Crypto Nomads Club"
+            link="https://cryptonomads.org/"
             tier="partner"
           />
           <SupporterLogo
@@ -395,30 +426,6 @@ const SupportersSection = () => {
             source={ETHRiyadhLogo}
             text="ETH Riyadh"
             link="https://ethriyadh.com/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={MetamaskLogo}
-            text="Metamask"
-            link="https://metamask.io/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={MoongateLogo}
-            text="Moongate"
-            link="https://www.moongate.id/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={RedbullLogo}
-            text="Red Bull"
-            link="https://www.redbull.com"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={SolidityScanLogo}
-            text="SolidityScan"
-            link="https://solidityscan.com/"
             tier="partner"
           />
           <SupporterLogo
@@ -456,7 +463,7 @@ const SupportersSection = () => {
             Looking to sponsor or support us?
           </a>
         </p>
-        <PartnerCategory category="">
+        <PartnerCategory category="Hosted by">
           <Image
             src={EJLogoFace}
             alt="Ethereum Japan"
