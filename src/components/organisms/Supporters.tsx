@@ -2,6 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
+// import FiveDollarVcLogo from "public/logo/5dollarvcLogo.png";
 import API3Logo from "public/logo/API3Logo.svg";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
 import AvailLogo from "public/logo/AvailLogo.svg";
@@ -13,6 +14,7 @@ import CircleLogo from "public/logo/CircleLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
+import DesciJapanLogo from "public/logo/DesciJapanLogo.png";
 import DevconLogo from "public/logo/DevconLogo.svg";
 import EJLogoFace from "public/logo/EJLogoFace_dark.png";
 import ENSLogo from "public/logo/ENSLogo.svg";
@@ -30,8 +32,10 @@ import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
 import SolidityScanLogo from "public/logo/SolidityScanLogo.svg";
+import StreamEthLogo from "public/logo/StreamEthLogo.png";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import TelosLogo from "public/logo/TelosLogo.png";
+import UnchainLogo from "public/logo/UnchainLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
 const SupportersSection = () => {
@@ -359,9 +363,45 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
+            source={MetamaskLogo}
+            text="Metamask"
+            link="https://metamask.io/"
+            tier="partner"
+          />
+          <SupporterLogo
             source={BunzzLogo}
             text="Bunzz"
             link="https://www.bunzz.dev/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={SolidityScanLogo}
+            text="SolidityScan"
+            link="https://solidityscan.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={DeFormLogo}
+            text="DeForm"
+            link="https://www.deform.cc/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={MoongateLogo}
+            text="Moongate"
+            link="https://www.moongate.id/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={StreamEthLogo}
+            text="StreamETH"
+            link="https://streameth.org/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={RedbullLogo}
+            text="Red Bull"
+            link="https://www.redbull.com"
             tier="partner"
           />
           <SupporterLogo
@@ -371,9 +411,9 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
-            source={DeFormLogo}
-            text="DeForm"
-            link="https://www.deform.cc/"
+            source={DesciJapanLogo}
+            text="DeSci Japan"
+            link="https://descijapan.org/"
             tier="partner"
           />
           <SupporterLogo
@@ -389,27 +429,9 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
-            source={MetamaskLogo}
-            text="Metamask"
-            link="https://metamask.io/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={MoongateLogo}
-            text="Moongate"
-            link="https://www.moongate.id/"
-            tier="partner"
-          />
-          {/* <SupporterLogo
-            source={RedbullLogo}
-            text="Red Bull"
-            link="https://www.redbull.com"
-            tier="partner"
-          /> */}
-          <SupporterLogo
-            source={SolidityScanLogo}
-            text="SolidityScan"
-            link="https://solidityscan.com/"
+            source={UnchainLogo}
+            text="UNCHAIN"
+            link="https://www.unchain.tech/"
             tier="partner"
           />
           <SupporterLogo
@@ -441,7 +463,7 @@ const SupportersSection = () => {
             Looking to sponsor or support us?
           </a>
         </p>
-        <PartnerCategory category="">
+        <PartnerCategory category="Hosted by">
           <Image
             src={EJLogoFace}
             alt="Ethereum Japan"
