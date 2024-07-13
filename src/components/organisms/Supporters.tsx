@@ -24,6 +24,7 @@ import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
 import IntmaxLogo from "public/logo/IntmaxLogo.svg";
+import LxDaoLogo from "public/logo/LxDaoLogo.png";
 import MercoinLogo from "public/logo/MercoinLogo.png";
 import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
@@ -89,7 +90,7 @@ const SupportersSection = () => {
         gold: "2rem",
         silver: "2rem",
         bronze: "2rem",
-        partner: "2rem",
+        partner: "1.5rem",
       },
     };
 
@@ -426,6 +427,12 @@ const SupportersSection = () => {
             source={ETHRiyadhLogo}
             text="ETH Riyadh"
             link="https://ethriyadh.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={LxDaoLogo}
+            text="LXDAO"
+            link="https://lxdao.io/"
             tier="partner"
           />
           <SupporterLogo
