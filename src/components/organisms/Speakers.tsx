@@ -18,7 +18,6 @@ import FrancescoPic from "public/images/speakers/francescoandreoli.jpg";
 import FriscoPic from "public/images/speakers/friscodanconia.jpeg";
 import GuruPic from "public/images/speakers/guru.jpg";
 import JamesPic from "public/images/speakers/jameshe.jpeg";
-import JayadityaPic from "public/images/speakers/jayadityagupta.png";
 import JehyukPic from "public/images/speakers/jehyukjang.jpg";
 import JosephPic from "public/images/speakers/josephschiarizzi.jpg";
 import JoshPic from "public/images/speakers/joshguha.png";
@@ -32,7 +31,6 @@ import PeterPic from "public/images/speakers/peterszilagyi.png";
 import PhilipPic from "public/images/speakers/phillippieper.jpg";
 import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
 import QiangPic from "public/images/speakers/qiangju.png";
-import QinenPic from "public/images/speakers/qinenlooi.jpg";
 import QiPic from "public/images/speakers/qizhou.png";
 import RohitPic from "public/images/speakers/rohitramesh.jpg";
 import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
@@ -307,13 +305,6 @@ const SpeakersSection = () => {
           orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
-          source={JayadityaPic}
-          name="Jayaditya Gupta"
-          link="https://www.linkedin.com/in/oay/"
-          org="EF, PSE"
-          orgUrl="https://pse.dev/"
-        />
-        <SpeakerIcon
           source={OzgurPic}
           name="Özgür Armanc Yiğit"
           link="https://www.linkedin.com/in/oay/"
@@ -327,7 +318,6 @@ const SpeakersSection = () => {
           org="EF, Portal"
           orgUrl="https://www.ethportal.net/"
         />
-
         <SpeakerIcon
           source={YuroitakiPic}
           name="yuroitaki"
@@ -586,13 +576,6 @@ const SpeakersSection = () => {
           link="https://x.com/ryoheikomy"
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
-        />
-        <SpeakerIcon
-          source={QinenPic}
-          name="Qin En Looi"
-          link="https://x.com/webthreedad"
-          org="Saison Capital"
-          orgUrl="https://www.saisoncapital.com/"
         />
       </div>
       <div>
