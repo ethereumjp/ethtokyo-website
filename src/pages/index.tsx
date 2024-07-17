@@ -168,6 +168,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           href="https://app.moongate.id/e/eth-tokyo-2024"
           text="Volunteer pass"
           color="green"
+          disabled
         />
         <LinkedButton
           href="/apply"
