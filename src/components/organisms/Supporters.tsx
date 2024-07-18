@@ -10,7 +10,6 @@ import BitflyerLogo from "public/logo/BitflyerLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
-import CircleLogo from "public/logo/CircleLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
@@ -24,6 +23,7 @@ import ETHTaipeiLogo from "public/logo/ETHTaipeiLogo.png";
 import FractonLogo from "public/logo/FractonLogo.png";
 import GMOLogo from "public/logo/GMOLogo.png";
 import IntmaxLogo from "public/logo/IntmaxLogo.svg";
+import LxDaoLogo from "public/logo/LxDaoLogo.png";
 import MercoinLogo from "public/logo/MercoinLogo.png";
 import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
@@ -89,7 +89,7 @@ const SupportersSection = () => {
         gold: "2rem",
         silver: "2rem",
         bronze: "2rem",
-        partner: "2rem",
+        partner: "1.5rem",
       },
     };
 
@@ -211,13 +211,15 @@ const SupportersSection = () => {
         >
           Platinum Sponsors
         </h2>
-        <SponsorTier>
+        <div css={css` display:flex; justify-content: center;`}>
           <SupporterLogo
             source={GMOLogo}
             text="GMO Internet Group, Inc."
             link="https://www.gmo.jp/"
             tier="platinum"
           />
+        </div>
+        <SponsorTier>
           <SupporterLogo
             source={CabinetLogo}
             text="Cabinet, Inc."
@@ -264,12 +266,6 @@ const SupportersSection = () => {
             link="https://www.availproject.org/"
             tier="gold"
           />
-          {/* <SupporterLogo
-            source={CircleLogo}
-            text="Circle"
-            link="https://www.circle.com/"
-            tier="gold"
-          /> */}
           <SupporterLogo
             source={ENSLogo}
             text="ENS"
@@ -426,6 +422,12 @@ const SupportersSection = () => {
             source={ETHRiyadhLogo}
             text="ETH Riyadh"
             link="https://ethriyadh.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={LxDaoLogo}
+            text="LXDAO"
+            link="https://lxdao.io/"
             tier="partner"
           />
           <SupporterLogo
