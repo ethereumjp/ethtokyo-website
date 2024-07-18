@@ -211,14 +211,14 @@ const SupportersSection = () => {
         >
           Platinum Sponsors
         </h2>
-        <SponsorTier>
+        <div css={css` display:flex; justify-content: center;`}>
           <SupporterLogo
             source={GMOLogo}
             text="GMO Internet Group, Inc."
             link="https://www.gmo.jp/"
             tier="platinum"
           />
-        </SponsorTier>
+        </div>
         <SponsorTier>
           <SupporterLogo
             source={CabinetLogo}
