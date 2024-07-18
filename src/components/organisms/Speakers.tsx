@@ -37,7 +37,6 @@ import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
 import SamuelPic from "public/images/speakers/samuelchong.png";
 import ShogoPic from "public/images/speakers/shogoochiai.jpg";
 import SujithPic from "public/images/speakers/sujithsomraaj.jpeg";
-import SundaramPic from "public/images/speakers/sundaramjha.png";
 import TomaszPic from "public/images/speakers/tomaszstanczak.png";
 import TomoPic from "public/images/speakers/tomosaito.jpg";
 import UttamPic from "public/images/speakers/uttamsingh.png";
@@ -457,13 +456,6 @@ const SpeakersSection = () => {
           link="https://www.linkedin.com/in/qiang-zhu-3a716731/"
           org="Quarkchain"
           orgUrl="https://quarkchain.io/"
-        />
-        <SpeakerIcon
-          source={SundaramPic}
-          name="Sundaram Jha"
-          link="https://sundaram.vercel.app/"
-          org="Eden Protocol"
-          orgUrl="https://www.joineden.ai/"
         />
         <SpeakerIcon
           source={UttamPic}
