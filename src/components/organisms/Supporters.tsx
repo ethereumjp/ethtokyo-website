@@ -10,7 +10,6 @@ import BitflyerLogo from "public/logo/BitflyerLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
-import CircleLogo from "public/logo/CircleLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
@@ -265,12 +264,6 @@ const SupportersSection = () => {
             link="https://www.availproject.org/"
             tier="gold"
           />
-          {/* <SupporterLogo
-            source={CircleLogo}
-            text="Circle"
-            link="https://www.circle.com/"
-            tier="gold"
-          /> */}
           <SupporterLogo
             source={ENSLogo}
             text="ENS"
