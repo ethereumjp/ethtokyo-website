@@ -287,7 +287,7 @@ const SpeakersSection = () => {
           source={AyaPic}
           name="Aya Miyaguchi"
           link="https://twitter.com/AyaMiyagotchi/"
-          org="EF, Director"
+          org="EF, Executive Director"
           orgUrl="https://ethereum.foundation/"
         />
         <SpeakerIcon
