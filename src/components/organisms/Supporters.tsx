@@ -218,6 +218,8 @@ const SupportersSection = () => {
             link="https://www.gmo.jp/"
             tier="platinum"
           />
+        </SponsorTier>
+        <SponsorTier>
           <SupporterLogo
             source={CabinetLogo}
             text="Cabinet, Inc."
