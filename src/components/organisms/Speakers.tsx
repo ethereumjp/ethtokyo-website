@@ -332,13 +332,6 @@ const SpeakersSection = () => {
           orgUrl="https://www.nethermind.io/"
         />
         <SpeakerIcon
-          source={PhilipPic}
-          name="Philip Pieper"
-          link="https://twitter.com/PhilippPieper"
-          org="Swarm"
-          orgUrl="https://www.swarm.com"
-        />
-        <SpeakerIcon
           source={JosephPic}
           name="Joseph Schiarizzi"
           link="http://twitter.com/cupojoseph"
@@ -470,6 +463,13 @@ const SpeakersSection = () => {
           link="https://twitter.com/davidfucius"
           org="Layer N"
           orgUrl="https://www.layern.com/"
+        />
+        <SpeakerIcon
+          source={PhilipPic}
+          name="Philip Pieper"
+          link="https://twitter.com/PhilippPieper"
+          org="Swarm"
+          orgUrl="https://www.swarm.com"
         />
         <SpeakerIcon
           source={VladPic}
