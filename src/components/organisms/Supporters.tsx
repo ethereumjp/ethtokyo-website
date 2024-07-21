@@ -312,6 +312,7 @@ const SupportersSection = () => {
             link="https://bitflyer.com/"
             tier="silver"
           />
+
           <SupporterLogo
             source={NeroLogo}
             text="NEROchain"
@@ -319,6 +320,14 @@ const SupportersSection = () => {
             tier="silver"
           />
         </SponsorTier>
+        <div css={css` display:flex; justify-content: center;`}>
+          <SupporterLogo
+            source={MetamaskLogo}
+            text="Metamask"
+            link="https://metamask.io/"
+            tier="partner"
+          />
+        </div>
       </section>
       <section id="supporters">
         <PartnerCategory category="Event Supporters">
@@ -356,12 +365,6 @@ const SupportersSection = () => {
             source={AkindoLogo}
             text="Akindo"
             link="https://akindo.io/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={MetamaskLogo}
-            text="Metamask"
-            link="https://metamask.io/"
             tier="partner"
           />
           <SupporterLogo
