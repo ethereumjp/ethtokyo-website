@@ -2,6 +2,8 @@ import Layout from "@/components/layouts/base";
 import { CountdownPanel } from "@/components/organisms/Countdown";
 import ScheduleSection from "@/components/organisms/Schedule";
 import SpeakersSection from "@/components/organisms/Speakers";
+import JudgesSection from "@/components/organisms/Judges";
+import MentorsSection from "@/components/organisms/Mentors";
 import StatementSection from "@/components/organisms/Statement";
 import SupportersSection from "@/components/organisms/Supporters";
 import { mq } from "@/themes/settings/breakpoints";
@@ -191,6 +193,8 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
         <StatementSection />
         <GetTicketsSection />
         <SpeakersSection />
+        <MentorsSection />
+        <JudgesSection />
         <SupportersSection />
         <ScheduleSection />
       </div>
