@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Tomasz Stańczak",
+    "role": "Founder",
+    "org": "Nethermind",
+    "imagePath": "/images/speakers/tomaszstanczak.png"
+  },
+  {
+    "name": "Michele D'Aliessi",
+    "role": "Co-founder",
+    "org": "Superfluid",
+    "imagePath": "/images/speakers/micheledaliessi.png"
+  },
+  {
+    "name": "Péter Szilágyi",
+    "role": "Geth lead",
+    "org": "Ethereum Foundation",
+    "imagePath": "/images/speakers/peterszilagyi.png"
+  },
+  {
+    "name": "Melisa Kurtcan",
+    "role": "Founder",
+    "org": "Satoshi Twenty One",
+    "imagePath": "/images/speakers/melisakurtcan.jpg"
+  },
+  {
+    "name": "Edmund Edgar",
+    "role": "Founder",
+    "org": "Reality.eth",
+    "imagePath": "/images/speakers/edmundedgar.jpg"
+  },
+  {
+    "name": "Joseph Schiarizzi",
+    "role": "Founder",
+    "org": "Open Dollar",
+    "imagePath": "/images/speakers/josephschiarizzi.jpg"
+  },
+  {
+    "name": "Moazzam Arif",
+    "role": "Founder",
+    "org": "BlockApex",
+    "imagePath": "/images/speakers/moazzamarif.png"
+  },
+  {
+    "name": "Naim Ashwab",
+    "role": "Co-founder",
+    "org": "PWN DAO",
+    "imagePath": "/images/speakers/naimashhab.jpeg"
+  },
+  {
+    "name": "Sujith Somraaj",
+    "role": "Senior Protocol Developer",
+    "org": "Superform",
+    "imagePath": "/images/speakers/sujithsomraaj.jpeg"
+  },
+  {
+    "name": "Makoto Inoue",
+    "role": "Core developer",
+    "org": "ENS",
+    "imagePath": "/images/speakers/makoto.jpg"
+  },
+  {
+    "name": "Andrej Berlin",
+    "role": "Designer & Engineer",
+    "org": "Deep Work Studio",
+    "imagePath": "https://x.com/kischiman/photo"
+  },
+  {
+    "name": "Nori Zkitty",
+    "role": "Founder",
+    "org": "SpaceCowboy",
+    "imagePath": "/images/speakers/norizkitty.jpg"
+  }
+]

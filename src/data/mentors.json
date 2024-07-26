@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Özgür Armanc Yiğit",
+    "org": "ZK Engineer",
+    "role": "Ethereum Foundation PSE",
+    "imagePath": "/images/speakers/ozgurarmancyigit.jpg"
+  },
+  {
+    "name": "yuroitaki",
+    "org": "Software Engineer",
+    "role": "Ethereum Foundation PSE",
+    "imagePath": "/images/speakers/yuroitaki.jpeg"
+  },
+  {
+    "name": "Francesco Andreoli",
+    "org": "Head of Developer Community",
+    "role": "MetaMask",
+    "imagePath": "/images/speakers/francescoandreoli.jpg"
+  },
+  {
+    "name": "Chua Zheng Leong",
+    "org": "Co-founder",
+    "role": "Automata Network",
+    "imagePath": "/images/speakers/chuazhenglong.jpeg"
+  },
+  {
+    "name": "Suhyeon Lee",
+    "org": "Security Researcher",
+    "role": "Tokamak Network",
+    "imagePath": "/images/speakers/suhyeonlee.png"
+  },
+  {
+    "name": "Jehyuk Jang",
+    "org": "ZKP researcher",
+    "role": "Tokamak Network",
+    "imagePath": "/images/speakers/jehyukjang.jpg"
+  },
+  {
+    "name": "Qi Zhou",
+    "org": "Founder",
+    "role": "EthStorage",
+    "imagePath": "/images/speakers/qizhou.png"
+  },
+  {
+    "name": "Varun Doshi",
+    "org": "Blockchain Engineer",
+    "role": "Chainrisk",
+    "imagePath": "/images/speakers/varundoshi.jpg"
+  },
+  {
+    "name": "Rohit Ramesh",
+    "org": "Devrel Engineer",
+    "role": "Crossmint",
+    "imagePath": "/images/speakers/rohitramesh.jpg"
+  },
+  {
+    "name": "Ryohei Komiyama",
+    "org": "CTO",
+    "role": "Kyuzan",
+    "imagePath": "/images/speakers/ryokomiyama.jpg"
+  },
+  {
+    "name": "Yuki Yuminaga",
+    "org": "Research & Strategy",
+    "role": "Sorella Labs",
+    "imagePath": "/images/speakers/yukiyuminaga.jpeg"
+  },
+  {
+    "name": "Luki Song",
+    "org": "Product Strategy",
+    "role": "Chainbase",
+    "imagePath": "https://drive.google.com/open?id=1_HRWd9pUTU7vM2DgDgtrnJffvH4o5eF9"
+  },
+  {
+    "name": "James He",
+    "org": "Core developer",
+    "role": "Prysm consensus client",
+    "imagePath": "/images/speakers/jameshe.jpeg"
+  },
+  {
+    "name": "Qiang Zhu",
+    "org": "Head of Engineering",
+    "role": "Quarkchain",
+    "imagePath": "/images/speakers/qiangju.png"
+  },
+  {
+    "name": "Yash Jagtap",
+    "org": "Tech Support Engineer",
+    "role": "TheGraph",
+    "imagePath": "https://drive.google.com/open?id=11wdwwWIeb-6YOLm0DEFVfFW7sZ78UFkC"
+  },
+  {
+    "name": "Harry Bairstow",
+    "org": "Software Engineer",
+    "role": "Lit Protocol",
+    "imagePath": "https://drive.google.com/open?id=1OKrC-HAXduEML5OXFK9FxGVSuFEqkTCT"
+  }
+]
