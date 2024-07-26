@@ -1,17 +1,10 @@
+import judges from "@/data/judges.json";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, info } from "@/themes/settings/color";
+import { brand } from "@/themes/settings/color";
+import type { Judge } from "@/types";
 import { css } from "@emotion/react";
 import Image from "next/image";
-import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
-import judges from "@/data/judges.json";
-
-interface Judge {
-  name: string;
-  role: string;
-  org: string;
-  imagePath: string;
-}
 
 const JudgeSection = () => {
   const [currentJudges, setJudges] = useState<Judge[]>([]);
@@ -24,8 +17,9 @@ const JudgeSection = () => {
     imagePath: string;
     name: string;
     org: string;
+    orgUrl: string;
     role: string;
-  }> = ({ imagePath, name, org, role }) => (
+  }> = ({ imagePath, name, org, orgUrl, role }) => (
     <div>
       <a
         href={"/"}
@@ -60,37 +54,22 @@ const JudgeSection = () => {
           {name}
         </p>
       </a>
-      <a
-        href={"/"}
-        target="_blank"
-        rel="noreferrer"
-        css={css`text-decoration: none; :hover{color: ${brand.JordyBlue};};`}
+      <p
+        css={css`margin-top:0; margin-bottom:0; font-size: 0.8rem; line-height:1;
+            ${mq.laptop}{
+              font-size: 1rem;
+            };
+          `}
       >
-        <p
-          css={css`
-            font-size: 0.8rem;
-            margin-top:0;
-            margin-bottom:0;
-            ${mq.laptop}{
-              font-size: 1rem;
-            };
-          `}
+        <a
+          css={css`text-decoration: none; :hover{color: ${brand.JordyBlue};};`}
+          href={orgUrl}
+          target="_blank"
+          rel="noreferrer"
         >
-          {role}
-        </p>
-        <p
-          css={css`
-            font-size: 0.8rem;
-            line-height:1;
-            margin-top:0;
-            ${mq.laptop}{
-              font-size: 1rem;
-            };
-          `}
-        >
-          {org}
-        </p>
-      </a>
+          {role}, {org}
+        </a>
+      </p>
     </div>
   );
 
@@ -135,20 +114,6 @@ const JudgeSection = () => {
           <JudgeIcon key={judges.name} {...judges} />
         ))}
       </div>
-      {/* <div>
-        <p>
-          ❗
-          <a
-            css={css`:hover {color: ${info.Attention}};`}
-            href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
-            target="_blank"
-            rel="noreferrer"
-          >
-            We are currently accepting speaker applications
-          </a>
-          ❗
-        </p>
-      </div> */}
     </section>
   );
 };

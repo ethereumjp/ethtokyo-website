@@ -1,74 +1,87 @@
 [
   {
+    "name": "Péter Szilágyi",
+    "role": "Geth lead",
+    "org": "EF",
+    "orgUrl": "https://geth.ethereum.org/",
+    "imagePath": "/images/speakers/peterszilagyi.png"
+  },
+  {
     "name": "Tomasz Stańczak",
     "role": "Founder",
     "org": "Nethermind",
+    "orgUrl": "https://www.nethermind.io/",
     "imagePath": "/images/speakers/tomaszstanczak.png"
   },
   {
-    "name": "Michele D'Aliessi",
-    "role": "Co-founder",
-    "org": "Superfluid",
-    "imagePath": "/images/speakers/micheledaliessi.png"
-  },
-  {
-    "name": "Péter Szilágyi",
-    "role": "Geth lead",
-    "org": "Ethereum Foundation",
-    "imagePath": "/images/speakers/peterszilagyi.png"
+    "name": "Makoto Inoue",
+    "role": "Core developer",
+    "org": "ENS",
+    "orgUrl": "https://ens.domains/",
+    "imagePath": "/images/speakers/makoto.jpg"
   },
   {
     "name": "Melisa Kurtcan",
     "role": "Founder",
     "org": "Satoshi Twenty One",
+    "orgUrl": "https://satoshitwenty.one/",
     "imagePath": "/images/speakers/melisakurtcan.jpg"
   },
   {
-    "name": "Edmund Edgar",
-    "role": "Founder",
-    "org": "Reality.eth",
-    "imagePath": "/images/speakers/edmundedgar.jpg"
+    "name": "Andrej Berlin",
+    "role": "Designer & Engineer",
+    "org": "Deep Work Studio",
+    "orgUrl": "https://deepwork.studio/",
+    "imagePath": "/images/speakers/andrejberlin.png"
   },
+  {
+    "name": "Michele D'Aliessi",
+    "role": "Co-founder",
+    "org": "Superfluid",
+    "orgUrl": "https://www.superfluid.finance/",
+    "imagePath": "/images/speakers/micheledaliessi.png"
+  },
+
   {
     "name": "Joseph Schiarizzi",
     "role": "Founder",
     "org": "Open Dollar",
+    "orgUrl": "https://www.opendollar.com/",
     "imagePath": "/images/speakers/josephschiarizzi.jpg"
   },
   {
     "name": "Moazzam Arif",
     "role": "Founder",
     "org": "BlockApex",
+    "orgUrl": "https://blockapex.io/",
     "imagePath": "/images/speakers/moazzamarif.png"
   },
   {
     "name": "Naim Ashwab",
     "role": "Co-founder",
     "org": "PWN DAO",
+    "orgUrl": "https://pwn.xyz/",
     "imagePath": "/images/speakers/naimashhab.jpeg"
-  },
-  {
-    "name": "Sujith Somraaj",
-    "role": "Senior Protocol Developer",
-    "org": "Superform",
-    "imagePath": "/images/speakers/sujithsomraaj.jpeg"
-  },
-  {
-    "name": "Makoto Inoue",
-    "role": "Core developer",
-    "org": "ENS",
-    "imagePath": "/images/speakers/makoto.jpg"
-  },
-  {
-    "name": "Andrej Berlin",
-    "role": "Designer & Engineer",
-    "org": "Deep Work Studio",
-    "imagePath": "/images/speakers/andrejberlin.png"
   },
   {
     "name": "Nori Zkitty",
     "role": "Founder",
     "org": "SpaceCowboy",
+    "orgUrl": "https://www.spacecowboy.so/",
     "imagePath": "/images/speakers/norizkitty.jpg"
+  },
+  {
+    "name": "Edmund Edgar",
+    "role": "Founder",
+    "org": "Reality.eth",
+    "orgUrl": "https://reality.eth.limo/",
+    "imagePath": "/images/speakers/edmundedgar.jpg"
+  },
+  {
+    "name": "Sujith Somraaj",
+    "role": "Senior Protocol Developer",
+    "org": "Superform",
+    "orgUrl": "https://www.superform.xyz/",
+    "imagePath": "/images/speakers/sujithsomraaj.jpeg"
   }
 ]

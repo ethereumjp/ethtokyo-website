@@ -12,3 +12,11 @@ export interface PageProps {
 export interface ComponentProps {
   children?: ReactNode;
 }
+
+export interface Judge {
+  name: string;
+  role: string;
+  org: string;
+  orgUrl: string;
+  imagePath: string;
+}
