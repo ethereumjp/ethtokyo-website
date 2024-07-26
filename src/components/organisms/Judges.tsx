@@ -116,7 +116,7 @@ const JudgeSection = () => {
             font-size: 3rem;
           }`}
       >
-        Mentors
+        Judges
       </h2>
       <div
         css={css`
