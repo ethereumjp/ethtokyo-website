@@ -24,7 +24,7 @@
     "lint:fix:css": "stylelint --fix \"**/*.{js,jsx,ts,tsx}\"",
     "format": "yarn run biome format ./src --write",
     "check": "yarn run biome check ./src",
-    "clean": "yarn run biome check ./src --apply",
+    "clean": "yarn run biome check ./src --write",
     "build-storybook": "storybook build"
   },
   "packageManager": "yarn@3.2.4",

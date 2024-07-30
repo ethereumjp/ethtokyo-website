@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Özgür Armanc Yiğit",
+    "role": "ZK Engineer",
+    "org": "EF, PSE",
+    "orgUrl": "https://pse.dev/",
+    "imagePath": "/images/contributors/ozgurarmancyigit.jpg"
+  },
+  {
+    "name": "yuroitaki",
+    "role": "Engineering",
+    "org": "EF, PSE",
+    "orgUrl": "https://pse.dev/",
+    "imagePath": "/images/contributors/yuroitaki.jpeg"
+  },
+  {
+    "name": "Francesco Andreoli",
+    "role": "Dev Community",
+    "org": "MetaMask",
+    "orgUrl": "https://metamask.io/",
+    "imagePath": "/images/contributors/francescoandreoli.jpg"
+  },
+  {
+    "name": "Qi Zhou",
+    "role": "Founder",
+    "org": "EthStorage",
+    "orgUrl": "https://ethstorage.io/",
+    "imagePath": "/images/contributors/qizhou.png"
+  },
+  {
+    "name": "Chua Zheng Leong",
+    "role": "Co-founder",
+    "orgUrl": "https://www.ata.network/",
+    "org": "Automata Network",
+    "imagePath": "/images/contributors/chuazhenglong.jpeg"
+  },
+  {
+    "name": "Suhyeon Lee",
+    "role": "Sec Researcher",
+    "org": "Tokamak Network",
+    "orgUrl": "https://www.tokamak.network/",
+    "imagePath": "/images/contributors/suhyeonlee.png"
+  },
+  {
+    "name": "Jehyuk Jang",
+    "role": "ZKP researcher",
+    "org": "Tokamak Network",
+    "orgUrl": "https://www.tokamak.network/",
+    "imagePath": "/images/contributors/jehyukjang.jpg"
+  },
+  {
+    "name": "Harry Bairstow",
+    "role": "Engineering",
+    "org": "Lit Protocol",
+    "orgUrl": "https://www.litprotocol.com/",
+    "imagePath": "/images/contributors/harrybairstow.jpg"
+  },
+  {
+    "name": "James He",
+    "role": "Core dev",
+    "org": "Offchain Labs",
+    "orgUrl": "https://www.offchainlabs.com/",
+    "imagePath": "/images/contributors/jameshe.jpeg"
+  },
+  {
+    "name": "Varun Doshi",
+    "role": "Engineering",
+    "org": "Chainrisk",
+    "orgUrl": "https://www.chainrisk.cloud/",
+    "imagePath": "/images/contributors/varundoshi.jpg"
+  },
+  {
+    "name": "Qiang Zhu",
+    "role": "Engineering",
+    "org": "Quarkchain",
+    "orgUrl": "https://quarkchain.io/",
+    "imagePath": "/images/contributors/qiangju.png"
+  },
+  {
+    "name": "Rohit Ramesh",
+    "role": "Devrel",
+    "org": "Crossmint",
+    "orgUrl": "https://www.crossmint.com/",
+    "imagePath": "/images/contributors/rohitramesh.jpg"
+  },
+  {
+    "name": "Yash Jagtap",
+    "role": "Tech Support",
+    "org": "TheGraph",
+    "orgUrl": "https://thegraph.com/",
+    "imagePath": "/images/contributors/yashjagtap.jpeg"
+  },
+  {
+    "name": "Ryohei Komiyama",
+    "role": "CTO",
+    "org": "Kyuzan",
+    "orgUrl": "https://kyuzan.com/",
+    "imagePath": "/images/contributors/ryokomiyama.jpg"
+  },
+  {
+    "name": "Yuki Yuminaga",
+    "role": "R&D",
+    "org": "Sorella Labs",
+    "orgUrl": "https://github.com/SorellaLabsl",
+    "imagePath": "/images/contributors/yukiyuminaga.jpeg"
+  },
+  {
+    "name": "Luki Song",
+    "role": "Product Strategy",
+    "org": "Chainbase",
+    "orgUrl": "https://chainbase.com/",
+    "imagePath": "/images/contributors/lukisong.jpg"
+  }
+]

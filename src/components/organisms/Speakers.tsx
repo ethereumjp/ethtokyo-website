@@ -2,49 +2,48 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
-import AbhimanyuPic from "public/images/speakers/abhimanyunag.jpg";
-import AggrePic from "public/images/speakers/aggre.jpg";
-import AllenPic from "public/images/speakers/allenjoseph.jpg";
-import AudreyPic from "public/images/speakers/audrey.png";
-import AyaPic from "public/images/speakers/ayamiyaguchi.png";
-import ChuazhengPic from "public/images/speakers/chuazhenglong.jpeg";
-import DangerPic from "public/images/speakers/dangerz.png";
-import DanielPic from "public/images/speakers/danielhwang.png";
-import DaodudePic from "public/images/speakers/daodude.jpg";
-import DavidPic from "public/images/speakers/davidcao.jpeg";
-import DeliPic from "public/images/speakers/deligong.png";
-import EdmundPic from "public/images/speakers/edmundedgar.jpg";
-import FrancescoPic from "public/images/speakers/francescoandreoli.jpg";
-import FriscoPic from "public/images/speakers/friscodanconia.jpeg";
-import GuruPic from "public/images/speakers/guru.jpg";
-import JamesPic from "public/images/speakers/jameshe.jpeg";
-import JehyukPic from "public/images/speakers/jehyukjang.jpg";
-import JosephPic from "public/images/speakers/josephschiarizzi.jpg";
-import JoshPic from "public/images/speakers/joshguha.png";
-import KolbyPic from "public/images/speakers/kolbymorozliebl.jpg";
-import MeinaPic from "public/images/speakers/meinazhou.jpg";
-import MelisaPic from "public/images/speakers/melisakurtcan.jpg";
-import MoazzamPic from "public/images/speakers/moazzamarif.png";
-import NaimPic from "public/images/speakers/naimashhab.jpeg";
-import OzgurPic from "public/images/speakers/ozgurarmancyigit.jpg";
-import PeterPic from "public/images/speakers/peterszilagyi.png";
-import PhilipPic from "public/images/speakers/phillippieper.jpg";
-import PiyushPic from "public/images/speakers/piyushgururani.jpeg";
-import QiangPic from "public/images/speakers/qiangju.png";
-import QiPic from "public/images/speakers/qizhou.png";
-import RohitPic from "public/images/speakers/rohitramesh.jpg";
-import RyoheiPic from "public/images/speakers/ryokomiyama.jpg";
-import SamuelPic from "public/images/speakers/samuelchong.png";
-import ShogoPic from "public/images/speakers/shogoochiai.jpg";
-import SujithPic from "public/images/speakers/sujithsomraaj.jpeg";
-import TomaszPic from "public/images/speakers/tomaszstanczak.png";
-import TomoPic from "public/images/speakers/tomosaito.jpg";
-import UttamPic from "public/images/speakers/uttamsingh.png";
-import VarunPic from "public/images/speakers/varundoshi.jpg";
-import VitalikPic from "public/images/speakers/vitalik.jpg";
-import VladPic from "public/images/speakers/vladsvitanko.jpg";
-import YukiPic from "public/images/speakers/yukiyuminaga.jpeg";
-import YuroitakiPic from "public/images/speakers/yuroitaki.jpeg";
+import AbhimanyuPic from "public/images/contributors/abhimanyunag.jpg";
+import AggrePic from "public/images/contributors/aggre.jpg";
+import AllenPic from "public/images/contributors/allenjoseph.jpg";
+import AudreyPic from "public/images/contributors/audrey.png";
+import AyaPic from "public/images/contributors/ayamiyaguchi.png";
+import ChuazhengPic from "public/images/contributors/chuazhenglong.jpeg";
+import DangerPic from "public/images/contributors/dangerz.png";
+import DanielPic from "public/images/contributors/danielhwang.png";
+import DaodudePic from "public/images/contributors/daodude.jpg";
+import DavidPic from "public/images/contributors/davidcao.jpeg";
+import DeliPic from "public/images/contributors/deligong.png";
+import EdmundPic from "public/images/contributors/edmundedgar.jpg";
+import FrancescoPic from "public/images/contributors/francescoandreoli.jpg";
+import FriscoPic from "public/images/contributors/friscodanconia.jpeg";
+import GuruPic from "public/images/contributors/guru.jpg";
+import JamesPic from "public/images/contributors/jameshe.jpeg";
+import JehyukPic from "public/images/contributors/jehyukjang.jpg";
+import JosephPic from "public/images/contributors/josephschiarizzi.jpg";
+import JoshPic from "public/images/contributors/joshguha.png";
+import KolbyPic from "public/images/contributors/kolbymorozliebl.jpg";
+import MeinaPic from "public/images/contributors/meinazhou.jpg";
+import MelisaPic from "public/images/contributors/melisakurtcan.jpg";
+import MoazzamPic from "public/images/contributors/moazzamarif.png";
+import NaimPic from "public/images/contributors/naimashhab.jpeg";
+import OzgurPic from "public/images/contributors/ozgurarmancyigit.jpg";
+import PeterPic from "public/images/contributors/peterszilagyi.png";
+import PhilipPic from "public/images/contributors/phillippieper.jpg";
+import PiyushPic from "public/images/contributors/piyushgururani.jpeg";
+import QiangPic from "public/images/contributors/qiangju.png";
+import QiPic from "public/images/contributors/qizhou.png";
+import RohitPic from "public/images/contributors/rohitramesh.jpg";
+import RyoheiPic from "public/images/contributors/ryokomiyama.jpg";
+import SamuelPic from "public/images/contributors/samuelchong.png";
+import ShogoPic from "public/images/contributors/shogoochiai.jpg";
+import SujithPic from "public/images/contributors/sujithsomraaj.jpeg";
+import TomaszPic from "public/images/contributors/tomaszstanczak.png";
+import TomoPic from "public/images/contributors/tomosaito.jpg";
+import VarunPic from "public/images/contributors/varundoshi.jpg";
+import VitalikPic from "public/images/contributors/vitalik.jpg";
+import VladPic from "public/images/contributors/vladsvitanko.jpg";
+import YukiPic from "public/images/contributors/yukiyuminaga.jpeg";
+import YuroitakiPic from "public/images/contributors/yuroitaki.jpeg";
 import type { ReactNode } from "react";
 
 const SpeakersSection = () => {
@@ -88,7 +87,7 @@ const SpeakersSection = () => {
             width: 96px;
 
             ${mq.laptop}{
-              width: 144px;
+              width: 120px;
             }
           `}
         />
@@ -208,18 +207,6 @@ const SpeakersSection = () => {
             </p>
           </HackathonTrackCard>
         </div>
-        <div>
-          <p css={css`font-size: 1.2rem;`}>
-            ✋
-            <a
-              href="https://forms.gle/nv1DFjb9GBXKZmAf9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hacking mentors welcome!
-            </a>
-          </p>
-        </div>
         {/* <br />
         <div>
           <Link
@@ -253,7 +240,7 @@ const SpeakersSection = () => {
             font-size: 3rem;
           }`}
       >
-        Event Speakers
+        Speakers
       </h2>
       <div
         css={css`
@@ -451,13 +438,6 @@ const SpeakersSection = () => {
           orgUrl="https://quarkchain.io/"
         />
         <SpeakerIcon
-          source={UttamPic}
-          name="Uttam Singh"
-          link="https://x.com/uttam_singhk"
-          org="Flare Network"
-          orgUrl="https://flare.network/"
-        />
-        <SpeakerIcon
           source={DavidPic}
           name="David Cao"
           link="https://twitter.com/davidfucius"
@@ -569,20 +549,6 @@ const SpeakersSection = () => {
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
         />
-      </div>
-      <div>
-        <p>
-          ❗
-          <a
-            css={css`:hover {color: ${info.Attention}};`}
-            href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
-            target="_blank"
-            rel="noreferrer"
-          >
-            We are currently accepting speaker applications
-          </a>
-          ❗
-        </p>
       </div>
     </section>
   );

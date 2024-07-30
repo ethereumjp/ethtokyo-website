@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/organisms/Footer";
 import { globalStyles } from "@/themes/global";
 import { brand } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
