@@ -23,10 +23,4 @@ interface Contributor {
 
 export interface Mentor extends Contributor {}
 
-export interface Judge {
-  name: string;
-  role: string;
-  org: string;
-  orgUrl: string;
-  imagePath: string;
-}
+export interface Judge extends Contributor {}
