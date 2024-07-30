@@ -1,98 +1,114 @@
 [
   {
     "name": "Özgür Armanc Yiğit",
-    "org": "ZK Engineer",
-    "role": "Ethereum Foundation PSE",
-    "imagePath": "/images/speakers/ozgurarmancyigit.jpg"
+    "role": "ZK Engineer",
+    "org": "Ethereum Foundation PSE",
+    "orgUrl": "https://pse.dev/",
+    "imagePath": "/images/contributors/ozgurarmancyigit.jpg"
   },
   {
     "name": "yuroitaki",
-    "org": "Software Engineer",
-    "role": "Ethereum Foundation PSE",
-    "imagePath": "/images/speakers/yuroitaki.jpeg"
+    "role": "Software Engineer",
+    "org": "Ethereum Foundation PSE",
+    "orgUrl": "https://pse.dev/",
+    "imagePath": "/images/contributors/yuroitaki.jpeg"
   },
   {
     "name": "Francesco Andreoli",
-    "org": "Head of Developer Community",
-    "role": "MetaMask",
-    "imagePath": "/images/speakers/francescoandreoli.jpg"
+    "role": "Head of Developer Community",
+    "org": "MetaMask",
+    "orgUrl": "https://metamask.io/",
+    "imagePath": "/images/contributors/francescoandreoli.jpg"
   },
   {
     "name": "Chua Zheng Leong",
-    "org": "Co-founder",
-    "role": "Automata Network",
-    "imagePath": "/images/speakers/chuazhenglong.jpeg"
+    "role": "Co-founder",
+    "orgUrl": "https://www.ata.network/",
+    "org": "Automata Network",
+    "imagePath": "/images/contributors/chuazhenglong.jpeg"
   },
   {
     "name": "Suhyeon Lee",
-    "org": "Security Researcher",
-    "role": "Tokamak Network",
-    "imagePath": "/images/speakers/suhyeonlee.png"
+    "role": "Security Researcher",
+    "org": "Tokamak Network",
+    "orgUrl": "https://www.tokamak.network/",
+    "imagePath": "/images/contributors/suhyeonlee.png"
   },
   {
     "name": "Jehyuk Jang",
-    "org": "ZKP researcher",
-    "role": "Tokamak Network",
-    "imagePath": "/images/speakers/jehyukjang.jpg"
+    "role": "ZKP researcher",
+    "org": "Tokamak Network",
+    "orgUrl": "https://www.tokamak.network/",
+    "imagePath": "/images/contributors/jehyukjang.jpg"
   },
   {
     "name": "Qi Zhou",
-    "org": "Founder",
     "role": "EthStorage",
-    "imagePath": "/images/speakers/qizhou.png"
+    "org": "Founder",
+    "orgUrl": "https://ethstorage.io/",
+    "imagePath": "/images/contributors/qizhou.png"
   },
   {
     "name": "Varun Doshi",
-    "org": "Blockchain Engineer",
-    "role": "Chainrisk",
-    "imagePath": "/images/speakers/varundoshi.jpg"
+    "role": "Blockchain Engineer",
+    "org": "Chainrisk",
+    "orgUrl": "https://www.chainrisk.cloud/",
+    "imagePath": "/images/contributors/varundoshi.jpg"
   },
   {
     "name": "Rohit Ramesh",
-    "org": "Devrel Engineer",
-    "role": "Crossmint",
-    "imagePath": "/images/speakers/rohitramesh.jpg"
+    "role": "Devrel Engineer",
+    "org": "Crossmint",
+    "orgUrl": "https://www.crossmint.com/",
+    "imagePath": "/images/contributors/rohitramesh.jpg"
   },
   {
     "name": "Ryohei Komiyama",
-    "org": "CTO",
-    "role": "Kyuzan",
-    "imagePath": "/images/speakers/ryokomiyama.jpg"
+    "role": "CTO",
+    "org": "Kyuzan",
+    "orgUrl": "https://kyuzan.com/",
+    "imagePath": "/images/contributors/ryokomiyama.jpg"
   },
   {
     "name": "Yuki Yuminaga",
-    "org": "Research & Strategy",
-    "role": "Sorella Labs",
-    "imagePath": "/images/speakers/yukiyuminaga.jpeg"
+    "role": "Research & Strategy",
+    "org": "Sorella Labs",
+    "orgUrl": "https://github.com/SorellaLabsl",
+    "imagePath": "/images/contributors/yukiyuminaga.jpeg"
   },
   {
     "name": "Luki Song",
-    "org": "Product Strategy",
-    "role": "Chainbase",
-    "imagePath": "https://drive.google.com/open?id=1_HRWd9pUTU7vM2DgDgtrnJffvH4o5eF9"
+    "role": "Product Strategy",
+    "org": "Chainbase",
+    "orgUrl": "https://chainbase.com/",
+    "imagePath": "/images/contributors/lukisong.jpg"
   },
   {
     "name": "James He",
-    "org": "Core developer",
-    "role": "Prysm consensus client",
-    "imagePath": "/images/speakers/jameshe.jpeg"
+    "role": "Core developer",
+    "org": "Offchain Labs",
+    "orgUrl": "https://www.offchainlabs.com/",
+    "imagePath": "/images/contributors/jameshe.jpeg"
   },
   {
     "name": "Qiang Zhu",
-    "org": "Head of Engineering",
-    "role": "Quarkchain",
-    "imagePath": "/images/speakers/qiangju.png"
+    "role": "Head of Engineering",
+    "org": "Quarkchain",
+    "orgUrl": "https://quarkchain.io/",
+    "imagePath": "/images/contributors/qiangju.png"
   },
   {
     "name": "Yash Jagtap",
-    "org": "Tech Support Engineer",
-    "role": "TheGraph",
-    "imagePath": "https://drive.google.com/open?id=11wdwwWIeb-6YOLm0DEFVfFW7sZ78UFkC"
+    "role": "Tech Support Engineer",
+    "org": "TheGraph",
+    "orgUrl": "https://thegraph.com/",
+    "imagePath": "/images/contributors/yashjagtap.jpeg"
   },
   {
     "name": "Harry Bairstow",
-    "org": "Software Engineer",
-    "role": "Lit Protocol",
-    "imagePath": "https://drive.google.com/open?id=1OKrC-HAXduEML5OXFK9FxGVSuFEqkTCT"
+    "role": "Software Engineer",
+    "org": "Lit Protocol",
+    "orgUrl": "https://www.litprotocol.com/",
+    "imagePath": "/images/contributors/harrybairstow.jpg"
   }
 ]

@@ -1,19 +1,12 @@
 import mentors from "@/data/mentors.json";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, info } from "@/themes/settings/color";
+import { brand } from "@/themes/settings/color";
+import type { Mentor } from "@/types";
 import { css } from "@emotion/react";
-import Image from "next/image";
-import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 
-interface Mentors {
-  name: string;
-  role: string;
-  org: string;
-  imagePath: string;
-}
 const MentorsSection = () => {
-  const [currentMentors, setMentors] = useState<Mentors[]>([]);
+  const [currentMentors, setMentors] = useState<Mentor[]>([]);
 
   useEffect(() => {
     setMentors(mentors);
@@ -22,8 +15,9 @@ const MentorsSection = () => {
     imagePath: string;
     name: string;
     org: string;
+    orgUrl: string;
     role: string;
-  }> = ({ imagePath, name, org, role }) => (
+  }> = ({ imagePath, name, org, orgUrl, role }) => (
     <div>
       <a
         href={"/"}
