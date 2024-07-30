@@ -13,6 +13,16 @@ export interface ComponentProps {
   children?: ReactNode;
 }
 
+interface Contributor {
+  name: string;
+  role: string;
+  org: string;
+  orgUrl: string;
+  imagePath: string;
+}
+
+export interface Mentor extends Contributor {}
+
 export interface Judge {
   name: string;
   role: string;

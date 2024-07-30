@@ -1,87 +1,99 @@
 [
   {
     "name": "Péter Szilágyi",
+    "linkToOnlinePresence": "https://twitter.com/peter_szilagyi/",
     "role": "Geth lead",
     "org": "EF",
     "orgUrl": "https://geth.ethereum.org/",
-    "imagePath": "/images/speakers/peterszilagyi.png"
+    "imagePath": "/images/contributors/peterszilagyi.png"
   },
   {
     "name": "Tomasz Stańczak",
+    "linkToOnlinePresence": "https://twitter.com/tkstanczak/",
     "role": "Founder",
     "org": "Nethermind",
     "orgUrl": "https://www.nethermind.io/",
-    "imagePath": "/images/speakers/tomaszstanczak.png"
+    "imagePath": "/images/contributors/tomaszstanczak.png"
   },
   {
     "name": "Makoto Inoue",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Core developer",
     "org": "ENS",
     "orgUrl": "https://ens.domains/",
-    "imagePath": "/images/speakers/makoto.jpg"
+    "imagePath": "/images/contributors/makoto.jpg"
   },
   {
     "name": "Melisa Kurtcan",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Founder",
     "org": "Satoshi Twenty One",
     "orgUrl": "https://satoshitwenty.one/",
-    "imagePath": "/images/speakers/melisakurtcan.jpg"
+    "imagePath": "/images/contributors/melisakurtcan.jpg"
   },
   {
     "name": "Andrej Berlin",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Designer & Engineer",
     "org": "Deep Work Studio",
     "orgUrl": "https://deepwork.studio/",
-    "imagePath": "/images/speakers/andrejberlin.png"
+    "imagePath": "/images/contributors/andrejberlin.png"
   },
   {
     "name": "Michele D'Aliessi",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Co-founder",
     "org": "Superfluid",
     "orgUrl": "https://www.superfluid.finance/",
-    "imagePath": "/images/speakers/micheledaliessi.png"
+    "imagePath": "/images/contributors/micheledaliessi.png"
   },
 
   {
     "name": "Joseph Schiarizzi",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Founder",
     "org": "Open Dollar",
     "orgUrl": "https://www.opendollar.com/",
-    "imagePath": "/images/speakers/josephschiarizzi.jpg"
+    "imagePath": "/images/contributors/josephschiarizzi.jpg"
   },
   {
     "name": "Moazzam Arif",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Founder",
     "org": "BlockApex",
     "orgUrl": "https://blockapex.io/",
-    "imagePath": "/images/speakers/moazzamarif.png"
+    "imagePath": "/images/contributors/moazzamarif.png"
   },
   {
     "name": "Naim Ashwab",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Co-founder",
     "org": "PWN DAO",
     "orgUrl": "https://pwn.xyz/",
-    "imagePath": "/images/speakers/naimashhab.jpeg"
+    "imagePath": "/images/contributors/naimashhab.jpeg"
   },
   {
     "name": "Nori Zkitty",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
     "role": "Founder",
     "org": "SpaceCowboy",
     "orgUrl": "https://www.spacecowboy.so/",
-    "imagePath": "/images/speakers/norizkitty.jpg"
+    "imagePath": "/images/contributors/norizkitty.jpg"
   },
   {
     "name": "Edmund Edgar",
+    "linkToOnlinePresence": "https://twitter.com/edmundedgar/",
     "role": "Founder",
     "org": "Reality.eth",
     "orgUrl": "https://reality.eth.limo/",
-    "imagePath": "/images/speakers/edmundedgar.jpg"
+    "imagePath": "/images/contributors/edmundedgar.jpg"
   },
   {
     "name": "Sujith Somraaj",
+    "linkToOnlinePresence": "https://www.sujithsomraaj.xyz/",
     "role": "Senior Protocol Developer",
     "org": "Superform",
     "orgUrl": "https://www.superform.xyz/",
-    "imagePath": "/images/speakers/sujithsomraaj.jpeg"
+    "imagePath": "/images/contributors/sujithsomraaj.jpeg"
   }
 ]
