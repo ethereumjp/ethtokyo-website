@@ -39,7 +39,6 @@ import ShogoPic from "public/images/contributors/shogoochiai.jpg";
 import SujithPic from "public/images/contributors/sujithsomraaj.jpeg";
 import TomaszPic from "public/images/contributors/tomaszstanczak.png";
 import TomoPic from "public/images/contributors/tomosaito.jpg";
-import UttamPic from "public/images/contributors/uttamsingh.png";
 import VarunPic from "public/images/contributors/varundoshi.jpg";
 import VitalikPic from "public/images/contributors/vitalik.jpg";
 import VladPic from "public/images/contributors/vladsvitanko.jpg";
@@ -88,7 +87,7 @@ const SpeakersSection = () => {
             width: 96px;
 
             ${mq.laptop}{
-              width: 144px;
+              width: 120px;
             }
           `}
         />
@@ -208,18 +207,6 @@ const SpeakersSection = () => {
             </p>
           </HackathonTrackCard>
         </div>
-        <div>
-          <p css={css`font-size: 1.2rem;`}>
-            ✋
-            <a
-              href="https://forms.gle/nv1DFjb9GBXKZmAf9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hacking mentors welcome!
-            </a>
-          </p>
-        </div>
         {/* <br />
         <div>
           <Link
@@ -253,7 +240,7 @@ const SpeakersSection = () => {
             font-size: 3rem;
           }`}
       >
-        Event Speakers
+        Speakers
       </h2>
       <div
         css={css`
@@ -451,13 +438,6 @@ const SpeakersSection = () => {
           orgUrl="https://quarkchain.io/"
         />
         <SpeakerIcon
-          source={UttamPic}
-          name="Uttam Singh"
-          link="https://x.com/uttam_singhk"
-          org="Flare Network"
-          orgUrl="https://flare.network/"
-        />
-        <SpeakerIcon
           source={DavidPic}
           name="David Cao"
           link="https://twitter.com/davidfucius"
@@ -569,20 +549,6 @@ const SpeakersSection = () => {
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
         />
-      </div>
-      <div>
-        <p>
-          ❗
-          <a
-            css={css`:hover {color: ${info.Attention}};`}
-            href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
-            target="_blank"
-            rel="noreferrer"
-          >
-            We are currently accepting speaker applications
-          </a>
-          ❗
-        </p>
       </div>
     </section>
   );

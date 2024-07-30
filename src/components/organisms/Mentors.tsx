@@ -36,7 +36,7 @@ const MentorsSection = () => {
             width: 96px;
 
             ${mq.laptop}{
-              width: 144px;
+              width: 120px;
             }
           `}
         />
@@ -112,40 +112,36 @@ const MentorsSection = () => {
       </h2>
       <div
         css={css`
-          display: grid;
+          display: flex;
+          flex-wrap: wrap;
           gap: 2rem;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          justify-items: center;
+          justify-content: center;
           margin: 0 auto;
-          max-width: 1200px;
+          max-width: 1500px;
 
           ${mq.tablet} {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
           }
 
           ${mq.laptop} {
-            gap: 4rem;
+            gap: 3rem;
           }
         `}
       >
         {currentMentors.map((mentor) => (
-          <MentorIcon key={mentor.name} {...mentor} />
+          <div
+            key={mentor.name}
+            css={css`
+              flex: 0 0 150px;
+              ${mq.tablet} {
+                flex: 0 0 160px;
+              }
+            `}
+          >
+            <MentorIcon {...mentor} />
+          </div>
         ))}
       </div>
-      {/* <div>
-        <p>
-          ❗
-          <a
-            css={css`:hover {color: ${info.Attention}};`}
-            href="https://forms.gle/1wtFYnTRfi4mFnRQ9"
-            target="_blank"
-            rel="noreferrer"
-          >
-            We are currently accepting speaker applications
-          </a>
-          ❗
-        </p>
-      </div> */}
     </section>
   );
 };
