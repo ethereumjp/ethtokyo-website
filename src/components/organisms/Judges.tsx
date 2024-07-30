@@ -55,7 +55,7 @@ const JudgeSection = () => {
         </p>
       </a>
       <p
-        css={css`margin-top:0; margin-bottom:0; font-size: 0.8rem; line-height:1;
+        css={css` font-size: 0.8rem; line-height:1; margin-bottom:0;margin-top:0;
             ${mq.laptop}{
               font-size: 1rem;
             };
@@ -99,19 +99,24 @@ const JudgeSection = () => {
       </h2>
       <div
         css={css`
-          align-items: center;
-          display: flex;
-          flex-flow: row wrap;
+          display: grid;
           gap: 2rem;
-          justify-content: center;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          justify-items: center;
+          margin: 0 auto;
+          max-width: 1200px;
+
+          ${mq.tablet} {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
 
           ${mq.laptop} {
             gap: 4rem;
           }
         `}
       >
-        {currentJudges.map((judges) => (
-          <JudgeIcon key={judges.name} {...judges} />
+        {currentJudges.map((judge) => (
+          <JudgeIcon key={judge.name} {...judge} />
         ))}
       </div>
     </section>

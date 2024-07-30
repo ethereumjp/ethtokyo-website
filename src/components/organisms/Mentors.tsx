@@ -1,10 +1,10 @@
+import mentors from "@/data/mentors.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, info } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
-import mentors from "@/data/mentors.json";
 
 interface Mentors {
   name: string;
@@ -67,8 +67,8 @@ const MentorsSection = () => {
         <p
           css={css`
             font-size: 0.8rem;
-            margin-top:0;
             margin-bottom:0;
+            margin-top:0;
             ${mq.laptop}{
               font-size: 1rem;
             };
@@ -118,11 +118,16 @@ const MentorsSection = () => {
       </h2>
       <div
         css={css`
-          align-items: center;
-          display: flex;
-          flex-flow: row wrap;
+          display: grid;
           gap: 2rem;
-          justify-content: center;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          justify-items: center;
+          margin: 0 auto;
+          max-width: 1200px;
+
+          ${mq.tablet} {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
 
           ${mq.laptop} {
             gap: 4rem;
