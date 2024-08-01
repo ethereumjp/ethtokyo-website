@@ -320,14 +320,6 @@ const SupportersSection = () => {
             tier="silver"
           />
         </SponsorTier>
-        <div css={css` display:flex; justify-content: center;`}>
-          <SupporterLogo
-            source={MetamaskLogo}
-            text="Metamask"
-            link="https://metamask.io/"
-            tier="partner"
-          />
-        </div>
       </section>
       <section id="supporters">
         <PartnerCategory category="Event Supporters">
@@ -383,6 +375,12 @@ const SupportersSection = () => {
             source={DeFormLogo}
             text="DeForm"
             link="https://www.deform.cc/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={MetamaskLogo}
+            text="Metamask"
+            link="https://metamask.io/"
             tier="partner"
           />
           <SupporterLogo
