@@ -84,9 +84,9 @@ const SupportersSection = () => {
         bronze: "1.5rem",
         partner: "1.5rem",
       },
-      desktop: {
+      laptop: {
         platinum: "2rem",
-        gold: "2rem",
+        gold: "2.5rem",
         silver: "2rem",
         bronze: "2rem",
         partner: "1.5rem",
@@ -109,9 +109,9 @@ const SupportersSection = () => {
             padding: ${padding.tablet[tier]};
           }
 
-          ${mq.desktop} {
+          ${mq.laptop} {
             max-width: ${sizes.laptop[tier]}%;
-            padding: ${padding.desktop[tier]};
+            padding: ${padding.laptop[tier]};
           }
         `}
       >
