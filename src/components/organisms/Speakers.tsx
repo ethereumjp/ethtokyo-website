@@ -259,7 +259,7 @@ const SpeakersSection = () => {
           source={VitalikPic}
           name="Vitalik (online)"
           link="https://vitalik.eth.limo/"
-          org="Ethereum"
+          org="Ethereum, co-founder"
           orgUrl="https://ethereum.org/"
         />
         <SpeakerIcon
