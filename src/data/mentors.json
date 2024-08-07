@@ -49,13 +49,6 @@
     "imagePath": "/images/contributors/jehyukjang.jpg"
   },
   {
-    "name": "Harry Bairstow",
-    "role": "Engineering",
-    "org": "Lit Protocol",
-    "orgUrl": "https://www.litprotocol.com/",
-    "imagePath": "/images/contributors/harrybairstow.jpg"
-  },
-  {
     "name": "James He",
     "role": "Core dev",
     "org": "Offchain Labs",
