@@ -24,7 +24,8 @@ const Footer: FC<ComponentProps> = ({ children }) => {
           }
         `}
       >
-        © 2024 ETHTokyo - Ethereum Japan.
+        © 2024 ETHTokyo - Ethereum Japan. Domain (ethtokyo.com) provided by
+        Yusuke Obinata.
       </span>
     </footer>
   );
