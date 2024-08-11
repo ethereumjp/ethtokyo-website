@@ -1,5 +1,6 @@
 import Layout from "@/components/layouts/base";
 import { CountdownPanel } from "@/components/organisms/Countdown";
+import Header from "@/components/organisms/Header";
 import JudgesSection from "@/components/organisms/Judges";
 import MentorsSection from "@/components/organisms/Mentors";
 import ScheduleSection from "@/components/organisms/Schedule";
@@ -138,6 +139,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   const GetTicketsSection = () => (
     <div
       css={css`background-color:black; background-image: url(${seikaiha.src}); padding: 4rem;`}
+      id="registration"
     >
       <h2
         css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem; text-align: center;`}
@@ -188,6 +190,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
 
   return (
     <Layout pageTitle="">
+      <Header />
       <div>
         <TopSection />
         <StatementSection />
