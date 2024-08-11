@@ -25,13 +25,13 @@ const HackerChallenge: NextPage = () => {
           <p css={css`font-size: 1.25rem;`}>
             You can find the event timetable in the following links.
             <b>
-              <a href="/DAY1.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY1.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 1
               </a>
-              <a href="/DAY2.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY2.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 2
               </a>
-              <a href="/DAY3.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY3.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 3
               </a>
             </b>
