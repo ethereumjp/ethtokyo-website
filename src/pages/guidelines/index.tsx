@@ -20,6 +20,24 @@ const HackerChallenge: NextPage = () => {
           <h1>ETHTokyo Hackathon guidelines</h1>
         </div>
         <br />
+        <br />
+        <div css={css`background-color: grey; margin: -1rem; padding: 0 1rem;`}>
+          <p css={css`font-size: 1.25rem;`}>
+            You can find the event timetable in the following links.
+            <b>
+              <a href="/DAY1.pdf" css={css`padding: 0 0.5rem;`}>
+                DAY 1
+              </a>
+              <a href="/DAY2.pdf" css={css`padding: 0 0.5rem;`}>
+                DAY 2
+              </a>
+              <a href="/DAY3.pdf" css={css`padding: 0 0.5rem;`}>
+                DAY 3
+              </a>
+            </b>
+          </p>
+        </div>
+        <br />
         <h2 css={css`font-weight: 300;`}>Find a team/hacker/idea</h2>
         <p>
           Are you looking a team? A hacker to join your force? A cool idea to
