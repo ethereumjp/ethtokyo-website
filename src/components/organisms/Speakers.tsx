@@ -36,6 +36,7 @@ import RohitPic from "public/images/contributors/rohitramesh.jpg";
 import RyoheiPic from "public/images/contributors/ryokomiyama.jpg";
 import SamuelPic from "public/images/contributors/samuelchong.png";
 import ShogoPic from "public/images/contributors/shogoochiai.jpg";
+import SuhyeonPic from "public/images/contributors/suhyeonlee.png";
 import SujithPic from "public/images/contributors/sujithsomraaj.jpeg";
 import TomaszPic from "public/images/contributors/tomaszstanczak.png";
 import TomoPic from "public/images/contributors/tomosaito.jpg";
@@ -477,6 +478,13 @@ const SpeakersSection = () => {
           orgUrl="https://www.tokamak.network/"
         />
         <SpeakerIcon
+          source={SuhyeonPic}
+          name="Suhyeon Lee"
+          link="https://www.linkedin.com/in/vlad-svitanko/"
+          org="Tokamak Network"
+          orgUrl="https://www.tokamak.network/"
+        />
+        <SpeakerIcon
           source={SujithPic}
           name="Sujith Somraaj"
           link="https://www.sujithsomraaj.xyz/"
@@ -546,6 +554,7 @@ const SpeakersSection = () => {
           org="Cryptorsy"
           orgUrl="https://cryptorsy.io/"
         />
+
         <SpeakerIcon
           source={FriscoPic}
           name="Frisco d'Anconia"
