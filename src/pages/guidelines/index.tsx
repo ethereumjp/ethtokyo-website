@@ -25,13 +25,13 @@ const HackerChallenge: NextPage = () => {
           <p css={css`font-size: 1.25rem;`}>
             You can find the event timetable in the following links.
             <b>
-              <a href="/DAY1.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY1.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 1
               </a>
-              <a href="/DAY2.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY2.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 2
               </a>
-              <a href="/DAY3.pdf" css={css`padding: 0 0.5rem;`}>
+              <a href="/timetable/DAY3.pdf" css={css`padding: 0 0.5rem;`}>
                 DAY 3
               </a>
             </b>
@@ -112,13 +112,10 @@ const HackerChallenge: NextPage = () => {
         <h3>The general flow for using the tool is as follows:</h3>
         <ol>
           <li>
-            Go to projects.ethberlin.org and sign in with your Zupass
-            credentials to receive your role as "hacker".
-          </li>
-          <li>
             Create or join an existing team Now you can submit projects and join
             team.
           </li>
+          <li>...</li>
           <li>...</li>
         </ol>
         <h3>Some things to keep in mind:</h3>
