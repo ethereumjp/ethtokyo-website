@@ -36,6 +36,7 @@ import RohitPic from "public/images/contributors/rohitramesh.jpg";
 import RyoheiPic from "public/images/contributors/ryokomiyama.jpg";
 import SamuelPic from "public/images/contributors/samuelchong.png";
 import ShogoPic from "public/images/contributors/shogoochiai.jpg";
+import SuhyeonPic from "public/images/contributors/suhyeonlee.png";
 import SujithPic from "public/images/contributors/sujithsomraaj.jpeg";
 import TomaszPic from "public/images/contributors/tomaszstanczak.png";
 import TomoPic from "public/images/contributors/tomosaito.jpg";
@@ -138,6 +139,94 @@ const SpeakersSection = () => {
         }
       `}
     >
+      <h2
+        css={css`
+          font-size: 2rem;
+          font-weight: 400;
+          ${mq.laptop} {
+            font-size: 3rem;
+          }`}
+      >
+        Event Schedule
+      </h2>
+      <div
+        css={css`
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        ${mq.laptop} {
+          flex-direction: row;
+          justify-content: center;
+        }
+      `}
+      >
+        <a
+          href="/timetable/DAY1.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 1 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 2 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY3.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 3 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY4.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 4 (Conference)
+        </a>
+      </div>
       <h2
         css={css`
           font-size: 2rem;
@@ -389,6 +478,13 @@ const SpeakersSection = () => {
           orgUrl="https://www.tokamak.network/"
         />
         <SpeakerIcon
+          source={SuhyeonPic}
+          name="Suhyeon Lee"
+          link="https://www.linkedin.com/in/vlad-svitanko/"
+          org="Tokamak Network"
+          orgUrl="https://www.tokamak.network/"
+        />
+        <SpeakerIcon
           source={SujithPic}
           name="Sujith Somraaj"
           link="https://www.sujithsomraaj.xyz/"
@@ -458,6 +554,7 @@ const SpeakersSection = () => {
           org="Cryptorsy"
           orgUrl="https://cryptorsy.io/"
         />
+
         <SpeakerIcon
           source={FriscoPic}
           name="Frisco d'Anconia"
