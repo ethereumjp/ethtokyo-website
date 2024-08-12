@@ -112,11 +112,24 @@ const HackerChallenge: NextPage = () => {
         <h3>The general flow for using the tool is as follows:</h3>
         <ol>
           <li>
-            Create or join an existing team Now you can submit projects and join
-            team.
+            Join AKINDO's{" "}
+            <a href="https://app.akindo.io/hackathons/3dXM7ZO2WsxvlkXp/">
+              ETH Tokyo 2024 Hackathon page
+            </a>
+            . *To join, you need to sign up for AKINDO.
           </li>
-          <li>...</li>
-          <li>...</li>
+          <li>
+            After joining, create your project page from the submit button *You
+            can also create your project{" "}
+            <a href="https://app.akindo.io/create-community">here</a>:
+          </li>
+          <li>Add team members from the project page</li>
+          <li>Add team members from the project page</li>
+          <li>
+            After creating your project, register the product you want to
+            submit. *Required -Product name -Tagline -Product demo video -GitHub
+            repo -Presentation slides
+          </li>
         </ol>
         <h3>Some things to keep in mind:</h3>
         <li>
