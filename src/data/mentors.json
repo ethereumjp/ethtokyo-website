@@ -103,5 +103,12 @@
     "org": "Chainbase",
     "orgUrl": "https://chainbase.com/",
     "imagePath": "/images/contributors/lukisong.jpg"
+  },
+  {
+    "name": "Steve Lee",
+    "role": "Investor",
+    "org": "Neoclassic Capital",
+    "orgUrl": "https://neoclassic.capital/",
+    "imagePath": "/images/contributors/stevelee.jpg`"
   }
 ]
