@@ -130,12 +130,15 @@ const HackerChallenge: NextPage = () => {
               <li>
                 Join AKINDO's{" "}
                 <a
-                  href="https://app.akindo.io/hackathons/3dXM7ZO2WsxvlkXp/"
-                  css={css`pointer-events: none;`}
+                  // biome-ignore lint/a11y/useValidAnchor: to be replaced
+                  href="#"
+                  // href="https://app.akindo.io/hackathons/3dXM7ZO2WsxvlkXp/"
+                  css={css`cursor: not-allowed;`}
                 >
                   ETHTokyo'24 Hackathon page
                 </a>
-                .
+                . (page is currently disabled and will be published near the
+                event.)
               </li>
               <li>
                 After joining, create your team. Note that AKINDO refers to the
@@ -156,7 +159,12 @@ const HackerChallenge: NextPage = () => {
                 </li>
                 <li>
                   If your hack is listed on the Hackathon{" "}
-                  <a href="https://app.akindo.io/hackathons/3dXM7ZO2WsxvlkXp?tab=products">
+                  <a
+                    // biome-ignore lint/a11y/useValidAnchor: to be replaced
+                    href="#"
+                    // href="https://app.akindo.io/hackathons/3dXM7ZO2WsxvlkXp?tab=products"
+                    css={css`cursor: not-allowed;`}
+                  >
                     submission list page
                   </a>
                   , your submission is complete:
