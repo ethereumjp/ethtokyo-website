@@ -139,10 +139,10 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   const GetTicketsSection = () => (
     <div
       css={css`background-color:black; background-image: url(${seikaiha.src}); padding: 4rem; text-align: center;`}
-      id="registration"
     >
       <h2
         css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem;`}
+        id="schedule"
       >
         Event Schedule
       </h2>
@@ -227,6 +227,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       </div>
       <h2
         css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem;`}
+        id="registration"
       >
         Participate
       </h2>
