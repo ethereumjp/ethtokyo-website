@@ -16,12 +16,44 @@
     "imagePath": "/images/contributors/tomaszstanczak.png"
   },
   {
-    "name": "Makoto Inoue",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
-    "role": "Core developer",
-    "org": "ENS",
-    "orgUrl": "https://ens.domains/",
-    "imagePath": "/images/contributors/makoto.jpg"
+    "name": "Joseph Schiarizzi",
+    "linkToOnlinePresence": "https://josephschiarizzi.com/",
+    "role": "Founder",
+    "org": "Open Dollar",
+    "orgUrl": "https://www.opendollar.com/",
+    "imagePath": "/images/contributors/josephschiarizzi.jpg"
+  },
+  {
+    "name": "William Metcalfe",
+    "linkToOnlinePresence": "https://www.curvegrid.com/team/william-metcalfe",
+    "role": "Co-founder",
+    "org": "Curvegrid",
+    "orgUrl": "https://www.curvegrid.com/",
+    "imagePath": "/images/contributors/williammetcalfe.jpg"
+  },
+  {
+    "name": "Michele D'Aliessi",
+    "linkToOnlinePresence": "https://x.com/MicheleDaliessi",
+    "role": "Co-founder",
+    "org": "Superfluid",
+    "orgUrl": "https://www.superfluid.finance/",
+    "imagePath": "/images/contributors/micheledaliessi.png"
+  },
+  {
+    "name": "Moazzam Arif",
+    "linkToOnlinePresence": "https://ae.linkedin.com/in/moazzam-arif",
+    "role": "Founder",
+    "org": "BlockApex",
+    "orgUrl": "https://blockapex.io/",
+    "imagePath": "/images/contributors/moazzamarif.png"
+  },
+  {
+    "name": "Takamichi Tsutsumi",
+    "linkToOnlinePresence": "https://jp.linkedin.com/in/takamichi-tsutsumi-24a002b7",
+    "role": "Software Engineer",
+    "org": "EF",
+    "orgUrl": "https://ethereum.foundation/",
+    "imagePath": "/images/contributors/tkmct.jpeg"
   },
   {
     "name": "Andrej Berlin",
@@ -32,30 +64,14 @@
     "imagePath": "/images/contributors/andrejberlin.png"
   },
   {
-    "name": "Michele D'Aliessi",
-    "linkToOnlinePresence": "https://x.com/MicheleDaliessi",
-    "role": "Co-founder",
-    "org": "Superfluid",
-    "orgUrl": "https://www.superfluid.finance/",
-    "imagePath": "/images/contributors/micheledaliessi.png"
+    "name": "Makoto Inoue",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "role": "Core developer",
+    "org": "ENS",
+    "orgUrl": "https://ens.domains/",
+    "imagePath": "/images/contributors/makoto.jpg"
   },
 
-  {
-    "name": "Joseph Schiarizzi",
-    "linkToOnlinePresence": "https://josephschiarizzi.com/",
-    "role": "Founder",
-    "org": "Open Dollar",
-    "orgUrl": "https://www.opendollar.com/",
-    "imagePath": "/images/contributors/josephschiarizzi.jpg"
-  },
-  {
-    "name": "Moazzam Arif",
-    "linkToOnlinePresence": "https://ae.linkedin.com/in/moazzam-arif",
-    "role": "Founder",
-    "org": "BlockApex",
-    "orgUrl": "https://blockapex.io/",
-    "imagePath": "/images/contributors/moazzamarif.png"
-  },
   {
     "name": "Naim Ashhab",
     "linkToOnlinePresence": "https://cz.linkedin.com/in/naim-ashhab-9b9145a1",
@@ -72,22 +88,7 @@
     "orgUrl": "https://www.spacecowboy.so/",
     "imagePath": "/images/contributors/norizkitty.jpg"
   },
-  {
-    "name": "Edmund Edgar",
-    "linkToOnlinePresence": "https://twitter.com/edmundedgar/",
-    "role": "Founder",
-    "org": "Reality.eth",
-    "orgUrl": "https://reality.eth.limo/",
-    "imagePath": "/images/contributors/edmundedgar.jpg"
-  },
-  {
-    "name": "William Metcalfe",
-    "linkToOnlinePresence": "https://www.curvegrid.com/team/william-metcalfe",
-    "role": "Co-founder",
-    "org": "Curvegrid",
-    "orgUrl": "https://www.curvegrid.com/",
-    "imagePath": "/images/contributors/williammetcalfe.jpg"
-  },
+
   {
     "name": "Sujith Somraaj",
     "linkToOnlinePresence": "https://www.sujithsomraaj.xyz/",
