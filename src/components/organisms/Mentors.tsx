@@ -88,7 +88,7 @@ const MentorsSection = () => {
 
   return (
     <section
-      id="speakers"
+      id="mentors"
       css={css`
         background-color: ${brand.Miyabi};
         padding: 1rem;
@@ -117,7 +117,7 @@ const MentorsSection = () => {
           gap: 2rem;
           justify-content: center;
           margin: 0 auto;
-          max-width: 1500px;
+          max-width: 1600px;
 
           ${mq.tablet} {
             gap: 2.5rem;
