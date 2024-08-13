@@ -138,11 +138,95 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
 
   const GetTicketsSection = () => (
     <div
-      css={css`background-color:black; background-image: url(${seikaiha.src}); padding: 4rem;`}
+      css={css`background-color:black; background-image: url(${seikaiha.src}); padding: 4rem; text-align: center;`}
       id="registration"
     >
       <h2
-        css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem; text-align: center;`}
+        css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem;`}
+      >
+        Event Schedule
+      </h2>
+      <div
+        css={css`
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 4rem;
+
+        ${mq.laptop} {
+          flex-direction: row;
+          justify-content: center;
+        }
+      `}
+      >
+        <a
+          href="/timetable/DAY1.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 1 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 2 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY3.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 3 (Hackathon)
+        </a>
+        <a
+          href="/timetable/DAY4.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          css={css`
+          color: ${brand.JordyBlue};
+          font-size: 2rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        `}
+        >
+          Day 4 (Conference)
+        </a>
+      </div>
+      <h2
+        css={css` font-size: 3rem; font-weight:600; line-height: 1.2; margin: 0 0 2rem;`}
       >
         Participate
       </h2>
