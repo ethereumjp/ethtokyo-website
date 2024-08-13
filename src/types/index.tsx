@@ -23,4 +23,6 @@ interface Contributor {
 
 export interface Mentor extends Contributor {}
 
-export interface Judge extends Contributor {}
+export interface Judge extends Contributor {
+  linkToOnlinePresence: string;
+}
