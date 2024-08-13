@@ -16,13 +16,14 @@ const JudgeSection = () => {
   const JudgeIcon: React.FC<{
     imagePath: string;
     name: string;
+    linkToOnlinePresence: string;
     org: string;
     orgUrl: string;
     role: string;
-  }> = ({ imagePath, name, org, orgUrl, role }) => (
+  }> = ({ imagePath, name, linkToOnlinePresence, org, orgUrl, role }) => (
     <div>
       <a
-        href={"/"}
+        href={linkToOnlinePresence}
         target="_blank"
         rel="noreferrer"
         css={css`text-decoration: none; :hover{color: ${brand.Shuiro};};`}

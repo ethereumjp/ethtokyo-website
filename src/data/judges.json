@@ -24,16 +24,8 @@
     "imagePath": "/images/contributors/makoto.jpg"
   },
   {
-    "name": "Melisa Kurtcan",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
-    "role": "Founder",
-    "org": "Satoshi Twenty One",
-    "orgUrl": "https://satoshitwenty.one/",
-    "imagePath": "/images/contributors/melisakurtcan.jpg"
-  },
-  {
     "name": "Andrej Berlin",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "linkToOnlinePresence": "https://de.linkedin.com/in/andrejberlin",
     "role": "Designer & Engineer",
     "org": "Deep Work Studio",
     "orgUrl": "https://deepwork.studio/",
@@ -41,7 +33,7 @@
   },
   {
     "name": "Michele D'Aliessi",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "linkToOnlinePresence": "https://x.com/MicheleDaliessi",
     "role": "Co-founder",
     "org": "Superfluid",
     "orgUrl": "https://www.superfluid.finance/",
@@ -50,7 +42,7 @@
 
   {
     "name": "Joseph Schiarizzi",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "linkToOnlinePresence": "https://josephschiarizzi.com/",
     "role": "Founder",
     "org": "Open Dollar",
     "orgUrl": "https://www.opendollar.com/",
@@ -58,15 +50,15 @@
   },
   {
     "name": "Moazzam Arif",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "linkToOnlinePresence": "https://ae.linkedin.com/in/moazzam-arif",
     "role": "Founder",
     "org": "BlockApex",
     "orgUrl": "https://blockapex.io/",
     "imagePath": "/images/contributors/moazzamarif.png"
   },
   {
-    "name": "Naim Ashwab",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "name": "Naim Ashhab",
+    "linkToOnlinePresence": "https://cz.linkedin.com/in/naim-ashhab-9b9145a1",
     "role": "Co-founder",
     "org": "PWN DAO",
     "orgUrl": "https://pwn.xyz/",
@@ -74,7 +66,7 @@
   },
   {
     "name": "Nori Zkitty",
-    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "linkToOnlinePresence": "https://www.linkedin.com/in/norika-kizawa",
     "role": "Founder",
     "org": "SpaceCowboy",
     "orgUrl": "https://www.spacecowboy.so/",
@@ -87,6 +79,14 @@
     "org": "Reality.eth",
     "orgUrl": "https://reality.eth.limo/",
     "imagePath": "/images/contributors/edmundedgar.jpg"
+  },
+  {
+    "name": "William Metcalfe",
+    "linkToOnlinePresence": "https://www.curvegrid.com/team/william-metcalfe",
+    "role": "Co-founder",
+    "org": "Curvegrid",
+    "orgUrl": "https://www.curvegrid.com/",
+    "imagePath": "/images/contributors/williammetcalfe.jpg"
   },
   {
     "name": "Sujith Somraaj",
