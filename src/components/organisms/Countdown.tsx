@@ -73,7 +73,7 @@ export const CountdownPanel = () => {
     return () => clearInterval(secTimer);
   }, []);
 
-  const eventDate = new Date("Aug 23, 2024").getTime();
+  const eventDate = new Date("Aug 23, 2024 18:00:00").getTime();
   const [days, hrs, mins, secs] = countDown(eventDate, now);
 
   return (

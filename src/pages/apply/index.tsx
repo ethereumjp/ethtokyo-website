@@ -52,7 +52,9 @@ const HackerChallenge: NextPage = () => {
           参加登録フォームのURLを見つけたら、自身のプロフィールを提出してください。
         </li>
         <li>
-          プロフィールを提出したハッカーへ、当日の参加証となるNFTを送付します。
+          プロフィールを提出したハッカーへ、当日の参加証となるNFTを送付します。この参加証NFTで、ETHTokyo'24
+          ハッカソン (8/23-25) と ETHTokyo'24 カンファレンス (8/26)
+          の両方にご入場いただけます。
         </li>
       </ol>
 
@@ -95,7 +97,9 @@ const HackerChallenge: NextPage = () => {
         </li>
         <li>
           We will airdrop an NFT to those who have successfully submitted the
-          registration form. The NFT will act as your registration pass.
+          registration form. The NFT will act as your registration pass. This
+          You can attend both the ETHTokyo hackathon (8/23-25) and the ETHTokyo
+          conference (8/26) with this pass.
         </li>
       </ol>
 
