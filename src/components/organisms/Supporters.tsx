@@ -451,7 +451,7 @@ const SupportersSection = () => {
           />
         </PartnerCategory>
 
-        <p>
+        {/* <p>
           <a
             css={css`
             color: blue;
@@ -465,7 +465,7 @@ const SupportersSection = () => {
           >
             Looking to sponsor or support us?
           </a>
-        </p>
+        </p> */}
         <PartnerCategory category="Hosted by">
           <Image
             src={EJLogoFace}
