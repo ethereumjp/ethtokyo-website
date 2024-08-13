@@ -22,6 +22,7 @@ import JehyukPic from "public/images/contributors/jehyukjang.jpg";
 import JosephPic from "public/images/contributors/josephschiarizzi.jpg";
 import JoshPic from "public/images/contributors/joshguha.png";
 import KolbyPic from "public/images/contributors/kolbymorozliebl.jpg";
+import MattPic from "public/images/contributors/matthewliu.jpeg";
 import MeinaPic from "public/images/contributors/meinazhou.jpg";
 import MelisaPic from "public/images/contributors/melisakurtcan.jpg";
 import MoazzamPic from "public/images/contributors/moazzamarif.png";
@@ -466,7 +467,6 @@ const SpeakersSection = () => {
           org="Cryptorsy"
           orgUrl="https://cryptorsy.io/"
         />
-
         <SpeakerIcon
           source={FriscoPic}
           name="Frisco d'Anconia"
@@ -522,6 +522,13 @@ const SpeakersSection = () => {
           link="https://twitter.com/danhwang88"
           org="Kintsugi"
           orgUrl="https://kintsugi.tech/"
+        />{" "}
+        <SpeakerIcon
+          source={MattPic}
+          name="Matthew Liu"
+          link="https://www.linkedin.com/in/matthew-liu-profile"
+          org="SynFutures"
+          orgUrl="https://www.synfutures.com/"
         />
         <SpeakerIcon
           source={MeinaPic}
