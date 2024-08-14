@@ -27,6 +27,7 @@ import LxDaoLogo from "public/logo/LxDaoLogo.png";
 import MercoinLogo from "public/logo/MercoinLogo.png";
 import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
+import NEOLogo from "public/logo/NEO-X.svg";
 import NeroLogo from "public/logo/NeroLogo.svg";
 import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
@@ -312,7 +313,12 @@ const SupportersSection = () => {
             link="https://bitflyer.com/"
             tier="silver"
           />
-
+          <SupporterLogo
+            source={NEOLogo}
+            text="NEO X"
+            link="https://x.neo.org/"
+            tier="silver"
+          />
           <SupporterLogo
             source={NeroLogo}
             text="NEROchain"
