@@ -7,6 +7,13 @@
     "imagePath": "/images/contributors/yuroitaki.jpeg"
   },
   {
+    "name": "Sero Cherfa",
+    "role": "Software Engineer",
+    "org": "EF, PSE",
+    "orgUrl": "https://www.offchainlabs.com/",
+    "imagePath": "/images/contributors/sero.jpg"
+  },
+  {
     "name": "Francesco Andreoli",
     "role": "Dev Community",
     "org": "MetaMask",
