@@ -35,6 +35,13 @@
     "imagePath": "/images/contributors/francescoandreoli.jpg"
   },
   {
+    "name": "Gwen Martin",
+    "role": "DevRel",
+    "org": "ORA",
+    "orgUrl": "https://www.ora.io/",
+    "imagePath": "/images/contributors/gwenmartin.jpg"
+  },
+  {
     "name": "Qi Zhou",
     "role": "Founder",
     "org": "EthStorage",
