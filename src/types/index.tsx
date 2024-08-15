@@ -15,6 +15,7 @@ export interface ComponentProps {
 
 interface Contributor {
   name: string;
+  linkToOnlinePresence: string;
   role: string;
   org: string;
   orgUrl: string;
@@ -23,6 +24,4 @@ interface Contributor {
 
 export interface Mentor extends Contributor {}
 
-export interface Judge extends Contributor {
-  linkToOnlinePresence: string;
-}
+export interface Judge extends Contributor {}

@@ -12,15 +12,16 @@ const MentorsSection = () => {
     setMentors(mentors);
   }, []);
   const MentorIcon: React.FC<{
-    imagePath: string;
     name: string;
+    linkToOnlinePresence: string;
+    role: string;
     org: string;
     orgUrl: string;
-    role: string;
-  }> = ({ imagePath, name, org, orgUrl, role }) => (
+    imagePath: string;
+  }> = ({ imagePath, linkToOnlinePresence, name, org, orgUrl, role }) => (
     <div>
       <a
-        href={"/"}
+        href={linkToOnlinePresence}
         target="_blank"
         rel="noreferrer"
         css={css`text-decoration: none; :hover{color: ${brand.Shuiro};};`}
@@ -53,10 +54,10 @@ const MentorsSection = () => {
         </p>
       </a>
       <a
-        href={"/"}
+        href={orgUrl}
         target="_blank"
         rel="noreferrer"
-        css={css`text-decoration: none; :hover{color: ${brand.JordyBlue};};`}
+        css={css`text-decoration: none; :hover{color: ${brand.JordyBlue}};`}
       >
         <p
           css={css`
@@ -68,19 +69,7 @@ const MentorsSection = () => {
             };
           `}
         >
-          {role}
-        </p>
-        <p
-          css={css`
-            font-size: 0.8rem;
-            line-height:1;
-            margin-top:0;
-            ${mq.laptop}{
-              font-size: 1rem;
-            };
-          `}
-        >
-          {org}
+          {role}, {org}
         </p>
       </a>
     </div>
