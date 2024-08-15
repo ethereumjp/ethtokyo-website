@@ -393,7 +393,7 @@ const SpeakersSection = () => {
         <SpeakerIcon
           source={SuhyeonPic}
           name="Suhyeon Lee"
-          link="https://www.linkedin.com/in/vlad-svitanko/"
+          link="https://suhyeonlee.xyz"
           org="Tokamak Network"
           orgUrl="https://www.tokamak.network/"
         />
