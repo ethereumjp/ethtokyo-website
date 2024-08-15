@@ -309,7 +309,7 @@ const SpeakersSection = () => {
         <SpeakerIcon
           source={YuroitakiPic}
           name="yuroitaki"
-          link="https://github.com/yuroitaki"
+          link="https://x.com/yuroitaki"
           org="PSE, TLSNotary"
           orgUrl="https://tlsnotary.org/"
         />
