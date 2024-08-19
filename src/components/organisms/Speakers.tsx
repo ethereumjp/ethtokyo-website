@@ -22,6 +22,7 @@ import JehyukPic from "public/images/contributors/jehyukjang.jpg";
 import JosephPic from "public/images/contributors/josephschiarizzi.jpg";
 import JoshPic from "public/images/contributors/joshguha.png";
 import KolbyPic from "public/images/contributors/kolbymorozliebl.jpg";
+import LouiePic from "public/images/contributors/louieoconnor.jpg";
 import MattPic from "public/images/contributors/matthewliu.jpeg";
 import MeinaPic from "public/images/contributors/meinazhou.jpg";
 import MelisaPic from "public/images/contributors/melisakurtcan.jpg";
@@ -382,6 +383,13 @@ const SpeakersSection = () => {
           link="https://www.linkedin.com/in/qi-zhou-9a668715/"
           org="EthStorage"
           orgUrl="https://ethstorage.io/"
+        />
+        <SpeakerIcon
+          source={LouiePic}
+          name="Louie Oconnor"
+          link="https://x.com/lou3ee"
+          org="LUKSO"
+          orgUrl="https://lukso.network/"
         />
         <SpeakerIcon
           source={JehyukPic}
