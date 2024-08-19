@@ -187,7 +187,9 @@ const HackerChallenge: NextPage = () => {
           <br />
           <h2 css={css`font-weight: 300;`}>Tracks and Prizes</h2>
           <p>
-            The winning teams of the track awards each receive 3,000 USDC. (Note: The prize money has been adjusted to 3,000 USDC in consideration of the operating balance of ETH Tokyo 2024.)
+            The winning teams of the track awards each receive 3,000 USDC.
+            (Note: The prize money has been adjusted to 3,000 USDC in
+            consideration of the operating balance of ETH Tokyo 2024.)
             <ul>
               <li>
                 <b>Freedom to Transact</b>: This track is for you if you want to
