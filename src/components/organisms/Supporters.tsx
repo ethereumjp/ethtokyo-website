@@ -1,5 +1,5 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, neutral } from "@/themes/settings/color";
+import { neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
 // import FiveDollarVcLogo from "public/logo/5dollarvcLogo.png";
@@ -35,7 +35,6 @@ import ShibuyaLogo from "public/logo/Shibuya.svg";
 import SolidityScanLogo from "public/logo/SolidityScanLogo.svg";
 import StreamEthLogo from "public/logo/StreamEthLogo.png";
 import TechfundLogo from "public/logo/TechfundLogo.png";
-import TelosLogo from "public/logo/TelosLogo.png";
 import UnchainLogo from "public/logo/UnchainLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
 
@@ -234,9 +233,9 @@ const SupportersSection = () => {
             tier="platinum"
           />
           <SupporterLogo
-            source={TelosLogo}
-            text="Telos"
-            link="https://www.telos.net/"
+            source={ESPLogo}
+            text="ESP"
+            link="https://esp.ethereum.foundation/"
             tier="platinum"
           />
         </SponsorTier>
@@ -333,12 +332,6 @@ const SupportersSection = () => {
             source={DevconLogo}
             text="Devcon"
             link="https://devcon.org/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={ESPLogo}
-            text="ESP"
-            link="https://esp.ethereum.foundation/"
             tier="partner"
           />
           <SupporterLogo
