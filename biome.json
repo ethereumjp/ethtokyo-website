@@ -10,6 +10,12 @@
     "indentStyle": "space",
     "lineWidth": 80
   },
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "parser": { "allowTrailingCommas": true }
+  },
   "organizeImports": {
     "enabled": true
   }
