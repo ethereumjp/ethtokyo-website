@@ -1,5 +1,5 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, info } from "@/themes/settings/color";
+import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
 import AbhimanyuPic from "public/images/contributors/abhimanyunag.jpg";
@@ -11,7 +11,6 @@ import ChuazhengPic from "public/images/contributors/chuazhenglong.jpeg";
 import DangerPic from "public/images/contributors/dangerz.png";
 import DanielPic from "public/images/contributors/danielhwang.png";
 import DaodudePic from "public/images/contributors/daodude.jpg";
-import DavidPic from "public/images/contributors/davidcao.jpeg";
 import DeliPic from "public/images/contributors/deligong.png";
 import EdmundPic from "public/images/contributors/edmundedgar.jpg";
 import FrancescoPic from "public/images/contributors/francescoandreoli.jpg";
@@ -22,18 +21,22 @@ import JehyukPic from "public/images/contributors/jehyukjang.jpg";
 import JosephPic from "public/images/contributors/josephschiarizzi.jpg";
 import JoshPic from "public/images/contributors/joshguha.png";
 import KolbyPic from "public/images/contributors/kolbymorozliebl.jpg";
+import LeonaPic from "public/images/contributors/leohio.jpeg";
 import LouiePic from "public/images/contributors/louieoconnor.jpg";
 import MattPic from "public/images/contributors/matthewliu.jpeg";
-import MeinaPic from "public/images/contributors/meinazhou.jpg";
 import MelisaPic from "public/images/contributors/melisakurtcan.jpg";
 import MoazzamPic from "public/images/contributors/moazzamarif.png";
+import NabihaPic from "public/images/contributors/nabihasheikh.png";
 import NaimPic from "public/images/contributors/naimashhab.jpeg";
+import NikhilPic from "public/images/contributors/nikhilmahana.jpg";
+import Nilspic from "public/images/contributors/nilspihl.png";
 import OzgurPic from "public/images/contributors/ozgurarmancyigit.jpg";
 import PeterPic from "public/images/contributors/peterszilagyi.png";
 import PhilipPic from "public/images/contributors/phillippieper.jpg";
 import PiyushPic from "public/images/contributors/piyushgururani.jpeg";
 import QiangPic from "public/images/contributors/qiangju.png";
 import QiPic from "public/images/contributors/qizhou.png";
+import RenaPic from "public/images/contributors/renaobrien.png";
 import RohitPic from "public/images/contributors/rohitramesh.jpg";
 import RyoheiPic from "public/images/contributors/ryokomiyama.jpg";
 import SamuelPic from "public/images/contributors/samuelchong.png";
@@ -45,6 +48,7 @@ import TomoPic from "public/images/contributors/tomosaito.jpg";
 import VarunPic from "public/images/contributors/varundoshi.jpg";
 import VitalikPic from "public/images/contributors/vitalik.jpg";
 import VladPic from "public/images/contributors/vladsvitanko.jpg";
+import YosuiPic from "public/images/contributors/yosuiharasawa.jpg";
 import YukiPic from "public/images/contributors/yukiyuminaga.jpeg";
 import YuroitakiPic from "public/images/contributors/yuroitaki.jpeg";
 import type { ReactNode } from "react";
@@ -322,6 +326,13 @@ const SpeakersSection = () => {
           orgUrl="https://www.nethermind.io/"
         />
         <SpeakerIcon
+          source={RenaPic}
+          name="Rena OBrien"
+          link="https://www.linkedin.com/in/renaobrien/"
+          org="Gitcoin"
+          orgUrl="https://gitcoin.co/"
+        />
+        <SpeakerIcon
           source={JosephPic}
           name="Joseph Schiarizzi"
           link="http://twitter.com/cupojoseph"
@@ -336,11 +347,11 @@ const SpeakersSection = () => {
           orgUrl="https://metamask.io/"
         />
         <SpeakerIcon
-          source={MoazzamPic}
-          name="Moazzam Arif"
-          link="https://www.linkedin.com/in/moazzam-arif/"
-          org="BlockApex"
-          orgUrl="https://blockapex.io/"
+          source={MelisaPic}
+          name="Melisa Kurtcan"
+          link="https://www.linkedin.com/in/melissa-kurtcan-81b20115a"
+          org="Satoshi Twenty One"
+          orgUrl="https://satoshitwenty.one/"
         />
         <SpeakerIcon
           source={NaimPic}
@@ -350,11 +361,32 @@ const SpeakersSection = () => {
           orgUrl="https://pwn.xyz"
         />
         <SpeakerIcon
+          source={LeonaPic}
+          name="Leona Hioki"
+          link="https://twitter.com/HiokiLeona"
+          org="Intmax"
+          orgUrl="https://www.intmax.io/"
+        />
+        <SpeakerIcon
+          source={YosuiPic}
+          name="Yosui Harasawa"
+          link="https://twitter.com/y0su1"
+          org="Mycel"
+          orgUrl="https://mycel.land/"
+        />
+        <SpeakerIcon
           source={GuruPic}
           name="Guru"
           link="https://x.com/hackyguru"
           org="Status.im"
           orgUrl="https://status.im/"
+        />
+        <SpeakerIcon
+          source={MoazzamPic}
+          name="Moazzam Arif"
+          link="https://www.linkedin.com/in/moazzam-arif/"
+          org="BlockApex"
+          orgUrl="https://blockapex.io/"
         />
         <SpeakerIcon
           source={DeliPic}
@@ -369,13 +401,6 @@ const SpeakersSection = () => {
           link="https://x.com/melynx"
           org="Automata Network"
           orgUrl="https://www.ata.network/"
-        />
-        <SpeakerIcon
-          source={MelisaPic}
-          name="Melisa Kurtcan"
-          link="https://www.linkedin.com/in/melissa-kurtcan-81b20115a"
-          org="Satoshi Twenty One"
-          orgUrl="https://satoshitwenty.one/"
         />
         <SpeakerIcon
           source={QiPic}
@@ -455,18 +480,18 @@ const SpeakersSection = () => {
           orgUrl="https://quarkchain.io/"
         />
         <SpeakerIcon
-          source={DavidPic}
-          name="David Cao"
-          link="https://twitter.com/davidfucius"
-          org="Layer N"
-          orgUrl="https://www.layern.com/"
-        />
-        <SpeakerIcon
           source={PhilipPic}
           name="Philip Pieper"
           link="https://twitter.com/PhilippPieper"
           org="Swarm"
           orgUrl="https://www.swarm.com"
+        />
+        <SpeakerIcon
+          source={NikhilPic}
+          name="Nikhil Mahana"
+          link="https://x.com/nikhil_mahana/"
+          org="Independent"
+          orgUrl="/#"
         />
         <SpeakerIcon
           source={VladPic}
@@ -504,6 +529,13 @@ const SpeakersSection = () => {
           orgUrl="https://www.offchainlabs.com/"
         />
         <SpeakerIcon
+          source={Nilspic}
+          name="Nils Pihl"
+          link="https://x.com/broodsugar"
+          org="Auki Labs"
+          orgUrl="https://www.aukilabs.com/"
+        />
+        <SpeakerIcon
           source={VarunPic}
           name="Varun Doshi"
           link="https://x.com/Varunx10"
@@ -530,34 +562,13 @@ const SpeakersSection = () => {
           link="https://twitter.com/danhwang88"
           org="Kintsugi"
           orgUrl="https://kintsugi.tech/"
-        />{" "}
+        />
         <SpeakerIcon
           source={MattPic}
           name="Matthew Liu"
           link="https://www.linkedin.com/in/matthew-liu-profile"
           org="SynFutures"
           orgUrl="https://www.synfutures.com/"
-        />
-        <SpeakerIcon
-          source={MeinaPic}
-          name="Meina Zhou"
-          link="https://x.com/CryptoMeina"
-          org="Native"
-          orgUrl="https://native.org/"
-        />
-        <SpeakerIcon
-          source={DaodudePic}
-          name="Kazuma Tamura"
-          link="https://www.linkedin.com/in/kazuma-tamura-0a38b916a/"
-          org="Bankless Japan"
-          orgUrl="https://x.com/BanklessJP"
-        />
-        <SpeakerIcon
-          source={RohitPic}
-          name="Rohit Ramesh"
-          link="https://x.com/Rohit7101"
-          org="Crossmint"
-          orgUrl="https://www.crossmint.com/"
         />
         <SpeakerIcon
           source={SamuelPic}
@@ -567,11 +578,32 @@ const SpeakersSection = () => {
           orgUrl="https://stakesaurus.com/"
         />
         <SpeakerIcon
+          source={NabihaPic}
+          name="Nabiha Sheikh"
+          link="https://twitter.com/Nabihas4/"
+          org="A51 Finance"
+          orgUrl="https://a51.finance/"
+        />
+        <SpeakerIcon
+          source={RohitPic}
+          name="Rohit Ramesh"
+          link="https://x.com/Rohit7101"
+          org="Crossmint"
+          orgUrl="https://www.crossmint.com/"
+        />
+        <SpeakerIcon
           source={RyoheiPic}
           name="Ryo Komiyama"
           link="https://x.com/ryoheikomy"
           org="Kyuzan"
           orgUrl="https://kyuzan.com/"
+        />{" "}
+        <SpeakerIcon
+          source={DaodudePic}
+          name="Kazuma Tamura"
+          link="https://www.linkedin.com/in/kazuma-tamura-0a38b916a/"
+          org="Bankless Japan"
+          orgUrl="https://x.com/BanklessJP"
         />
       </div>
     </section>
