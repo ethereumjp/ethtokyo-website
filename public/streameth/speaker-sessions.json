@@ -2,6 +2,7 @@
   {
     "sessionTitle": "Panel discussion: Deep diving into DAOs",
     "description": "Discussing the state of DAOs and its prospective future",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Andrej",
@@ -34,6 +35,7 @@
   {
     "sessionTitle": "Panel discussion: Securely Scaling Ethereum",
     "description": "Discussing how to scale Etherum for the world.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Chua",
@@ -66,6 +68,7 @@
   {
     "sessionTitle": "Scaling Web3 Technology with Authentic DevRel & Collaborative Dev Innovation",
     "description": "Exploring the transformative impact of Snaps permissionless innovation in the Wallet ecosystem. Discover how authentic relationships and collaborative innovation are reshaping wallet technology in Web3.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Francesco",
@@ -80,6 +83,7 @@
   {
     "sessionTitle": "Why User Experience Is Important for Mass Adoption in Ethereum Ecosystem",
     "description": "Examining real-world examples and technical solutions, this talk will demonstrate how improving UX at the application level can significantly enhance user adoption.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Nabiha",
@@ -94,6 +98,7 @@
   {
     "sessionTitle": "Using AI to improve performance of Solidity Fuzzers",
     "description": "Fuzzers play a crucial role in identifying vulnerabilities. Different fuzzers employ distinct approaches to achieve this goal.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Piyush",
@@ -108,6 +113,7 @@
   {
     "sessionTitle": "Game Theoretic Auditing for Finding Deep Bugs",
     "description": "Delving into the application of game theoretic auditing for uncovering deep, critical vulnerabilities in blockchain systems.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Moazzam",
@@ -122,6 +128,7 @@
   {
     "sessionTitle": "Execution Layer Cross Validation: Resilience without Swapping Clients",
     "description": "This talk will attempt to detail a bit the penalty mechanisms that play out in case of consensus errors, and explain how they are amplified with the scale of the error.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Péter",
@@ -136,6 +143,7 @@
   {
     "sessionTitle": "Panel discussion: Validators and Staking Communities",
     "description": "Knowing how to run blockchain nodes is a high leverage skill and highly monetisable. Need to invest time and effort for sure but no prior technical background is needed.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Kolby",
@@ -168,6 +176,7 @@
   {
     "sessionTitle": "Panel discussion: RWAs and Stablecoins",
     "description": "The FSA is actively working on stablecoin regulations. We anticipate that many stablecoins will be issued by Japanese banks this year. However, the most crucial aspect will be determining how these stablecoins will be utilized after they are issued.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Vlad",
@@ -199,7 +208,8 @@
   },
   {
     "sessionTitle": "Tokenized RWAs: Brave new world or unnecessary fad?",
-    "description": "",
+    "description": "Thi talk will explore the critical role of tokenization in unlocking new opportunities and addressing key challenges within the RWA and  DeFi ecosystem.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Philipp",
@@ -214,6 +224,7 @@
   {
     "sessionTitle": "Be Your Own Federal Reserve: How to build a safer next generation of stablecoin",
     "description": "This talk will be an introduction to the GEB framework for building floating peg stablecoins, and a call to action to continue researching money that is backed by peaceful assets.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Joseph",
@@ -228,6 +239,7 @@
   {
     "sessionTitle": "True real-life token-enabled projects: Mechanisms and Impacts",
     "description": "This talk will explore how applications built on Dev Protocol have supported various tokenized projects that are viable in the real life, including creators, stores, and social infrastructure.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Aggre",
@@ -242,6 +254,7 @@
   {
     "sessionTitle": "TLSNotary: Bridging Data from web2 to web3 Using Privacy-Preserving MPC",
     "description": "TLSNotary is an open-source project that utilizes MPC-TLS (Multi-Party Computation-Transport Layer Security) to enable users to prove and share their data while preserving their privacy.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "yuroitaki",
@@ -256,6 +269,7 @@
   {
     "sessionTitle": "MAIDs for Game Theoretic Formal Verification of Governance Protocols",
     "description": "This talk will propose the use of Multi Agent Influence Diagrams (MAIDs) as a way to formally assess the game theoretical properties of any Governance game in Ethereum.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Abhimanyu",
@@ -270,6 +284,7 @@
   {
     "sessionTitle": "Advancing Parallel EVM: Parallel I/O via EIP-7650 and Intelligent I/O Preloading",
     "description": "We delve into two innovative strategies to maximize the advantages of parallel I/O. EIP-7650 (Programmable Access Lists) and Intelligent I/O Preloading.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Qiang",
@@ -284,6 +299,7 @@
   {
     "sessionTitle": "Enter the Portal Network",
     "description": "This talk with introduce a decentralized way for all users to access Ethereum in a resource efficient way, but still maintain full access to the state.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Kolby",
@@ -298,6 +314,7 @@
   {
     "sessionTitle": "Elliptical Eccentricity for Capital Efficiency",
     "description": "This talk withh introduce a new Elliptic Concentrated Liquidity Pool (E-CLP) design which combines the benefits of Uniswap-V3-style concentrated liquidity with the ability to customise the liquidity profile between the price bounds, using an ellipse",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Josh",
@@ -311,7 +328,8 @@
   },
   {
     "sessionTitle": "Leveraging Bitcoin Security in Ethereum dApps",
-    "description": "This talk will explore the potential of building on Bitcoin solutions that are Ethereum Virtual Machine (EVM) compatible, leveraging Bitcoin’s renowned security and the flexibility of Ethereum's programming environment.",
+    "description": "This talk will explore the potential of building on Bitcoin solutions that are Ethereum Virtual Machine (EVM) compatible, leveraging Bitcoin's renowned security and the flexibility of Ethereum's programming environment.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Allen",
@@ -326,6 +344,7 @@
   {
     "sessionTitle": "Maximal Extractable Loss-Versus-Rebalancing",
     "description": "This talk will discuss mehtods to empirically determine the maximal extractable amount of such CEX-DEX arbitrage value in an attempt to measure the upper bound of this LVR problem to date.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Yuki",
@@ -340,6 +359,7 @@
   {
     "sessionTitle": "Interplanetary Banking System",
     "description": "This talk will talk about lending in the future, if our current infra is sufficient for truly tokenized economy and what is missing to support humans as multi-planetary species.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Naim",
@@ -354,6 +374,7 @@
   {
     "sessionTitle": "Panel discussion: Decentralized data bridging from Web2 to Web3",
     "description": "Discussing web2-web3 integration through decentralized data briding.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Sammi",
@@ -386,6 +407,7 @@
   {
     "sessionTitle": "Panel discussion: Crosschain DeFi",
     "description": "Discussing the future of globally interoperable finance",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Blagoj",
@@ -412,6 +434,7 @@
   {
     "sessionTitle": "Technical audits are not enough: Economic risks in DeFi",
     "description": "This talk will be diving into what Economic exploits are and how most of them are executed in the Ethereum ecosystem.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Varun",
@@ -426,6 +449,7 @@
   {
     "sessionTitle": "VDF-Based On-Chain Random Beacon: Practice and Challenges",
     "description": "This talk will discuss constructing a VDF-based on-chain Distributed Random Beacon (DRB), introduce two VDF mechanisms, share optimization techniques, and compare applications of Commit-Reveal schemes enhanced by VDF, noting the challenges in blockchain environments.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Suhyeon",
@@ -440,6 +464,7 @@
   {
     "sessionTitle": "Tokamak zk-EVM: A new type of zk-EVM",
     "description": "This talk will propose a new zk-EVM type that compromises between existing zk-rollups and optimistic rollups.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Jehyuk",
@@ -468,6 +493,7 @@
   {
     "sessionTitle": "Dynamic NFT Rewards: Auto-Tuning Drop Rates for Enhanced Game Engagement",
     "description": "This talk is aimed at integrating blockchain technology into traditional Web2 games to boost engagement. This method automatically adjusts NFT drop rates based on user activity, similar to how Bitcoin adjusts mining difficulty.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Ryo",
@@ -482,6 +508,7 @@
   {
     "sessionTitle": "Satoshi's Legacy: Giving AI the sense of space?",
     "description": "This talk explores how Satoshi Nakamoto's invention of Bitcoin sparked a decentralization movement that is reshaping human organization. It highlights the shift from traditional, centralized models to decentralized networks where AI and individuals collaboratively manage infrastructure and economic activity on a global scale.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Nils",
@@ -496,6 +523,7 @@
   {
     "sessionTitle": "Homage to Augur",
     "description": "This talk will discuss how to built crypto-economically secure oracles and governance mechanisms. It will centre on the design of the oracle used in Augur, an early Ethereum prediction market.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Edmund",
@@ -510,6 +538,7 @@
   {
     "sessionTitle": "Pluralistic Funding Mechanisms in Grants & Why they're important",
     "description": "Pluralistic funding mechanisms are what will expand Web3's growth into the opaque Web2 world. Enabling communities, donors and projects to fund projects in new ways that enable transparency and modularity.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Rena",
@@ -524,6 +553,7 @@
   {
     "sessionTitle": "Society Github",
     "description": "This talk will present the vision of the world that is build the same way as modern software. Version controlled and packaged public systems; AI, blockchain, and robotics existing to serve the humanity while following the Three Laws of Robotics; etc.",
+    "stage": "Conference Room",
     "speakers": [
       {
         "firstname": "Tomasz",
@@ -538,6 +568,7 @@
   {
     "sessionTitle": "Bridging the gap: Business management for DAO",
     "description": "This talk will discuss how to manage businesses as a DAO.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Andrej",
@@ -552,6 +583,7 @@
   {
     "sessionTitle": "Panel discussion: Web3 Creator Social Economy",
     "description": "Discussing the future of creator economy and the social environment surrounding it, empowered by web3 infrastructures and services.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Taka",
@@ -584,6 +616,7 @@
   {
     "sessionTitle": "End of the Ethereum Killer Narrative; The Future of Onchain Businesses",
     "description": "This talk will discuss how advancements in scalability solutions are empowering Ethereum to accommodate a vast network of transactions and interactions, fostering seamless operations for onchain businesses of all scales.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Melissa",
@@ -598,6 +631,7 @@
   {
     "sessionTitle": "Ethereum Culture Expanding in the Infinite Garden",
     "description": "This talk will look into the cultural aspect of Ethereum through the lens of the Infinite Garden narrative.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Tomo",
@@ -612,6 +646,7 @@
   {
     "sessionTitle": "Plurality and the Future of Tech-Driven Governance",
     "description": "This talk will discuss the state of tech-driven governance and present a vision towards a more pluralistic future",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Audrey",
@@ -626,6 +661,7 @@
   {
     "sessionTitle": "Expectation of the Ethereum ecosystem growth over the next ten years.",
     "description": "As per the title, this talk will discuss where the Ethereum ecosystem is headed over the next decade.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Vitalik",
@@ -640,6 +676,7 @@
   {
     "sessionTitle": "Growing the Infinite Garden in a capitalist society",
     "description": "This talk will discuss the challenges and opportunities to play the infinite-game in a self-devouring capitalist environment.",
+    "stage": "Main stage",
     "speakers": [
       {
         "firstname": "Aya",
