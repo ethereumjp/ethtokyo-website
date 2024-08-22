@@ -2,16 +2,17 @@ import { mq } from "@/themes/settings/breakpoints";
 import { neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image, { type StaticImageData } from "next/image";
-// import FiveDollarVcLogo from "public/logo/5dollarvcLogo.png";
 import API3Logo from "public/logo/API3Logo.svg";
 import AkindoLogo from "public/logo/AkindoLogo.svg";
 import AvailLogo from "public/logo/AvailLogo.svg";
+import BNBLogo from "public/logo/BNBLogo.svg";
 import BitflyerLogo from "public/logo/BitflyerLogo.svg";
 import BunzzLogo from "public/logo/BunzzLogo.svg";
 import CabinetLogo from "public/logo/CabinetLogo.png";
 import CentrumLogo from "public/logo/CentrumLogo.svg";
 import CoinpostLogo from "public/logo/CoinpostLogo.png";
 import CryptonomadsLogo from "public/logo/CryptonomadsLogo.svg";
+import CryptopolitanLogo from "public/logo/CryptopolitanLogo.svg";
 import DeFormLogo from "public/logo/DeFormLogo.png";
 import DesciJapanLogo from "public/logo/DesciJapanLogo.png";
 import DevconLogo from "public/logo/DevconLogo.svg";
@@ -29,6 +30,7 @@ import MetamaskLogo from "public/logo/MetamaskLogo.svg";
 import MoongateLogo from "public/logo/MoongateLogo.svg";
 import NEOLogo from "public/logo/NEO-X.svg";
 import NeroLogo from "public/logo/NeroLogo.svg";
+import NewEconomyLogo from "public/logo/NewEconomyLogo.svg";
 import RedbullLogo from "public/logo/RedbullLogo.svg";
 import ScrollLogo from "public/logo/ScrollLogo.svg";
 import ShibuyaLogo from "public/logo/Shibuya.svg";
@@ -37,6 +39,7 @@ import StreamEthLogo from "public/logo/StreamEthLogo.png";
 import TechfundLogo from "public/logo/TechfundLogo.png";
 import UnchainLogo from "public/logo/UnchainLogo.png";
 import ZeloLogo from "public/logo/ZeloLogo.png";
+import FiveDollarVcLogo from "public/logo/fivedollarvc.png";
 
 const SupportersSection = () => {
   const SupporterLogo: React.FC<{
@@ -267,6 +270,12 @@ const SupportersSection = () => {
             tier="gold"
           />
           <SupporterLogo
+            source={BNBLogo}
+            text="BNB Chain"
+            link="https://www.bnbchain.org/"
+            tier="gold"
+          />
+          <SupporterLogo
             source={ENSLogo}
             text="ENS"
             link="https://ens.domains/"
@@ -325,6 +334,46 @@ const SupportersSection = () => {
             tier="silver"
           />
         </SponsorTier>
+        <h3
+          css={css`
+            color: black;
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+
+            ${mq.laptop} {
+              font-size: 2.5rem;
+            }
+          `}
+        >
+          Media Partners
+        </h3>
+        <SponsorTier>
+          <SupporterLogo
+            source={CoinpostLogo}
+            text="Coinpost"
+            link="https://coinpost.jp/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={NewEconomyLogo}
+            text="あたらしい経済"
+            link="https://www.neweconomy.jp/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={FiveDollarVcLogo}
+            text="$5.VC"
+            link="https://5dollarvc.com/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={CryptopolitanLogo}
+            text="Cryptopolitan"
+            link="https://www.cryptopolitan.com/"
+            tier="partner"
+          />
+        </SponsorTier>
       </section>
       <section id="supporters">
         <PartnerCategory category="Event Supporters">
@@ -341,12 +390,6 @@ const SupportersSection = () => {
             tier="partner"
           />
           <SupporterLogo
-            source={CoinpostLogo}
-            text="Coinpost"
-            link="https://coinpost.jp/"
-            tier="partner"
-          />
-          <SupporterLogo
             source={CentrumLogo}
             text="Centrum"
             link="https://centrum.studio/"
@@ -356,6 +399,12 @@ const SupportersSection = () => {
             source={AkindoLogo}
             text="Akindo"
             link="https://akindo.io/"
+            tier="partner"
+          />
+          <SupporterLogo
+            source={StreamEthLogo}
+            text="StreamETH"
+            link="https://streameth.org/"
             tier="partner"
           />
           <SupporterLogo
@@ -386,12 +435,6 @@ const SupportersSection = () => {
             source={MoongateLogo}
             text="Moongate"
             link="https://www.moongate.id/"
-            tier="partner"
-          />
-          <SupporterLogo
-            source={StreamEthLogo}
-            text="StreamETH"
-            link="https://streameth.org/"
             tier="partner"
           />
           <SupporterLogo
