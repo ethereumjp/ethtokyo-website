@@ -5,6 +5,7 @@ import Image, { type StaticImageData } from "next/image";
 import AbhimanyuPic from "public/images/contributors/abhimanyunag.jpg";
 import AggrePic from "public/images/contributors/aggre.jpg";
 import AllenPic from "public/images/contributors/allenjoseph.jpg";
+import AnjaliPic from "public/images/contributors/anjaliyoung.png";
 import AudreyPic from "public/images/contributors/audrey.png";
 import AyaPic from "public/images/contributors/ayamiyaguchi.png";
 import ChuazhengPic from "public/images/contributors/chuazhenglong.jpeg";
@@ -408,6 +409,13 @@ const SpeakersSection = () => {
           link="https://www.linkedin.com/in/qi-zhou-9a668715/"
           org="EthStorage"
           orgUrl="https://ethstorage.io/"
+        />
+        <SpeakerIcon
+          source={AnjaliPic}
+          name="Anjali Young"
+          link="https://x.com/damaderoca"
+          org="Collab.Land"
+          orgUrl="https://www.collab.land/"
         />
         <SpeakerIcon
           source={LouiePic}
