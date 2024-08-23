@@ -263,6 +263,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           href="/apply"
           text="Hackathon registration"
           color={brand.BluePantone}
+          disabled
         />
         <LinkedButton
           href="https://app.moongate.id/e/eth-tokyo-2024"
