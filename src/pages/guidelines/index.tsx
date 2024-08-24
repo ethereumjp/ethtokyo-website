@@ -114,8 +114,8 @@ const HackerChallenge: NextPage = () => {
             </ul>
           </p>
           <p>
-            You must submit the project to the specified platform by 11:59 on
-            the final day of the hackathon.
+            You must submit the project to the specified platform by 8:59 on the
+            final day of the hackathon.
           </p>
           <br />
           <h2 css={css`font-weight: 300;`}>Submitting your Project</h2>
