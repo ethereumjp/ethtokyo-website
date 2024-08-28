@@ -85,7 +85,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
             <h1>Tokyo, Japan</h1>
           </div>
         </TriangleJpWaveBackground>
-        <CountdownPanel />
+        {/* <CountdownPanel /> */}
       </section>
     );
   };
