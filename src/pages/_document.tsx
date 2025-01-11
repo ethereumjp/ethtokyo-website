@@ -15,20 +15,20 @@ const CustomDocument = (props: NoncedDocument) => {
     <Html prefix="og: https://ogp.me/ns#" lang="en" nonce={props.nonce}>
       <Head nonce={props.nonce}>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:url" content="www.ethtokyo.com" />
+        <meta property="og:url" content="ethtokyo.org" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="ETHTokyo 2024" />
+        <meta property="og:title" content="ETHTokyo 2025" />
         <meta
           property="og:image"
-          content="https://www.ethtokyo.com/images/thumbnail.jpg"
+          content="https://ethtokyo.org/images/thumbnail.jpg"
         />
         <meta
           property="og:description"
-          content="ETHTokyo 2024 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
+          content="ETHTokyo 2025 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
         />
         <meta
           name="description"
-          content="ETHTokyo 2024 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
+          content="ETHTokyo 2025 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:card" content="summary_large_image" />
