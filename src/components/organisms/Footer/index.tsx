@@ -1,12 +1,10 @@
 import { mq } from "@/themes/settings/breakpoints";
-import { brand } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import type { FC } from "react";
 
+import type { FC } from "react";
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`
-    background-color: ${brand.Shuiro};
     padding: 1rem 0;
     text-align: center;
     width: 100%;
@@ -24,8 +22,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
           }
         `}
       >
-        © 2024 ETHTokyo - Ethereum Japan. Domain (ethtokyo.com) provided by
-        Yusuke Obinata.
+        © {new Date().getFullYear()} ETHTokyo - Ethereum Japan.
       </span>
     </footer>
   );
