@@ -21,7 +21,14 @@ const Info = () => {
         }
       `}
       >
-        <div css={css`align-self:start;`}>
+        <div
+          css={css`
+          align-self: "center";
+          ${mq.laptop}{
+            align-self: "start";
+          }
+        `}
+        >
           <HiCalendarDays size={60} />
         </div>
 
@@ -46,7 +53,13 @@ const Info = () => {
           </div>
         </div>
         <div css={css`height:2rem; ${mq.laptop}{width: 2rem;}`} />
-        <div css={css`align-self:start;`}>
+        <div
+          css={css`
+          align-self: "center";
+          ${mq.laptop}{
+            align-self: "start";
+          }`}
+        >
           <HiOutlineMapPin size={60} />
         </div>
         <div
