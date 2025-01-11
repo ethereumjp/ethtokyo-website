@@ -9,8 +9,8 @@ import type { FC } from "react";
 
 export const metadata = {
   title: {
-    template: "%s | ETHTokyo'24",
-    default: "ETHTokyo'24",
+    template: "%s | ETHTokyo'25",
+    default: "ETHTokyo'25",
   },
   description: "The Japanese Ethereum Community Hackathon & Conference",
   keywords: ["Ethereum", "Japan", "Tokyo", "Blockchain", "Hackathon"],
@@ -22,13 +22,13 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "ETHTokyo 2024",
+    title: "ETHTokyo 2025",
     description: "The Japanese Ethereum Community Hackathon & Conference",
-    url: "https://www.ethtokyo.com",
-    siteName: "www.ethtokyo.com",
+    url: "https://ethtokyo.org/",
+    siteName: "ethtokyo.org",
     images: [
       {
-        url: "https://www.ethtokyo.com/logo/ETHTokyoLogo.png",
+        url: "https://ethtokyo.org/logo/ETHTokyoLogo.png",
         width: 800,
         height: 600,
       },
@@ -38,12 +38,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ETHTokyo 2024",
+    title: "ETHTokyo 2025",
     description: "The Japanese Ethereum Community Hackathon & Conference",
     siteId: "1511737631948034048",
     creator: "@Ethereum_JP",
     creatorId: "1511737631948034048",
-    images: ["https://www.ethtokyo.com/logo/ETHTokyoLogo.png"],
+    images: ["https://ethtokyo.org/logo/ETHTokyoLogo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#B8FAF6" },
@@ -75,7 +75,7 @@ const fontInter = Inter({
 // const styleCache = createCache({ key: 'next' });
 
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
-  const siteTitle = "ETHTokyo'24";
+  const siteTitle = "ETHTokyo'25";
   const baseLayoutStyle = css``;
   const mainLayoutStyle = css``;
 
