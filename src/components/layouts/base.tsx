@@ -77,9 +77,7 @@ const fontInter = Inter({
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'24";
   const baseLayoutStyle = css``;
-  const mainLayoutStyle = css`
-    background-color: ${brand.Miyabi};
-  `;
+  const mainLayoutStyle = css``;
 
   return (
     <>
