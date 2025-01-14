@@ -70,17 +70,15 @@ const Info = () => {
         `}
         >
           <div css={css``}>
-            <h2 css={css`margin:0;`}>United Nations University</h2>
-            <a
+            <h2 css={css`margin:0;`}>TBA</h2>
+            {/* <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-              href="https://maps.app.goo.gl/uZKbVZm5wmGyCsAg6"
+              href=""
               target="_blank"
               rel="noreferrer"
-            >
-              <p css={css`font-size: 1rem; margin:0;`}>
-                5-53-70 Jingumae, Shibuya, Tokyo
-              </p>
-            </a>
+            > */}
+            <p css={css`font-size: 1rem; margin:0;`}>Location, Tokyo</p>
+            {/* </a> */}
           </div>
           <div css={css`margin-top: 1rem;`}>
             <h2 css={css`margin:0;`}>Digital Garage</h2>
