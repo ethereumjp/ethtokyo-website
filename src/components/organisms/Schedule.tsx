@@ -127,7 +127,6 @@ const ScheduleSection = () => {
       `}
     >
       <Info />
-      <Socials />
     </section>
   );
 };

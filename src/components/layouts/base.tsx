@@ -76,17 +76,19 @@ const fontInter = Inter({
 
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'25";
-  const baseLayoutStyle = css``;
-  const mainLayoutStyle = css``;
+  const baseLayoutStyle = css``; // 決めたい
+  const mainLayoutStyle = css``; // 決めたい
 
   return (
     <>
       <Global styles={globalStyles} />
 
+      {/* HTML header */}
       <Head>
         <title>{pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle}</title>
       </Head>
 
+      {/* main body */}
       <div className={fontInter.className} css={baseLayoutStyle}>
         <main css={mainLayoutStyle}>{children}</main>
         <Footer />

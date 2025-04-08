@@ -1,6 +1,7 @@
 import Layout from "@/components/layouts/base";
 // import { CountdownPanel } from "@/components/organisms/Countdown";
 import ScheduleSection from "@/components/organisms/Schedule";
+import { Socials } from "@/components/organisms/Socials";
 import StatementSection from "@/components/organisms/Statement";
 import { brand } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
@@ -13,16 +14,12 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   return (
     <Layout pageTitle="">
       <div>
-        <StatementSection />
-        <div
-          css={css`
-            background-image: url(${seikaiha.src});
-            background: linear-gradient(0deg, #000, ${brand.Shuiro});
-          `}
-        >
+        {/* <StatementSection /> replace with new design */}
+        <div css={css``}>
           <ScheduleSection />
         </div>
       </div>
+      <Socials />
     </Layout>
   );
 };
