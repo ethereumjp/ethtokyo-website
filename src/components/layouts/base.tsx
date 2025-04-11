@@ -1,6 +1,8 @@
 import Footer from "@/components/organisms/Footer";
+import Header from "@/components/organisms/Header";
 import { globalStyles } from "@/themes/global";
-import { brand } from "@/themes/settings/color";
+import { mq } from "@/themes/settings/breakpoints";
+import { brand, neutral, themeLight } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
 import { Global, css } from "@emotion/react";
 import { Inter } from "next/font/google";
@@ -76,8 +78,31 @@ const fontInter = Inter({
 
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'25";
-  const baseLayoutStyle = css``; // 決めたい
-  const mainLayoutStyle = css``; // 決めたい
+  const baseLayoutStyle = css`
+    background-color: ${themeLight.Background};
+    color: ${neutral.Text};
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    
+    a {
+      color: ${themeLight.Link};
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: ${themeLight.LinkHover};
+      }
+    }
+  `;
+
+  const mainLayoutStyle = css`
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  `;
 
   return (
     <>
@@ -90,6 +115,7 @@ const Layout: FC<PageProps> = ({ pageTitle, children }) => {
 
       {/* main body */}
       <div className={fontInter.className} css={baseLayoutStyle}>
+        <Header />
         <main css={mainLayoutStyle}>{children}</main>
         <Footer />
       </div>
