@@ -13,17 +13,14 @@ export const Socials = () => {
 
   return (
     <div css={container}>
-      <a href="https://ethereumjp.org/contact" target="_blank" rel="noreferrer">
-        <GoGlobe size={36} css={css`margin: 12.5px;`} />
-      </a>
       <a href="mailto:info@ethtokyo.org">
-        <GoMail size={36} css={css`margin: 12.5px;`} />
+        <GoMail size={36} css={css`margin: 12.5px;`} color="black" />
       </a>
       <SocialIcon
         css={css`:hover {fill: ${info.Attention};}`}
         url="https://x.com/Ethereum_JP"
         bgColor="transparent"
-        fgColor="currentColor"
+        fgColor="black"
         label="Twitter/X"
         target="_blank"
         rel="noreferrer"
@@ -33,7 +30,7 @@ export const Socials = () => {
         css={css`:hover {fill: ${info.Attention};}`}
         url="https://github.com/ethereumjp"
         bgColor="transparent"
-        fgColor="currentColor"
+        fgColor="black"
         label="Github"
         target="_blank"
         rel="noreferrer"
@@ -43,7 +40,7 @@ export const Socials = () => {
         css={css`:hover {fill: ${info.Attention};}`}
         url="https://discord.gg/Tm5jU3DSCE"
         bgColor="transparent"
-        fgColor="currentColor"
+        fgColor="black"
         label="Discord"
         target="_blank"
         rel="noreferrer"

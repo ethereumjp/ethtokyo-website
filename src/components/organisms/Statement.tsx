@@ -1,10 +1,10 @@
-import eventDetails from "@/data/eventDetails.json";
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
-import ETHDiamondLogo from "public/logo/ETHDiamondLogo.png";
-import ETHTokyoLogo from "public/logo/ETHTokyoLogo.png";
+import ETHDiamondLogo from "public/2024/logo/ETHDiamondLogo.png";
+import ETHTokyoLogo from "public/assets/ETHTokyoLogo.png";
 
 const StatementSection = () => {
   const EventLogo = () => {

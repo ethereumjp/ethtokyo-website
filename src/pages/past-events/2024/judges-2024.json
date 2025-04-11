@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Péter Szilágyi",
+    "linkToOnlinePresence": "https://twitter.com/peter_szilagyi/",
+    "role": "Geth lead",
+    "org": "EF",
+    "orgUrl": "https://geth.ethereum.org/",
+    "imagePath": "/2024/images/contributors/peterszilagyi.png"
+  },
+  {
+    "name": "Tomasz Stańczak",
+    "linkToOnlinePresence": "https://twitter.com/tkstanczak/",
+    "role": "Founder",
+    "org": "Nethermind",
+    "orgUrl": "https://www.nethermind.io/",
+    "imagePath": "/2024/images/contributors/tomaszstanczak.png"
+  },
+  {
+    "name": "Joseph Schiarizzi",
+    "linkToOnlinePresence": "https://josephschiarizzi.com/",
+    "role": "Founder",
+    "org": "Open Dollar",
+    "orgUrl": "https://www.opendollar.com/",
+    "imagePath": "/2024/images/contributors/josephschiarizzi.jpg"
+  },
+  {
+    "name": "William Metcalfe",
+    "linkToOnlinePresence": "https://www.curvegrid.com/team/william-metcalfe",
+    "role": "Co-founder",
+    "org": "Curvegrid",
+    "orgUrl": "https://www.curvegrid.com/",
+    "imagePath": "/2024/images/contributors/williammetcalfe.jpg"
+  },
+  {
+    "name": "Michele D'Aliessi",
+    "linkToOnlinePresence": "https://x.com/MicheleDaliessi",
+    "role": "Co-founder",
+    "org": "Superfluid",
+    "orgUrl": "https://www.superfluid.finance/",
+    "imagePath": "/2024/images/contributors/micheledaliessi.png"
+  },
+  {
+    "name": "Moazzam Arif",
+    "linkToOnlinePresence": "https://ae.linkedin.com/in/moazzam-arif",
+    "role": "Founder",
+    "org": "BlockApex",
+    "orgUrl": "https://blockapex.io/",
+    "imagePath": "/2024/images/contributors/moazzamarif.png"
+  },
+  {
+    "name": "Takamichi Tsutsumi",
+    "linkToOnlinePresence": "https://jp.linkedin.com/in/takamichi-tsutsumi-24a002b7",
+    "role": "Software Engineer",
+    "org": "EF",
+    "orgUrl": "https://ethereum.foundation/",
+    "imagePath": "/2024/images/contributors/tkmct.jpeg"
+  },
+  {
+    "name": "Andrej Berlin",
+    "linkToOnlinePresence": "https://de.linkedin.com/in/andrejberlin",
+    "role": "Designer & Engineer",
+    "org": "Deep Work Studio",
+    "orgUrl": "https://deepwork.studio/",
+    "imagePath": "/2024/images/contributors/andrejberlin.png"
+  },
+  {
+    "name": "Makoto Inoue",
+    "linkToOnlinePresence": "https://matoken.eth.limo/",
+    "role": "Core developer",
+    "org": "ENS",
+    "orgUrl": "https://ens.domains/",
+    "imagePath": "/2024/images/contributors/makoto.jpg"
+  },
+
+  {
+    "name": "Naim Ashhab",
+    "linkToOnlinePresence": "https://cz.linkedin.com/in/naim-ashhab-9b9145a1",
+    "role": "Co-founder",
+    "org": "PWN DAO",
+    "orgUrl": "https://pwn.xyz/",
+    "imagePath": "/2024/images/contributors/naimashhab.jpeg"
+  },
+  {
+    "name": "Nori Zkitty",
+    "linkToOnlinePresence": "https://www.linkedin.com/in/norika-kizawa",
+    "role": "Founder",
+    "org": "SpaceCowboy",
+    "orgUrl": "https://www.spacecowboy.so/",
+    "imagePath": "/2024/images/contributors/norizkitty.jpg"
+  },
+
+  {
+    "name": "Sujith Somraaj",
+    "linkToOnlinePresence": "https://www.sujithsomraaj.xyz/",
+    "role": "Senior Protocol Developer",
+    "org": "Superform",
+    "orgUrl": "https://www.superform.xyz/",
+    "imagePath": "/2024/images/contributors/sujithsomraaj.jpeg"
+  }
+]

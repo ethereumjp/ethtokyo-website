@@ -5,8 +5,8 @@ import type { PageProps } from "@/types";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import ThemeImage from "public/2025/image/ETHTokyo-theme-image.png";
-import ETHTokyoLogo from "public/2025/logo/ETHTokyo_logo.png";
+import ThemeImage from "public/2025/images/keyvisual.png";
+import ETHTokyoLogo from "public/assets/ETHTokyoLogo.png";
 import type { FC } from "react";
 
 // テクニカルグラフィック

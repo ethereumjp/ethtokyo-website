@@ -1,4 +1,4 @@
-import { brand } from "@/themes/settings/color";
+import { brand } from "@/themes/2024-styles";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Link from "next/link";

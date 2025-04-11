@@ -1,10 +1,23 @@
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
+import Airtable from "airtable";
+import AirtableError from "airtable/lib/airtable_error";
 import type { FC } from "react";
+import { useState } from "react";
+
+// Airtable configurations to store newsletter subscribers.
+const base = new Airtable({
+  apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PAT,
+}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE as string);
+
+const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE as string);
 
 const Footer: FC<ComponentProps> = ({ children }) => {
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const footerStyle = css`
     background-color: ${neutral.Grey6};
     color: ${neutral.White};
@@ -83,12 +96,39 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     border-top: 1px solid ${neutral.Grey5};
   `;
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const email = (
+      e.currentTarget.elements.namedItem("email") as HTMLInputElement
+    ).value as string;
+
+    table.create(
+      {
+        Email: email as string,
+      },
+      (err, record) => {
+        if (err) {
+          throw new Error(
+            `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
+          );
+        }
+        setIsSubscribed(true);
+        return JSON.stringify({
+          message: "SUCCESS",
+          address: email as string,
+          record: record?.getId(),
+        });
+      },
+    );
+  };
+
   return (
     <footer css={footerStyle}>
       <div css={containerStyle}>
         <div>
-          <h3 css={footerHeadingStyle}>ETHTokyo2025</h3>
-          <p css={footerTextStyle}>Building the future of Ethereum in Asia</p>
+          <h3 css={footerHeadingStyle}>{eventInfo.title}</h3>
+          <p css={footerTextStyle}>{eventInfo.subtitle}</p>
         </div>
         <div>
           <h4 css={footerHeadingStyle}>Quick Links</h4>
@@ -102,7 +142,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
           <h4 css={footerHeadingStyle}>Connect</h4>
           <div css={footerLinksStyle}>
             <a href="https://twitter.com/Ethereum_JP">Twitter</a>
-            <a href="https://discord.gg/ethereum-jp">Discord</a>
+            <a href="https://discord.gg/Tm5jU3DSCE">Discord</a>
             <a href="https://t.me/ethtokyo">Telegram</a>
           </div>
         </div>
@@ -112,19 +152,20 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             Stay updated with the latest news and announcements
           </p>
           <div css={inputContainerStyle}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              css={inputStyle}
-            />
-            <button type="button" css={buttonStyle}>
-              Subscribe
-            </button>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                css={inputStyle}
+                id="email"
+              />
+              <button type="submit" css={buttonStyle} disabled={isSubscribed}>
+                {isSubscribed ? "Subscribed" : "Subscribe"}
+              </button>
+            </form>
           </div>
         </div>
-        <div css={copyrightStyle}>
-          © {new Date().getFullYear()} ETHTokyo - Ethereum Japan.
-        </div>
+        <div css={copyrightStyle}>© {new Date().getFullYear()} ETHTokyo.</div>
       </div>
     </footer>
   );
