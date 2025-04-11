@@ -1,5 +1,12 @@
 import { CountdownPanel } from "@/components/organisms/Countdown";
 import { Socials } from "@/components/organisms/Socials";
+import {
+  brand,
+  globalStyles,
+  mq,
+  neutral,
+  themeLight,
+} from "@/themes/2024-styles";
 import type { ComponentProps, Judge, Mentor, PageProps } from "@/types";
 import { Global, css } from "@emotion/react";
 import type { NextPage } from "next";
@@ -108,7 +115,6 @@ import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import judges from "./judges-2024.json";
 import mentors from "./mentors-2024.json";
-import { brand, globalStyles, mq, neutral, themeLight } from "./themes-global";
 
 export const metadata = {
   title: {

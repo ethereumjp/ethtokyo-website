@@ -1,9 +1,9 @@
+import { brand } from "@/themes/2024-styles";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Layout } from "../index";
-import { brand } from "../themes-global";
 
 const HackerChallenge: NextPage = () => {
   const [isClient, setIsClient] = useState(false);

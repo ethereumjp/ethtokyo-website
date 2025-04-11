@@ -1,7 +1,7 @@
+import { brand } from "@/themes/2024-styles";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Link from "next/link";
-import { brand } from "../themes-global";
 
 const HackerChallenge: NextPage = () => {
   return (
