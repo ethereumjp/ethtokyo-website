@@ -28,6 +28,10 @@ jobs:
       - name: Run build
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: yarn build
+        env:
+          NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
+          NEXT_PUBLIC_AIRTABLE_BASE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE }}
+          NEXT_PUBLIC_AIRTABLE_TABLE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

@@ -11,11 +11,9 @@ import { useState } from "react";
 // Airtable configurations to store newsletter subscribers.
 const base = new Airtable({
   apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PAT,
-}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_INQUIRYFORM as string);
+}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE as string);
 
-const table = base(
-  process.env.NEXT_PUBLIC_AIRTABLE_TABLE_INQUIRYFORM as string,
-);
+const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE as string);
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const [isSubscribed, setIsSubscribed] = useState(false);
