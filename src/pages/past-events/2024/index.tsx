@@ -15,10 +15,10 @@ import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import topHero from "public/images/hero_top.jpg";
-import seikaiha from "public/images/seikaiha.png";
-import ETHDiamondLogo from "public/logo/ETHDiamondLogo.png";
-import ETHTokyoLogo from "public/logo/ETHTokyoLogo.png";
+import topHero from "public/2024/images/hero_top.jpg";
+import seikaiha from "public/2024/images/seikaiha.png";
+import ETHDiamondLogo from "public/2024/logo/ETHDiamondLogo.png";
+import ETHTokyoLogo from "public/2024/logo/ETHTokyoLogo.png";
 import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 
