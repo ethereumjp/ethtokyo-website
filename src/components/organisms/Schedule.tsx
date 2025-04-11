@@ -1,6 +1,7 @@
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
+import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Socials } from "./Socials";
 
@@ -71,22 +72,22 @@ const Info = () => {
         >
           <div css={css``}>
             <h2 css={css`margin:0;`}>{eventInfo.location.conference.name}</h2>
-            {/* <a
+            <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-              href=""
+              href="https://maps.app.goo.gl/46AJpycWLYEMFbr68"
               target="_blank"
               rel="noreferrer"
-            > */}
-            <p css={css`font-size: 1rem; margin:0;`}>
-              {eventInfo.location.conference.address}
-            </p>
-            {/* </a> */}
+            >
+              <p css={css`font-size: 1rem; margin:0;`}>
+                {eventInfo.location.conference.address}
+              </p>
+            </a>
           </div>
           <div css={css`margin-top: 1rem;`}>
             <h2 css={css`margin:0;`}>{eventInfo.location.hackathon.name}</h2>
             <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
-              href="https://maps.app.goo.gl/aCRdR2pX4qRaUz6MA"
+              href="https://maps.app.goo.gl/Pn5yszwApgEvhux6A"
               target="_blank"
               rel="noreferrer"
             >

@@ -19,7 +19,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           <ScheduleSection />
         </div>
       </div>
-      <Socials />
+      {/* <Socials /> */}
     </Layout>
   );
 };
