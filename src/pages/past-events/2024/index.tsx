@@ -18,7 +18,7 @@ import Link from "next/link";
 import topHero from "public/2024/images/hero_top.jpg";
 import seikaiha from "public/2024/images/seikaiha.png";
 import ETHDiamondLogo from "public/2024/logo/ETHDiamondLogo.png";
-import ETHTokyoLogo from "public/2024/logo/ETHTokyoLogo.png";
+import ETHTokyoLogo from "public/assets/ETHTokyoLogo.png";
 import { GoInfo } from "react-icons/go";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 

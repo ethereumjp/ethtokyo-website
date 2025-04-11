@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "ethtokyo.org",
     images: [
       {
-        url: "https://ethtokyo.org/logo/ETHTokyoLogo.png",
+        url: "https://ethtokyo.org/assets/ETHTokyoLogo.png",
         width: 800,
         height: 600,
       },
@@ -45,14 +45,14 @@ export const metadata = {
     siteId: "1511737631948034048",
     creator: "@Ethereum_JP",
     creatorId: "1511737631948034048",
-    images: ["https://ethtokyo.org/logo/ETHTokyoLogo.png"],
+    images: ["https://ethtokyo.org/assets/ETHTokyoLogo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#B8FAF6" },
     { media: "(prefers-color-scheme: dark)", color: "#C9B3F5" },
   ],
   icons: {
-    icon: "/logo/ETHTokyoLogo.png",
+    icon: "/assets/ETHTokyoLogo.png",
   },
   robots: {
     index: true,
