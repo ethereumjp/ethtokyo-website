@@ -1,9 +1,9 @@
-import Layout from "@/components/layouts/base";
-import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Layout } from "../index";
+import { brand } from "../themes-global";
 
 const HackerChallenge: NextPage = () => {
   const [isClient, setIsClient] = useState(false);

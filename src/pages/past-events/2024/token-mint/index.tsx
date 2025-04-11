@@ -1,7 +1,7 @@
-import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
+import { Layout } from "../index";
 
 const TokenMintPage: NextPage = () => {
   return (

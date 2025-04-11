@@ -6,7 +6,7 @@ import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import ThemeImage from "public/2025/images/keyvisual.png";
-import ETHTokyoLogo from "public/assets/ETHTokyo_logo.png";
+import ETHTokyoLogo from "public/assets/ETHTokyoLogo.png";
 import type { FC } from "react";
 
 // テクニカルグラフィック
