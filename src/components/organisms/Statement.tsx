@@ -1,4 +1,4 @@
-import eventDetails from "@/data/eventDetails.json";
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand } from "@/themes/settings/color";
 import { css } from "@emotion/react";
