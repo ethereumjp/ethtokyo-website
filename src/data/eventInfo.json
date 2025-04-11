@@ -1,0 +1,22 @@
+{
+  "title": "ETHTokyo'25",
+  "subtitle": "Tech for Humanity",
+  "location": {
+    "city": "Tokyo, Japan",
+    "conference": {
+      "name": "United Nations University",
+      "address": "5-53-70 Jingumae, Shibuya, Tokyo",
+      "map": "https://maps.app.goo.gl/UuGbxz6bBsZ3yLoV8"
+    },
+    "hackathon": {
+      "name": "Digital Garage",
+      "address": "15-1 Udagawacho, Shibuya, Tokyo",
+      "map": "https://maps.app.goo.gl/iWZyoXDoqX8ZKhE27"
+    }
+  },
+  "dates": {
+    "event": "Sep 12-15, 2025",
+    "conference": "September 12",
+    "hackathon": "September 13-15"
+  }
+}

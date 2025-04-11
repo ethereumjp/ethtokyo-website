@@ -1,4 +1,4 @@
-import eventDetails from "@/data/eventDetails.json";
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
@@ -42,13 +42,13 @@ const Info = () => {
           <div>
             <h2 css={css`margin:0;`}>Conference</h2>
             <p css={css`font-size: 1rem; margin:0;`}>
-              {eventDetails.eventDate.conference}
+              {eventInfo.dates.conference}
             </p>
           </div>
           <div css={css`margin-top: 1rem;`}>
             <h2 css={css`margin:0;`}>Hackathon</h2>
             <p css={css`font-size: 1rem; margin:0;`}>
-              {eventDetails.eventDate.hackathon}
+              {eventInfo.dates.hackathon}
             </p>
           </div>
         </div>
@@ -70,18 +70,20 @@ const Info = () => {
         `}
         >
           <div css={css``}>
-            <h2 css={css`margin:0;`}>TBA</h2>
+            <h2 css={css`margin:0;`}>{eventInfo.location.conference.name}</h2>
             {/* <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
               href=""
               target="_blank"
               rel="noreferrer"
             > */}
-            <p css={css`font-size: 1rem; margin:0;`}>Location, Tokyo</p>
+            <p css={css`font-size: 1rem; margin:0;`}>
+              {eventInfo.location.conference.address}
+            </p>
             {/* </a> */}
           </div>
           <div css={css`margin-top: 1rem;`}>
-            <h2 css={css`margin:0;`}>Digital Garage</h2>
+            <h2 css={css`margin:0;`}>{eventInfo.location.hackathon.name}</h2>
             <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
               href="https://maps.app.goo.gl/aCRdR2pX4qRaUz6MA"
@@ -89,7 +91,7 @@ const Info = () => {
               rel="noreferrer"
             >
               <p css={css`font-size: 1rem; margin:0;`}>
-                15-1 Udagawacho, Shibuya, Tokyo
+                {eventInfo.location.hackathon.address}
               </p>
             </a>
           </div>
