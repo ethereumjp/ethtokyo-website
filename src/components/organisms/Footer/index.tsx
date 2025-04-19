@@ -3,17 +3,17 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import Airtable from "airtable";
-import AirtableError from "airtable/lib/airtable_error";
+// import Airtable from "airtable";
+// import AirtableError from "airtable/lib/airtable_error";
 import type { FC } from "react";
 import { useState } from "react";
 
 // Airtable configurations to store newsletter subscribers.
-const base = new Airtable({
-  apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PAT,
-}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE as string);
+// const base = new Airtable({
+//   apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PAT,
+// }).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE as string);
 
-const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE as string);
+// const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE as string);
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -103,24 +103,24 @@ const Footer: FC<ComponentProps> = ({ children }) => {
       e.currentTarget.elements.namedItem("email") as HTMLInputElement
     ).value as string;
 
-    table.create(
-      {
-        Email: email as string,
-      },
-      (err, record) => {
-        if (err) {
-          throw new Error(
-            `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
-          );
-        }
-        setIsSubscribed(true);
-        return JSON.stringify({
-          message: "SUCCESS",
-          address: email as string,
-          record: record?.getId(),
-        });
-      },
-    );
+    // table.create(
+    //   {
+    //     Email: email as string,
+    //   },
+    //   (err, record) => {
+    //     if (err) {
+    //       throw new Error(
+    //         `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
+    //       );
+    //     }
+    //     setIsSubscribed(true);
+    //     return JSON.stringify({
+    //       message: "SUCCESS",
+    //       address: email as string,
+    //       record: record?.getId(),
+    //     });
+    //   },
+    // );
   };
 
   return (
