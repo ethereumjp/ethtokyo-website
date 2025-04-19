@@ -8,7 +8,10 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "lineWidth": 80
+    "lineWidth": 80,
+    "formatWithErrors": true,
+    "indentWidth": 2,
+    "lineEnding": "lf"
   },
   "json": {
     "formatter": {
@@ -18,5 +21,11 @@
   },
   "organizeImports": {
     "enabled": true
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "trailingCommas": "es5"
+    }
   }
 }
