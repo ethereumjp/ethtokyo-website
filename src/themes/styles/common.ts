@@ -57,10 +57,15 @@ export const buttonStyle = css`
   gap: 0.5rem;
   background-color: ${brand.Primary};
   color: ${neutral.White};
-  padding: 1rem 2rem;
+  padding: 8px 2rem;
   border-radius: 9999px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   transition: background-color 0.2s ease;
+
+  @media (min-width: 480px) {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
 
   &:hover {
     background-color: #FF7766;

@@ -65,16 +65,66 @@ const HeroSection: FC = () => {
     text-align: center;
     position: relative;
     z-index: 2;
-    padding: 0 2rem;
+    padding: 0 1rem;
+    padding-top: 8rem;
+    
+    ${mq.mobile} {
+      padding: 0 1.5rem;
+      padding-top: 9rem;
+    }
+    
+    ${mq.tablet} {
+      padding: 0 2rem;
+      padding-top: 10rem;
+    }
+    
+    ${mq.laptop} {
+      padding-top: 11rem;
+    }
+  `;
+
+  const logoContainerStyle = css`
+    position: relative;
+    max-width: 200px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+    
+    ${mq.mobile} {
+      max-width: 220px;
+      height: 130px;
+      margin: 0 auto 1.75rem;
+    }
+    
+    ${mq.tablet} {
+      max-width: 250px;
+      height: 150px;
+      margin: 0 auto 2rem;
+    }
+    
+    ${mq.laptop} {
+      max-width: 300px;
+    }
   `;
 
   const headingStyle = css`
-    font-size: 3.75rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: ${brand.Secondary};
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    
+    ${mq.mobile} {
+      font-size: 3rem;
+      margin-bottom: 1.25rem;
+    }
     
     ${mq.tablet} {
+      font-size: 3.75rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ${mq.laptop} {
       font-size: 6rem;
     }
   `;
@@ -84,12 +134,46 @@ const HeroSection: FC = () => {
   `;
 
   const subheadingStyle = css`
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: ${neutral.Grey4};
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    
+    ${mq.mobileSmall} {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ${mq.mobile} {
+      font-size: 1.125rem;
+      margin-bottom: 1.75rem;
+    }
     
     ${mq.tablet} {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    ${mq.laptop} {
       font-size: 1.875rem;
+    }
+  `;
+
+  const buttonContainerStyle = css`
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
+    
+    ${mq.mobile} {
+      margin-top: 1.75rem;
+      margin-bottom: 7rem;
+    }
+    
+    ${mq.tablet} {
+      margin-top: 2rem;
+      margin-bottom: 8rem;
+    }
+    
+    ${mq.laptop} {
+      margin-bottom: 9rem;
     }
   `;
 
@@ -98,10 +182,10 @@ const HeroSection: FC = () => {
       <div css={backgroundStyle}>
         <div
           css={css`
-            position: relative;
-            width: 100%;
-            height: 100%;
-          `}
+          position: relative;
+          width: 100%;
+          height: 100%;
+        `}
         >
           <Image
             src={ThemeImage}
@@ -120,26 +204,17 @@ const HeroSection: FC = () => {
         {/* TechGraphic component will be implemented later */}
       </div>
       <div css={containerStyle}>
-        <div
-          css={css`
-            position: relative;
-            max-width: 250px;
-            height: 150px;
-            margin: 0 auto 2rem;
-            display: flex;
-            justify-content: center;
-            
-            ${mq.tablet} {
-              max-width: 300px;
-            }
-          `}
-        >
+        <div css={logoContainerStyle}>
           <Image
             src={ETHTokyoLogo}
             alt="ETHTokyo Logo"
             width={300}
             height={150}
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              maxWidth: "100%",
+              height: "auto",
+            }}
           />
         </div>
         <h1 css={headingStyle}>
@@ -207,24 +282,26 @@ const HeroSection: FC = () => {
             <span>3000+ Attendees</span>
           </div>
         </div>
-        <button type="button" css={buttonStyle}>
-          Join the Revolution
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <title>Arrow Right</title>
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
-        </button>
+        <div css={buttonContainerStyle}>
+          <button type="button" css={buttonStyle}>
+            Join the Revolution
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <title>Arrow Right</title>
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
