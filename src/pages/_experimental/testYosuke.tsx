@@ -1,9 +1,6 @@
 import Layout from "@/components/layouts/base";
-import { brand, themeLight } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
-import { css } from "@emotion/react";
 import type { NextPage } from "next";
-import type { FC } from "react";
 import HeroSection from "@/components/organisms/HeroSection";
 import AboutSection from "@/components/organisms/AboutSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
