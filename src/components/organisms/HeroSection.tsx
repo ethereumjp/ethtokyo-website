@@ -98,10 +98,10 @@ const HeroSection: FC = () => {
       <div css={backgroundStyle}>
         <div
           css={css`
-          position: relative;
-          width: 100%;
-          height: 100%;
-        `}
+            position: relative;
+            width: 100%;
+            height: 100%;
+          `}
         >
           <Image
             src={ThemeImage}
@@ -122,15 +122,17 @@ const HeroSection: FC = () => {
       <div css={containerStyle}>
         <div
           css={css`
-          position: relative;
-          max-width: 250px;
-          height: 150px;
-          margin: 0 auto 2rem;
-          
-          ${mq.tablet} {
-            max-width: 300px;
-          }
-        `}
+            position: relative;
+            max-width: 250px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: center;
+            
+            ${mq.tablet} {
+              max-width: 300px;
+            }
+          `}
         >
           <Image
             src={ETHTokyoLogo}
