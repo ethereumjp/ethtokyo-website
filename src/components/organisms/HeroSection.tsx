@@ -126,6 +126,7 @@ const HeroSection: FC = () => {
     
     ${mq.laptop} {
       font-size: 6rem;
+      margin-top: 1rem;
     }
   `;
 
