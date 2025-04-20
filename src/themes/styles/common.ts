@@ -90,5 +90,5 @@ export const infoItemStyle = css`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: ${brand.Secondary};
+  color: ${neutral.White};
 `;
