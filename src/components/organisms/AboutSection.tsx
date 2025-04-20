@@ -73,7 +73,7 @@ const AboutSection: FC = () => {
           <div css={textContainerStyle}>
             <p css={paragraphStyle}>
               ETHTokyo2025 brings together developers, entrepreneurs, and crypto
-              enthusiasts from across Asia and beyond for a week of learning,
+              enthusiasts from across Asia and beyond for 4 days of learning,
               building, and connecting.
             </p>
             <p css={paragraphStyle}>
