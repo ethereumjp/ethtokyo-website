@@ -105,6 +105,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <a href="#schedule" css={navLinkStyle}>
               Schedule
             </a>
+            <a href="#tracks" css={navLinkStyle}>
+              Tracks
+            </a>
             <a href="#venue" css={navLinkStyle}>
               Venue
             </a>
