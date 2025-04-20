@@ -1,4 +1,4 @@
-import { sessionsData } from "@/data/eventData";
+import { workshopsData } from "@/data/eventData";
 import {
   cardHeadingStyle,
   cardParagraphStyle,
@@ -10,16 +10,16 @@ import {
 } from "@/themes/styles/common";
 import type { FC } from "react";
 
-const MentorSessionsSection: FC = () => {
+const WorkshopSection: FC = () => {
   return (
     <section css={sectionStyle} id="Mentor-sessions">
       <div css={containerStyle}>
-        <h2 css={headingStyle}>Mentor Sessions</h2>
+        <h2 css={headingStyle}>Workshops</h2>
         <div css={multiGridStyle}>
-          {sessionsData.map((session) => (
-            <div key={session.id} css={cardStyle}>
-              <h3 css={cardHeadingStyle}>{session.title}</h3>
-              <p css={cardParagraphStyle}>{session.description}</p>
+          {workshopsData.map((workshop) => (
+            <div key={workshop.id} css={cardStyle}>
+              <h3 css={cardHeadingStyle}>{workshop.title}</h3>
+              <p css={cardParagraphStyle}>{workshop.description}</p>
             </div>
           ))}
         </div>
@@ -28,4 +28,4 @@ const MentorSessionsSection: FC = () => {
   );
 };
 
-export default MentorSessionsSection;
+export default WorkshopSection;

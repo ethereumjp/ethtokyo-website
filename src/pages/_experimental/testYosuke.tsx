@@ -4,6 +4,7 @@ import ArchiveSection from "@/components/organisms/ArchiveSection";
 import BlogSection from "@/components/organisms/BlogSection";
 import MentorSessionsSection from "@/components/organisms/MentorSessionsSection";
 import FeaturedSpeakersSection from "@/components/organisms/FeaturedSpeakersSection";
+import WorkshopSection from "@/components/organisms/WorkshopSection";
 import HeroSection from "@/components/organisms/HeroSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
 import SponsorsSection from "@/components/organisms/SponsorsSection";
@@ -21,6 +22,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <TracksSection />
       <FeaturedSpeakersSection />
       <MentorSessionsSection />
+      <WorkshopSection />
       <ArchiveSection />
       <BlogSection />
       <SponsorsSection />

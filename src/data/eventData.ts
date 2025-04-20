@@ -62,7 +62,7 @@ export const mentorsData = [
 ];
 
 // セッションデータ
-export const sessionsData = [
+export const workshopsData = [
   {
     id: "zkp",
     title: "ZKPs in Practice",
