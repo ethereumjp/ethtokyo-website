@@ -2,7 +2,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import { type FC, useEffect, useRef, useState, useCallback } from "react";
+import { type FC, useCallback, useEffect, useRef, useState } from "react";
 
 const Header: FC<ComponentProps> = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);

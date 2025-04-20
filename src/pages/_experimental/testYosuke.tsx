@@ -1,16 +1,16 @@
 import Layout from "@/components/layouts/base";
-import type { PageProps } from "@/types";
-import type { NextPage } from "next";
-import HeroSection from "@/components/organisms/HeroSection";
 import AboutSection from "@/components/organisms/AboutSection";
-import ScheduleSection from "@/components/organisms/ScheduleSection";
-import TracksSection from "@/components/organisms/TracksSection";
-import FeaturedSpeakersSection from "@/components/organisms/FeaturedSpeakersSection";
-import FeaturedSessionsSection from "@/components/organisms/FeaturedSessionsSection";
 import ArchiveSection from "@/components/organisms/ArchiveSection";
 import BlogSection from "@/components/organisms/BlogSection";
+import FeaturedSessionsSection from "@/components/organisms/FeaturedSessionsSection";
+import FeaturedSpeakersSection from "@/components/organisms/FeaturedSpeakersSection";
+import HeroSection from "@/components/organisms/HeroSection";
+import ScheduleSection from "@/components/organisms/ScheduleSection";
 import SponsorsSection from "@/components/organisms/SponsorsSection";
+import TracksSection from "@/components/organisms/TracksSection";
 import VenueSection from "@/components/organisms/VenueSection";
+import type { PageProps } from "@/types";
+import type { NextPage } from "next";
 
 const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   return (
