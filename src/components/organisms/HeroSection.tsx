@@ -242,7 +242,7 @@ const HeroSection: FC = () => {
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            <span>April 15-21, 2025</span>
+            <span>September 12-15, 2025</span>
           </div>
           <div css={infoItemStyle}>
             <svg
