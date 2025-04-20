@@ -93,11 +93,16 @@ const Header: FC<ComponentProps> = ({ children }) => {
   `;
 
   const navLinkStyle = css`
+    all: unset;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: bold;
     color: ${brand.Secondary};
-    transition: color 0.2s ease;
+    cursor: pointer;
 
     &:hover {
-      color: ${brand.Primary};
+      background-color: #eee;
     }
   `;
 
