@@ -1,4 +1,4 @@
-import { mentorsData } from "@/data/eventData";
+import { sessionsData } from "@/data/eventData";
 import {
   cardHeadingStyle,
   cardParagraphStyle,
@@ -16,10 +16,10 @@ const MentorSessionsSection: FC = () => {
       <div css={containerStyle}>
         <h2 css={headingStyle}>Mentor Sessions</h2>
         <div css={multiGridStyle}>
-          {mentorsData.map((mentor) => (
-            <div key={mentor.id} css={cardStyle}>
-              <h3 css={cardHeadingStyle}>{mentor.name}</h3>
-              <p css={cardParagraphStyle}>{mentor.role}</p>
+          {sessionsData.map((session) => (
+            <div key={session.id} css={cardStyle}>
+              <h3 css={cardHeadingStyle}>{session.title}</h3>
+              <p css={cardParagraphStyle}>{session.description}</p>
             </div>
           ))}
         </div>

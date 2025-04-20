@@ -42,6 +42,25 @@ export const speakersData = [
   },
 ];
 
+// メンターデータ
+export const mentorsData = [
+  {
+    id: "vitalik",
+    name: "Vitalik Buterin",
+    role: "Ethereum Co-founder",
+  },
+  {
+    id: "aya",
+    name: "Aya Miyaguchi",
+    role: "Executive Director, EF",
+  },
+  {
+    id: "hudson",
+    name: "Hudson Jameson",
+    role: "Ethereum Community",
+  },
+];
+
 // セッションデータ
 export const sessionsData = [
   {
