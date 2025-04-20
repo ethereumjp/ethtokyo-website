@@ -1,4 +1,5 @@
 export const mq = {
+  mobileSmall: "@media (max-width: 479px)",
   mobile: "@media (min-width: 480px)",
   tablet: "@media (min-width: 768px)",
   laptop: "@media (min-width: 1024px)",
