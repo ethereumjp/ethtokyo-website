@@ -2,14 +2,14 @@ import Layout from "@/components/layouts/base";
 import AboutSection from "@/components/organisms/AboutSection";
 import ArchiveSection from "@/components/organisms/ArchiveSection";
 import BlogSection from "@/components/organisms/BlogSection";
-import MentorSessionsSection from "@/components/organisms/MentorSessionsSection";
 import FeaturedSpeakersSection from "@/components/organisms/FeaturedSpeakersSection";
-import WorkshopSection from "@/components/organisms/WorkshopSection";
 import HeroSection from "@/components/organisms/HeroSection";
+import MentorSessionsSection from "@/components/organisms/MentorSessionsSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
 import SponsorsSection from "@/components/organisms/SponsorsSection";
 import TracksSection from "@/components/organisms/TracksSection";
 import VenueSection from "@/components/organisms/VenueSection";
+import WorkshopSection from "@/components/organisms/WorkshopSection";
 import type { PageProps } from "@/types";
 import type { NextPage } from "next";
 
