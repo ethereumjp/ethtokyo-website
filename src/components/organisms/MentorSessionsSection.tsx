@@ -10,11 +10,11 @@ import {
 } from "@/themes/styles/common";
 import type { FC } from "react";
 
-const FeaturedSessionsSection: FC = () => {
+const MentorSessionsSection: FC = () => {
   return (
-    <section css={sectionStyle} id="featured-sessions">
+    <section css={sectionStyle} id="Mentor-sessions">
       <div css={containerStyle}>
-        <h2 css={headingStyle}>Featured Sessions</h2>
+        <h2 css={headingStyle}>Mentor Sessions</h2>
         <div css={multiGridStyle}>
           {sessionsData.map((session) => (
             <div key={session.id} css={cardStyle}>
@@ -28,4 +28,4 @@ const FeaturedSessionsSection: FC = () => {
   );
 };
 
-export default FeaturedSessionsSection;
+export default MentorSessionsSection;
