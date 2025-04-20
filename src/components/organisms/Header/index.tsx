@@ -182,7 +182,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
       <div css={containerStyle}>
         <div css={navContentStyle}>
           <div css={logoStyle}>
-            <span>ETHTokyo2025</span>
+            <a href="/">
+              <span>ETHTokyo2025</span>
+            </a>
           </div>
           {/* Registerボタン（モバイルでも表示） */}
           <div css={css`${mq.tablet} { display: none; }`}>

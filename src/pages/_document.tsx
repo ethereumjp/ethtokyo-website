@@ -45,7 +45,7 @@ const CustomDocument = (props: NoncedDocument) => {
 };
 
 CustomDocument.getInitialProps = async (
-  ctx: DocumentContext
+  ctx: DocumentContext,
 ): Promise<NoncedDocument> => {
   const initialProps = await Document.getInitialProps(ctx);
   const nonce = (ctx.req?.headers["x-csp-nonce"] as string) ?? "";
