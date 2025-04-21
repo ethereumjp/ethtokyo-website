@@ -1,5 +1,6 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
+import Button from "@/components/common/Button";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 import { type FC, useCallback, useEffect, useRef, useState } from "react";
@@ -106,18 +107,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
     }
   `;
 
-  const navButtonStyle = css`
-    background-color: ${brand.Primary};
-    color: ${neutral.White};
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-      background-color: #FF7766;
-    }
-  `;
-
   const hamburgerStyle = css`
     display: flex;
     flex-direction: column;
@@ -186,9 +175,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
           </div>
           {/* Registerボタン（モバイルでも表示） */}
           <div css={css`${mq.tablet} { display: none; }`}>
-            <button type="button" css={navButtonStyle}>
+            <Button size="small" onClick={() => {}}>
               Register Now
-            </button>
+            </Button>
           </div>
           {/* ハンバーガーアイコン */}
           <div
@@ -209,6 +198,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <a href="#about" css={navLinkStyle}>
               About
             </a>
+            <a href="#conference" css={navLinkStyle}>
+              Conference
+            </a>
             <a href="#schedule" css={navLinkStyle}>
               Schedule
             </a>
@@ -218,9 +210,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <a href="#venue" css={navLinkStyle}>
               Venue
             </a>
-            <button type="button" css={navButtonStyle}>
-              Register Now
-            </button>
+            <Button size="small">Register Now</Button>
           </nav>
         </div>
       </div>
@@ -269,6 +259,18 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
+              .querySelector("#conference")
+              ?.scrollIntoView({ behavior: "smooth" });
+            closeMenu();
+          }}
+        >
+          Conference
+        </button>
+        <button
+          type="button"
+          css={navLinkStyle}
+          onClick={() => {
+            document
               .querySelector("#schedule")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
@@ -300,6 +302,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
         >
           Venue
         </button>
+        <Button size="small" onClick={closeMenu}>
+          Register Now
+        </Button>
       </div>
     </header>
   );

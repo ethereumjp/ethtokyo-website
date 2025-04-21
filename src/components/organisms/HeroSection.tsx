@@ -1,10 +1,7 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import {
-  buttonStyle,
-  eventInfoStyle,
-  infoItemStyle,
-} from "@/themes/styles/common";
+import Button from "@/components/common/Button";
+import { eventInfoStyle, infoItemStyle } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import ThemeImage from "public/2025/images/keyvisual.png";
@@ -284,24 +281,28 @@ const HeroSection: FC = () => {
           </div>
         </div>
         <div css={buttonContainerStyle}>
-          <button type="button" css={buttonStyle}>
-            Join the Revolution
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <title>Arrow Right</title>
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
+          <Button
+            size="large"
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Register</title>
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            }
+          >
+            Register Now
+          </Button>
         </div>
       </div>
     </section>

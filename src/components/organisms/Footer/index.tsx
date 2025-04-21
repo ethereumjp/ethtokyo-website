@@ -1,6 +1,7 @@
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
+import Button from "@/components/common/Button";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 // import Airtable from "airtable";
@@ -65,6 +66,12 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     gap: 0.5rem;
   `;
 
+  const formStyle = css`
+    display: flex;
+    align-items: center;
+    width: 100%;
+  `;
+
   const inputStyle = css`
     background-color: ${neutral.Grey5};
     color: ${neutral.White};
@@ -74,16 +81,9 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     border: none;
   `;
 
-  const buttonStyle = css`
-    background-color: ${brand.Primary};
-    color: ${neutral.White};
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s ease;
-    
-    &:hover {
-      background-color: #FF7766;
-    }
+  const footerButtonStyle = css`
+    border-radius: 0.5rem !important;
+    margin-left: 0.5rem;
   `;
 
   const copyrightStyle = css`
@@ -152,16 +152,22 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             Stay updated with the latest news and announcements
           </p>
           <div css={inputContainerStyle}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} css={formStyle}>
               <input
                 type="email"
                 placeholder="Enter your email"
                 css={inputStyle}
                 id="email"
               />
-              <button type="submit" css={buttonStyle} disabled={isSubscribed}>
+              <Button
+                size="small"
+                variant={isSubscribed ? "secondary" : "primary"}
+                onClick={() => {}}
+                type="submit"
+                css={footerButtonStyle}
+              >
                 {isSubscribed ? "Subscribed" : "Subscribe"}
-              </button>
+              </Button>
             </form>
           </div>
         </div>
