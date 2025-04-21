@@ -72,7 +72,7 @@ const Info = () => {
         >
           <div css={css``}>
             <h2 css={css`margin:0;`}>{eventInfo.location.conference.name}</h2>
-            <a
+            {/* <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
               href="https://maps.app.goo.gl/46AJpycWLYEMFbr68"
               target="_blank"
@@ -81,7 +81,10 @@ const Info = () => {
               <p css={css`font-size: 1rem; margin:0;`}>
                 {eventInfo.location.conference.address}
               </p>
-            </a>
+            </a> */}
+            <p css={css`font-size: 1rem; margin:0;`}>
+              {eventInfo.location.conference.address}
+            </p>
           </div>
           <div css={css`margin-top: 1rem;`}>
             <h2 css={css`margin:0;`}>{eventInfo.location.hackathon.name}</h2>

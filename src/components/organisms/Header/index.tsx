@@ -198,9 +198,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <a href="#about" css={navLinkStyle}>
               About
             </a>
-            <a href="#conference" css={navLinkStyle}>
+            {/* <a href="#conference" css={navLinkStyle}>
               Conference
-            </a>
+            </a> */}
             <a href="#schedule" css={navLinkStyle}>
               Schedule
             </a>
@@ -254,7 +254,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
         >
           About
         </button>
-        <button
+        {/* <button
           type="button"
           css={navLinkStyle}
           onClick={() => {
@@ -265,7 +265,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           }}
         >
           Conference
-        </button>
+        </button> */}
         <button
           type="button"
           css={navLinkStyle}
