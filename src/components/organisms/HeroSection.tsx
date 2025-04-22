@@ -219,7 +219,9 @@ const HeroSection: FC = () => {
           ETHTokyo
           <span css={titleAccentStyle}> '25</span>
         </h1>
-        <p css={subheadingStyle}>Technology for Humanity</p>
+        <p css={subheadingStyle}>
+          Emancipatory Tech for the Future of Humanity
+        </p>
         <div css={[eventInfoStyle, eventInfoContainerStyle]}>
           <div css={infoItemStyle}>
             <svg
