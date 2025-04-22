@@ -6,20 +6,26 @@ interface SectionTitleProps {
   title: string;
   description?: string | ReactNode;
   className?: string;
+  lightMode?: boolean;
 }
 
 const SectionTitle: FC<SectionTitleProps> = ({
   title,
   description,
   className = "",
+  lightMode = false,
 }) => {
   return (
     <div css={containerStyle} className={className}>
-      <h2 css={titleStyle}>
+      <h2 css={[titleStyle, lightMode && lightTitleStyle]}>
         {title}
         <span css={underlineStyle} />
       </h2>
-      {description && <p css={descriptionStyle}>{description}</p>}
+      {description && (
+        <p css={[descriptionStyle, lightMode && lightDescriptionStyle]}>
+          {description}
+        </p>
+      )}
     </div>
   );
 };
@@ -41,6 +47,10 @@ const titleStyle = css`
   width: 100%;
 `;
 
+const lightTitleStyle = css`
+  color: ${neutral.White};
+`;
+
 const underlineStyle = css`
   display: block;
   width: 100px;
@@ -57,6 +67,10 @@ const descriptionStyle = css`
   font-size: 1.1rem;
   line-height: 1.6;
   color: ${neutral.Grey4};
+`;
+
+const lightDescriptionStyle = css`
+  color: rgba(255, 255, 255, 0.9);
 `;
 
 export default SectionTitle;

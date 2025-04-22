@@ -1,8 +1,8 @@
+import ContentCard from "@/components/common/ContentCard";
+import SectionTitle from "@/components/common/SectionTitle";
 import { tracksData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import SectionTitle from "@/components/common/SectionTitle";
-import ContentCard from "@/components/common/ContentCard";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";

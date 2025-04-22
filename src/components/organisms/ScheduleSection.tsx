@@ -1,12 +1,12 @@
+import ContentCard from "@/components/common/ContentCard";
+import SectionTitle from "@/components/common/SectionTitle";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import SectionTitle from "@/components/common/SectionTitle";
-import ContentCard from "@/components/common/ContentCard";
 import { css } from "@emotion/react";
-import { HiCalendarDays, HiOutlineMapPin, HiClock } from "react-icons/hi2";
-import { IoTicketOutline } from "react-icons/io5";
 import { useState } from "react";
+import { HiCalendarDays, HiClock, HiOutlineMapPin } from "react-icons/hi2";
+import { IoTicketOutline } from "react-icons/io5";
 
 interface EventItem {
   time: string;

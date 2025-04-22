@@ -1,6 +1,6 @@
+import SectionTitle from "@/components/common/SectionTitle";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
-import SectionTitle from "@/components/common/SectionTitle";
 import { css } from "@emotion/react";
 import type { FC } from "react";
 

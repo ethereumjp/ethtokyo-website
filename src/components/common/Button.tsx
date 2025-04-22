@@ -1,6 +1,6 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import { css, type SerializedStyles } from "@emotion/react";
+import { type SerializedStyles, css } from "@emotion/react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 

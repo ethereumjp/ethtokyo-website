@@ -1,6 +1,6 @@
+import Button from "@/components/common/Button";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import Button from "@/components/common/Button";
 import {
   cardHeadingStyle,
   cardParagraphStyle,
@@ -11,9 +11,9 @@ import {
   sectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
+import type { FC } from "react";
 import { BiMicrophone } from "react-icons/bi";
 import { MdOutlineSchedule } from "react-icons/md";
-import type { FC } from "react";
 
 const ConferenceSection: FC = () => {
   // クリプトパッドフォームへのURL

@@ -1,7 +1,7 @@
+import Button from "@/components/common/Button";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
-import Button from "@/components/common/Button";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 // import Airtable from "airtable";
