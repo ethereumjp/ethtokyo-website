@@ -1,5 +1,6 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
+import SectionTitle from "@/components/common/SectionTitle";
 import { css } from "@emotion/react";
 import type { FC } from "react";
 
@@ -12,14 +13,6 @@ const AboutSection: FC = () => {
   const containerStyle = css`
     max-width: 1280px;
     margin: 0 auto;
-  `;
-
-  const headingStyle = css`
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: ${brand.Secondary};
-    margin-bottom: 3rem;
-    text-align: center;
   `;
 
   const contentContainerStyle = css`
@@ -68,7 +61,10 @@ const AboutSection: FC = () => {
   return (
     <section id="about" css={sectionStyle}>
       <div css={containerStyle}>
-        <h2 css={headingStyle}>About ETHTokyo2025</h2>
+        <SectionTitle
+          title="About ETHTokyo2025"
+          description="The premier Ethereum event in Asia - bringing together developers, entrepreneurs, and crypto enthusiasts for 4 days of innovation."
+        />
         <div css={contentContainerStyle}>
           <div css={textContainerStyle}>
             <p css={paragraphStyle}>
