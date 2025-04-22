@@ -1,4 +1,3 @@
-import Button from "@/components/common/Button";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { eventInfoStyle, infoItemStyle } from "@/themes/styles/common";
@@ -156,22 +155,23 @@ const HeroSection: FC = () => {
     }
   `;
 
-  const buttonContainerStyle = css`
-    margin-top: 1.5rem;
-    margin-bottom: 6rem;
+  const eventInfoContainerStyle = css`
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     
     ${mq.mobile} {
-      margin-top: 1.75rem;
-      margin-bottom: 7rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
     }
     
     ${mq.tablet} {
-      margin-top: 2rem;
-      margin-bottom: 8rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
     
     ${mq.laptop} {
-      margin-bottom: 9rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
   `;
 
@@ -217,10 +217,10 @@ const HeroSection: FC = () => {
         </div>
         <h1 css={headingStyle}>
           ETHTokyo
-          <span css={titleAccentStyle}> ’25</span>
+          <span css={titleAccentStyle}> '25</span>
         </h1>
         <p css={subheadingStyle}>Technology for Humanity</p>
-        <div css={eventInfoStyle}>
+        <div css={[eventInfoStyle, eventInfoContainerStyle]}>
           <div css={infoItemStyle}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +259,7 @@ const HeroSection: FC = () => {
             </svg>
             <span>Tokyo, Japan</span>
           </div>
-          <div css={infoItemStyle}>
+          {/* <div css={infoItemStyle}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -278,31 +278,7 @@ const HeroSection: FC = () => {
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
             <span>3000+ Attendees</span>
-          </div>
-        </div>
-        <div css={buttonContainerStyle}>
-          <Button
-            size="large"
-            icon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <title>Register</title>
-                <path d="M5 12h14" />
-                <path d="M12 5l7 7-7 7" />
-              </svg>
-            }
-          >
-            Register Now
-          </Button>
+          </div> */}
         </div>
       </div>
     </section>

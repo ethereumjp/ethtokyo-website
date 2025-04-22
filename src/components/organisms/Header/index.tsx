@@ -173,12 +173,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
           <div css={logoStyle}>
             <span>ETHTokyo2025</span>
           </div>
-          {/* Registerボタン（モバイルでも表示） */}
-          <div css={css`${mq.tablet} { display: none; }`}>
-            <Button size="small" onClick={() => {}}>
-              Register Now
-            </Button>
-          </div>
           {/* ハンバーガーアイコン */}
           <div
             css={hamburgerStyle}
@@ -210,7 +204,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <a href="#venue" css={navLinkStyle}>
               Venue
             </a>
-            <Button size="small">Register Now</Button>
           </nav>
         </div>
       </div>
@@ -302,9 +295,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
         >
           Venue
         </button>
-        <Button size="small" onClick={closeMenu}>
-          Register Now
-        </Button>
       </div>
     </header>
   );

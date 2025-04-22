@@ -1,24 +1,13 @@
-import Button from "@/components/common/Button";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-// import Airtable from "airtable";
-// import AirtableError from "airtable/lib/airtable_error";
 import type { FC } from "react";
-import { useState } from "react";
-
-// Airtable configurations to store newsletter subscribers.
-// const base = new Airtable({
-//   apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PAT,
-// }).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE as string);
-
-// const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE as string);
+import { FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: FC<ComponentProps> = ({ children }) => {
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
   const footerStyle = css`
     background-color: ${neutral.Grey6};
     color: ${neutral.White};
@@ -32,7 +21,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     gap: 2rem;
     
     ${mq.tablet} {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   `;
 
@@ -44,46 +33,29 @@ const Footer: FC<ComponentProps> = ({ children }) => {
 
   const footerTextStyle = css`
     color: ${neutral.Grey3};
+    line-height: 1.6;
   `;
 
   const footerLinksStyle = css`
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
     
     a {
       color: ${neutral.Grey3};
       transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       
       &:hover {
         color: ${neutral.White};
       }
+      
+      svg {
+        font-size: 1.25rem;
+      }
     }
-  `;
-
-  const inputContainerStyle = css`
-    display: flex;
-    gap: 0.5rem;
-  `;
-
-  const formStyle = css`
-    display: flex;
-    align-items: center;
-    width: 100%;
-  `;
-
-  const inputStyle = css`
-    background-color: ${neutral.Grey5};
-    color: ${neutral.White};
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    flex: 1;
-    border: none;
-  `;
-
-  const footerButtonStyle = css`
-    border-radius: 0.5rem !important;
-    margin-left: 0.5rem;
   `;
 
   const copyrightStyle = css`
@@ -96,39 +68,15 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     border-top: 1px solid ${neutral.Grey5};
   `;
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const email = (
-      e.currentTarget.elements.namedItem("email") as HTMLInputElement
-    ).value as string;
-
-    // table.create(
-    //   {
-    //     Email: email as string,
-    //   },
-    //   (err, record) => {
-    //     if (err) {
-    //       throw new Error(
-    //         `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
-    //       );
-    //     }
-    //     setIsSubscribed(true);
-    //     return JSON.stringify({
-    //       message: "SUCCESS",
-    //       address: email as string,
-    //       record: record?.getId(),
-    //     });
-    //   },
-    // );
-  };
-
   return (
     <footer css={footerStyle}>
       <div css={containerStyle}>
         <div>
           <h3 css={footerHeadingStyle}>{eventInfo.title}</h3>
-          <p css={footerTextStyle}>{eventInfo.subtitle}</p>
+          <p css={footerTextStyle}>
+            Building technology, community, and culture in Tokyo. Connecting
+            diverse minds to foster innovations for humanity.
+          </p>
         </div>
         <div>
           <h4 css={footerHeadingStyle}>Quick Links</h4>
@@ -141,34 +89,18 @@ const Footer: FC<ComponentProps> = ({ children }) => {
         <div>
           <h4 css={footerHeadingStyle}>Connect</h4>
           <div css={footerLinksStyle}>
-            <a href="https://twitter.com/Ethereum_JP">Twitter</a>
-            <a href="https://discord.gg/Tm5jU3DSCE">Discord</a>
-            <a href="https://t.me/ethtokyo">Telegram</a>
-          </div>
-        </div>
-        <div>
-          <h4 css={footerHeadingStyle}>Newsletter</h4>
-          <p css={footerTextStyle}>
-            Stay updated with the latest news and announcements
-          </p>
-          <div css={inputContainerStyle}>
-            <form onSubmit={handleSubmit} css={formStyle}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                css={inputStyle}
-                id="email"
-              />
-              <Button
-                size="small"
-                variant={isSubscribed ? "secondary" : "primary"}
-                onClick={() => {}}
-                type="submit"
-                css={footerButtonStyle}
-              >
-                {isSubscribed ? "Subscribed" : "Subscribe"}
-              </Button>
-            </form>
+            <a href="https://x.com/Ethereum_JP">
+              <FaXTwitter />
+              <span>X</span>
+            </a>
+            <a href="https://discord.gg/Tm5jU3DSCE">
+              <FaDiscord />
+              <span>Discord</span>
+            </a>
+            <a href="https://t.me/ethtokyo">
+              <FaTelegram />
+              <span>Telegram</span>
+            </a>
           </div>
         </div>
         <div css={copyrightStyle}>© {new Date().getFullYear()} ETHTokyo.</div>
