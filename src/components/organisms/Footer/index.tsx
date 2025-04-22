@@ -4,8 +4,9 @@ import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { FaDiscord, FaTelegram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { SiMatrix } from "react-icons/si";
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`
@@ -89,17 +90,17 @@ const Footer: FC<ComponentProps> = ({ children }) => {
         <div>
           <h4 css={footerHeadingStyle}>Connect</h4>
           <div css={footerLinksStyle}>
-            <a href="https://x.com/Ethereum_JP">
-              <FaXTwitter />
-              <span>X</span>
+            <a href="https://twitter.com/Ethereum_JP">
+              <FaTwitter />
+              <span>Twitter</span>
             </a>
             <a href="https://discord.gg/Tm5jU3DSCE">
               <FaDiscord />
               <span>Discord</span>
             </a>
-            <a href="https://t.me/ethtokyo">
-              <FaTelegram />
-              <span>Telegram</span>
+            <a href="https://matrix.to/#/#entak:matrix.org">
+              <SiMatrix />
+              <span>Matrix</span>
             </a>
           </div>
         </div>

@@ -120,8 +120,8 @@ const ConferenceSection: FC = () => {
             <div>
               <h3 css={featureTitleStyle}>Industry-Leading Speakers</h3>
               <p>
-                Hear from top speakers from the Ethereum Foundation, major
-                projects, and research institutions.
+                Hear from top experts and builders in the Ethereum Community,
+                major projects, and research institutions.
               </p>
             </div>
           </div>
@@ -133,8 +133,9 @@ const ConferenceSection: FC = () => {
             Call for Speakers & Mentors
           </h3>
           <p css={formDescriptionStyle}>
-            ETHTokyo 2025 is looking for speakers and mentors. Share your
-            knowledge and experience to contribute to the Web3 community.
+            ETHTokyo'25 is currently accepting conference speakers and hackathon
+            mentors. Share your knowledge and experience to contribute to the
+            Web3 community.
           </p>
           <Button
             href={speakerFormUrl}

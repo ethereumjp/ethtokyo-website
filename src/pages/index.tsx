@@ -13,7 +13,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     <Layout pageTitle="ETHTokyo 2025">
       <HeroSection />
       <AboutSection />
-      {/* <ConferenceSection /> */}
+      <ConferenceSection />
       <ScheduleSection />
       <TracksSection />
       <VenueSection />
