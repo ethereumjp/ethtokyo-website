@@ -217,9 +217,9 @@ const HeroSection: FC = () => {
         </div>
         <h1 css={headingStyle}>
           ETHTokyo
-          <span css={titleAccentStyle}>2025</span>
+          <span css={titleAccentStyle}> ’25</span>
         </h1>
-        <p css={subheadingStyle}>The Premier Ethereum Event in Asia</p>
+        <p css={subheadingStyle}>Technology for Humanity</p>
         <div css={eventInfoStyle}>
           <div css={infoItemStyle}>
             <svg
