@@ -42,11 +42,7 @@ const HeroSection: FC = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      135deg, 
-      rgba(255, 238, 204, 0.7) 0%, 
-      rgba(85, 34, 102, 0.7) 100%
-    );
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
   `;
 
@@ -104,11 +100,16 @@ const HeroSection: FC = () => {
     }
   `;
 
+  const textShadowStyle = css`
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  `;
+
   const headingStyle = css`
     font-size: 2.5rem;
     font-weight: 700;
-    color: ${brand.Secondary};
+    color: ${neutral.White};
     margin-bottom: 1rem;
+    ${textShadowStyle}
     
     ${mq.mobile} {
       font-size: 3rem;
@@ -126,14 +127,11 @@ const HeroSection: FC = () => {
     }
   `;
 
-  const titleAccentStyle = css`
-    color: ${brand.Primary};
-  `;
-
   const subheadingStyle = css`
     font-size: 1.25rem;
-    color: ${neutral.Grey4};
+    color: ${neutral.White};
     margin-bottom: 1.5rem;
+    ${textShadowStyle}
     
     ${mq.mobileSmall} {
       font-size: 1rem;
@@ -158,6 +156,8 @@ const HeroSection: FC = () => {
   const eventInfoContainerStyle = css`
     margin-top: 2rem;
     margin-bottom: 2rem;
+    color: ${neutral.White};
+    ${textShadowStyle}
     
     ${mq.mobile} {
       margin-top: 2.5rem;
@@ -193,6 +193,7 @@ const HeroSection: FC = () => {
             style={{
               objectFit: "cover",
               objectPosition: "center",
+              filter: "blur(2px)",
             }}
           />
         </div>
@@ -215,10 +216,7 @@ const HeroSection: FC = () => {
             }}
           />
         </div>
-        <h1 css={headingStyle}>
-          ETHTokyo
-          <span css={titleAccentStyle}> '25</span>
-        </h1>
+        <h1 css={headingStyle}>ETHTokyo '25</h1>
         <p css={subheadingStyle}>
           Emancipatory Tech for the Future of Humanity
         </p>

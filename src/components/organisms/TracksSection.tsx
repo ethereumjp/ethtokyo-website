@@ -90,7 +90,7 @@ const TracksSection: FC = () => {
     <section css={sectionStyle} id="tracks">
       <div css={containerStyle}>
         <SectionTitle
-          title="Official Tracks"
+          title="Hackathon Official Tracks"
           description="Join one of our official tracks and compete for prizes while building the future of Ethereum."
         />
 
