@@ -116,11 +116,11 @@ const VenueSection: FC = () => {
                     </div>
 
                     <div css={detailItemStyle}>
-                      <div css={detailWithIconStyle}>
-                        <HiCalendarDays size={20} css={calendarIconStyle} />
-                        <span css={detailTitleStyle}>Date</span>
+                      <HiCalendarDays size={24} />
+                      <div>
+                        <div css={detailTitleStyle}>Date</div>
+                        <div css={detailValueStyle}>September 13-15, 2025</div>
                       </div>
-                      <div css={detailValueStyle}>September 13-15, 2025</div>
                     </div>
 
                     <div css={detailItemStyle}>
