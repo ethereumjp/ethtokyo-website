@@ -1,0 +1,22 @@
+{
+  "title": "ETHTokyo '25",
+  "subtitle": "Building technology, community, and culture in the largest city in the world",
+  "location": {
+    "city": "Tokyo, Japan",
+    "conference": {
+      "name": "TBA",
+      "address": "Location, Tokyo",
+      "map": ""
+    },
+    "hackathon": {
+      "name": "Digital Garage",
+      "address": "15-1 Udagawacho, Shibuya, Tokyo",
+      "map": "https://maps.app.goo.gl/iWZyoXDoqX8ZKhE27"
+    }
+  },
+  "dates": {
+    "event": "Sep 12-15, 2025",
+    "conference": "September 12",
+    "hackathon": "September 13-15"
+  }
+}

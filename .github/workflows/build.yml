@@ -13,21 +13,29 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v4
+      - id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: |
             ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.yarn/cache
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
       - uses: actions/cache@v4
         id: build-cache
         with:
-          path: ${{ github.workspace }}/.next/cache
+          path: |
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}  
+            ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-next-build-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-next-build-
       - name: Run build
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: yarn build
+        env:
+          NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
+          NEXT_PUBLIC_AIRTABLE_BASE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE }}
+          NEXT_PUBLIC_AIRTABLE_TABLE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

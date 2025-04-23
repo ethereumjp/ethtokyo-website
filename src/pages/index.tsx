@@ -1,28 +1,22 @@
 import Layout from "@/components/layouts/base";
-// import { CountdownPanel } from "@/components/organisms/Countdown";
-import ScheduleSection from "@/components/organisms/Schedule";
-import StatementSection from "@/components/organisms/Statement";
-import { brand } from "@/themes/settings/color";
+import AboutSection from "@/components/organisms/AboutSection";
+import ConferenceSection from "@/components/organisms/ConferenceSection";
+import HeroSection from "@/components/organisms/HeroSection";
+import ScheduleSection from "@/components/organisms/ScheduleSection";
+import TracksSection from "@/components/organisms/TracksSection";
+import VenueSection from "@/components/organisms/VenueSection";
 import type { PageProps } from "@/types";
-import type { ComponentProps } from "@/types";
-import { css } from "@emotion/react";
 import type { NextPage } from "next";
-import seikaiha from "public/images/seikaiha.png";
 
 const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   return (
-    <Layout pageTitle="">
-      <div>
-        <StatementSection />
-        <div
-          css={css`
-            background-image: url(${seikaiha.src});
-            background: linear-gradient(0deg, #000, ${brand.Shuiro});
-          `}
-        >
-          <ScheduleSection />
-        </div>
-      </div>
+    <Layout pageTitle="ETHTokyo 2025">
+      <HeroSection />
+      <AboutSection />
+      {/* <ConferenceSection /> */}
+      <ScheduleSection />
+      <TracksSection />
+      <VenueSection />
     </Layout>
   );
 };

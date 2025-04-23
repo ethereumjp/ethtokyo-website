@@ -1,6 +1,8 @@
 import Footer from "@/components/organisms/Footer";
+import Header from "@/components/organisms/Header";
 import { globalStyles } from "@/themes/global";
-import { brand } from "@/themes/settings/color";
+import { mq } from "@/themes/settings/breakpoints";
+import { brand, neutral, themeLight } from "@/themes/settings/color";
 import type { PageProps } from "@/types";
 import { Global, css } from "@emotion/react";
 import { Inter } from "next/font/google";
@@ -28,7 +30,7 @@ export const metadata = {
     siteName: "ethtokyo.org",
     images: [
       {
-        url: "https://ethtokyo.org/logo/ETHTokyoLogo.png",
+        url: "https://ethtokyo.org/assets/ETHTokyoLogo.png",
         width: 800,
         height: 600,
       },
@@ -43,14 +45,14 @@ export const metadata = {
     siteId: "1511737631948034048",
     creator: "@Ethereum_JP",
     creatorId: "1511737631948034048",
-    images: ["https://ethtokyo.org/logo/ETHTokyoLogo.png"],
+    images: ["https://ethtokyo.org/assets/ETHTokyoLogo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#B8FAF6" },
     { media: "(prefers-color-scheme: dark)", color: "#C9B3F5" },
   ],
   icons: {
-    icon: "/logo/ETHTokyoLogo.png",
+    icon: "/assets/ETHTokyoLogo.png",
   },
   robots: {
     index: true,
@@ -76,18 +78,44 @@ const fontInter = Inter({
 
 const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const siteTitle = "ETHTokyo'25";
-  const baseLayoutStyle = css``;
-  const mainLayoutStyle = css``;
+  const baseLayoutStyle = css`
+    background-color: ${themeLight.Background};
+    color: ${neutral.Text};
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    
+    a {
+      color: ${themeLight.Link};
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: ${themeLight.LinkHover};
+      }
+    }
+  `;
+
+  const mainLayoutStyle = css`
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  `;
 
   return (
     <>
       <Global styles={globalStyles} />
 
+      {/* HTML header */}
       <Head>
         <title>{pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle}</title>
       </Head>
 
+      {/* main body */}
       <div className={fontInter.className} css={baseLayoutStyle}>
+        <Header />
         <main css={mainLayoutStyle}>{children}</main>
         <Footer />
       </div>

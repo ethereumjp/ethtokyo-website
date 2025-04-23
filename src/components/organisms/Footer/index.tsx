@@ -1,29 +1,119 @@
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
+import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-
+import Link from "next/link";
 import type { FC } from "react";
+import { FaDiscord } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { SiMatrix } from "react-icons/si";
+
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`
-    padding: 1rem 0;
+    background-color: ${neutral.Grey6};
+    color: ${neutral.White};
+    padding: 3rem 1rem;
+  `;
+
+  const containerStyle = css`
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    
+    ${mq.tablet} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  `;
+
+  const footerHeadingStyle = css`
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  `;
+
+  const footerTextStyle = css`
+    color: ${neutral.Grey3};
+    line-height: 1.6;
+  `;
+
+  const footerLinksStyle = css`
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    
+    a {
+      color: ${neutral.Grey3};
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      &:hover {
+        color: ${neutral.White};
+      }
+      
+      svg {
+        font-size: 1.25rem;
+      }
+    }
+  `;
+
+  const copyrightStyle = css`
+    margin-top: 2rem;
     text-align: center;
-    width: 100%;
+    font-size: 0.875rem;
+    color: ${neutral.Grey3};
+    grid-column: 1 / -1;
+    padding-top: 1.5rem;
+    border-top: 1px solid ${neutral.Grey5};
   `;
 
   return (
     <footer css={footerStyle}>
-      <span
-        css={css`
-          font-size: 0.75rem;
-          letter-spacing: 0.07rem;
-
-          ${mq.laptop} {
-            font-size: 1rem;
-          }
-        `}
-      >
-        © {new Date().getFullYear()} ETHTokyo - Ethereum Japan.
-      </span>
+      <div css={containerStyle}>
+        <div>
+          <h3 css={footerHeadingStyle}>{eventInfo.title}</h3>
+          <p css={footerTextStyle}>
+            Building technology, community, and culture in Tokyo. Connecting
+            diverse minds to foster innovations for humanity.
+          </p>
+        </div>
+        <div>
+          <h4 css={footerHeadingStyle}>Quick Links</h4>
+          <div css={footerLinksStyle}>
+            <Link href="#about">About</Link>
+            <Link href="#schedule">Schedule</Link>
+            <Link href="#tracks">Hackathon</Link>
+            <Link href="#venue">Venue</Link>
+            <Link
+              href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+              target="_blank"
+            >
+              🆕 Apply as speaker
+            </Link>
+          </div>
+        </div>
+        <div>
+          <h4 css={footerHeadingStyle}>Connect</h4>
+          <div css={footerLinksStyle}>
+            <a href="https://twitter.com/Ethereum_JP">
+              <FaTwitter />
+              <span>Twitter</span>
+            </a>
+            <a href="https://discord.gg/Tm5jU3DSCE">
+              <FaDiscord />
+              <span>Discord</span>
+            </a>
+            <a href="https://matrix.to/#/#entak:matrix.org">
+              <SiMatrix />
+              <span>Matrix</span>
+            </a>
+          </div>
+        </div>
+        <div css={copyrightStyle}>© {new Date().getFullYear()} ETHTokyo.</div>
+      </div>
     </footer>
   );
 };

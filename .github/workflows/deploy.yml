@@ -14,6 +14,8 @@ jobs:
     needs: ci
     steps:
       - uses: actions/checkout@v4
+      - id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
       - uses: actions/configure-pages@v4
         with:
           static_site_generator: next
@@ -21,15 +23,18 @@ jobs:
         with:
           path: |
             ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.yarn/cache
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
       - name: build
         run: yarn build-static
         env:
           NODE_ENV: production
+          NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
+          NEXT_PUBLIC_AIRTABLE_BASE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE }}
+          NEXT_PUBLIC_AIRTABLE_TABLE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
 
