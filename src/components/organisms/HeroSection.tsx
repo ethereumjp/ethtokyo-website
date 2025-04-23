@@ -1,10 +1,6 @@
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
-import {
-  buttonStyle,
-  eventInfoStyle,
-  infoItemStyle,
-} from "@/themes/styles/common";
+import { eventInfoStyle, infoItemStyle } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import ThemeImage from "public/2025/images/keyvisual.png";
@@ -159,22 +155,23 @@ const HeroSection: FC = () => {
     }
   `;
 
-  const buttonContainerStyle = css`
-    margin-top: 1.5rem;
-    margin-bottom: 6rem;
+  const eventInfoContainerStyle = css`
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     
     ${mq.mobile} {
-      margin-top: 1.75rem;
-      margin-bottom: 7rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
     }
     
     ${mq.tablet} {
-      margin-top: 2rem;
-      margin-bottom: 8rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
     
     ${mq.laptop} {
-      margin-bottom: 9rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
   `;
 
@@ -220,10 +217,12 @@ const HeroSection: FC = () => {
         </div>
         <h1 css={headingStyle}>
           ETHTokyo
-          <span css={titleAccentStyle}>2025</span>
+          <span css={titleAccentStyle}> '25</span>
         </h1>
-        <p css={subheadingStyle}>The Premier Ethereum Event in Asia</p>
-        <div css={eventInfoStyle}>
+        <p css={subheadingStyle}>
+          Emancipatory Tech for the Future of Humanity
+        </p>
+        <div css={[eventInfoStyle, eventInfoContainerStyle]}>
           <div css={infoItemStyle}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +261,7 @@ const HeroSection: FC = () => {
             </svg>
             <span>Tokyo, Japan</span>
           </div>
-          <div css={infoItemStyle}>
+          {/* <div css={infoItemStyle}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -281,27 +280,7 @@ const HeroSection: FC = () => {
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
             <span>3000+ Attendees</span>
-          </div>
-        </div>
-        <div css={buttonContainerStyle}>
-          <button type="button" css={buttonStyle}>
-            Join the Revolution
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <title>Arrow Right</title>
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
+          </div> */}
         </div>
       </div>
     </section>
