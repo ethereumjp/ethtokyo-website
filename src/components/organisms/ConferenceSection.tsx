@@ -134,8 +134,8 @@ const ConferenceSection: FC = () => {
           </h3>
           <p css={formDescriptionStyle}>
             ETHTokyo'25 is currently accepting conference speakers and hackathon
-            mentors. Share your knowledge and experience to contribute to the
-            Web3 community.
+            mentors. Share your knowledge and experience with the ETHTokyo
+            community.
           </p>
           <Button
             href={speakerFormUrl}

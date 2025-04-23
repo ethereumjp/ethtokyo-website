@@ -18,5 +18,8 @@
   },
   "organizeImports": {
     "enabled": true
+  },
+  "files": {
+    "ignore": [".next/**", "node_modules/**", "out/**", ".yarn/**"]
   }
 }
