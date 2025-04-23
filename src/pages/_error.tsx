@@ -8,17 +8,20 @@ const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => {
   return (
     <div>
       <h1>
-        {statusCode
-          ? `An error ${statusCode} occurred on server`
-          : "An error occurred on client"}
+        {statusCode === 404
+          ? `${statusCode} page not found`
+          : `Unexpected error: ${statusCode}`}
       </h1>
     </div>
   );
 };
 
-ErrorPage.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
-  return { statusCode };
+export const getStaticProps = async () => {
+  return {
+    props: {
+      statusCode: 404,
+    },
+  };
 };
 
 export default ErrorPage;
