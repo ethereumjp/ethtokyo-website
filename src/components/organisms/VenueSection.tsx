@@ -87,12 +87,12 @@ const VenueSection: FC = () => {
                       The conference venue will be announced soon. Stay tuned
                       for updates!
                     </p>
-                    <div css={venueDetailStyle}>
-                      <div css={detailWithIconStyle}>
-                        <HiCalendarDays size={20} css={calendarIconStyle} />
-                        <span css={detailTitleStyle}>Date</span>
+                    <div css={[detailItemStyle, centerDetailItemStyle]}>
+                      <HiCalendarDays size={24} />
+                      <div>
+                        <div css={detailTitleStyle}>Date</div>
+                        <div css={detailValueStyle}>September 12, 2025</div>
                       </div>
-                      <div css={dateValueStyle}>September 12, 2025</div>
                     </div>
                   </div>
                 </div>
@@ -581,7 +581,7 @@ const venueDescriptionStyle = css`
   line-height: 1.6;
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
 `;
 
 const venueDetailsGridStyle = css`
@@ -862,7 +862,7 @@ const comingSoonTextStyle = css`
 `;
 
 const tbaContainerStyle = css`
-  background-color: ${neutral.Grey1};
+  background-color: ${neutral.White};
   border: 2px dashed ${neutral.Grey3};
   border-radius: 8px;
   padding: 2rem;
@@ -874,7 +874,8 @@ const tbaTextStyle = css`
   font-size: 1.5rem;
   font-weight: 600;
   color: ${brand.Secondary};
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
+  text-align: center;
 `;
 
 const venueDetailStyle = css`
@@ -910,6 +911,12 @@ const hotelButtonStyle = css`
     color: ${brand.Secondary};
     text-decoration: underline;
   }
+`;
+
+const centerDetailItemStyle = css`
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: left;
 `;
 
 export default VenueSection;
