@@ -3,6 +3,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
+import Link from "next/link";
 import type { FC } from "react";
 import { FaDiscord } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
@@ -82,9 +83,16 @@ const Footer: FC<ComponentProps> = ({ children }) => {
         <div>
           <h4 css={footerHeadingStyle}>Quick Links</h4>
           <div css={footerLinksStyle}>
-            <a href="#about">About</a>
-            <a href="#schedule">Schedule</a>
-            <a href="#venue">Venue</a>
+            <Link href="#about">About</Link>
+            <Link href="#schedule">Schedule</Link>
+            <Link href="#tracks">Hackathon</Link>
+            <Link href="#venue">Venue</Link>
+            <Link
+              href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+              target="_blank"
+            >
+              🆕 Apply as speaker
+            </Link>
           </div>
         </div>
         <div>

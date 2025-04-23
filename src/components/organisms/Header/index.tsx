@@ -3,6 +3,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
+import Link from "next/link";
 import { type FC, useCallback, useEffect, useRef, useState } from "react";
 
 const Header: FC<ComponentProps> = ({ children }) => {
@@ -47,11 +48,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
     transition: all 0.3s ease;
     background-color: ${isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent"};
     backdrop-filter: ${isScrolled ? "blur(8px)" : "none"};
-    box-shadow: ${
-      isScrolled
-        ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-        : "none"
-    };
+    box-shadow: ${isScrolled ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" : "none"};
   `;
 
   const containerStyle = css`
@@ -170,9 +167,11 @@ const Header: FC<ComponentProps> = ({ children }) => {
     <header css={headerStyle}>
       <div css={containerStyle}>
         <div css={navContentStyle}>
-          <div css={logoStyle}>
-            <span>ETHTokyo2025</span>
-          </div>
+          <Link href="/">
+            <div css={logoStyle}>
+              <span>ETHTokyo</span>
+            </div>
+          </Link>
           {/* ハンバーガーアイコン */}
           <div
             css={hamburgerStyle}
@@ -189,21 +188,28 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <span />
           </div>
           <nav css={navLinksStyle}>
-            <a href="#about" css={navLinkStyle}>
+            <Link href="#about" css={navLinkStyle}>
               About
-            </a>
-            {/* <a href="#conference" css={navLinkStyle}>
+            </Link>
+            {/* <Link href="#conference" css={navLinkStyle}>
               Conference
-            </a> */}
-            <a href="#schedule" css={navLinkStyle}>
+            </Link> */}
+            <Link href="#schedule" css={navLinkStyle}>
               Schedule
-            </a>
-            <a href="#tracks" css={navLinkStyle}>
-              Tracks
-            </a>
-            <a href="#venue" css={navLinkStyle}>
+            </Link>
+            <Link href="#tracks" css={navLinkStyle}>
+              Hackathon
+            </Link>
+            <Link href="#venue" css={navLinkStyle}>
               Venue
-            </a>
+            </Link>
+            <Link
+              href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+              css={navLinkStyle}
+              target="_blank"
+            >
+              Apply as a Speaker
+            </Link>
           </nav>
         </div>
       </div>
@@ -281,7 +287,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
             closeMenu();
           }}
         >
-          Tracks
+          Hackathon
         </button>
         <button
           type="button"
@@ -294,6 +300,19 @@ const Header: FC<ComponentProps> = ({ children }) => {
           }}
         >
           Venue
+        </button>
+        <button
+          type="button"
+          css={navLinkStyle}
+          onClick={() => {
+            window.open(
+              "https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/",
+              "_blank",
+            );
+            closeMenu();
+          }}
+        >
+          Apply as a Speaker
         </button>
       </div>
     </header>

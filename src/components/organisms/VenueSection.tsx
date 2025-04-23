@@ -20,6 +20,7 @@ import {
   MdOutlineDirectionsSubway,
   MdOutlineHotel,
 } from "react-icons/md";
+import { Temp_formSection } from "./AboutSection";
 
 type TabType = "venue" | "travel" | "accommodation";
 
@@ -479,6 +480,7 @@ const VenueSection: FC = () => {
           )}
         </div>
       </div>
+      <Temp_formSection />
     </section>
   );
 };

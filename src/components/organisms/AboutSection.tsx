@@ -1,8 +1,10 @@
+import Button from "@/components/common/Button";
 import SectionTitle from "@/components/common/SectionTitle";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, neutral } from "@/themes/settings/color";
+import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";
+import { BiMicrophone } from "react-icons/bi";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
@@ -50,7 +52,7 @@ const AboutSection: FC = () => {
   `;
 
   const themeCardStyle = css`
-    background-color: ${brand.Primary};
+    background-color: ${brand.Secondary};
     border-radius: 1rem;
     padding: 2.5rem;
     color: ${neutral.White};
@@ -87,13 +89,6 @@ const AboutSection: FC = () => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
   `;
 
   const overviewTitleStyle = css`
@@ -127,10 +122,11 @@ const AboutSection: FC = () => {
     <section id="about" css={sectionStyle}>
       <div css={containerStyle}>
         <SectionTitle
-          title="What's ETHTokyo"
-          description="A vibrant gathering for the global Ethereum community"
+          title="What is ETHTokyo?"
+          description="We are a community of Tokyo-based developers and professionals, driven by a shared sense of cypherpunk ethos and optimism for the future, dedicated to advance the development and adoption of Ethereum."
         />
         <div css={contentContainerStyle}>
+          <Temp_formSection />
           {/* What's ETHTokyo */}
           <div css={aboutCardStyle}>
             <div css={aboutContentStyle}>
@@ -138,9 +134,11 @@ const AboutSection: FC = () => {
                 <span css={tagStyle}>Community</span>
                 <p css={paragraphStyle}>
                   ETHTokyo is an{" "}
-                  <span css={highlightTextStyle}>engaging hackathon</span> for
-                  the global Ethereum community where people with all sorts of
-                  backgrounds, ideas, and skills come together to share their
+                  <span css={highlightTextStyle}>
+                    engaging conference and hackathon
+                  </span>{" "}
+                  for the global Ethereum community where people with all sorts
+                  of backgrounds, ideas, and skills come together to share their
                   love for Ethereum and its world.
                 </p>
               </div>
@@ -159,12 +157,19 @@ const AboutSection: FC = () => {
 
           {/* Event Theme */}
           <div css={themeCardStyle}>
-            <h3 css={themeHeadingStyle}>Event Theme</h3>
+            <h3 css={themeHeadingStyle}>
+              2025 theme: Emancipatory Tech for Future of Humanity
+            </h3>
             <div css={themeContentStyle}>
-              <h4>Technology for Humanity</h4>
               <p>
-                Reimagining technology to empower people, preserve culture, and
-                build a sustainable future. Let's innovate for humanity.
+                Emancipation begins in the mind; let us radically reimagine how
+                we can harness technology to empower people, preserve culture,
+                and build a sustainable future in ways not possible today.
+              </p>
+              <p>
+                The goal is to innovate not for its own sake, but to envision
+                new ways and better approaches to do things through reshaping
+                and redefining the constraints of our own constructed reality.
               </p>
             </div>
           </div>
@@ -198,5 +203,60 @@ const AboutSection: FC = () => {
     </section>
   );
 };
+
+//////////Conference Section から移植　Conferenceページを公開したら削除//////////////
+export const Temp_formSection = () => {
+  return (
+    <div css={temp_formSectionStyle}>
+      <h3 css={temp_formHeadingStyle}>
+        <BiMicrophone size={28} />
+        Call for Speakers & Mentors
+      </h3>
+      <p css={temp_formDescriptionStyle}>
+        ETHTokyo'25 is currently accepting conference speakers and hackathon
+        mentors. Share your knowledge and experience with the ETHTokyo
+        community.
+      </p>
+      <Button
+        href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+        external
+        size="medium"
+        icon={<BiMicrophone />}
+      >
+        <span css={css`color: ${neutral.White};`}>Apply Now</span>
+      </Button>
+    </div>
+  );
+};
+
+const temp_formSectionStyle = css`
+    background-color: ${info.Attention};
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+  `;
+
+const temp_formHeadingStyle = css`
+    color: ${brand.Secondary};
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  `;
+
+const temp_formDescriptionStyle = css`
+    color: ${neutral.Grey4};
+    margin-bottom: 1.5rem;
+  `;
+
+////////////////////// END ////////////////////////////////
 
 export default AboutSection;
