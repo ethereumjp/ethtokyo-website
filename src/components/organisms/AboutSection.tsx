@@ -210,12 +210,11 @@ export const Temp_formSection = () => {
     <div css={temp_formSectionStyle}>
       <h3 css={temp_formHeadingStyle}>
         <BiMicrophone size={28} />
-        Call for Speakers & Mentors
+        Call for Speakers & Workshops
       </h3>
       <p css={temp_formDescriptionStyle}>
-        ETHTokyo'25 is currently accepting conference speakers and hackathon
-        mentors. Share your knowledge and experience with the ETHTokyo
-        community.
+        ETHTokyo'25 is currently accepting conference speakers and workshop
+        owners. Share your knowledge and experience with the ETHTokyo community.
       </p>
       <Button
         href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"

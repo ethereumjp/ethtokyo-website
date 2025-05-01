@@ -1913,7 +1913,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
           </div>
 
           <div>
-            <h2 css={css`margin:0;`}>Digital Garage</h2>
+            <h2 css={css`margin:0;`}>Dragon Gate</h2>
             <a
               css={css`text-decoration: none; :hover {text-decoration: underline;} ;`}
               href="https://maps.app.goo.gl/aCRdR2pX4qRaUz6MA"
