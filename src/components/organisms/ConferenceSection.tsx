@@ -21,30 +21,30 @@ const ConferenceSection: FC = () => {
     "https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/";
 
   const descriptionStyle = css`
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    text-align: center;
     color: ${neutral.Grey4};
     font-size: 1.125rem;
     line-height: 1.6;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+    text-align: center;
   `;
 
   const formSectionStyle = css`
     background-color: ${neutral.White};
     border-radius: 1rem;
-    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     margin: 2rem auto;
     max-width: 800px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
   `;
 
   const formHeadingStyle = css`
-    color: ${brand.Secondary};
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
     align-items: center;
+    color: ${brand.Secondary};
+    display: flex;
+    font-size: 1.5rem;
     gap: 0.75rem;
+    margin-bottom: 1rem;
   `;
 
   const formDescriptionStyle = css`
@@ -54,8 +54,8 @@ const ConferenceSection: FC = () => {
 
   const featureListStyle = css`
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
+    grid-template-columns: 1fr;
     margin: 2rem 0;
     
     ${mq.tablet} {
@@ -64,21 +64,21 @@ const ConferenceSection: FC = () => {
   `;
 
   const featureItemStyle = css`
-    display: flex;
     align-items: flex-start;
+    display: flex;
     gap: 1rem;
   `;
 
   const featureIconStyle = css`
-    background-color: ${themeLight.PrimaryLowContrast};
-    color: ${brand.Primary};
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: ${themeLight.PrimaryLowContrast};
+    border-radius: 50%;
+    color: ${brand.Primary};
+    display: flex;
     flex-shrink: 0;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
   `;
 
   const featureTitleStyle = css`

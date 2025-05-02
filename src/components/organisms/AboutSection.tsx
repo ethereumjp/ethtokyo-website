@@ -8,13 +8,13 @@ import { BiMicrophone } from "react-icons/bi";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
-    padding: 5rem 1rem;
     background-color: ${neutral.White};
+    padding: 5rem 1rem;
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
   `;
 
   const contentContainerStyle = css`
@@ -26,8 +26,8 @@ const AboutSection: FC = () => {
   const aboutCardStyle = css`
     background-color: ${neutral.Grey1};
     border-radius: 1rem;
-    padding: 2.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
   `;
 
   const aboutContentStyle = css`
@@ -40,9 +40,9 @@ const AboutSection: FC = () => {
   `;
 
   const paragraphStyle = css`
+    color: ${neutral.Grey4};
     font-size: 1.125rem;
     line-height: 1.8;
-    color: ${neutral.Grey4};
     margin: 0;
   `;
 
@@ -54,17 +54,17 @@ const AboutSection: FC = () => {
   const themeCardStyle = css`
     background-color: ${brand.Secondary};
     border-radius: 1rem;
-    padding: 2.5rem;
-    color: ${neutral.White};
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: ${neutral.White};
+    padding: 2.5rem;
   `;
 
   const themeHeadingStyle = css`
-    font-size: 1.5rem;
-    margin: 0 0 1.5rem;
-    display: flex;
     align-items: center;
+    display: flex;
+    font-size: 1.5rem;
     gap: 0.5rem;
+    margin: 0 0 1.5rem;
   `;
 
   const themeContentStyle = css`
@@ -74,8 +74,8 @@ const AboutSection: FC = () => {
 
   const overviewContainerStyle = css`
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
+    grid-template-columns: 1fr;
     
     ${mq.tablet} {
       grid-template-columns: 1fr 1fr;
@@ -85,37 +85,37 @@ const AboutSection: FC = () => {
   const overviewCardStyle = css`
     background-color: ${neutral.Grey1};
     border-radius: 1rem;
-    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 2.5rem;
   `;
 
   const overviewTitleStyle = css`
-    font-size: 1.5rem;
-    margin: 0;
+    align-items: center;
     color: ${brand.Secondary};
     display: flex;
-    align-items: center;
+    font-size: 1.5rem;
     gap: 0.5rem;
+    margin: 0;
   `;
 
   const overviewTextStyle = css`
+    color: ${neutral.Grey4};
     font-size: 1.125rem;
     line-height: 1.6;
-    color: ${neutral.Grey4};
     margin: 0;
   `;
 
   const tagStyle = css`
-    display: inline-block;
     background-color: ${brand.Miyabi};
-    color: ${neutral.White};
-    padding: 0.5rem 1rem;
     border-radius: 2rem;
+    color: ${neutral.White};
+    display: inline-block;
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
   `;
 
   return (
@@ -231,24 +231,24 @@ export const Temp_formSection = () => {
 const temp_formSectionStyle = css`
     background-color: ${info.Attention};
     border-radius: 1rem;
-    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     margin: 2rem auto;
     max-width: 800px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     &:hover {
-      transform: translateY(-5px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
     }
   `;
 
 const temp_formHeadingStyle = css`
-    color: ${brand.Secondary};
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
     align-items: center;
+    color: ${brand.Secondary};
+    display: flex;
+    font-size: 1.5rem;
     gap: 0.75rem;
+    margin-bottom: 1rem;
   `;
 
 const temp_formDescriptionStyle = css`

@@ -18,16 +18,16 @@ const TechGraphic: FC = () => {
 // ヒーローセクション
 const HeroSection: FC = () => {
   const sectionStyle = css`
+    align-items: center;
+    background-color: ${themeLight.Background};
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
     position: relative;
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: ${themeLight.Background};
 
     @supports (height: 100dvh) {
       height: 100dvh;
@@ -35,27 +35,27 @@ const HeroSection: FC = () => {
   `;
 
   const backgroundStyle = css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    width: 100%;
     height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
     z-index: 0;
   `;
 
   const overlayStyle = css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: linear-gradient(
       135deg, 
       rgba(255, 238, 204, 0.7) 0%, 
       rgba(85, 34, 102, 0.7) 100%
     );
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: 1;
   `;
 
@@ -65,18 +65,18 @@ const HeroSection: FC = () => {
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+    max-width: 1280px;
     padding: 0 2rem;
+    position: relative;
+    text-align: center;
+    z-index: 2;
   `;
 
   const logoStyle = css`
-    max-width: 250px;
-    margin-bottom: 2rem;
     height: auto;
+    margin-bottom: 2rem;
+    max-width: 250px;
     
     ${mq.tablet} {
       max-width: 300px;
@@ -84,9 +84,9 @@ const HeroSection: FC = () => {
   `;
 
   const headingStyle = css`
+    color: ${brand.Secondary};
     font-size: 3.75rem;
     font-weight: 700;
-    color: ${brand.Secondary};
     margin-bottom: 1.5rem;
     
     ${mq.tablet} {
@@ -99,8 +99,8 @@ const HeroSection: FC = () => {
   `;
 
   const subheadingStyle = css`
-    font-size: 1.5rem;
     color: ${neutral.Grey4};
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     
     ${mq.tablet} {
@@ -109,11 +109,11 @@ const HeroSection: FC = () => {
   `;
 
   const eventInfoStyle = css`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1.5rem;
+    justify-content: center;
     margin-bottom: 3rem;
     
     ${mq.tablet} {
@@ -122,21 +122,21 @@ const HeroSection: FC = () => {
   `;
 
   const infoItemStyle = css`
-    display: flex;
     align-items: center;
-    gap: 0.5rem;
     color: ${brand.Secondary};
+    display: flex;
+    gap: 0.5rem;
   `;
 
   const buttonStyle = css`
-    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
     background-color: ${brand.Primary};
-    color: ${neutral.White};
-    padding: 1rem 2rem;
     border-radius: 9999px;
+    color: ${neutral.White};
+    display: inline-flex;
     font-size: 1.25rem;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -149,9 +149,9 @@ const HeroSection: FC = () => {
       <div css={backgroundStyle}>
         <div
           css={css`
+          height: 100%;
           position: relative;
           width: 100%;
-          height: 100%;
         `}
         >
           <Image
@@ -173,10 +173,10 @@ const HeroSection: FC = () => {
       <div css={containerStyle}>
         <div
           css={css`
-          position: relative;
-          max-width: 250px;
           height: 150px;
           margin: 0 auto 2rem;
+          max-width: 250px;
+          position: relative;
           
           ${mq.tablet} {
             max-width: 300px;
@@ -282,19 +282,19 @@ const HeroSection: FC = () => {
 // アバウトセクション
 const AboutSection: FC = () => {
   const sectionStyle = css`
-    padding: 5rem 1rem;
     background-color: ${neutral.White};
+    padding: 5rem 1rem;
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
   `;
 
   const headingStyle = css`
+    color: ${brand.Secondary};
     font-size: 2.25rem;
     font-weight: 700;
-    color: ${brand.Secondary};
     margin-bottom: 3rem;
     text-align: center;
   `;
@@ -315,26 +315,26 @@ const AboutSection: FC = () => {
   `;
 
   const paragraphStyle = css`
-    font-size: 1.125rem;
     color: ${neutral.Grey4};
+    font-size: 1.125rem;
   `;
 
   const statsContainerStyle = css`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   `;
 
   const statBoxStyle = css`
     background-color: ${neutral.Grey1};
-    padding: 1.5rem;
     border-radius: 0.75rem;
+    padding: 1.5rem;
   `;
 
   const statNumberStyle = css`
+    color: ${brand.Primary};
     font-size: 1.5rem;
     font-weight: 700;
-    color: ${brand.Primary};
     margin-bottom: 0.5rem;
   `;
 
@@ -385,21 +385,21 @@ const AboutSection: FC = () => {
 // スケジュールセクション
 const ScheduleSection: FC = () => {
   const sectionStyle = css`
-    padding: 5rem 1rem;
     background-color: ${themeLight.Background};
-    position: relative;
     overflow: hidden;
+    padding: 5rem 1rem;
+    position: relative;
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
   `;
 
   const headingStyle = css`
+    color: ${brand.Secondary};
     font-size: 2.25rem;
     font-weight: 700;
-    color: ${brand.Secondary};
     margin-bottom: 3rem;
     text-align: center;
   `;
@@ -415,9 +415,9 @@ const ScheduleSection: FC = () => {
 
   const scheduleCardStyle = css`
     background-color: ${neutral.White};
-    padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
   `;
 
   const dayLabelStyle = css`
@@ -427,9 +427,9 @@ const ScheduleSection: FC = () => {
   `;
 
   const eventTitleStyle = css`
+    color: ${brand.Secondary};
     font-size: 1.25rem;
     font-weight: 700;
-    color: ${brand.Secondary};
     margin-bottom: 0.5rem;
   `;
 
@@ -482,16 +482,16 @@ const ScheduleSection: FC = () => {
 // 会場セクション
 const VenueSection: FC = () => {
   const sectionStyle = css`
-    padding: 5rem 1rem;
     background-color: ${brand.Secondary};
     color: ${neutral.White};
-    position: relative;
     overflow: hidden;
+    padding: 5rem 1rem;
+    position: relative;
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
     text-align: center;
   `;
 
@@ -513,17 +513,17 @@ const VenueSection: FC = () => {
 
   const venueDescriptionStyle = css`
     font-size: 1.125rem;
-    opacity: 0.8;
-    max-width: 800px;
     margin: 0 auto;
+    max-width: 800px;
+    opacity: 0.8;
   `;
 
   const venueDetailsStyle = css`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: 600px;
     margin: 3rem auto 0;
+    max-width: 600px;
     
     ${mq.tablet} {
       flex-direction: row;

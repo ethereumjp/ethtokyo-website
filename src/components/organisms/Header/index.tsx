@@ -40,20 +40,20 @@ const Header: FC<ComponentProps> = ({ children }) => {
   }, [isMenuOpen]);
 
   const headerStyle = css`
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    transition: all 0.3s ease;
-    background-color: ${isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent"};
     backdrop-filter: ${isScrolled ? "blur(8px)" : "none"};
+    background-color: ${isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent"};
     box-shadow: ${isScrolled ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" : "none"};
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 50;
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
     padding: 0 1rem;
 
     ${mq.tablet} {
@@ -66,38 +66,38 @@ const Header: FC<ComponentProps> = ({ children }) => {
   `;
 
   const navContentStyle = css`
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     height: 4rem;
+    justify-content: space-between;
   `;
 
   const logoStyle = css`
-    display: flex;
     align-items: center;
+    color: ${brand.Primary};
+    display: flex;
     font-size: 1.5rem;
     font-weight: 700;
-    color: ${brand.Primary};
   `;
 
   const navLinksStyle = css`
     display: none;
 
     ${mq.tablet} {
-      display: flex;
       align-items: center;
+      display: flex;
       gap: 2rem;
     }
   `;
 
   const navLinkStyle = css`
     all: unset;
-    display: block;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    font-weight: bold;
     color: ${brand.Secondary};
     cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    text-align: center;
 
     &:hover {
       background-color: #eee;
@@ -105,16 +105,16 @@ const Header: FC<ComponentProps> = ({ children }) => {
   `;
 
   const hamburgerStyle = css`
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    cursor: pointer;
 
     span {
-      width: 25px;
-      height: 3px;
       background-color: ${brand.Primary};
+      height: 3px;
       transition: 0.3s;
+      width: 25px;
     }
 
     ${mq.tablet} {
@@ -123,40 +123,40 @@ const Header: FC<ComponentProps> = ({ children }) => {
   `;
 
   const drawerOverlayStyle = css`
-    position: fixed;
-    inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 40;
+    inset: 0;
     opacity: ${isMenuOpen ? 1 : 0};
     pointer-events: ${isMenuOpen ? "auto" : "none"};
+    position: fixed;
     transition: opacity 0.3s ease;
+    z-index: 40;
   `;
 
   const drawerMenuStyle = css`
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 280px;
     background-color: ${neutral.White};
-    padding: 2rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    z-index: 50;
-    transform: ${isMenuOpen ? "translateX(0)" : "translateX(100%)"};
-    transition: transform 0.3s ease;
+    height: 100vh;
     outline: none;
     overflow-y: auto;
+    padding: 2rem 1.5rem 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: ${isMenuOpen ? "translateX(0)" : "translateX(100%)"};
+    transition: transform 0.3s ease;
+    width: 280px;
+    z-index: 50;
   `;
 
   const closeButtonStyle = css`
     align-self: flex-end;
     background: none;
     border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
     color: ${brand.Primary};
+    cursor: pointer;
+    font-size: 1.5rem;
 
     &:hover {
       color: ${brand.Secondary};

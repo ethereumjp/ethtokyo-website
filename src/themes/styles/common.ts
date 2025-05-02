@@ -4,67 +4,67 @@ import { css } from "@emotion/react";
 
 // セクション共通スタイル
 export const sectionStyle = css`
-  padding: 4rem 2rem;
   background: ${themeLight.Background};
+  padding: 4rem 2rem;
 `;
 
 export const containerStyle = css`
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 `;
 
 export const headingStyle = css`
-  text-align: center;
   color: ${brand.Secondary};
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const multiGridStyle = css`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
+  justify-content: center;
   margin-top: 2rem;
 `;
 
 export const cardStyle = css`
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   flex: 1 1 220px;
   max-width: 280px;
+  padding: 1.5rem;
   text-align: center;
 `;
 
 export const cardHeadingStyle = css`
-  margin: 0;
-  font-size: 1.5rem;
   color: ${brand.Secondary};
+  font-size: 1.5rem;
+  margin: 0;
 `;
 
 export const cardParagraphStyle = css`
-  margin: 0.5rem 0 0;
   color: #777;
+  margin: 0.5rem 0 0;
 `;
 
 // ボタンスタイル
 export const buttonStyle = css`
-  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   background-color: ${brand.Primary};
-  color: ${neutral.White};
-  padding: 8px 2rem;
   border-radius: 9999px;
+  color: ${neutral.White};
+  display: inline-flex;
   font-size: 1rem;
+  gap: 0.5rem;
+  padding: 8px 2rem;
   transition: background-color 0.2s ease;
 
   @media (min-width: 480px) {
-    padding: 1rem 2rem;
     font-size: 1.25rem;
+    padding: 1rem 2rem;
   }
 
   &:hover {
@@ -74,11 +74,11 @@ export const buttonStyle = css`
 
 // イベント情報スタイル
 export const eventInfoStyle = css`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
+  justify-content: center;
   margin-bottom: 3rem;
   
   ${mq.tablet} {
@@ -87,8 +87,8 @@ export const eventInfoStyle = css`
 `;
 
 export const infoItemStyle = css`
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
   color: ${neutral.White};
+  display: flex;
+  gap: 0.5rem;
 `;
