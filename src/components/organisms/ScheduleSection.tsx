@@ -194,28 +194,28 @@ const ScheduleSection = () => {
 };
 
 const sectionStyle = css`
-  padding: 5rem 0;
   background-color: ${neutral.Grey1};
-  width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 5rem 0;
+  width: 100%;
 `;
 
 const containerStyle = css`
-  max-width: 1200px;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+  width: 95%;
 `;
 
 const cardsContainerStyle = css`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
   width: 100%;
-  box-sizing: border-box;
 
   ${mq.laptop} {
     flex-direction: row;
@@ -224,8 +224,8 @@ const cardsContainerStyle = css`
 `;
 
 const cardTitleStyle = css`
-  font-size: 1.25rem;
   color: ${neutral.White};
+  font-size: 1.25rem;
   margin: 0;
   text-align: center;
   
@@ -235,11 +235,11 @@ const cardTitleStyle = css`
 `;
 
 const infoRowStyle = css`
-  display: flex;
   align-items: flex-start;
+  color: ${neutral.Grey5};
+  display: flex;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
-  color: ${neutral.Grey5};
   
   svg {
     color: ${brand.Primary};
@@ -254,17 +254,17 @@ const infoRowStyle = css`
 
 const locationContainerStyle = css`
   flex: 1;
-  min-width: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   hyphens: auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 `;
 
 const locationNameStyle = css`
   display: block;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  font-size: 1rem;
   
   ${mq.tablet} {
     font-size: 1.1rem;
@@ -272,8 +272,8 @@ const locationNameStyle = css`
 `;
 
 const addressStyle = css`
-  font-size: 0.9rem;
   color: ${neutral.Grey4};
+  font-size: 0.9rem;
   word-break: break-word;
   
   ${mq.tablet} {
@@ -282,10 +282,10 @@ const addressStyle = css`
 `;
 
 const addressLinkStyle = css`
-  font-size: 0.9rem;
   color: ${neutral.Grey4};
-  text-decoration: none;
   display: block;
+  font-size: 0.9rem;
+  text-decoration: none;
   word-break: break-word;
   
   &:hover {
@@ -302,22 +302,22 @@ const comingSoonContainerStyle = css`
   background: linear-gradient(135deg, ${neutral.Grey1} 0%, ${neutral.Grey2} 100%);
   border: 1px dashed ${neutral.Grey3};
   border-radius: 12px;
-  padding: 2rem;
-  margin-top: 1.5rem;
-  text-align: center;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
-  position: relative;
+  margin-top: 1.5rem;
   overflow: hidden;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
   
   &::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 120px;
-    height: 120px;
     background: ${brand.Primary}20;
     border-radius: 50%;
+    content: '';
+    height: 120px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 120px;
     z-index: 0;
   }
 `;
@@ -328,22 +328,22 @@ const comingSoonContentStyle = css`
 `;
 
 const comingSoonTitleStyle = css`
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
   color: ${brand.Secondary};
+  font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 0.5rem;
 `;
 
 const comingSoonTextStyle = css`
-  margin: 0;
-  font-size: 0.95rem;
   color: ${neutral.Grey4};
+  font-size: 0.95rem;
+  margin: 0;
 `;
 
 const timelineContainerStyle = css`
+  animation: fadeIn 0.3s ease;
   margin-top: 2rem;
   position: relative;
-  animation: fadeIn 0.3s ease;
   
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
@@ -351,20 +351,20 @@ const timelineContainerStyle = css`
   }
   
   &::before {
+    background-color: ${themeLight.PrimaryLowContrast};
+    bottom: 0;
     content: '';
+    left: 12px;
     position: absolute;
     top: 0;
-    bottom: 0;
-    left: 12px;
     width: 2px;
-    background-color: ${themeLight.PrimaryLowContrast};
   }
 `;
 
 const timelineItemStyle = css`
-  position: relative;
-  padding-left: 40px;
   margin-bottom: 1.5rem;
+  padding-left: 40px;
+  position: relative;
   
   &:last-child {
     margin-bottom: 0;
@@ -372,23 +372,23 @@ const timelineItemStyle = css`
 `;
 
 const timelineDotStyle = css`
-  position: absolute;
+  background-color: ${brand.Primary};
+  border-radius: 50%;
+  height: 14px;
   left: 6px;
+  position: absolute;
   top: 6px;
   width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: ${brand.Primary};
   z-index: 1;
 `;
 
 const timelineTimeStyle = css`
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  color: ${brand.Secondary};
+  display: flex;
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${brand.Secondary};
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
   
   svg {
@@ -398,35 +398,35 @@ const timelineTimeStyle = css`
 
 const timelineContentStyle = css`
   background-color: ${themeLight.BackgroundHighlight};
-  padding: 1rem;
   border-radius: 8px;
+  padding: 1rem;
 `;
 
 const eventTitleStyle = css`
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
   color: ${neutral.Grey5};
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
 `;
 
 const eventDescriptionStyle = css`
-  margin: 0;
-  font-size: 0.95rem;
   color: ${neutral.Grey4};
+  font-size: 0.95rem;
+  margin: 0;
 `;
 
 const readMoreButtonStyle = css`
   background: none;
   border: none;
   color: ${brand.Primary};
-  font-weight: 600;
-  padding: 0.5rem 0;
-  margin-top: 1.5rem;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s ease;
-  text-align: center;
   width: 100%;
   
   &:hover {

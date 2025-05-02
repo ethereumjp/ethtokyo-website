@@ -31,19 +31,19 @@ const SectionTitle: FC<SectionTitleProps> = ({
 };
 
 const containerStyle = css`
-  text-align: center;
   margin-bottom: 3rem;
+  text-align: center;
 `;
 
 const titleStyle = css`
-  font-size: 2.5rem;
-  text-align: center;
   color: ${brand.Secondary};
-  margin-bottom: 0.5rem;
-  position: relative;
   display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  text-align: center;
   width: 100%;
 `;
 
@@ -52,21 +52,21 @@ const lightTitleStyle = css`
 `;
 
 const underlineStyle = css`
-  display: block;
-  width: 100px;
-  height: 4px;
   background-color: ${brand.Primary};
-  margin: 0.5rem auto 2rem;
   border-radius: 2px;
+  display: block;
+  height: 4px;
+  margin: 0.5rem auto 2rem;
+  width: 100px;
 `;
 
 const descriptionStyle = css`
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  color: ${neutral.Grey4};
   font-size: 1.1rem;
   line-height: 1.6;
-  color: ${neutral.Grey4};
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
 `;
 
 const lightDescriptionStyle = css`

@@ -111,16 +111,16 @@ const TracksSection: FC = () => {
 
 // Styles
 const sectionStyle = css`
-  padding: 5rem 0;
   background-color: ${neutral.Grey1};
+  padding: 5rem 0;
   width: 100%;
 `;
 
 const containerStyle = css`
-  width: 95%;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0;
+  width: 95%;
 `;
 
 const tracksContainerStyle = css`
@@ -131,17 +131,17 @@ const tracksContainerStyle = css`
 `;
 
 const trackTitleStyle = css`
-  font-size: 1.75rem;
-  color: ${neutral.White};
-  margin: 0;
-  display: flex;
   align-items: center;
+  color: ${neutral.White};
+  display: flex;
+  font-size: 1.75rem;
   gap: 0.5rem;
+  margin: 0;
   
   ${mq.mobileSmall} {
-    font-size: 1.5rem;
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
+    font-size: 1.5rem;
   }
 `;
 
@@ -151,18 +151,18 @@ const trackIconStyle = css`
 `;
 
 const trackSubtitleStyle = css`
-  font-size: 1.1rem;
   color: ${neutral.Grey1};
+  font-size: 1.1rem;
   font-weight: 500;
 `;
 
 const trackPrizeStyle = css`
   background-color: ${brand.Primary};
+  border-radius: 20px;
   color: ${neutral.White};
+  font-size: 0.9rem;
   font-weight: 600;
   padding: 0.35rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
 `;
 
 const trackContentContainerStyle = css`
@@ -171,9 +171,9 @@ const trackContentContainerStyle = css`
 `;
 
 const trackDescriptionStyle = css`
+  color: ${neutral.Grey5};
   font-size: 1.05rem;
   line-height: 1.6;
-  color: ${neutral.Grey5};
   margin: 0 0 1.5rem;
 `;
 
@@ -187,59 +187,59 @@ const expandedContentStyle = css`
 `;
 
 const trackLongDescriptionStyle = css`
+  color: ${neutral.Grey5};
   font-size: 1rem;
   line-height: 1.6;
-  color: ${neutral.Grey5};
   margin-bottom: 1.5rem;
 `;
 
 const trackAdditionalInfoStyle = css`
-  font-size: 1rem;
-  line-height: 1.6;
   color: ${neutral.Grey5};
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
   font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 `;
 
 const requirementsContainerStyle = css`
   background-color: ${neutral.Grey1};
-  padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
+  padding: 1.5rem;
 `;
 
 const requirementsTitleStyle = css`
-  font-size: 1.2rem;
   color: ${brand.Secondary};
-  margin: 0 0 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 1rem;
 `;
 
 const requirementsListStyle = css`
+  list-style-type: none;
   margin: 0;
   padding: 0 0 0 1.25rem;
-  list-style-type: none;
 `;
 
 const requirementItemStyle = css`
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  color: ${neutral.Grey5};
   font-size: 0.95rem;
   line-height: 1.5;
-  color: ${neutral.Grey5};
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
   
   &:last-child {
     margin-bottom: 0;
   }
   
   &::before {
-    content: "•";
-    position: absolute;
-    left: 0;
     color: ${brand.Primary};
-    font-weight: bold;
+    content: "•";
     font-size: 1.2rem;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
   }
 `;
 
@@ -247,11 +247,11 @@ const readMoreButtonStyle = css`
   background: none;
   border: none;
   color: ${brand.Primary};
-  font-weight: 600;
-  padding: 0.5rem 0;
-  margin-top: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s ease;

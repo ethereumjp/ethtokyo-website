@@ -15,15 +15,15 @@ const SponsorsSection: FC = () => {
   const sponsorsLogosStyle = css`
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 2rem;
+    justify-content: center;
     margin-top: 2rem;
   `;
 
   const sponsorLogoStyle = css`
     height: 60px;
-    object-fit: contain;
     max-width: 100%;
+    object-fit: contain;
   `;
 
   return (

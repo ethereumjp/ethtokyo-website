@@ -33,14 +33,14 @@ const Button = ({
   css: cssProp,
 }: ButtonProps) => {
   const baseStyle = css`
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: 9999px;
-    font-weight: 600;
     border: none;
+    border-radius: 9999px;
     cursor: pointer;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 0.5rem;
+    justify-content: center;
     text-decoration: none;
     transition: background-color 0.2s ease;
   `;
@@ -62,8 +62,8 @@ const Button = ({
     `,
     outline: css`
       background-color: transparent;
-      color: ${brand.Primary};
       border: 2px solid ${brand.Primary};
+      color: ${brand.Primary};
       &:hover {
         background-color: ${themeLight.PrimaryLowContrast};
       }
@@ -72,22 +72,22 @@ const Button = ({
 
   const sizeStyles = {
     small: css`
-      padding: 0.5rem 1.25rem;
       font-size: 0.875rem;
+      padding: 0.5rem 1.25rem;
     `,
     medium: css`
-      padding: 0.75rem 1.75rem;
       font-size: 1rem;
+      padding: 0.75rem 1.75rem;
       ${mq.tablet} {
         padding: 0.875rem 2rem;
       }
     `,
     large: css`
-      padding: 1rem 2.25rem;
       font-size: 1.125rem;
+      padding: 1rem 2.25rem;
       ${mq.tablet} {
-        padding: 1.125rem 2.5rem;
         font-size: 1.25rem;
+        padding: 1.125rem 2.5rem;
       }
     `,
   };

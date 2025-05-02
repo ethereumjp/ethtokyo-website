@@ -81,10 +81,10 @@ const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   const baseLayoutStyle = css`
     background-color: ${themeLight.Background};
     color: ${neutral.Text};
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
+    min-height: 100vh;
     
     a {
       color: ${themeLight.Link};
@@ -98,10 +98,10 @@ const Layout: FC<PageProps> = ({ pageTitle, children }) => {
   `;
 
   const mainLayoutStyle = css`
-    flex: 1;
-    width: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
+    width: 100%;
   `;
 
   return (

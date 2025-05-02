@@ -9,16 +9,16 @@ import type { FC } from "react";
 
 const HeroSection: FC = () => {
   const sectionStyle = css`
+    align-items: center;
+    background-color: ${themeLight.Background};
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
     position: relative;
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: ${themeLight.Background};
 
     @supports (height: 100dvh) {
       height: 100dvh;
@@ -26,23 +26,23 @@ const HeroSection: FC = () => {
   `;
 
   const backgroundStyle = css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    width: 100%;
     height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
     z-index: 0;
   `;
 
   const overlayStyle = css`
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
   `;
 
@@ -52,13 +52,13 @@ const HeroSection: FC = () => {
   `;
 
   const containerStyle = css`
-    max-width: 1280px;
     margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+    max-width: 1280px;
     padding: 0 1rem;
     padding-top: 8rem;
+    position: relative;
+    text-align: center;
+    z-index: 2;
     
     ${mq.mobile} {
       padding: 0 1.5rem;
@@ -76,23 +76,23 @@ const HeroSection: FC = () => {
   `;
 
   const logoContainerStyle = css`
-    position: relative;
-    max-width: 200px;
-    height: 120px;
-    margin: 0 auto 1.5rem;
     display: flex;
+    height: 120px;
     justify-content: center;
+    margin: 0 auto 1.5rem;
+    max-width: 200px;
+    position: relative;
     
     ${mq.mobile} {
-      max-width: 220px;
       height: 130px;
       margin: 0 auto 1.75rem;
+      max-width: 220px;
     }
     
     ${mq.tablet} {
-      max-width: 250px;
       height: 150px;
       margin: 0 auto 2rem;
+      max-width: 250px;
     }
     
     ${mq.laptop} {
@@ -160,18 +160,18 @@ const HeroSection: FC = () => {
     ${textShadowStyle}
     
     ${mq.mobile} {
-      margin-top: 2.5rem;
       margin-bottom: 2.5rem;
+      margin-top: 2.5rem;
     }
     
     ${mq.tablet} {
-      margin-top: 3rem;
       margin-bottom: 3rem;
+      margin-top: 3rem;
     }
     
     ${mq.laptop} {
-      margin-top: 4rem;
       margin-bottom: 4rem;
+      margin-top: 4rem;
     }
   `;
 
@@ -180,9 +180,9 @@ const HeroSection: FC = () => {
       <div css={backgroundStyle}>
         <div
           css={css`
+          height: 100%;
           position: relative;
           width: 100%;
-          height: 100%;
         `}
         >
           <Image

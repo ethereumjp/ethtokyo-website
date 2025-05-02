@@ -487,16 +487,16 @@ const VenueSection: FC = () => {
 
 // Styles
 const sectionStyle = css`
-  padding: 5rem 1rem;
   background-color: ${brand.Secondary};
   color: ${neutral.White};
-  position: relative;
   overflow: hidden;
+  padding: 5rem 1rem;
+  position: relative;
 `;
 
 const containerStyle = css`
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 `;
 
 const tabsContainerStyle = css`
@@ -507,24 +507,24 @@ const tabsContainerStyle = css`
   
   ${mq.tablet} {
     flex-direction: row;
-    justify-content: center;
     gap: 1rem;
+    justify-content: center;
   }
 `;
 
 const tabStyle = css`
-  padding: 0.75rem 1.5rem;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 8px;
   color: ${neutral.White};
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 600;
   gap: 0.5rem;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
   
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
@@ -547,8 +547,8 @@ const contentContainerStyle = css`
   background-color: ${neutral.White};
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
   color: ${neutral.Grey5};
+  overflow: hidden;
 `;
 
 const tabContentStyle = css`
@@ -572,24 +572,24 @@ const venueCardStyle = css`
 `;
 
 const venueTitleStyle = css`
+  color: ${brand.Secondary};
   font-size: 1.75rem;
   margin: 0;
-  color: ${brand.Secondary};
   text-align: center;
 `;
 
 const venueDescriptionStyle = css`
   font-size: 1.1rem;
   line-height: 1.6;
-  text-align: center;
-  max-width: 800px;
   margin: 0 auto 1.5rem;
+  max-width: 800px;
+  text-align: center;
 `;
 
 const venueDetailsGridStyle = css`
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
   margin-top: 1rem;
   
   ${mq.tablet} {
@@ -598,12 +598,12 @@ const venueDetailsGridStyle = css`
 `;
 
 const detailItemStyle = css`
-  display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
   background-color: ${neutral.Grey1};
   border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
   
   svg {
     color: ${brand.Primary};
@@ -612,19 +612,19 @@ const detailItemStyle = css`
 `;
 
 const detailWithIconStyle = css`
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 0.5rem;
   line-height: 1;
 `;
 
 const detailTitleStyle = css`
-  font-weight: 600;
-  margin-bottom: 0.5rem;
   color: ${brand.Secondary};
-  font-size: 1rem;
   display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1;
+  margin-bottom: 0.5rem;
   vertical-align: middle;
 `;
 
@@ -633,26 +633,26 @@ const detailValueStyle = css`
 `;
 
 const mapContainerStyle = css`
-  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 400px;
   margin-top: 2rem;
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 `;
 
 const mapIframeStyle = css`
-  width: 100%;
-  height: 100%;
   border: none;
+  height: 100%;
+  width: 100%;
 `;
 
 const infoCardStyle = css`
-  margin-bottom: 2rem;
   background-color: ${neutral.White};
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  overflow: hidden;
   
   &:last-child {
     margin-bottom: 0;
@@ -660,12 +660,12 @@ const infoCardStyle = css`
 `;
 
 const infoCardHeaderStyle = css`
-  padding: 1.25rem;
+  align-items: center;
   background-color: ${neutral.Grey1};
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+  padding: 1.25rem;
   transition: background-color 0.2s ease;
   
   &:hover {
@@ -674,8 +674,8 @@ const infoCardHeaderStyle = css`
 `;
 
 const infoCardHeaderContentStyle = css`
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 1rem;
   
   svg {
@@ -684,24 +684,24 @@ const infoCardHeaderContentStyle = css`
 `;
 
 const infoCardTitleStyle = css`
-  margin: 0;
-  font-size: 1.25rem;
   color: ${brand.Secondary};
+  font-size: 1.25rem;
+  margin: 0;
 `;
 
 const infoCardBodyStyle = css`
   padding: 1.5rem;
   
   p {
-    margin-top: 0;
     line-height: 1.6;
+    margin-top: 0;
   }
 `;
 
 const airportInfoStyle = css`
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
   margin-top: 1.5rem;
   
   ${mq.tablet} {
@@ -711,13 +711,13 @@ const airportInfoStyle = css`
 
 const airportCardStyle = css`
   background-color: ${neutral.Grey1};
-  padding: 1.5rem;
   border-radius: 8px;
+  padding: 1.5rem;
   
   h4 {
-    margin: 0 0 1rem;
     color: ${brand.Secondary};
     font-size: 1.1rem;
+    margin: 0 0 1rem;
   }
 `;
 
@@ -735,34 +735,34 @@ const transportListStyle = css`
 `;
 
 const transportOptionsStyle = css`
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 const transportOptionStyle = css`
+  align-items: flex-start;
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
 `;
 
 const transportIconStyle = css`
   color: ${brand.Primary};
-  margin-top: 0.25rem;
   flex-shrink: 0;
+  margin-top: 0.25rem;
 `;
 
 const transportTitleStyle = css`
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
   color: ${brand.Secondary};
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
 `;
 
 const linkStyle = css`
   color: ${brand.Primary};
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s ease;
   
   &:hover {
@@ -776,14 +776,14 @@ const hotelInfoStyle = css`
 `;
 
 const accommodationDescStyle = css`
-  margin-top: 0;
   line-height: 1.6;
+  margin-top: 0;
 `;
 
 const hotelCategoriesStyle = css`
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
   margin-top: 1.5rem;
   
   ${mq.tablet} {
@@ -793,13 +793,13 @@ const hotelCategoriesStyle = css`
 
 const hotelCategoryStyle = css`
   background-color: ${neutral.Grey1};
-  padding: 1.5rem;
   border-radius: 8px;
+  padding: 1.5rem;
   
   h4 {
-    margin: 0 0 1rem;
     color: ${brand.Secondary};
     font-size: 1.1rem;
+    margin: 0 0 1rem;
   }
 `;
 
@@ -817,34 +817,34 @@ const hotelListStyle = css`
 `;
 
 const bookingTipStyle = css`
-  margin-top: 1.5rem;
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  border-radius: 8px;
   border-left: 4px solid ${brand.Primary};
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
   
   h4 {
-    margin: 0 0 0.5rem;
     color: ${brand.Secondary};
     font-size: 1.1rem;
+    margin: 0 0 0.5rem;
   }
   
   p {
-    margin: 0;
     line-height: 1.6;
+    margin: 0;
   }
 `;
 
 const comingSoonCardStyle = css`
+  align-items: center;
   background-color: ${neutral.White};
-  padding: 3rem 2rem;
   border-radius: 8px;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 300px;
+  padding: 3rem 2rem;
+  text-align: center;
 `;
 
 const comingSoonContentStyle = css`
@@ -867,30 +867,30 @@ const tbaContainerStyle = css`
   background-color: ${neutral.White};
   border: 2px dashed ${neutral.Grey3};
   border-radius: 8px;
+  margin-bottom: 1.5rem;
   padding: 2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
 `;
 
 const tbaTextStyle = css`
+  color: ${brand.Secondary};
   font-size: 1.5rem;
   font-weight: 600;
-  color: ${brand.Secondary};
   margin: 0 0 1.5rem;
   text-align: center;
 `;
 
 const venueDetailStyle = css`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
   gap: 0.25rem;
+  margin-top: 1rem;
 `;
 
 const calendarIconStyle = css`
-  flex-shrink: 0;
   color: ${brand.Primary};
+  flex-shrink: 0;
 `;
 
 const dateValueStyle = css`
@@ -899,15 +899,15 @@ const dateValueStyle = css`
 `;
 
 const hotelButtonStyle = css`
-  color: ${brand.Primary};
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
   background: none;
   border: none;
-  padding: 0;
+  color: ${brand.Primary};
   cursor: pointer;
+  font-weight: 500;
+  padding: 0;
   text-align: left;
+  text-decoration: none;
+  transition: color 0.2s ease;
   
   &:hover {
     color: ${brand.Secondary};

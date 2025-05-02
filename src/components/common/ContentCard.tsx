@@ -48,35 +48,35 @@ const ContentCard = ({
 };
 
 export const cardContainerStyle = css`
-  flex: 1;
-  min-width: 0;
-  max-width: 100%;
   background-color: ${neutral.White};
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
+  flex: 1;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
-    transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
   }
 `;
 
 export const cardHeaderStyle = css`
-  position: relative;
   padding: 1.5rem;
+  position: relative;
   
   &::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 15px;
     background: linear-gradient(135deg, transparent 33.33%, var(--header-bg-color, ${brand.Secondary}) 33.33%, var(--header-bg-color, ${brand.Secondary}) 66.66%, transparent 66.66%);
     background-size: 30px 15px;
+    bottom: -15px;
+    content: '';
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 `;
 
@@ -87,10 +87,10 @@ const headerContentStyle = css`
 `;
 
 export const titleStyle = css`
-  font-size: 1.5rem;
   color: ${neutral.White};
-  margin: 0;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin: 0;
   
   ${mq.tablet} {
     font-size: 1.5rem;
@@ -98,11 +98,11 @@ export const titleStyle = css`
 `;
 
 export const subtitleContainerStyle = css`
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: space-between;
 `;
 
 export const contentStyle = css`
