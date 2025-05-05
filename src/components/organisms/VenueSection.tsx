@@ -162,8 +162,6 @@ const VenueSection: FC = () => {
                       toggleItem("airports");
                     }
                   }}
-                  tabIndex={0}
-                  role="button"
                   aria-expanded={expandedItems.airports}
                 >
                   <div css={infoCardHeaderContentStyle}>
@@ -235,8 +233,6 @@ const VenueSection: FC = () => {
                       toggleItem("transport");
                     }
                   }}
-                  tabIndex={0}
-                  role="button"
                   aria-expanded={expandedItems.transport}
                 >
                   <div css={infoCardHeaderContentStyle}>

@@ -3,9 +3,9 @@ import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { eventInfoStyle, infoItemStyle } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import Image from "next/image";
-import ThemeImage from "public/2025/images/keyvisual.png";
-import ETHTokyoLogo from "public/assets/ETHTokyoLogo.png";
 import type { FC } from "react";
+import ThemeImage from "/public/2025/images/keyvisual.png";
+import ETHTokyoLogo from "/public/assets/ETHTokyoLogo.png";
 
 const HeroSection: FC = () => {
   const sectionStyle = css`

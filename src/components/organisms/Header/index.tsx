@@ -175,8 +175,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
           {/* ハンバーガーアイコン */}
           <div
             css={hamburgerStyle}
-            role="button"
-            tabIndex={0}
             aria-label="Toggle menu"
             onClick={toggleMenu}
             onKeyDown={(e) => {
@@ -216,8 +214,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
       {/* ドロワー背景 */}
       <div
         css={drawerOverlayStyle}
-        role="button"
-        tabIndex={0}
         aria-label="Close menu"
         onClick={closeMenu}
         onKeyDown={(e) => {
@@ -228,7 +224,6 @@ const Header: FC<ComponentProps> = ({ children }) => {
       <div
         css={drawerMenuStyle}
         ref={drawerRef}
-        role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
         tabIndex={-1}
