@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches-ignore: main
+    branches-ignore: [main]
 
 jobs:
   setup:
