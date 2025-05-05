@@ -172,7 +172,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
               <FaDiscord />
               <span>Discord</span>
             </a>
-            <a href="https://matrix.to/#/#entak:matrix.org">
+            <a href="https://matrix.to/#/#ethtokyo:matrix.org">
               <SiMatrix />
               <span>Matrix</span>
             </a>
