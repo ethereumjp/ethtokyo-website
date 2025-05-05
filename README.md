@@ -1,4 +1,4 @@
-# ETHTokyo 2024 official website
+# ETHTokyo 2025 official website
 
 ## Features
 
