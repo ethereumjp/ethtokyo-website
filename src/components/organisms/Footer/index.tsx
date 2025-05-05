@@ -191,7 +191,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
                 css={inputStyle}
                 id="email"
                 required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
                 title="Please enter a valid email address"
                 onChange={(e) => setIsValidEmail(e.target.validity.valid)}
                 disabled={[1, 2].includes(sendStatus)}
