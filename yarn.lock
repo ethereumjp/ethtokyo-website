@@ -6146,9 +6146,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001716":
-  version: 1.0.30001716
-  resolution: "caniuse-lite@npm:1.0.30001716"
-  checksum: ff087ff38c339d0b697ef7862f575cdd0aeb5986a9c3660be97071c3b3c5ccf52380da73bb8397fdb8a528e4f05de009f6885219f7f6d908b1bff2d89334bfce
+  version: 1.0.30001717
+  resolution: "caniuse-lite@npm:1.0.30001717"
+  checksum: 357fbb230d86d28c0f7005d0c19a2274059ad4f1ed419ebe8754737ec908b567c9745abf0d16eda93417f40913221adc6290eb2f0432bc5bb5364f95bd7eabfa
   languageName: node
   linkType: hard
 
@@ -13349,9 +13349,9 @@ __metadata:
   linkType: hard
 
 "tocbot@npm:^4.20.1":
-  version: 4.36.2
-  resolution: "tocbot@npm:4.36.2"
-  checksum: fdca708df20ce821eca1fc1da9c200960ca46c0ca3b7a625e2998533f30f63c459fe946f3834f86bb0d172bb9a057775364cc537d4742ed94acdcce4868b455d
+  version: 4.36.3
+  resolution: "tocbot@npm:4.36.3"
+  checksum: 05db7694ff59fcd1dc461a5f8f41ba4f7ae8478701718e64011c3189a31c93f79fb6ac046ce32d4cd3a6a8e4b58896e678a5d1b11f3bc7688bfe2cfa8fc94280
   languageName: node
   linkType: hard
 
