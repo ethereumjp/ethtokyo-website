@@ -17,7 +17,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-static": "next build && next export",
     "start": "serve out",
     "lint": "yarn run biome lint ./src",
     "lint:fix": "yarn run biome lint ./src --write",

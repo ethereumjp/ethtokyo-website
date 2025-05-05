@@ -26,7 +26,7 @@ jobs:
             ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
       - name: build
-        run: yarn build-static
+        run: yarn build
         env:
           NODE_ENV: production
           NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
