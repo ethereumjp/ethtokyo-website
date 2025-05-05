@@ -104,10 +104,12 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     text-align: center;
   `;
 
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [sendStatus, setSendStatus] = useState<number>(0); // 0: 未送信, 1: 送信中, 2: 送信成功, 3: 送信失敗
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSendStatus(1);
 
     const email = (
       e.currentTarget.elements.namedItem("email") as HTMLInputElement
@@ -119,11 +121,12 @@ const Footer: FC<ComponentProps> = ({ children }) => {
       },
       (err, record) => {
         if (err) {
+          setSendStatus(3);
           throw new Error(
             `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
           );
         }
-        setIsSubscribed(true);
+        setSendStatus(2);
         return JSON.stringify({
           message: "SUCCESS",
           address: email as string,
@@ -187,15 +190,25 @@ const Footer: FC<ComponentProps> = ({ children }) => {
                 placeholder="Enter your email"
                 css={inputStyle}
                 id="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Please enter a valid email address"
+                onChange={(e) => setIsValidEmail(e.target.validity.valid)}
+                disabled={[1, 2].includes(sendStatus)}
               />
               <Button
                 size="small"
-                variant={isSubscribed ? "secondary" : "primary"}
-                onClick={() => {}}
+                variant={
+                  !isValidEmail && sendStatus === 0
+                    ? "disabled"
+                    : sendStatus === 2
+                      ? "secondary"
+                      : "primary"
+                }
                 type="submit"
                 css={footerButtonStyle}
               >
-                {isSubscribed ? "Subscribed" : "Subscribe"}
+                {sendStatus === 2 ? "Subscribed" : "Subscribe"}
               </Button>
             </form>
           </div>

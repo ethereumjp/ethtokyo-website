@@ -4,7 +4,7 @@ import { type SerializedStyles, css } from "@emotion/react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "outline" | "disabled";
 type ButtonSize = "small" | "medium" | "large";
 
 export interface ButtonProps {
@@ -56,9 +56,7 @@ const Button = ({
     secondary: css`
       background-color: ${brand.Secondary};
       color: ${neutral.White};
-      &:hover {
-        background-color: ${themeLight.SecondaryHighContrast};
-      }
+      cursor: not-allowed;
     `,
     outline: css`
       background-color: transparent;
@@ -67,6 +65,11 @@ const Button = ({
       &:hover {
         background-color: ${themeLight.PrimaryLowContrast};
       }
+    `,
+    disabled: css`
+      background-color: ${neutral.Grey3};
+      color: ${neutral.White};
+      cursor: not-allowed;
     `,
   };
 
@@ -141,6 +144,7 @@ const Button = ({
       css={buttonStyle}
       className={className}
       onClick={onClick}
+      disabled={["secondary", "disabled"].includes(variant)}
     >
       {content}
     </button>
