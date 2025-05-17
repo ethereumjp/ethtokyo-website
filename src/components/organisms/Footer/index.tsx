@@ -1,15 +1,13 @@
 import Button from "@/components/common/Button";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, neutral } from "@/themes/settings/color";
+import { neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
 import Airtable from "airtable";
 import AirtableError from "airtable/lib/airtable_error";
-import Link from "next/link";
 import { type FC, useState } from "react";
-import { FaDiscord } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa6";
+import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 
 // Airtable configurations to store newsletter subscribers
@@ -149,16 +147,24 @@ const Footer: FC<ComponentProps> = ({ children }) => {
         <div>
           <h4 css={footerHeadingStyle}>Quick Links</h4>
           <div css={footerLinksStyle}>
-            <Link href="#about">About</Link>
+            {/* <Link href="#about">About</Link>
             <Link href="#schedule">Schedule</Link>
             <Link href="#tracks">Hackathon</Link>
-            <Link href="#venue">Venue</Link>
-            <Link
+            <Link href="#venue">Venue</Link> */}
+            <a
               href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
               target="_blank"
+              rel="noreferrer"
             >
-              🆕 Apply as speaker
-            </Link>
+              Speaker application
+            </a>
+            <a
+              href="https://ethtokyo.deform.cc/25-sponsor-application"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Event sponsorship
+            </a>
           </div>
         </div>
         <div>
@@ -171,6 +177,10 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             <a href="https://discord.gg/Tm5jU3DSCE">
               <FaDiscord />
               <span>Discord</span>
+            </a>
+            <a href="https://t.me/ethtokyo">
+              <FaTelegramPlane />
+              <span>Telegram</span>
             </a>
             <a href="https://matrix.to/#/#ethtokyo:matrix.org">
               <SiMatrix />
