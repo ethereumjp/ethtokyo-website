@@ -4,7 +4,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiMicrophone } from "react-icons/bi";
+import { BiMicrophone, BiMoney } from "react-icons/bi";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
@@ -207,23 +207,57 @@ const AboutSection: FC = () => {
 //////////Conference Section から移植　Conferenceページを公開したら削除//////////////
 export const Temp_formSection = () => {
   return (
-    <div css={temp_formSectionStyle}>
-      <h3 css={temp_formHeadingStyle}>
-        <BiMicrophone size={28} />
-        Call for Speakers & Workshops
-      </h3>
-      <p css={temp_formDescriptionStyle}>
-        ETHTokyo'25 is currently accepting conference speakers and workshop
-        owners. Share your knowledge and experience with the ETHTokyo community.
-      </p>
-      <Button
-        href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
-        external
-        size="medium"
-        icon={<BiMicrophone />}
-      >
-        <span css={css`color: ${neutral.White};`}>Apply Now</span>
-      </Button>
+    <div
+      id="apply"
+      css={css`
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      
+      ${mq.laptop} {
+        flex-direction: row;
+        justify-content: center;
+      }
+    `}
+    >
+      <div css={temp_formSectionStyle}>
+        <h3 css={temp_formHeadingStyle}>
+          <BiMicrophone size={28} />
+          Call for Speakers & Workshops
+        </h3>
+        <p css={temp_formDescriptionStyle}>
+          ETHTokyo'25 is currently accepting conference speakers and workshop
+          owners. Share your knowledge and experience with the ETHTokyo
+          community.
+        </p>
+        <Button
+          href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+          external
+          size="medium"
+          icon={<BiMicrophone />}
+        >
+          <span css={css`color: ${neutral.White};`}>Apply Now</span>
+        </Button>
+      </div>
+
+      <div css={temp_formSectionStyle}>
+        <h3 css={temp_formHeadingStyle}>
+          <BiMoney size={28} />
+          Call for Sponsors
+        </h3>
+        <p css={temp_formDescriptionStyle}>
+          ETHTokyo'25 is currently accepting sponsors. Please contact us if you
+          are interested in sponsoring the event.
+        </p>
+        <Button
+          href="https://ethtokyo.deform.cc/25-sponsor-application"
+          external
+          size="medium"
+          icon={<BiMoney />}
+        >
+          <span css={css`color: ${neutral.White};`}>Apply Now</span>
+        </Button>
+      </div>
     </div>
   );
 };
@@ -233,7 +267,7 @@ const temp_formSectionStyle = css`
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     margin: 2rem auto;
-    max-width: 800px;
+    max-width: 500px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     &:hover {

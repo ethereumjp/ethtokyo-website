@@ -201,12 +201,8 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <Link href="#venue" css={navLinkStyle}>
               Venue
             </Link>
-            <Link
-              href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
-              css={navLinkStyle}
-              target="_blank"
-            >
-              Apply as a Speaker
+            <Link href="#apply" css={navLinkStyle}>
+              Apply / Partcipate
             </Link>
           </nav>
         </div>
