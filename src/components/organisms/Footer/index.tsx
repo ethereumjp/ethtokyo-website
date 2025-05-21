@@ -7,7 +7,7 @@ import { css } from "@emotion/react";
 import Airtable from "airtable";
 import AirtableError from "airtable/lib/airtable_error";
 import { type FC, useState } from "react";
-import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 
 // Airtable configurations to store newsletter subscribers
@@ -173,10 +173,6 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             <a href="https://twitter.com/Ethereum_JP">
               <FaTwitter />
               <span>Twitter</span>
-            </a>
-            <a href="https://discord.gg/Tm5jU3DSCE">
-              <FaDiscord />
-              <span>Discord</span>
             </a>
             <a href="https://t.me/ethtokyo">
               <FaTelegramPlane />
