@@ -16,9 +16,8 @@ import { BiMicrophone } from "react-icons/bi";
 import { MdOutlineSchedule } from "react-icons/md";
 
 const ConferenceSection: FC = () => {
-  // クリプトパッドフォームへのURL
-  const speakerFormUrl =
-    "https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/";
+  // deform url
+  const speakerFormUrl = "https://ethtokyo.deform.cc/25-speaker-application";
 
   const descriptionStyle = css`
     color: ${neutral.Grey4};

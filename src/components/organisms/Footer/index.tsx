@@ -152,7 +152,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             <Link href="#tracks">Hackathon</Link>
             <Link href="#venue">Venue</Link> */}
             <a
-              href="https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/"
+              href="https://ethtokyo.deform.cc/25-speaker-application"
               target="_blank"
               rel="noreferrer"
             >
