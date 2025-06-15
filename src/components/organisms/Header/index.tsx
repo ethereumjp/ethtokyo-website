@@ -297,7 +297,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             window.open(
-              "https://cryptpad.fr/form/#/2/form/view/MKKokxNBwiZDxLIy-sXhGE324W95geXRewWIXJT3bIA/",
+              "https://ethtokyo.deform.cc/25-speaker-application",
               "_blank",
             );
             closeMenu();
