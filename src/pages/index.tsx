@@ -1,5 +1,6 @@
 import Layout from "@/components/layouts/base";
 import AboutSection from "@/components/organisms/AboutSection";
+import TicketSection from "@/components/organisms/TicketSection";
 import ConferenceSection from "@/components/organisms/ConferenceSection";
 import HeroSection from "@/components/organisms/HeroSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
@@ -13,10 +14,12 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
     <Layout pageTitle="ETHTokyo 2025">
       <HeroSection />
       <AboutSection />
+      <TicketSection />
       {/* <ConferenceSection /> */}
       <ScheduleSection />
       <TracksSection />
       <VenueSection />
+      <TicketSection />
     </Layout>
   );
 };
