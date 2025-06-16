@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/common/SectionTitle";
 import { venueData } from "@/data/eventData";
+import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { css } from "@emotion/react";
@@ -10,7 +11,6 @@ import {
   HiChevronDown,
   HiChevronUp,
   HiOutlineClock,
-  HiOutlineHome,
   HiOutlineMapPin,
 } from "react-icons/hi2";
 import {
@@ -20,6 +20,7 @@ import {
   MdOutlineDirectionsSubway,
   MdOutlineHotel,
 } from "react-icons/md";
+import { PiTrain } from "react-icons/pi";
 import { Temp_formSection } from "./AboutSection";
 
 type TabType = "venue" | "travel" | "accommodation";
@@ -83,16 +84,43 @@ const VenueSection: FC = () => {
                 <div css={venueCardStyle}>
                   <h3 css={venueTitleStyle}>Conference Venue</h3>
                   <div css={tbaContainerStyle}>
-                    <p css={tbaTextStyle}>To Be Announced</p>
-                    <p css={venueDescriptionStyle}>
-                      The conference venue will be announced soon. Stay tuned
-                      for updates!
+                    <p css={tbaTextStyle}>
+                      {eventInfo.location.conference.name}
                     </p>
-                    <div css={[detailItemStyle, centerDetailItemStyle]}>
+                    <p css={venueDescriptionStyle}>
+                      Join us at the United Nations University in Shibuya for a
+                      day of insightful talks and exchanging ideas.
+                    </p>
+                  </div>
+                  <div css={venueDetailsGridStyle}>
+                    <div css={detailItemStyle}>
+                      <HiOutlineMapPin size={24} />
+                      <div>
+                        <div css={detailTitleStyle}>Address</div>
+                        <div css={detailValueStyle}>
+                          {eventInfo.location.conference.address}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div css={detailItemStyle}>
                       <HiCalendarDays size={24} />
                       <div>
                         <div css={detailTitleStyle}>Date</div>
-                        <div css={detailValueStyle}>September 12, 2025</div>
+                        <div css={detailValueStyle}>
+                          {eventInfo.dates.conference}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div css={detailItemStyle}>
+                      <PiTrain size={24} />
+                      <div>
+                        <div css={detailTitleStyle}>Nearby Stations</div>
+                        <div css={detailValueStyle}>
+                          Shibuya (渋谷) Station <br />
+                          Omotesando (表参道) Station
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -111,7 +139,7 @@ const VenueSection: FC = () => {
                       <div>
                         <div css={detailTitleStyle}>Address</div>
                         <div css={detailValueStyle}>
-                          15-1 Udagawacho, Shibuya, Tokyo
+                          {eventInfo.location.hackathon.address}
                         </div>
                       </div>
                     </div>
@@ -120,16 +148,19 @@ const VenueSection: FC = () => {
                       <HiCalendarDays size={24} />
                       <div>
                         <div css={detailTitleStyle}>Date</div>
-                        <div css={detailValueStyle}>September 13-15, 2025</div>
+                        <div css={detailValueStyle}>
+                          {eventInfo.dates.hackathon}
+                        </div>
                       </div>
                     </div>
 
                     <div css={detailItemStyle}>
-                      <HiOutlineHome size={24} />
+                      <PiTrain size={24} />
                       <div>
-                        <div css={detailTitleStyle}>Facilities</div>
+                        <div css={detailTitleStyle}>Nearby Stations</div>
                         <div css={detailValueStyle}>
-                          WiFi, Power Outlets, Meeting Rooms, Catering
+                          Shibuya (渋谷) Station <br />
+                          Shinsen (神泉) Station
                         </div>
                       </div>
                     </div>

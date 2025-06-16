@@ -189,20 +189,20 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <Link href="#about" css={navLinkStyle}>
               About
             </Link>
-            {/* <Link href="#conference" css={navLinkStyle}>
+            <Link href="#conference" css={navLinkStyle}>
               Conference
-            </Link> */}
-            <Link href="#schedule" css={navLinkStyle}>
-              Schedule
             </Link>
             <Link href="#tracks" css={navLinkStyle}>
               Hackathon
+            </Link>
+            <Link href="#schedule" css={navLinkStyle}>
+              Schedule
             </Link>
             <Link href="#venue" css={navLinkStyle}>
               Venue
             </Link>
             <Link href="#apply" css={navLinkStyle}>
-              Apply / Partcipate
+              Apply as a Speaker
             </Link>
           </nav>
         </div>
@@ -244,7 +244,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
         >
           About
         </button>
-        {/* <button
+        <button
           type="button"
           css={navLinkStyle}
           onClick={() => {
@@ -255,7 +255,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           }}
         >
           Conference
-        </button> */}
+        </button>
         <button
           type="button"
           css={navLinkStyle}

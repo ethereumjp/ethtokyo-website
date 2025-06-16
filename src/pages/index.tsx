@@ -15,11 +15,10 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <HeroSection />
       <AboutSection />
       <TicketSection />
-      {/* <ConferenceSection /> */}
-      <ScheduleSection />
+      <ConferenceSection />
       <TracksSection />
+      <ScheduleSection />
       <VenueSection />
-      <TicketSection />
     </Layout>
   );
 };
