@@ -4,9 +4,9 @@
   "location": {
     "city": "Tokyo, Japan",
     "conference": {
-      "name": "TBA",
-      "address": "Location, Tokyo",
-      "map": ""
+      "name": "United Nations University",
+      "address": "5-53-70 Jingumae, Shibuya, Tokyo",
+      "map": "https://maps.app.goo.gl/9z41vXGKVTzhFFLFA"
     },
     "hackathon": {
       "name": "Dragon Gate",
@@ -16,7 +16,7 @@
   },
   "dates": {
     "event": "Sep 12-15, 2025",
-    "conference": "September 12",
-    "hackathon": "September 13-15"
+    "conference": "September 12, 2025 (Fri)",
+    "hackathon": "September 13-15, 2025 (Sat-Mon)"
   }
 }

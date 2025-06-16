@@ -170,6 +170,7 @@ const ScheduleSection = () => {
             date={eventInfo.dates.conference}
             location={eventInfo.location.conference.name}
             address={eventInfo.location.conference.address}
+            mapUrl={eventInfo.location.conference.map}
             events={conferenceEvents}
             hasDetailedSchedule={hasDetailedSchedule}
             isExpanded={expandedSchedules.conference}
@@ -181,7 +182,7 @@ const ScheduleSection = () => {
             date={eventInfo.dates.hackathon}
             location={eventInfo.location.hackathon.name}
             address={eventInfo.location.hackathon.address}
-            mapUrl="https://maps.app.goo.gl/Pn5yszwApgEvhux6A"
+            mapUrl={eventInfo.location.hackathon.map}
             events={hackathonEvents}
             hasDetailedSchedule={hasDetailedSchedule}
             isExpanded={expandedSchedules.hackathon}
