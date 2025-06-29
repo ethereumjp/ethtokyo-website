@@ -26,6 +26,12 @@ const OrganizersSection: FC = () => {
     object-fit: contain;
   `;
 
+  const intMaxLogoStyle = css`
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+  `;
+
   return (
     <section css={[sectionStyle, organizersStyle]}>
       <div css={containerStyle}>
@@ -46,10 +52,12 @@ const OrganizersSection: FC = () => {
             alt="Organizer Centrum"
             css={organizersLogoStyle}
           />
+        </div>
+        <div css={organizersLogosStyle}>
           <img
             src="2025/images/organizers/intmax.png"
             alt="Organizer intmax"
-            css={organizersLogoStyle}
+            css={intMaxLogoStyle}
           />
         </div>
       </div>
