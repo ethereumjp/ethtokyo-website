@@ -32,6 +32,11 @@ const OrganizersSection: FC = () => {
         <h2 css={headingStyle}>Organizers</h2>
         <div css={organizersLogosStyle}>
           <img
+            src="2025/images/organizers/EJLogoFace_dark_horizontal.png"
+            alt="Organizer Ethereum Japan"
+            css={organizersLogoStyle}
+          />
+          <img
             src="2025/images/organizers/fracton-rec-black.png"
             alt="Organizer fracton"
             css={organizersLogoStyle}
@@ -46,7 +51,6 @@ const OrganizersSection: FC = () => {
             alt="Organizer intmax"
             css={organizersLogoStyle}
           />
-          {/* <img src="/sponsor4.png" alt="Organizer 4" css={organizersLogoStyle} /> */}
         </div>
       </div>
     </section>
