@@ -32,17 +32,17 @@ const OrganizersSection: FC = () => {
         <h2 css={headingStyle}>Organizers</h2>
         <div css={organizersLogosStyle}>
           <img
-            src="2025/organizers/fracton-rec-black.png"
+            src="2025/images/organizers/fracton-rec-black.png"
             alt="Organizer fracton"
             css={organizersLogoStyle}
           />
           <img
-            src="2025/organizers/logo_white_blackbg.png"
+            src="2025/images/organizers/logo_white_blackbg.png"
             alt="Organizer Centrum"
             css={organizersLogoStyle}
           />
           <img
-            src="2025/organizers/intmax.png"
+            src="2025/images/organizers/intmax.png"
             alt="Organizer intmax"
             css={organizersLogoStyle}
           />

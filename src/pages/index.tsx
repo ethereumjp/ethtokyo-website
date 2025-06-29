@@ -8,6 +8,7 @@ import TicketSection from "@/components/organisms/TicketSection";
 import TracksSection from "@/components/organisms/TracksSection";
 import VenueSection from "@/components/organisms/VenueSection";
 import OrganizersSection from "@/components/organisms/OrganizersSection";
+import EventPartnersSection from "@/components/organisms/EventPartnersSection";
 import type { PageProps } from "@/types";
 import type { NextPage } from "next";
 
@@ -22,7 +23,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <ScheduleSection />
       <VenueSection />
       <OrganizersSection />
-      <SponsorsSection />
+      <EventPartnersSection />
     </Layout>
   );
 };
