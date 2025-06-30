@@ -43,12 +43,12 @@ const OrganizersSection: FC = () => {
             css={organizersLogoStyle}
           />
           <img
-            src="2025/images/organizers/fracton-rec-black.png"
+            src="2025/images/organizers/fracton-rec-white-clear.png"
             alt="Organizer fracton"
             css={organizersLogoStyle}
           />
           <img
-            src="2025/images/organizers/logo_white_blackbg.png"
+            src="2025/images/organizers/logo_black_transparent.png"
             alt="Organizer Centrum"
             css={organizersLogoStyle}
           />
