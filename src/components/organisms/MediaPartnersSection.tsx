@@ -10,15 +10,17 @@ const MediaPartnersSection: FC = () => {
   const mediaPartnersStyle = css`
     background: white;
     text-align: center;
-    padding-bottom: 4rem;
   `;
 
-  const mediaPartnersLogosStyle = css`
+  const mediaPartnersLogosGridStyle = css`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    gap: 0rem 2.5rem;
     justify-items: center;
-    margin-top: 2rem;
+    align-items: center;
+    margin-top: 2.5rem;
+    width: 100%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -30,11 +32,23 @@ const MediaPartnersSection: FC = () => {
     object-fit: contain;
   `;
 
+  const mediaPartnersLogoStyleWide = css`
+    height: 150px;
+    max-width: 100%;
+    padding-bottom: 0rem;
+    object-fit: contain;
+  `;
+
   return (
     <section css={[partnersSectionStyle, mediaPartnersStyle]}>
       <div css={containerStyle}>
         <h2 css={headingStyle}>Media Partners</h2>
-        <div css={mediaPartnersLogosStyle}>
+        <div css={mediaPartnersLogosGridStyle}>
+          <img
+            src="2025/images/mediaPartners/neweconomy_bk.png"
+            alt="Media Partners neweconomy"
+            css={mediaPartnersLogoStyle}
+          />
           <img
             src="2025/images/mediaPartners/coindesk_jp.png"
             alt="Media Partners coindesk"
@@ -50,16 +64,11 @@ const MediaPartnersSection: FC = () => {
             alt="Media Partners coinrank"
             css={mediaPartnersLogoStyle}
           />
-          {/* <img
-            src="2025/images/eventPartners/kon.png"
-            alt="Media Partners "
-            css={mediaPartnersLogoStyle}
-          />
           <img
-            src="2025/images/eventPartners/toban-logo-text.svg"
-            alt="Media Partners "
-            css={mediaPartnersLogoStyle}
-          /> */}
+            src="2025/images/mediaPartners/coinpost_logo.png"
+            alt="Media Partners CoinPost"
+            css={mediaPartnersLogoStyleWide}
+          />
         </div>
       </div>
     </section>
