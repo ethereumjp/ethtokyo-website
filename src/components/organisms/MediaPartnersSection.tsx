@@ -1,7 +1,6 @@
 import {
   containerStyle,
   headingStyle,
-  sectionStyle,
   partnersSectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
