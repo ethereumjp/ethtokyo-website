@@ -13,24 +13,15 @@ const EventPartnersSection: FC = () => {
     text-align: center;
   `;
 
-  const eventPartnersLogosStyle = css`
+  const eventPartnersLogosGridStyle = css`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    gap: 0rem 2.5rem;
     justify-items: center;
-    margin-top: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  `;
-
-  const eventPartnersLogosStyle2 = css`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    height: 160px;
-    gap: 2rem;
+    margin-top: 2.5rem;
+    width: 100%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -59,7 +50,7 @@ const EventPartnersSection: FC = () => {
     <section css={[partnersSectionStyle, eventPartnersStyle]}>
       <div css={containerStyle}>
         <h2 css={headingStyle}>Event Partners</h2>
-        <div css={eventPartnersLogosStyle}>
+        <div css={eventPartnersLogosGridStyle}>
           <img
             src="2025/images/eventPartners/Devfolio_logo.svg"
             alt="Event Partners Devfolio"
@@ -75,8 +66,6 @@ const EventPartnersSection: FC = () => {
             alt="Event Partners AKINDO"
             css={eventPartnersLogoStyle}
           />
-        </div>
-        <div css={eventPartnersLogosStyle2}>
           <img
             src="2025/images/eventPartners/kon.png"
             alt="Event Partners Kon"
