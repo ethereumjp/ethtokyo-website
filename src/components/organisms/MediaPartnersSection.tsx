@@ -2,6 +2,7 @@ import {
   containerStyle,
   headingStyle,
   sectionStyle,
+  partnersSectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { FC } from "react";
@@ -10,6 +11,7 @@ const MediaPartnersSection: FC = () => {
   const mediaPartnersStyle = css`
     background: white;
     text-align: center;
+    padding-bottom: 4rem;
   `;
 
   const mediaPartnersLogosStyle = css`
@@ -30,7 +32,7 @@ const MediaPartnersSection: FC = () => {
   `;
 
   return (
-    <section css={[sectionStyle, mediaPartnersStyle]}>
+    <section css={[partnersSectionStyle, mediaPartnersStyle]}>
       <div css={containerStyle}>
         <h2 css={headingStyle}>Media Partners</h2>
         <div css={mediaPartnersLogosStyle}>

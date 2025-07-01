@@ -8,6 +8,11 @@ export const sectionStyle = css`
   padding: 4rem 2rem;
 `;
 
+export const partnersSectionStyle = css`
+  background: ${themeLight.Background};
+  padding: 0rem 2rem;
+`;
+
 export const containerStyle = css`
   margin: 0 auto;
   max-width: 1200px;

@@ -2,6 +2,7 @@ import {
   containerStyle,
   headingStyle,
   sectionStyle,
+  partnersSectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { FC } from "react";
@@ -24,11 +25,12 @@ const EventPartnersSection: FC = () => {
   `;
 
   const eventPartnersLogosStyle2 = css`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
     gap: 2rem;
-    justify-items: center;
-    margin-top: 2rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -49,11 +51,12 @@ const EventPartnersSection: FC = () => {
   const eventPartnersLogoStyleWide = css`
     height: 150px;
     max-width: 100%;
+    padding-bottom: 2rem;
     object-fit: contain;
   `;
 
   return (
-    <section css={[sectionStyle, eventPartnersStyle]}>
+    <section css={[partnersSectionStyle, eventPartnersStyle]}>
       <div css={containerStyle}>
         <h2 css={headingStyle}>Event Partners</h2>
         <div css={eventPartnersLogosStyle}>
@@ -84,8 +87,6 @@ const EventPartnersSection: FC = () => {
             alt="Event Partners Kismet"
             css={eventPartnersLogoStyleMiddle}
           />
-        </div>
-        <div>
           <img
             src="2025/images/eventPartners/zktokyo.png"
             alt="Event Partners ZKTokyo"

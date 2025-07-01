@@ -10,6 +10,7 @@ const OrganizersSection: FC = () => {
   const organizersStyle = css`
     background: white;
     text-align: center;
+    padding: 2rem 2rem;
   `;
 
   const organizersLogosStyle = css`
@@ -17,6 +18,7 @@ const OrganizersSection: FC = () => {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
     margin-top: 2rem;
   `;
 
@@ -52,8 +54,6 @@ const OrganizersSection: FC = () => {
             alt="Organizer Centrum"
             css={organizersLogoStyle}
           />
-        </div>
-        <div css={organizersLogosStyle}>
           <img
             src="2025/images/organizers/intmax.png"
             alt="Organizer intmax"
