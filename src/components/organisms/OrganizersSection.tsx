@@ -46,7 +46,7 @@ const OrganizersSection: FC = () => {
           />
           <img
             src="2025/images/organizers/fracton-rec-white-clear.png"
-            alt="Organizer fracton"
+            alt="Organizer Fracton Ventures"
             css={organizersLogoStyle}
           />
           <img
@@ -56,7 +56,7 @@ const OrganizersSection: FC = () => {
           />
           <img
             src="2025/images/organizers/intmax.png"
-            alt="Organizer intmax"
+            alt="Organizer INTMAX"
             css={intMaxLogoStyle}
           />
         </div>

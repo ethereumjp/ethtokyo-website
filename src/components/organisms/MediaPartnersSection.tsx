@@ -51,17 +51,17 @@ const MediaPartnersSection: FC = () => {
           />
           <img
             src="2025/images/mediaPartners/coindesk_jp.png"
-            alt="Media Partners coindesk"
+            alt="Media Partners CoinDesk"
             css={mediaPartnersLogoStyle}
           />
           <img
             src="2025/images/mediaPartners/cryptotimes.png"
-            alt="Media Partners cryptotimes"
+            alt="Media Partners The Crypto Times"
             css={mediaPartnersLogoStyle}
           />
           <img
             src="2025/images/mediaPartners/coinrank.svg"
-            alt="Media Partners coinrank"
+            alt="Media Partners CoinRank"
             css={mediaPartnersLogoStyle}
           />
           <img

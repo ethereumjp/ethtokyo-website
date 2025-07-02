@@ -67,17 +67,17 @@ const EventPartnersSection: FC = () => {
           />
           <img
             src="2025/images/eventPartners/kon.png"
-            alt="Event Partners Kon"
+            alt="Event Partners KON"
             css={eventPartnersLogoStyleMiddle}
           />
           <img
             src="2025/images/eventPartners/kismet_logo.png"
-            alt="Event Partners Kismet"
+            alt="Event Partners Kismet Casa"
             css={eventPartnersLogoStyleMiddle}
           />
           <img
             src="2025/images/eventPartners/zktokyo.png"
-            alt="Event Partners ZKTokyo"
+            alt="Event Partners ZK Tokyo"
             css={eventPartnersLogoStyleWide}
           />
         </div>
