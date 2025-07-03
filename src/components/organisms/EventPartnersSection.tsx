@@ -50,36 +50,68 @@ const EventPartnersSection: FC = () => {
       <div css={containerStyle}>
         <h2 css={headingStyle}>Event Partners</h2>
         <div css={eventPartnersLogosGridStyle}>
-          <img
-            src="2025/images/eventPartners/Devfolio_logo.svg"
-            alt="Event Partners Devfolio"
-            css={eventPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/eventPartners/toban-logo-text.svg"
-            alt="Event Partners Toban"
-            css={eventPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/eventPartners/akindo.svg"
-            alt="Event Partners AKINDO"
-            css={eventPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/eventPartners/kon.png"
-            alt="Event Partners KON"
-            css={eventPartnersLogoStyleMiddle}
-          />
-          <img
-            src="2025/images/eventPartners/kismet_logo.png"
-            alt="Event Partners Kismet Casa"
-            css={eventPartnersLogoStyleMiddle}
-          />
-          <img
-            src="2025/images/eventPartners/zktokyo.png"
-            alt="Event Partners ZK Tokyo"
-            css={eventPartnersLogoStyleWide}
-          />
+          <a
+            href="https://devfolio.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/eventPartners/Devfolio_logo.svg"
+              alt="Event Partners Devfolio"
+              css={eventPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://github.com/hackdays-io/toban/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/eventPartners/toban-logo-text.svg"
+              alt="Event Partners Toban"
+              css={eventPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://akindo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/eventPartners/akindo.svg"
+              alt="Event Partners AKINDO"
+              css={eventPartnersLogoStyle}
+            />
+          </a>
+          <a href="https://kon.xyz/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="2025/images/eventPartners/kon.png"
+              alt="Event Partners KON"
+              css={eventPartnersLogoStyleMiddle}
+            />
+          </a>
+          <a
+            href="https://kismetcasa.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/eventPartners/kismet_logo.png"
+              alt="Event Partners Kismet Casa"
+              css={eventPartnersLogoStyleMiddle}
+            />
+          </a>
+          <a
+            href="https://x.com/zk_tokyo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/eventPartners/zktokyo.png"
+              alt="Event Partners ZK Tokyo"
+              css={eventPartnersLogoStyleWide}
+            />
+          </a>
         </div>
       </div>
     </section>

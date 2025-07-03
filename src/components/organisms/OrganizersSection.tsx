@@ -39,26 +39,50 @@ const OrganizersSection: FC = () => {
       <div css={containerStyle}>
         <h2 css={headingStyle}>Organizers</h2>
         <div css={organizersLogosStyle}>
-          <img
-            src="2025/images/organizers/EJLogoFace_dark_horizontal.png"
-            alt="Organizer Ethereum Japan"
-            css={organizersLogoStyle}
-          />
-          <img
-            src="2025/images/organizers/fracton-rec-white-clear.png"
-            alt="Organizer Fracton Ventures"
-            css={organizersLogoStyle}
-          />
-          <img
-            src="2025/images/organizers/logo_black_transparent.png"
-            alt="Organizer Centrum"
-            css={organizersLogoStyle}
-          />
-          <img
-            src="2025/images/organizers/intmax.png"
-            alt="Organizer INTMAX"
-            css={intMaxLogoStyle}
-          />
+          <a
+            href="https://ethereumjp.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/organizers/EJLogoFace_dark_horizontal.png"
+              alt="Organizer Ethereum Japan"
+              css={organizersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://fracton.ventures/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/organizers/fracton-rec-white-clear.png"
+              alt="Organizer Fracton Ventures"
+              css={organizersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://centrum.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/organizers/logo_black_transparent.png"
+              alt="Organizer Centrum"
+              css={organizersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://intmax.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/organizers/intmax.png"
+              alt="Organizer INTMAX"
+              css={intMaxLogoStyle}
+            />
+          </a>
         </div>
       </div>
     </section>

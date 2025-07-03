@@ -44,31 +44,61 @@ const MediaPartnersSection: FC = () => {
       <div css={containerStyle}>
         <h2 css={headingStyle}>Media Partners</h2>
         <div css={mediaPartnersLogosGridStyle}>
-          <img
-            src="2025/images/mediaPartners/neweconomy_bk.png"
-            alt="Media Partners neweconomy"
-            css={mediaPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/mediaPartners/coindesk_jp.png"
-            alt="Media Partners CoinDesk"
-            css={mediaPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/mediaPartners/cryptotimes.png"
-            alt="Media Partners The Crypto Times"
-            css={mediaPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/mediaPartners/coinrank.svg"
-            alt="Media Partners CoinRank"
-            css={mediaPartnersLogoStyle}
-          />
-          <img
-            src="2025/images/mediaPartners/coinpost_logo.png"
-            alt="Media Partners CoinPost"
-            css={mediaPartnersLogoStyleWide}
-          />
+          <a
+            href="https://www.neweconomy.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/mediaPartners/neweconomy_bk.png"
+              alt="Media Partners neweconomy"
+              css={mediaPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://www.coindesk.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/mediaPartners/coindesk_jp.png"
+              alt="Media Partners CoinDesk"
+              css={mediaPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://www.cryptotimes.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/mediaPartners/cryptotimes.png"
+              alt="Media Partners The Crypto Times"
+              css={mediaPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://www.coinrank.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/mediaPartners/coinrank.svg"
+              alt="Media Partners CoinRank"
+              css={mediaPartnersLogoStyle}
+            />
+          </a>
+          <a
+            href="https://coinpost.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="2025/images/mediaPartners/coinpost_logo.png"
+              alt="Media Partners CoinPost"
+              css={mediaPartnersLogoStyleWide}
+            />
+          </a>
         </div>
       </div>
     </section>
