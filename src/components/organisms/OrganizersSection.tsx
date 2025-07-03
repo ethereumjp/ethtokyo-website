@@ -1,3 +1,4 @@
+import { mq } from "@/themes/settings/breakpoints";
 import {
   containerStyle,
   headingStyle,
@@ -20,6 +21,12 @@ const OrganizersSection: FC = () => {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+
+    ${mq.mobileSmall} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
   `;
 
   const organizersLogoStyle = css`
@@ -32,6 +39,9 @@ const OrganizersSection: FC = () => {
     height: 100px;
     max-width: 100%;
     object-fit: contain;
+    ${mq.mobileSmall} {
+        height: 75px;
+    }
   `;
 
   return (
