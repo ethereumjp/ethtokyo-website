@@ -56,13 +56,13 @@ const MediaPartnersSection: FC = () => {
             />
           </a>
           <a
-            href="https://www.coindesk.com/"
+            href="https://www.coinrank.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="2025/images/mediaPartners/coindesk_jp.png"
-              alt="Media Partners CoinDesk"
+              src="2025/images/mediaPartners/coinrank.svg"
+              alt="Media Partners CoinRank"
               css={mediaPartnersLogoStyle}
             />
           </a>
@@ -78,13 +78,13 @@ const MediaPartnersSection: FC = () => {
             />
           </a>
           <a
-            href="https://www.coinrank.io/"
+            href="https://www.coindesk.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="2025/images/mediaPartners/coinrank.svg"
-              alt="Media Partners CoinRank"
+              src="2025/images/mediaPartners/coindesk_jp.png"
+              alt="Media Partners CoinDesk"
               css={mediaPartnersLogoStyle}
             />
           </a>
