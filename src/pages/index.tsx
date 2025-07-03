@@ -1,7 +1,10 @@
 import Layout from "@/components/layouts/base";
 import AboutSection from "@/components/organisms/AboutSection";
 import ConferenceSection from "@/components/organisms/ConferenceSection";
+import EventPartnersSection from "@/components/organisms/EventPartnersSection";
 import HeroSection from "@/components/organisms/HeroSection";
+import MediaPartnersSection from "@/components/organisms/MediaPartnersSection";
+import OrganizersSection from "@/components/organisms/OrganizersSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
 import TicketSection from "@/components/organisms/TicketSection";
 import TracksSection from "@/components/organisms/TracksSection";
@@ -19,6 +22,9 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <TracksSection />
       <ScheduleSection />
       <VenueSection />
+      <OrganizersSection />
+      <EventPartnersSection />
+      <MediaPartnersSection />
     </Layout>
   );
 };
