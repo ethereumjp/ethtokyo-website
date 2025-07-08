@@ -88,8 +88,8 @@ const VenueSection: FC = () => {
                       {eventInfo.location.conference.name}
                     </p>
                     <p css={venueDescriptionStyle}>
-                      Join us at the United Nations University in Shibuya for a
-                      day of insightful talks and exchanging ideas.
+                      Join us for a day of insightful talks and exchanging
+                      ideas.
                     </p>
                   </div>
                   <div css={venueDetailsGridStyle}>
@@ -117,10 +117,7 @@ const VenueSection: FC = () => {
                       <PiTrain size={24} />
                       <div>
                         <div css={detailTitleStyle}>Nearby Stations</div>
-                        <div css={detailValueStyle}>
-                          Shibuya (渋谷) Station <br />
-                          Omotesando (表参道) Station
-                        </div>
+                        <div css={detailValueStyle}>TBA</div>
                       </div>
                     </div>
                   </div>
