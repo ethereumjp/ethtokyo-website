@@ -2,6 +2,7 @@ import Layout from "@/components/layouts/base";
 import AboutSection from "@/components/organisms/AboutSection";
 import ConferenceSection from "@/components/organisms/ConferenceSection";
 import EventPartnersSection from "@/components/organisms/EventPartnersSection";
+import FeaturedSpeakersSection from "@/components/organisms/FeaturedSpeakersSection";
 import HeroSection from "@/components/organisms/HeroSection";
 import MediaPartnersSection from "@/components/organisms/MediaPartnersSection";
 import OrganizersSection from "@/components/organisms/OrganizersSection";
@@ -19,6 +20,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <AboutSection />
       <TicketSection />
       <ConferenceSection />
+      <FeaturedSpeakersSection />
       <TracksSection />
       <ScheduleSection />
       <VenueSection />

@@ -29,16 +29,25 @@ export const speakersData = [
     id: "vitalik",
     name: "Vitalik Buterin",
     role: "Ethereum Co-founder",
+    image: "/2024/images/contributors/vitalik.jpg",
+    talkTitle: "Ethereum: The Road Ahead",
+    project: "Ethereum",
   },
   {
     id: "aya",
     name: "Aya Miyaguchi",
     role: "Executive Director, EF",
+    image: "/2024/images/contributors/ayamiyaguchi.png",
+    talkTitle: "Building Global Communities",
+    project: "Ethereum Foundation",
   },
   {
     id: "hudson",
     name: "Hudson Jameson",
     role: "Ethereum Community",
+    image: "/2024/images/contributors/harrybairstow.jpg",
+    talkTitle: "Governance in Ethereum",
+    project: "Ethereum Community",
   },
 ];
 

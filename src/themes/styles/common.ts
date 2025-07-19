@@ -28,9 +28,9 @@ export const headingStyle = css`
 
 export const multiGridStyle = css`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  justify-content: center;
   margin-top: 2rem;
 `;
 
@@ -38,8 +38,7 @@ export const cardStyle = css`
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  flex: 1 1 220px;
-  max-width: 280px;
+  width: 100%;
   padding: 1.5rem;
   text-align: center;
 `;
