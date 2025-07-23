@@ -1,4 +1,5 @@
 import Button from "@/components/common/Button";
+import { speakersData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
@@ -86,6 +87,110 @@ const ConferenceSection: FC = () => {
     margin: 0 0 0.5rem;
   `;
 
+  const speakerCardStyle = css`
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    @media (max-width: 768px) {
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+  `;
+
+  const speakerContentStyle = css`
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
+  `;
+
+  const speakerPhotoStyle = css`
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #e9ecef;
+    @media (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+  `;
+
+  const speakerLeftStyle = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    flex: 1;
+    .speaker-position,
+    .speaker-project {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      gap: 8px;
+      .speaker-position,
+      .speaker-project {
+        display: block;
+      }
+    }
+  `;
+
+  const speakerRightStyle = css`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    text-align: right;
+    margin-left: auto;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
+
+  const speakerNameStyle = css`
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+  `;
+
+  const speakerPositionStyle = css`
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  `;
+
+  const speakerProjectStyle = css`
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: 500;
+    background: #e7f3ff;
+    padding: 4px 12px;
+    border-radius: 16px;
+    display: inline-block;
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+    }
+  `;
+
   return (
     <section id="conference" css={sectionStyle}>
       <div css={containerStyle}>
@@ -124,6 +229,49 @@ const ConferenceSection: FC = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        <h2 css={headingStyle}>Featured Speakers</h2>
+        <div>
+          {speakersData.map((speaker) => (
+            <div key={speaker.name} css={speakerCardStyle}>
+              <div css={speakerContentStyle}>
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  css={speakerPhotoStyle}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src =
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face";
+                  }}
+                />
+                <div css={speakerLeftStyle}>
+                  <div css={speakerNameStyle}>{speaker.name}</div>
+                  {speaker.title && (
+                    <div
+                      className="speaker-position"
+                      css={speakerPositionStyle}
+                    >
+                      {speaker.title}
+                    </div>
+                  )}
+                  {speaker.project && (
+                    <div className="speaker-project" css={speakerProjectStyle}>
+                      {speaker.project}
+                    </div>
+                  )}
+                </div>
+                <div css={speakerRightStyle}>
+                  {speaker.title && (
+                    <div css={speakerPositionStyle}>{speaker.title}</div>
+                  )}
+                  {speaker.project && (
+                    <div css={speakerProjectStyle}>{speaker.project}</div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div css={formSectionStyle}>

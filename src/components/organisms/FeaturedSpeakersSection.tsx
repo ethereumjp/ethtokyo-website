@@ -18,7 +18,7 @@ const FeaturedSpeakersSection: FC = () => {
         <div css={multiGridStyle}>
           {speakersData.map((speaker) => (
             <div
-              key={speaker.id}
+              key={speaker.name}
               css={cardStyle}
               style={{
                 display: "flex",
@@ -57,7 +57,7 @@ const FeaturedSpeakersSection: FC = () => {
                 }}
               >
                 <div style={{ color: "#777", whiteSpace: "nowrap" }}>
-                  {speaker.role}
+                  {speaker.title}
                 </div>
                 <div
                   style={{
