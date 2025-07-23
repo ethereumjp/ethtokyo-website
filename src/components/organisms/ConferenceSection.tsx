@@ -133,29 +133,7 @@ const ConferenceSection: FC = () => {
     justify-content: center;
     min-width: 0;
     flex: 1;
-    .speaker-position,
-    .speaker-project {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      gap: 8px;
-      .speaker-position,
-      .speaker-project {
-        display: block;
-      }
-    }
-  `;
-
-  const speakerRightStyle = css`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    text-align: right;
-    margin-left: auto;
-    @media (max-width: 768px) {
-      display: none;
-    }
+    gap: 8px;
   `;
 
   const speakerNameStyle = css`
@@ -188,6 +166,20 @@ const ConferenceSection: FC = () => {
     display: inline-block;
     @media (max-width: 768px) {
       font-size: 0.85rem;
+    }
+  `;
+
+  const speakersGridStyle = css`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 2rem 0;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
   `;
 
@@ -232,7 +224,7 @@ const ConferenceSection: FC = () => {
         </div>
 
         <h2 css={headingStyle}>Featured Speakers</h2>
-        <div>
+        <div css={speakersGridStyle}>
           {speakersData.map((speaker) => (
             <div key={speaker.name} css={speakerCardStyle}>
               <div css={speakerContentStyle}>
@@ -247,21 +239,6 @@ const ConferenceSection: FC = () => {
                 />
                 <div css={speakerLeftStyle}>
                   <div css={speakerNameStyle}>{speaker.name}</div>
-                  {speaker.title && (
-                    <div
-                      className="speaker-position"
-                      css={speakerPositionStyle}
-                    >
-                      {speaker.title}
-                    </div>
-                  )}
-                  {speaker.project && (
-                    <div className="speaker-project" css={speakerProjectStyle}>
-                      {speaker.project}
-                    </div>
-                  )}
-                </div>
-                <div css={speakerRightStyle}>
                   {speaker.title && (
                     <div css={speakerPositionStyle}>{speaker.title}</div>
                   )}
