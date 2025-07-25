@@ -26,19 +26,33 @@ export const scheduleData = [
 // スピーカーデータ
 export const speakersData = [
   {
-    id: "vitalik",
     name: "Vitalik Buterin",
-    role: "Ethereum Co-founder",
+    image: "2025/images/speakers/Vitalik Buterin_Founder_Ethereum.jpg",
+    title: "Founder",
+    project: "Ethereum Foundation",
+    talkTitle: "",
   },
   {
-    id: "aya",
     name: "Aya Miyaguchi",
-    role: "Executive Director, EF",
+    image:
+      "2025/images/speakers/Aya Miyaguchi_President_Ethereum Foundation.jpg",
+    title: "President",
+    project: "Ethereum Foundation",
+    talkTitle: "",
   },
   {
-    id: "hudson",
-    name: "Hudson Jameson",
-    role: "Ethereum Community",
+    name: "Cheeky Gorila",
+    image: "2025/images/speakers/Cheeky Gorila_Protocol Guild.jpg",
+    title: "",
+    project: "Protocol Guild",
+    talkTitle: "",
+  },
+  {
+    name: "Charles Lu",
+    image: "2025/images/speakers/Charles Lu_Espresso.png",
+    title: "",
+    project: "Espresso",
+    talkTitle: "",
   },
 ];
 
