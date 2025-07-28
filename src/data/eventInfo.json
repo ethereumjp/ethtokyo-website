@@ -4,9 +4,9 @@
   "location": {
     "city": "Tokyo, Japan",
     "conference": {
-      "name": "TBA",
-      "address": "TBA",
-      "map": ""
+      "name": "United Nations University",
+      "address": "5-53-70 Jingumae, Shibuya, Tokyo",
+      "map": "https://maps.app.goo.gl/SeMwPSFvYYj7N8rB7"
     },
     "hackathon": {
       "name": "Dragon Gate",
