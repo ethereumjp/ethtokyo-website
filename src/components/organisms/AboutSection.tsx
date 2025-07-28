@@ -231,7 +231,7 @@ export const Temp_formSection = () => {
           community.
         </p>
         <Button
-          href="https://ethtokyo.deform.cc/25-speaker-application"
+          href="https://speak.ethtokyo.org/ethtokyo-2025/submit"
           external
           size="medium"
           icon={<BiMicrophone />}
