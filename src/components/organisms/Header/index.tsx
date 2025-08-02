@@ -297,7 +297,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             window.open(
-              "https://ethtokyo.deform.cc/25-speaker-application",
+              "https://speak.ethtokyo.org/ethtokyo-2025/submit",
               "_blank",
             );
             closeMenu();
