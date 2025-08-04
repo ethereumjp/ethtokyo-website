@@ -58,7 +58,7 @@ export const speakersData = [
     name: "Maika Isogawa",
     image: "2025/images/speakers/maikaisogawa.png",
     title: "",
-    project: "DD.xyz",
+    project: "Webacy",
     talkTitle: "",
   },
   {
