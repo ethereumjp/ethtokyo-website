@@ -84,7 +84,7 @@ export const speakersData = [
   },
   {
     name: "Mykola Siusko",
-    image: "2025/images/speakers/mykolasiusko.png",
+    image: "2025/images/speakers/mykolasiusko.jpg",
     title: "",
     project: "Mykola Web3Privacy now",
     talkTitle: "",
