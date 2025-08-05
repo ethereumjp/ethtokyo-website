@@ -18,7 +18,7 @@ import { MdOutlineSchedule } from "react-icons/md";
 
 const ConferenceSection: FC = () => {
   // deform url
-  const speakerFormUrl = "https://speak.ethtokyo.org/ethtokyo-2025/submit";
+  const speakerFormUrl = "https://speak.ethtokyo.org/conference-2025/submit";
 
   const descriptionStyle = css`
     color: ${neutral.Grey4};

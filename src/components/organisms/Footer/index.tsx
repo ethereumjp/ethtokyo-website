@@ -152,7 +152,7 @@ const Footer: FC<ComponentProps> = ({ children }) => {
             <Link href="#tracks">Hackathon</Link>
             <Link href="#venue">Venue</Link> */}
             <a
-              href="https://speak.ethtokyo.org/ethtokyo-2025/submit"
+              href="https://speak.ethtokyo.org/conference-2025/submit"
               target="_blank"
               rel="noreferrer"
             >
