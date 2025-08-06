@@ -93,16 +93,6 @@ const TracksSection: FC = () => {
           title="Hackathon Official Tracks"
           description="Join one of our official tracks and compete for prizes while building the future of Ethereum."
         />
-
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
-            className="apply-button"
-            data-hackathon-slug="ethtokyo"
-            data-button-theme="light"
-            style={{ height: "44px", maxWidth: "312px" }}
-          />
-        </div>
-
         <div css={tracksContainerStyle}>
           {tracksData.map((track) => (
             <TrackCard

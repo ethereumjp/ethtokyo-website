@@ -21,7 +21,7 @@ import {
   MdOutlineHotel,
 } from "react-icons/md";
 import { PiTrain } from "react-icons/pi";
-import { Temp_formSection } from "./AboutSection";
+import TicketSection from "./TicketSection";
 
 type TabType = "venue" | "travel" | "accommodation";
 
@@ -41,476 +41,482 @@ const VenueSection: FC = () => {
   };
 
   return (
-    <section id="venue" css={sectionStyle}>
-      <div css={containerStyle}>
-        <SectionTitle
-          title="Venue & Travel Info"
-          description="Everything you need to know about the venue and getting around Tokyo"
-          lightMode={true}
-        />
+    <>
+      <section id="venue" css={sectionStyle}>
+        <div css={containerStyle}>
+          <SectionTitle
+            title="Venue & Travel Info"
+            description="Everything you need to know about the venue and getting around Tokyo"
+            lightMode={true}
+          />
 
-        <div css={tabsContainerStyle}>
-          <button
-            type="button"
-            css={[tabStyle, activeTab === "venue" && activeTabStyle]}
-            onClick={() => setActiveTab("venue")}
-          >
-            <HiOutlineMapPin size={20} />
-            Venue
-          </button>
-          <button
-            type="button"
-            css={[tabStyle, activeTab === "travel" && activeTabStyle]}
-            onClick={() => setActiveTab("travel")}
-          >
-            <MdOutlineDirectionsSubway size={20} />
-            Travel
-          </button>
-          <button
-            type="button"
-            css={[tabStyle, activeTab === "accommodation" && activeTabStyle]}
-            onClick={() => setActiveTab("accommodation")}
-          >
-            <MdOutlineHotel size={20} />
-            Accommodation
-          </button>
-        </div>
+          <div css={tabsContainerStyle}>
+            <button
+              type="button"
+              css={[tabStyle, activeTab === "venue" && activeTabStyle]}
+              onClick={() => setActiveTab("venue")}
+            >
+              <HiOutlineMapPin size={20} />
+              Venue
+            </button>
+            <button
+              type="button"
+              css={[tabStyle, activeTab === "travel" && activeTabStyle]}
+              onClick={() => setActiveTab("travel")}
+            >
+              <MdOutlineDirectionsSubway size={20} />
+              Travel
+            </button>
+            <button
+              type="button"
+              css={[tabStyle, activeTab === "accommodation" && activeTabStyle]}
+              onClick={() => setActiveTab("accommodation")}
+            >
+              <MdOutlineHotel size={20} />
+              Accommodation
+            </button>
+          </div>
 
-        <div css={contentContainerStyle}>
-          {/* Venue Information Tab */}
-          {activeTab === "venue" && (
-            <div css={tabContentStyle}>
-              <div css={venuesContainerStyle}>
-                <div css={venueCardStyle}>
-                  <h3 css={venueTitleStyle}>Conference Venue</h3>
-                  <div css={tbaContainerStyle}>
-                    <p css={tbaTextStyle}>
-                      {eventInfo.location.conference.name}
-                    </p>
+          <div css={contentContainerStyle}>
+            {/* Venue Information Tab */}
+            {activeTab === "venue" && (
+              <div css={tabContentStyle}>
+                <div css={venuesContainerStyle}>
+                  <div css={venueCardStyle}>
+                    <h3 css={venueTitleStyle}>Conference Venue</h3>
+                    <div css={tbaContainerStyle}>
+                      <p css={tbaTextStyle}>
+                        {eventInfo.location.conference.name}
+                      </p>
+                      <p css={venueDescriptionStyle}>
+                        Join us for a day of insightful talks and exchanging
+                        ideas.
+                      </p>
+                    </div>
+                    <div css={venueDetailsGridStyle}>
+                      <div css={detailItemStyle}>
+                        <HiOutlineMapPin size={24} />
+                        <div>
+                          <div css={detailTitleStyle}>Address</div>
+                          <div css={detailValueStyle}>
+                            {eventInfo.location.conference.address}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div css={detailItemStyle}>
+                        <HiCalendarDays size={24} />
+                        <div>
+                          <div css={detailTitleStyle}>Date</div>
+                          <div css={detailValueStyle}>
+                            {eventInfo.dates.conference}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div css={detailItemStyle}>
+                        <PiTrain size={24} />
+                        <div>
+                          <div css={detailTitleStyle}>Nearby Stations</div>
+                          <div css={detailValueStyle}>
+                            Shibuya (渋谷) Station <br />
+                            Omote-Sando (表参道) Station
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div css={venueCardStyle}>
+                    <h3 css={venueTitleStyle}>Hackathon Venue</h3>
                     <p css={venueDescriptionStyle}>
-                      Join us for a day of insightful talks and exchanging
-                      ideas.
-                    </p>
-                  </div>
-                  <div css={venueDetailsGridStyle}>
-                    <div css={detailItemStyle}>
-                      <HiOutlineMapPin size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Address</div>
-                        <div css={detailValueStyle}>
-                          {eventInfo.location.conference.address}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div css={detailItemStyle}>
-                      <HiCalendarDays size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Date</div>
-                        <div css={detailValueStyle}>
-                          {eventInfo.dates.conference}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div css={detailItemStyle}>
-                      <PiTrain size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Nearby Stations</div>
-                        <div css={detailValueStyle}>
-                          Shibuya (渋谷) Station <br />
-                          Omote-Sando (表参道) Station
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div css={venueCardStyle}>
-                  <h3 css={venueTitleStyle}>Hackathon Venue</h3>
-                  <p css={venueDescriptionStyle}>
-                    Join us for an exciting three-day hackathon at Digital
-                    Garage in the heart of Tokyo's vibrant Shibuya district.
-                  </p>
-
-                  <div css={venueDetailsGridStyle}>
-                    <div css={detailItemStyle}>
-                      <HiOutlineMapPin size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Address</div>
-                        <div css={detailValueStyle}>
-                          {eventInfo.location.hackathon.address}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div css={detailItemStyle}>
-                      <HiCalendarDays size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Date</div>
-                        <div css={detailValueStyle}>
-                          {eventInfo.dates.hackathon}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div css={detailItemStyle}>
-                      <PiTrain size={24} />
-                      <div>
-                        <div css={detailTitleStyle}>Nearby Stations</div>
-                        <div css={detailValueStyle}>
-                          Shibuya (渋谷) Station <br />
-                          Shinsen (神泉) Station
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div css={mapContainerStyle}>
-                    <iframe
-                      // title="Hackathon Venue Location"
-                      // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7172133535074!2d139.69777457670718!3d35.66247108162841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9c5d23113%3A0xf3a233d2f218acaa!2s15-1%20Udagawacho%2C%20Shibuya%20City%2C%20Tokyo%20150-0042!5e0!3m2!1sen!2sjp!4v1684554239963!5m2!1sen!2sjp"
-                      title="Conference Venue Location"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5964902582496!2d139.7082801!3d35.662312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f64c267bd%3A0x34ff084390b090a0!2sUnited%20Nations%20University!5e0!3m2!1sen!2sjp!4v1753695224651!5m2!1sen!2sjp"
-                      css={mapIframeStyle}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Travel Information Tab */}
-          {activeTab === "travel" && (
-            <div css={tabContentStyle}>
-              <div css={infoCardStyle}>
-                <div
-                  css={infoCardHeaderStyle}
-                  onClick={() => toggleItem("airports")}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      toggleItem("airports");
-                    }
-                  }}
-                  aria-expanded={expandedItems.airports}
-                >
-                  <div css={infoCardHeaderContentStyle}>
-                    <MdOutlineAirplanemodeActive size={24} />
-                    <h3 css={infoCardTitleStyle}>Traveling to Tokyo</h3>
-                  </div>
-                  {expandedItems.airports ? (
-                    <HiChevronUp size={20} />
-                  ) : (
-                    <HiChevronDown size={20} />
-                  )}
-                </div>
-
-                {expandedItems.airports && (
-                  <div css={infoCardBodyStyle}>
-                    <p>
-                      Tokyo has two airports:{" "}
-                      <a
-                        href="https://maps.app.goo.gl/pEzYqQj1HuTY3ctD7"
-                        target="_blank"
-                        rel="noreferrer"
-                        css={linkStyle}
-                      >
-                        Narita International Airport (NRT)
-                      </a>{" "}
-                      and{" "}
-                      <a
-                        href="https://maps.app.goo.gl/C1rgT7mBmtXzULy68"
-                        target="_blank"
-                        rel="noreferrer"
-                        css={linkStyle}
-                      >
-                        Haneda International Airport (HND)
-                      </a>
-                      . They are both well connected with the railway system.
+                      Join us for an exciting three-day hackathon at Digital
+                      Garage in the heart of Tokyo's vibrant Shibuya district.
                     </p>
 
-                    <div css={airportInfoStyle}>
-                      <div css={airportCardStyle}>
-                        <h4>Narita International Airport (NRT)</h4>
-                        <ul css={transportListStyle}>
-                          <li>60-90 minutes to central Tokyo</li>
-                          <li>JR Narita Express: ~60 min, ¥3,070</li>
-                          <li>Keisei Skyliner: ~40 min, ¥2,520</li>
-                          <li>Limousine Bus: ~80-120 min, ¥3,200</li>
-                        </ul>
-                      </div>
-
-                      <div css={airportCardStyle}>
-                        <h4>Haneda International Airport (HND)</h4>
-                        <ul css={transportListStyle}>
-                          <li>30-45 minutes to central Tokyo</li>
-                          <li>Tokyo Monorail: ~30 min, ¥500</li>
-                          <li>Keikyu Line: ~30 min, ¥450</li>
-                          <li>Limousine Bus: ~30-60 min, ¥1,200</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div css={infoCardStyle}>
-                <div
-                  css={infoCardHeaderStyle}
-                  onClick={() => toggleItem("transport")}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      toggleItem("transport");
-                    }
-                  }}
-                  aria-expanded={expandedItems.transport}
-                >
-                  <div css={infoCardHeaderContentStyle}>
-                    <MdOutlineDirectionsSubway size={24} />
-                    <h3 css={infoCardTitleStyle}>Urban Transportation</h3>
-                  </div>
-                  {expandedItems.transport ? (
-                    <HiChevronUp size={20} />
-                  ) : (
-                    <HiChevronDown size={20} />
-                  )}
-                </div>
-
-                {expandedItems.transport && (
-                  <div css={infoCardBodyStyle}>
-                    <p>
-                      Tokyo is a city optimized for public transportation. Most
-                      of the times, the quickest and easiest way to getting from
-                      A to B is by trains and buses. If you are staying longer
-                      than just a few days, you might want to consider
-                      purchasing a{" "}
-                      <a
-                        href="https://www.jreast.co.jp/multi/en/pass/suica.html"
-                        target="_blank"
-                        rel="noreferrer"
-                        css={linkStyle}
-                      >
-                        SUICA
-                      </a>{" "}
-                      or{" "}
-                      <a
-                        href="https://www.pasmo.co.jp/visitors/en/"
-                        target="_blank"
-                        rel="noreferrer"
-                        css={linkStyle}
-                      >
-                        PASMO
-                      </a>{" "}
-                      card at for the best experience, which can be obtained at
-                      pretty much any train station. You can use these cards to
-                      ride the buses also.
-                    </p>
-
-                    <div css={transportOptionsStyle}>
-                      <div css={transportOptionStyle}>
-                        <MdDirectionsBike size={24} css={transportIconStyle} />
+                    <div css={venueDetailsGridStyle}>
+                      <div css={detailItemStyle}>
+                        <HiOutlineMapPin size={24} />
                         <div>
-                          <h4 css={transportTitleStyle}>Scooters & Bikes</h4>
-                          <p>
-                            Depending on the area, you will also find scooters
-                            and bikes that you can grab around the city, using
-                            apps like{" "}
-                            <a
-                              href="https://play.google.com/store/apps/details?id=sc.luup.luup"
-                              target="_blank"
-                              rel="noreferrer"
-                              css={linkStyle}
-                            >
-                              LUUP
-                            </a>{" "}
-                            and{" "}
-                            <a
-                              href="https://play.google.com/store/apps/details?id=com.limebike"
-                              target="_blank"
-                              rel="noreferrer"
-                              css={linkStyle}
-                            >
-                              LIME
-                            </a>
-                            . You should take precaution to stay safe since the
-                            streets in Tokyo are generally narrow and crowded.
-                          </p>
+                          <div css={detailTitleStyle}>Address</div>
+                          <div css={detailValueStyle}>
+                            {eventInfo.location.hackathon.address}
+                          </div>
                         </div>
                       </div>
 
-                      <div css={transportOptionStyle}>
-                        <MdLocalTaxi size={24} css={transportIconStyle} />
+                      <div css={detailItemStyle}>
+                        <HiCalendarDays size={24} />
                         <div>
-                          <h4 css={transportTitleStyle}>Taxis</h4>
-                          <p>
-                            Taxis are available through apps like{" "}
-                            <a
-                              href="https://play.google.com/store/apps/details?id=com.dena.automotive.taxibell"
-                              target="_blank"
-                              rel="noreferrer"
-                              css={linkStyle}
-                            >
-                              GO
-                            </a>{" "}
-                            and{" "}
-                            <a
-                              href="https://play.google.com/store/apps/details?id=com.ubercab"
-                              target="_blank"
-                              rel="noreferrer"
-                              css={linkStyle}
-                            >
-                              Uber
-                            </a>
-                            .
-                          </p>
+                          <div css={detailTitleStyle}>Date</div>
+                          <div css={detailValueStyle}>
+                            {eventInfo.dates.hackathon}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div css={detailItemStyle}>
+                        <PiTrain size={24} />
+                        <div>
+                          <div css={detailTitleStyle}>Nearby Stations</div>
+                          <div css={detailValueStyle}>
+                            Shibuya (渋谷) Station <br />
+                            Shinsen (神泉) Station
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
 
-          {/* Accommodation Tab */}
-          {activeTab === "accommodation" && (
-            <div css={tabContentStyle}>
-              {hasAccommodationInfo ? (
+                    <div css={mapContainerStyle}>
+                      <iframe
+                        // title="Hackathon Venue Location"
+                        // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7172133535074!2d139.69777457670718!3d35.66247108162841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9c5d23113%3A0xf3a233d2f218acaa!2s15-1%20Udagawacho%2C%20Shibuya%20City%2C%20Tokyo%20150-0042!5e0!3m2!1sen!2sjp!4v1684554239963!5m2!1sen!2sjp"
+                        title="Conference Venue Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5964902582496!2d139.7082801!3d35.662312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f64c267bd%3A0x34ff084390b090a0!2sUnited%20Nations%20University!5e0!3m2!1sen!2sjp!4v1753695224651!5m2!1sen!2sjp"
+                        css={mapIframeStyle}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Travel Information Tab */}
+            {activeTab === "travel" && (
+              <div css={tabContentStyle}>
                 <div css={infoCardStyle}>
-                  <div css={infoCardHeaderContentStyle}>
-                    <MdOutlineHotel size={24} />
-                    <h3 css={infoCardTitleStyle}>Accommodation</h3>
+                  <div
+                    css={infoCardHeaderStyle}
+                    onClick={() => toggleItem("airports")}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        toggleItem("airports");
+                      }
+                    }}
+                    aria-expanded={expandedItems.airports}
+                  >
+                    <div css={infoCardHeaderContentStyle}>
+                      <MdOutlineAirplanemodeActive size={24} />
+                      <h3 css={infoCardTitleStyle}>Traveling to Tokyo</h3>
+                    </div>
+                    {expandedItems.airports ? (
+                      <HiChevronUp size={20} />
+                    ) : (
+                      <HiChevronDown size={20} />
+                    )}
                   </div>
 
-                  <div css={hotelInfoStyle}>
-                    <p css={accommodationDescStyle}>
-                      There are various hotels around the ETHTokyo 2025 venue.
-                      We recommend booking early.
-                    </p>
-
-                    <div css={hotelCategoriesStyle}>
-                      <div css={hotelCategoryStyle}>
-                        <h4>Recommended Hotels Near Venue</h4>
-                        <ul css={hotelListStyle}>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() => console.log("Hotel A selected")}
-                            >
-                              Hotel A (5-min walk from venue)
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() => console.log("Hotel B selected")}
-                            >
-                              Hotel B (10-min walk from venue)
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() => console.log("Hotel C selected")}
-                            >
-                              Hotel C (1 station from nearest station)
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div css={hotelCategoryStyle}>
-                        <h4>Budget-Friendly Options</h4>
-                        <ul css={hotelListStyle}>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() => console.log("Hostel X selected")}
-                            >
-                              Hostel X (about ¥5,000 per night)
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() =>
-                                console.log("Capsule Hotel Y selected")
-                              }
-                            >
-                              Capsule Hotel Y (about ¥3,000 per night)
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              type="button"
-                              css={hotelButtonStyle}
-                              onClick={() =>
-                                console.log("Guesthouse Z selected")
-                              }
-                            >
-                              Guesthouse Z (about ¥4,000 per night)
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div css={bookingTipStyle}>
-                      <h4>Booking Tips</h4>
+                  {expandedItems.airports && (
+                    <div css={infoCardBodyStyle}>
                       <p>
-                        We recommend booking as early as possible. Hotels in
-                        Tokyo tend to fill up during event periods. Look for
-                        options with free cancellation on sites like{" "}
+                        Tokyo has two airports:{" "}
                         <a
-                          href="https://www.booking.com"
+                          href="https://maps.app.goo.gl/pEzYqQj1HuTY3ctD7"
                           target="_blank"
                           rel="noreferrer"
                           css={linkStyle}
                         >
-                          Booking.com
+                          Narita International Airport (NRT)
                         </a>{" "}
                         and{" "}
                         <a
-                          href="https://www.agoda.com"
+                          href="https://maps.app.goo.gl/C1rgT7mBmtXzULy68"
                           target="_blank"
                           rel="noreferrer"
                           css={linkStyle}
                         >
-                          Agoda
+                          Haneda International Airport (HND)
                         </a>
-                        .
+                        . They are both well connected with the railway system.
+                      </p>
+
+                      <div css={airportInfoStyle}>
+                        <div css={airportCardStyle}>
+                          <h4>Narita International Airport (NRT)</h4>
+                          <ul css={transportListStyle}>
+                            <li>60-90 minutes to central Tokyo</li>
+                            <li>JR Narita Express: ~60 min, ¥3,070</li>
+                            <li>Keisei Skyliner: ~40 min, ¥2,520</li>
+                            <li>Limousine Bus: ~80-120 min, ¥3,200</li>
+                          </ul>
+                        </div>
+
+                        <div css={airportCardStyle}>
+                          <h4>Haneda International Airport (HND)</h4>
+                          <ul css={transportListStyle}>
+                            <li>30-45 minutes to central Tokyo</li>
+                            <li>Tokyo Monorail: ~30 min, ¥500</li>
+                            <li>Keikyu Line: ~30 min, ¥450</li>
+                            <li>Limousine Bus: ~30-60 min, ¥1,200</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div css={infoCardStyle}>
+                  <div
+                    css={infoCardHeaderStyle}
+                    onClick={() => toggleItem("transport")}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        toggleItem("transport");
+                      }
+                    }}
+                    aria-expanded={expandedItems.transport}
+                  >
+                    <div css={infoCardHeaderContentStyle}>
+                      <MdOutlineDirectionsSubway size={24} />
+                      <h3 css={infoCardTitleStyle}>Urban Transportation</h3>
+                    </div>
+                    {expandedItems.transport ? (
+                      <HiChevronUp size={20} />
+                    ) : (
+                      <HiChevronDown size={20} />
+                    )}
+                  </div>
+
+                  {expandedItems.transport && (
+                    <div css={infoCardBodyStyle}>
+                      <p>
+                        Tokyo is a city optimized for public transportation.
+                        Most of the times, the quickest and easiest way to
+                        getting from A to B is by trains and buses. If you are
+                        staying longer than just a few days, you might want to
+                        consider purchasing a{" "}
+                        <a
+                          href="https://www.jreast.co.jp/multi/en/pass/suica.html"
+                          target="_blank"
+                          rel="noreferrer"
+                          css={linkStyle}
+                        >
+                          SUICA
+                        </a>{" "}
+                        or{" "}
+                        <a
+                          href="https://www.pasmo.co.jp/visitors/en/"
+                          target="_blank"
+                          rel="noreferrer"
+                          css={linkStyle}
+                        >
+                          PASMO
+                        </a>{" "}
+                        card at for the best experience, which can be obtained
+                        at pretty much any train station. You can use these
+                        cards to ride the buses also.
+                      </p>
+
+                      <div css={transportOptionsStyle}>
+                        <div css={transportOptionStyle}>
+                          <MdDirectionsBike
+                            size={24}
+                            css={transportIconStyle}
+                          />
+                          <div>
+                            <h4 css={transportTitleStyle}>Scooters & Bikes</h4>
+                            <p>
+                              Depending on the area, you will also find scooters
+                              and bikes that you can grab around the city, using
+                              apps like{" "}
+                              <a
+                                href="https://play.google.com/store/apps/details?id=sc.luup.luup"
+                                target="_blank"
+                                rel="noreferrer"
+                                css={linkStyle}
+                              >
+                                LUUP
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                href="https://play.google.com/store/apps/details?id=com.limebike"
+                                target="_blank"
+                                rel="noreferrer"
+                                css={linkStyle}
+                              >
+                                LIME
+                              </a>
+                              . You should take precaution to stay safe since
+                              the streets in Tokyo are generally narrow and
+                              crowded.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div css={transportOptionStyle}>
+                          <MdLocalTaxi size={24} css={transportIconStyle} />
+                          <div>
+                            <h4 css={transportTitleStyle}>Taxis</h4>
+                            <p>
+                              Taxis are available through apps like{" "}
+                              <a
+                                href="https://play.google.com/store/apps/details?id=com.dena.automotive.taxibell"
+                                target="_blank"
+                                rel="noreferrer"
+                                css={linkStyle}
+                              >
+                                GO
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                href="https://play.google.com/store/apps/details?id=com.ubercab"
+                                target="_blank"
+                                rel="noreferrer"
+                                css={linkStyle}
+                              >
+                                Uber
+                              </a>
+                              .
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Accommodation Tab */}
+            {activeTab === "accommodation" && (
+              <div css={tabContentStyle}>
+                {hasAccommodationInfo ? (
+                  <div css={infoCardStyle}>
+                    <div css={infoCardHeaderContentStyle}>
+                      <MdOutlineHotel size={24} />
+                      <h3 css={infoCardTitleStyle}>Accommodation</h3>
+                    </div>
+
+                    <div css={hotelInfoStyle}>
+                      <p css={accommodationDescStyle}>
+                        There are various hotels around the ETHTokyo 2025 venue.
+                        We recommend booking early.
+                      </p>
+
+                      <div css={hotelCategoriesStyle}>
+                        <div css={hotelCategoryStyle}>
+                          <h4>Recommended Hotels Near Venue</h4>
+                          <ul css={hotelListStyle}>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() => console.log("Hotel A selected")}
+                              >
+                                Hotel A (5-min walk from venue)
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() => console.log("Hotel B selected")}
+                              >
+                                Hotel B (10-min walk from venue)
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() => console.log("Hotel C selected")}
+                              >
+                                Hotel C (1 station from nearest station)
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div css={hotelCategoryStyle}>
+                          <h4>Budget-Friendly Options</h4>
+                          <ul css={hotelListStyle}>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() => console.log("Hostel X selected")}
+                              >
+                                Hostel X (about ¥5,000 per night)
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() =>
+                                  console.log("Capsule Hotel Y selected")
+                                }
+                              >
+                                Capsule Hotel Y (about ¥3,000 per night)
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                type="button"
+                                css={hotelButtonStyle}
+                                onClick={() =>
+                                  console.log("Guesthouse Z selected")
+                                }
+                              >
+                                Guesthouse Z (about ¥4,000 per night)
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div css={bookingTipStyle}>
+                        <h4>Booking Tips</h4>
+                        <p>
+                          We recommend booking as early as possible. Hotels in
+                          Tokyo tend to fill up during event periods. Look for
+                          options with free cancellation on sites like{" "}
+                          <a
+                            href="https://www.booking.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            css={linkStyle}
+                          >
+                            Booking.com
+                          </a>{" "}
+                          and{" "}
+                          <a
+                            href="https://www.agoda.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            css={linkStyle}
+                          >
+                            Agoda
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div css={comingSoonCardStyle}>
+                    <div css={comingSoonContentStyle}>
+                      <h3 css={comingSoonTitleStyle}>
+                        Accommodation Information Coming Soon
+                      </h3>
+                      <p css={comingSoonTextStyle}>
+                        Information about accommodation options near the
+                        ETHTokyo 2025 venue will be provided at a later date.
+                        Check back for recommended places to stay in Tokyo.
                       </p>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div css={comingSoonCardStyle}>
-                  <div css={comingSoonContentStyle}>
-                    <h3 css={comingSoonTitleStyle}>
-                      Accommodation Information Coming Soon
-                    </h3>
-                    <p css={comingSoonTextStyle}>
-                      Information about accommodation options near the ETHTokyo
-                      2025 venue will be provided at a later date. Check back
-                      for recommended places to stay in Tokyo.
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+                )}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-      <Temp_formSection />
-    </section>
+      </section>
+      <TicketSection />
+    </>
   );
 };
 
@@ -519,7 +525,7 @@ const sectionStyle = css`
   background-color: ${brand.Secondary};
   color: ${neutral.White};
   overflow: hidden;
-  padding: 5rem 1rem;
+  padding: 2.5rem 1rem;
   position: relative;
 `;
 

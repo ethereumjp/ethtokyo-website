@@ -185,31 +185,28 @@ const AboutSection: FC = () => {
                   opportunities. Learn about the latest developments in Ethereum
                   and blockchain technology.
                 </p>
-                <Button
-                  css={css`
-                  max-width: 312px;
-                  max-height: 44px;
-                `}
-                  href="https://app.moongate.id/e/ethtokyo2025"
-                  external
-                  variant="outline"
-                  icon={<BiIdCard />}
-                >
-                  <span css={css``}>Purchase Ticket</span>
-                </Button>
-
-                {/* <Button
-                  css={css`
-                    max-width: 312px;
-                    max-height: 44px;
-                  `}
-                  href="https://speak.ethtokyo.org/conference-2025/submit"
-                  external
-                  variant="outline"
-                  icon={<BiMicrophone />}
-                >
-                  <span css={css``}>Speaker apply</span>
-                </Button> */}
+                <div css={css`display:flex; justify-content: space-between;`}>
+                  <Button
+                    css={css`max-width: 312px; max-height: 44px;`}
+                    href="https://app.moongate.id/e/ethtokyo2025"
+                    external
+                    variant="primary"
+                    icon={<BiIdCard />}
+                  >
+                    <span css={css`color: ${neutral.White};`}>
+                      Purchase Ticket
+                    </span>
+                  </Button>
+                  <Button
+                    css={css`max-width: 312px; max-height: 44px;`}
+                    href="https://speak.ethtokyo.org/conference-2025/submit"
+                    external
+                    variant="outline"
+                    icon={<BiMicrophone />}
+                  >
+                    <span css={css``}>Speaker apply</span>
+                  </Button>
+                </div>
               </div>
               <div css={overviewCardStyle}>
                 <h4 css={overviewTitleStyle}>Hackathon</h4>
@@ -219,17 +216,30 @@ const AboutSection: FC = () => {
                   solutions, and compete for exciting prizes. Open to all skill
                   levels.
                 </p>
-                <div
-                  className="apply-button"
-                  data-hackathon-slug="ethtokyo"
-                  data-button-theme="dark-inverted"
-                  style={{ height: "44px", width: "312px" }}
-                  css={css`
-                    width: auto;
-                    height: auto;
-                    max-width: 100%;
-                  `}
-                />
+                <div css={css`display:flex; justify-content: space-between;`}>
+                  <Button
+                    css={css`max-width: 312px; max-height: 44px;`}
+                    href="https://app.moongate.id/e/ethtokyo2025"
+                    external
+                    variant="primary"
+                    icon={<BiIdCard />}
+                  >
+                    <span css={css`color: ${neutral.White};`}>
+                      Purchase Ticket
+                    </span>
+                  </Button>
+                  <div
+                    className="apply-button"
+                    data-hackathon-slug="ethtokyo"
+                    data-button-theme="dark-inverted"
+                    style={{ height: "44px", width: "312px" }}
+                    css={css`
+                      width: auto;
+                      height: auto;
+                      max-width: 100%;
+                    `}
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { BiIdCard } from "react-icons/bi";
 
 const TicketSection: FC = () => {
   const sectionStyle = css`
-    background-color: ${neutral.White};
+    background-color: ${brand.Miyabi};
     padding: 1rem 1rem;
   `;
 
