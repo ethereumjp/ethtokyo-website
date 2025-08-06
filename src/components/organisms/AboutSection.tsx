@@ -4,7 +4,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiMicrophone, BiMoney } from "react-icons/bi";
+import { BiIdCard, BiMicrophone, BiMoney } from "react-icons/bi";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
@@ -126,7 +126,6 @@ const AboutSection: FC = () => {
           description="We are a community of Tokyo-based developers and professionals, driven by a shared sense of cypherpunk ethos and optimism for the future, dedicated to advance the development and adoption of Ethereum."
         />
         <div css={contentContainerStyle}>
-          <Temp_formSection />
           {/* What's ETHTokyo */}
           <div css={aboutCardStyle}>
             <div css={aboutContentStyle}>
@@ -186,6 +185,31 @@ const AboutSection: FC = () => {
                   opportunities. Learn about the latest developments in Ethereum
                   and blockchain technology.
                 </p>
+                <Button
+                  css={css`
+                  max-width: 312px;
+                  max-height: 44px;
+                `}
+                  href="https://app.moongate.id/e/ethtokyo2025"
+                  external
+                  variant="outline"
+                  icon={<BiIdCard />}
+                >
+                  <span css={css``}>Purchase Ticket</span>
+                </Button>
+
+                {/* <Button
+                  css={css`
+                    max-width: 312px;
+                    max-height: 44px;
+                  `}
+                  href="https://speak.ethtokyo.org/conference-2025/submit"
+                  external
+                  variant="outline"
+                  icon={<BiMicrophone />}
+                >
+                  <span css={css``}>Speaker apply</span>
+                </Button> */}
               </div>
               <div css={overviewCardStyle}>
                 <h4 css={overviewTitleStyle}>Hackathon</h4>
@@ -195,9 +219,22 @@ const AboutSection: FC = () => {
                   solutions, and compete for exciting prizes. Open to all skill
                   levels.
                 </p>
+                <div
+                  className="apply-button"
+                  data-hackathon-slug="ethtokyo"
+                  data-button-theme="dark-inverted"
+                  style={{ height: "44px", width: "312px" }}
+                  css={css`
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                  `}
+                />
               </div>
             </div>
           </div>
+
+          <Temp_formSection />
         </div>
       </div>
     </section>
@@ -220,25 +257,25 @@ export const Temp_formSection = () => {
       }
     `}
     >
-      <div css={temp_formSectionStyle}>
+      {/* <div css={temp_formSectionStyle}>
         <h3 css={temp_formHeadingStyle}>
-          <BiMicrophone size={28} />
-          Call for Speakers & Workshops
+          <BiIdCard size={28} />
+          Event Ticket
         </h3>
         <p css={temp_formDescriptionStyle}>
-          ETHTokyo'25 is currently accepting conference speakers and workshop
-          owners. Share your knowledge and experience with the ETHTokyo
-          community.
+          When you purchase your ticket, it will be sent to your wallet as
+          an NFT. This NFT will be recorded on the blockchain, serving as
+          permanent proof of your participation in this event.
         </p>
         <Button
-          href="https://speak.ethtokyo.org/conference-2025/submit"
+          href="https://app.moongate.id/e/ethtokyo2025"
           external
           size="medium"
-          icon={<BiMicrophone />}
+          icon={<BiIdCard />}
         >
-          <span css={css`color: ${neutral.White};`}>Apply Now</span>
+          <span css={css`color: ${neutral.White};`}>Get Ticket</span>
         </Button>
-      </div>
+      </div> */}
 
       <div css={temp_formSectionStyle}>
         <h3 css={temp_formHeadingStyle}>
@@ -253,9 +290,10 @@ export const Temp_formSection = () => {
           href="https://ethtokyo.deform.cc/25-sponsor-application"
           external
           size="medium"
+          variant="primary"
           icon={<BiMoney />}
         >
-          <span css={css`color: ${neutral.White};`}>Apply Now</span>
+          <span css={css`color: ${neutral.White};`}>Sponsor event</span>
         </Button>
       </div>
     </div>

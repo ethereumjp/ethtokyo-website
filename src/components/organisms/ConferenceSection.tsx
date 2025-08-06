@@ -265,6 +265,7 @@ const ConferenceSection: FC = () => {
             href={speakerFormUrl}
             external
             size="medium"
+            variant="outline"
             icon={<BiMicrophone />}
           >
             Apply Now
