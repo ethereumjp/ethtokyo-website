@@ -4,7 +4,8 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiIdCard, BiMicrophone, BiMoney } from "react-icons/bi";
+import { BiDoorOpen, BiIdCard, BiMicrophone, BiMoney } from "react-icons/bi";
+import TaikaiLogoMark from "/public/2025/images/eventPartners/taikai_logomark.svg";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
@@ -193,9 +194,7 @@ const AboutSection: FC = () => {
                     variant="primary"
                     icon={<BiIdCard />}
                   >
-                    <span css={css`color: ${neutral.White};`}>
-                      Purchase Ticket
-                    </span>
+                    <span css={css`color: ${neutral.White};`}>Get Tickets</span>
                   </Button>
                   <Button
                     css={css`max-width: 312px; max-height: 44px;`}
@@ -204,7 +203,7 @@ const AboutSection: FC = () => {
                     variant="outline"
                     icon={<BiMicrophone />}
                   >
-                    <span css={css``}>Speaker apply</span>
+                    <span css={css``}>Apply as speaker</span>
                   </Button>
                 </div>
               </div>
@@ -224,11 +223,9 @@ const AboutSection: FC = () => {
                     variant="primary"
                     icon={<BiIdCard />}
                   >
-                    <span css={css`color: ${neutral.White};`}>
-                      Purchase Ticket
-                    </span>
+                    <span css={css`color: ${neutral.White};`}>Get Tickets</span>
                   </Button>
-                  <div
+                  {/* <div //devfolio
                     className="apply-button"
                     data-hackathon-slug="ethtokyo"
                     data-button-theme="dark-inverted"
@@ -238,7 +235,22 @@ const AboutSection: FC = () => {
                       height: auto;
                       max-width: 100%;
                     `}
-                  />
+                  /> */}
+                  <Button
+                    css={css`max-width: 312px; max-height: 44px;`}
+                    href="https://taikai.network/en/ethtokyo/hackathons/hackathon-2025/overview"
+                    external
+                    variant="outline"
+                    icon={
+                      <img
+                        src="/2025/images/eventPartners/taikai_logomark.svg"
+                        alt="Hacker Registration"
+                        style={{ width: 16, height: 16 }}
+                      />
+                    }
+                  >
+                    <span css={css``}>Hacker Registration</span>
+                  </Button>
                 </div>
               </div>
             </div>

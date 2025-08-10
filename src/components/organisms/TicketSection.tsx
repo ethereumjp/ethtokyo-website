@@ -74,7 +74,7 @@ const TicketSection: FC = () => {
                   color: ${neutral.White};
                 `}
               >
-                Moongate
+                Get Ticket
               </span>
             </Button>
           </div>
