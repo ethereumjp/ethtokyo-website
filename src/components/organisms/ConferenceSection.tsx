@@ -15,10 +15,36 @@ import { css } from "@emotion/react";
 import type { FC } from "react";
 import { BiMicrophone } from "react-icons/bi";
 import { MdOutlineSchedule } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const ConferenceSection: FC = () => {
   // deform url
   const speakerFormUrl = "https://speak.ethtokyo.org/conference-2025/submit";
+
+  // URLからアカウント名を抽出する関数
+  const extractAccountName = (url: string): string => {
+    try {
+      const urlObj = new URL(url);
+      const pathname = urlObj.pathname;
+
+      // Twitter/Xの場合
+      if (url.includes("x.com") || url.includes("twitter.com")) {
+        const match = pathname.match(/^\/([^\/]+)/);
+        return match ? `@${match[1]}` : "";
+      }
+
+      // LinkedInの場合
+      if (url.includes("linkedin.com")) {
+        const match = pathname.match(/\/in\/([^\/]+)/);
+        return match ? match[1] : "";
+      }
+
+      return "";
+    } catch {
+      return "";
+    }
+  };
 
   const descriptionStyle = css`
     color: ${neutral.Grey4};
@@ -169,6 +195,57 @@ const ConferenceSection: FC = () => {
     }
   `;
 
+  const speakerSocialStyle = css`
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  `;
+
+  const socialLinkStyle = css`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #f8f9fa;
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    
+    &:hover {
+      background: ${brand.Primary} !important;
+      color: ${neutral.White} !important;
+      transform: translateY(-1px);
+    }
+    
+    &:hover span {
+      color: ${neutral.White} !important;
+    }
+    
+    &:hover div {
+      color: ${neutral.White} !important;
+    }
+    
+    @media (max-width: 768px) {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      gap: 6px;
+    }
+  `;
+
+  const socialIconStyle = css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    @media (max-width: 768px) {
+      width: 18px;
+      height: 18px;
+    }
+  `;
+
   const speakersGridStyle = css`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -244,6 +321,29 @@ const ConferenceSection: FC = () => {
                   )}
                   {speaker.project && (
                     <div css={speakerProjectStyle}>{speaker.project}</div>
+                  )}
+                  {speaker.socialLink && (
+                    <div css={speakerSocialStyle}>
+                      <a
+                        href={speaker.socialLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        css={socialLinkStyle}
+                        aria-label={`${speaker.name}'s social link`}
+                      >
+                        <div css={socialIconStyle}>
+                          {speaker.socialLink.includes("x.com") ||
+                          speaker.socialLink.includes("twitter.com") ? (
+                            <FaXTwitter size={16} />
+                          ) : speaker.socialLink.includes("linkedin.com") ? (
+                            <FaLinkedin size={16} />
+                          ) : (
+                            <FaXTwitter size={16} />
+                          )}
+                        </div>
+                        <span>{extractAccountName(speaker.socialLink)}</span>
+                      </a>
+                    </div>
                   )}
                 </div>
               </div>
