@@ -41,13 +41,6 @@ export const speakersData = [
     talkTitle: "",
   },
   {
-    name: "Cheeky Gorila",
-    image: "2025/images/speakers/Cheeky Gorila_Protocol Guild.jpg",
-    title: "",
-    project: "Protocol Guild",
-    talkTitle: "",
-  },
-  {
     name: "Charles Lu",
     image: "2025/images/speakers/Charles Lu_Espresso.png",
     title: "",
