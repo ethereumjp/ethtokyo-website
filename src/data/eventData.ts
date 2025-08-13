@@ -31,6 +31,7 @@ export const speakersData = [
     title: "Founder",
     project: "Ethereum Foundation",
     talkTitle: "",
+    socialLink: "https://x.com/VitalikButerin",
   },
   {
     name: "Aya Miyaguchi",
@@ -39,6 +40,7 @@ export const speakersData = [
     title: "President",
     project: "Ethereum Foundation",
     talkTitle: "",
+    socialLink: "https://x.com/AyaMiyagotchi",
   },
   {
     name: "Charles Lu",
@@ -46,6 +48,7 @@ export const speakersData = [
     title: "",
     project: "Espresso",
     talkTitle: "",
+    socialLink: "https://x.com/charleslu1",
   },
   {
     name: "Maika Isogawa",
@@ -53,6 +56,7 @@ export const speakersData = [
     title: "",
     project: "Webacy",
     talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/maikaisogawa/",
   },
   {
     name: "Jeff Wentworth",
@@ -60,6 +64,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Curvegrid",
     talkTitle: "",
+    socialLink: "https://x.com/JeffInTokyo",
   },
   {
     name: "Alan Scott",
@@ -67,6 +72,7 @@ export const speakersData = [
     title: "Contributor",
     project: "Railgun",
     talkTitle: "",
+    socialLink: "https://x.com/tsu_kareta",
   },
   {
     name: "Gwénolé Martin",
@@ -74,6 +80,7 @@ export const speakersData = [
     title: "Devrel",
     project: "Consensys",
     talkTitle: "",
+    socialLink: "https://x.com/Gwenole_M",
   },
   {
     name: "Mykola Siusko",
@@ -81,6 +88,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Web3Privacy now",
     talkTitle: "",
+    socialLink: "https://x.com/nicksvyaznoy",
   },
   {
     name: "Jack Baldwin",
@@ -88,6 +96,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Shinsei Galverse",
     talkTitle: "",
+    socialLink: "https://x.com/OnlyWailoaloa",
   },
   {
     name: "Suji Yan",
@@ -95,6 +104,7 @@ export const speakersData = [
     title: "Founder",
     project: "Mask Network",
     talkTitle: "",
+    socialLink: "https://x.com/suji_yan",
   },
   {
     name: "David Casey",
@@ -102,6 +112,7 @@ export const speakersData = [
     title: "CEO",
     project: "Funding the Commons",
     talkTitle: "",
+    socialLink: "https://x.com/david1casey",
   },
   {
     name: "Stefan Piech",
@@ -109,6 +120,7 @@ export const speakersData = [
     title: "",
     project: "Amagi Digital",
     talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/stefan-piech?",
   },
   // {
   //   name: "Sora Suegami",
@@ -123,6 +135,7 @@ export const speakersData = [
     title: "Security Researcher",
     project: "Independent",
     talkTitle: "",
+    socialLink: "https://x.com/NoahJelich",
   },
   {
     name: "Jack Saracco",
@@ -130,6 +143,7 @@ export const speakersData = [
     title: "Founder",
     project: "Plasma Free",
     talkTitle: "",
+    socialLink: "https://x.com/jacksaracco",
   },
   // {
   //   name: "Leona Hioki",
