@@ -359,3 +359,91 @@ export const mediaPartnersData = [
     logoFile: "coindesk_jp.png",
   },
 ];
+
+// スポンサーデータ
+export const platinumSponsorsData = [
+  {
+    partnerName: "Ethereum Foundation",
+    website: "https://ethereum.org/",
+    logoFile: "EFLogo.png",
+  },
+  {
+    partnerName: "Consensys",
+    website: "https://consensys.net/",
+    logoFile: "ConsensysLogo.svg",
+  },
+];
+
+export const goldSponsorsData = [
+  {
+    partnerName: "Polygon",
+    website: "https://polygon.technology/",
+    logoFile: "PolygonLogo.svg",
+  },
+  {
+    partnerName: "Chainlink",
+    website: "https://chainlinklabs.com/",
+    logoFile: "ChainlinkLogo.svg",
+  },
+  {
+    partnerName: "Uniswap",
+    website: "https://uniswap.org/",
+    logoFile: "UniswapLogo.svg",
+  },
+];
+
+export const silverSponsorsData = [
+  {
+    partnerName: "Aave",
+    website: "https://aave.com/",
+    logoFile: "AaveLogo.svg",
+  },
+  {
+    partnerName: "Compound",
+    website: "https://compound.finance/",
+    logoFile: "CompoundLogo.svg",
+  },
+  {
+    partnerName: "MakerDAO",
+    website: "https://makerdao.com/",
+    logoFile: "MakerDAOLogo.svg",
+  },
+  {
+    partnerName: "Synthetix",
+    website: "https://synthetix.io/",
+    logoFile: "SynthetixLogo.svg",
+  },
+];
+
+export const communitySponsorsData = [
+  {
+    partnerName: "Gitcoin",
+    website: "https://gitcoin.co/",
+    logoFile: "GitcoinLogo.svg",
+  },
+  {
+    partnerName: "ENS",
+    website: "https://ens.domains/",
+    logoFile: "ENSLogo.svg",
+  },
+  {
+    partnerName: "MetaMask",
+    website: "https://metamask.io/",
+    logoFile: "MetamaskLogo.svg",
+  },
+  {
+    partnerName: "The Graph",
+    website: "https://thegraph.com/",
+    logoFile: "TheGraphLogo.svg",
+  },
+  {
+    partnerName: "1inch",
+    website: "https://1inch.io/",
+    logoFile: "1inchLogo.svg",
+  },
+  {
+    partnerName: "Balancer",
+    website: "https://balancer.fi/",
+    logoFile: "BalancerLogo.svg",
+  },
+];
