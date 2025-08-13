@@ -296,3 +296,66 @@ export const venueData = {
   hours: "9:00 AM - 6:00 PM",
   facilities: "Free Wi-Fi, Cafes, Co-working Spaces",
 };
+
+// イベントパートナーデータ
+export const eventPartnersData = [
+  {
+    partnerName: "Toban",
+    website: "https://github.com/hackdays-io/toban/",
+    logoFile: "toban-logo-text.svg",
+  },
+  {
+    partnerName: "KON",
+    website: "https://kon.xyz/",
+    logoFile: "kon.png",
+  },
+  {
+    partnerName: "TAIKAI",
+    website: "https://taikai.network/",
+    logoFile: "taikai.svg",
+  },
+  {
+    partnerName: "Kismet Casa",
+    website: "https://kismetcasa.xyz/",
+    logoFile: "kismet_logo.png",
+  },
+  {
+    partnerName: "ZK Tokyo",
+    website: "https://x.com/zk_tokyo",
+    logoFile: "zktokyo.png",
+  },
+  {
+    partnerName: "AKINDO",
+    website: "https://akindo.io/",
+    logoFile: "akindo.svg",
+  },
+];
+
+// メディアパートナーデータ
+export const mediaPartnersData = [
+  {
+    partnerName: "neweconomy",
+    website: "https://www.neweconomy.jp/",
+    logoFile: "neweconomy_bk.png",
+  },
+  {
+    partnerName: "CoinRank",
+    website: "https://www.coinrank.io/",
+    logoFile: "coinrank.svg",
+  },
+  {
+    partnerName: "Crypto Times",
+    website: "https://www.cryptotimes.io/",
+    logoFile: "cryptotimes.png",
+  },
+  {
+    partnerName: "CoinPost",
+    website: "https://coinpost.jp/",
+    logoFile: "coinpost_logo.png",
+  },
+  {
+    partnerName: "CoinDesk",
+    website: "https://www.coindesk.com/",
+    logoFile: "coindesk_jp.png",
+  },
+];
