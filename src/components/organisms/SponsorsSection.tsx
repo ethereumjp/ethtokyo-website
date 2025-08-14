@@ -42,54 +42,54 @@ const SponsorsSection: FC = () => {
 
   const platinumLogosGridStyle = css`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: ${platinumSponsorsData.length === 1 ? "1fr" : platinumSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
     gap: 3rem;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
-    max-width: 600px;
+    max-width: ${platinumSponsorsData.length === 1 ? "300px" : platinumSponsorsData.length === 2 ? "400px" : "800px"};
     margin-left: auto;
     margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: ${platinumSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 2rem;
     }
   `;
 
   const goldLogosGridStyle = css`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: ${goldSponsorsData.length === 1 ? "1fr" : goldSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
     gap: 2.5rem;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
-    max-width: 800px;
+    max-width: ${goldSponsorsData.length === 1 ? "300px" : goldSponsorsData.length === 2 ? "400px" : "800px"};
     margin-left: auto;
     margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: ${goldSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 2rem;
     }
   `;
 
   const silverLogosGridStyle = css`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: ${silverSponsorsData.length === 1 ? "1fr" : silverSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
     gap: 2rem;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
-    max-width: 900px;
+    max-width: ${silverSponsorsData.length === 1 ? "300px" : silverSponsorsData.length === 2 ? "400px" : "800px"};
     margin-left: auto;
     margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: ${silverSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 1.5rem;
     }
   `;
@@ -186,8 +186,8 @@ const SponsorsSection: FC = () => {
 
   return (
     <>
-      {/* <section css={[partnersSectionStyle, sponsorsStyle]}>
-        <div css={containerStyle}>
+      <section css={[partnersSectionStyle, sponsorsStyle]}>
+        <div css={[containerStyle, cs]}>
           <h2 css={headingStyle}>Platinum Sponsors</h2>
           <div css={platinumLogosGridStyle}>
             {platinumSponsorsData.map((sponsor) => (
@@ -235,10 +235,10 @@ const SponsorsSection: FC = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section css={[partnersSectionStyle, sponsorsStyle]}>
-        <div css={[containerStyle, cs]}>
+        <div css={containerStyle}>
           <h2 css={headingStyle}>Community Sponsors</h2>
           <div css={communityLogosGridStyle}>
             {communitySponsorsData.map((sponsor) => (

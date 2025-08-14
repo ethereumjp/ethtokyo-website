@@ -363,55 +363,30 @@ export const mediaPartnersData = [
 // スポンサーデータ
 export const platinumSponsorsData = [
   {
-    partnerName: "Ethereum Foundation",
-    website: "https://ethereum.org/",
-    logoFile: "EFLogo.png",
-  },
-  {
-    partnerName: "Consensys",
-    website: "https://consensys.net/",
-    logoFile: "ConsensysLogo.svg",
+    partnerName: "Japan Smart Chain",
+    website: "https://japansmartchain.com/",
+    logoFile: "JSC-Logo.svg",
   },
 ];
 
 export const goldSponsorsData = [
   {
-    partnerName: "Polygon",
-    website: "https://polygon.technology/",
-    logoFile: "PolygonLogo.svg",
-  },
-  {
-    partnerName: "Chainlink",
-    website: "https://chainlinklabs.com/",
-    logoFile: "ChainlinkLogo.svg",
-  },
-  {
-    partnerName: "Uniswap",
-    website: "https://uniswap.org/",
-    logoFile: "UniswapLogo.svg",
+    partnerName: "ens",
+    website: "https://ens.domains/",
+    logoFile: "ens-logo-Blue.svg",
   },
 ];
 
 export const silverSponsorsData = [
   {
-    partnerName: "Aave",
-    website: "https://aave.com/",
-    logoFile: "AaveLogo.svg",
+    partnerName: "Myna Wallet",
+    website: "https://www.mynawallet.jp/",
+    logoFile: "Myna-logo.png",
   },
   {
-    partnerName: "Compound",
-    website: "https://compound.finance/",
-    logoFile: "CompoundLogo.svg",
-  },
-  {
-    partnerName: "MakerDAO",
-    website: "https://makerdao.com/",
-    logoFile: "MakerDAOLogo.svg",
-  },
-  {
-    partnerName: "Synthetix",
-    website: "https://synthetix.io/",
-    logoFile: "SynthetixLogo.svg",
+    partnerName: "Stormbit",
+    website: "https://stormbit.finance/",
+    logoFile: "Stormbit-logo.svg",
   },
 ];
 
@@ -460,5 +435,33 @@ export const communitySponsorsData = [
     partnerName: "vinyl",
     website: "https://x.com/vvinyll",
     logoFile: "PudgyPenguins.png",
+  },
+];
+
+// オーガナイザーデータ
+export const organizersData = [
+  {
+    name: "Ethereum Japan",
+    website: "https://ethereumjp.org/",
+    logoFile: "2025/images/organizers/EJLogoFace_dark_horizontal.png",
+    logoStyle: "standard",
+  },
+  {
+    name: "Fracton Ventures",
+    website: "https://fracton.ventures/",
+    logoFile: "2025/images/organizers/fracton-rec-white-clear.png",
+    logoStyle: "standard",
+  },
+  {
+    name: "Centrum",
+    website: "https://centrum.studio/",
+    logoFile: "2025/images/organizers/logo_black_transparent.png",
+    logoStyle: "standard",
+  },
+  {
+    name: "INTMAX",
+    website: "https://intmax.io/",
+    logoFile: "2025/images/organizers/intmax.png",
+    logoStyle: "large",
   },
 ];
