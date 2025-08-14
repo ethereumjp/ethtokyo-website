@@ -1,17 +1,17 @@
+import { css } from "@emotion/react";
+import type { FC } from "react";
+import {
+  communitySponsorsData,
+  goldSponsorsData,
+  platinumSponsorsData,
+  silverSponsorsData,
+} from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import {
   containerStyle,
   headingStyle,
   partnersSectionStyle,
 } from "@/themes/styles/common";
-import {
-  platinumSponsorsData,
-  goldSponsorsData,
-  silverSponsorsData,
-  communitySponsorsData,
-} from "@/data/eventData";
-import { css } from "@emotion/react";
-import type { FC } from "react";
 import { Temp_formSection } from "./AboutSection";
 
 const SponsorsSection: FC = () => {
