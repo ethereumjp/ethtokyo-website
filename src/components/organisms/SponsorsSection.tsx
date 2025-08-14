@@ -187,7 +187,7 @@ const SponsorsSection: FC = () => {
   return (
     <>
       <section css={[partnersSectionStyle, sponsorsStyle]}>
-        <div css={containerStyle}>
+        <div css={[containerStyle, cs]}>
           <h2 css={headingStyle}>Platinum Sponsors</h2>
           <div css={platinumLogosGridStyle}>
             {platinumSponsorsData.map((sponsor) => (
@@ -238,7 +238,7 @@ const SponsorsSection: FC = () => {
       </section>
 
       <section css={[partnersSectionStyle, sponsorsStyle]}>
-        <div css={[containerStyle, cs]}>
+        <div css={containerStyle}>
           <h2 css={headingStyle}>Community Sponsors</h2>
           <div css={communityLogosGridStyle}>
             {communitySponsorsData.map((sponsor) => (
