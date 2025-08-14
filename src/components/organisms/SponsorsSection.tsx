@@ -1,5 +1,3 @@
-import { css } from "@emotion/react";
-import type { FC } from "react";
 import {
   communitySponsorsData,
   goldSponsorsData,
@@ -12,6 +10,8 @@ import {
   headingStyle,
   partnersSectionStyle,
 } from "@/themes/styles/common";
+import { css } from "@emotion/react";
+import type { FC } from "react";
 import { Temp_formSection } from "./AboutSection";
 
 const SponsorsSection: FC = () => {

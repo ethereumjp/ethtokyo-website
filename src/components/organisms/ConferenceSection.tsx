@@ -1,9 +1,3 @@
-import { css } from "@emotion/react";
-import type { FC } from "react";
-import { BiMicrophone } from "react-icons/bi";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { MdOutlineSchedule } from "react-icons/md";
 import Button from "@/components/common/Button";
 import { speakersData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
@@ -17,6 +11,12 @@ import {
   multiGridStyle,
   sectionStyle,
 } from "@/themes/styles/common";
+import { css } from "@emotion/react";
+import type { FC } from "react";
+import { BiMicrophone } from "react-icons/bi";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { MdOutlineSchedule } from "react-icons/md";
 
 const ConferenceSection: FC = () => {
   // deform url
