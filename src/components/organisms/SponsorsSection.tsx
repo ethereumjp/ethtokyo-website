@@ -186,7 +186,7 @@ const SponsorsSection: FC = () => {
 
   return (
     <>
-      {/* <section css={[partnersSectionStyle, sponsorsStyle]}>
+      <section css={[partnersSectionStyle, sponsorsStyle]}>
         <div css={containerStyle}>
           <h2 css={headingStyle}>Platinum Sponsors</h2>
           <div css={platinumLogosGridStyle}>
@@ -235,7 +235,7 @@ const SponsorsSection: FC = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section css={[partnersSectionStyle, sponsorsStyle]}>
         <div css={[containerStyle, cs]}>
