@@ -7,7 +7,6 @@ import {
 import { eventPartnersData, mediaPartnersData } from "@/data/eventData";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { Temp_formSection } from "./AboutSection";
 
 const PartnersSection: FC = () => {
   const partnersStyle = css`
@@ -110,10 +109,6 @@ const PartnersSection: FC = () => {
           </div>
         </div>
       </section>
-
-      <div css={css`background: white;`}>
-        <Temp_formSection />
-      </div>
     </>
   );
 };

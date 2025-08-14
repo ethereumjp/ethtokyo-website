@@ -12,6 +12,7 @@ import {
 } from "@/data/eventData";
 import { css } from "@emotion/react";
 import type { FC } from "react";
+import { Temp_formSection } from "./AboutSection";
 
 const SponsorsSection: FC = () => {
   const sponsorsStyle = css`
@@ -111,6 +112,10 @@ const SponsorsSection: FC = () => {
     }
   `;
 
+  const cs = css`
+    padding-top: 2.5rem;
+  `;
+
   const sponsorLogoStyle = css`
     height: 60px;
     max-width: 100%;
@@ -118,25 +123,31 @@ const SponsorsSection: FC = () => {
   `;
 
   const platinumLogoStyle = css`
-    height: 80px;
+    height: 120px;
     max-width: 100%;
     object-fit: contain;
   `;
 
   const goldLogoStyle = css`
-    height: 70px;
+    height: 100px;
     max-width: 100%;
     object-fit: contain;
   `;
 
   const silverLogoStyle = css`
-    height: 60px;
+    height: 90px;
     max-width: 100%;
     object-fit: contain;
   `;
 
   const communityLogoStyle = css`
-    height: 50px;
+    height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+  `;
+
+  const largeCommunityLogoStyle = css`
+    height: 120px;
     max-width: 100%;
     object-fit: contain;
   `;
@@ -146,23 +157,32 @@ const SponsorsSection: FC = () => {
     sponsorName: string;
     website: string;
     logoFile: string;
-  }) => (
-    <a href={props.website} target="_blank" rel="noopener noreferrer">
-      <img
-        src={`2025/images/${props.sponsorType}Sponsors/${props.logoFile}`}
-        alt={`${props.sponsorName} logo`}
-        css={
-          props.sponsorType === "platinum"
-            ? platinumLogoStyle
-            : props.sponsorType === "gold"
-              ? goldLogoStyle
-              : props.sponsorType === "silver"
-                ? silverLogoStyle
-                : communityLogoStyle
-        }
-      />
-    </a>
-  );
+  }) => {
+    // Ethereum JakartaとCurvegrid Inc.のロゴを大きく表示
+    const isLargeLogo =
+      props.sponsorName === "Ethereum Jakarta (ethjkt)" ||
+      props.sponsorName === "Curvegrid Inc.";
+
+    return (
+      <a href={props.website} target="_blank" rel="noopener noreferrer">
+        <img
+          src={`2025/images/${props.sponsorType}Sponsors/${props.logoFile}`}
+          alt={`${props.sponsorName} logo`}
+          css={
+            props.sponsorType === "platinum"
+              ? platinumLogoStyle
+              : props.sponsorType === "gold"
+                ? goldLogoStyle
+                : props.sponsorType === "silver"
+                  ? silverLogoStyle
+                  : isLargeLogo
+                    ? largeCommunityLogoStyle
+                    : communityLogoStyle
+          }
+        />
+      </a>
+    );
+  };
 
   return (
     <>
@@ -218,7 +238,7 @@ const SponsorsSection: FC = () => {
       </section> */}
 
       <section css={[partnersSectionStyle, sponsorsStyle]}>
-        <div css={containerStyle}>
+        <div css={[containerStyle, cs]}>
           <h2 css={headingStyle}>Community Sponsors</h2>
           <div css={communityLogosGridStyle}>
             {communitySponsorsData.map((sponsor) => (
@@ -233,6 +253,9 @@ const SponsorsSection: FC = () => {
           </div>
         </div>
       </section>
+      <div css={css`background: white;`}>
+        <Temp_formSection />
+      </div>
     </>
   );
 };

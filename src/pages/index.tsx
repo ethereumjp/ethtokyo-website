@@ -33,8 +33,8 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <ScheduleSection />
       <VenueSection />
       <SponsorsSection />
-      <OrganizersSection />
       <PartnersSection />
+      <OrganizersSection />
     </Layout>
   );
 };

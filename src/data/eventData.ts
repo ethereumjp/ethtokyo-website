@@ -417,33 +417,48 @@ export const silverSponsorsData = [
 
 export const communitySponsorsData = [
   {
-    partnerName: "Gitcoin",
-    website: "https://gitcoin.co/",
-    logoFile: "GitcoinLogo.svg",
+    partnerName: "Base Japan",
+    website: "https://basejapan.notion.site/",
+    logoFile: "basejapan_blue_transparent.png",
   },
   {
-    partnerName: "ENS",
-    website: "https://ens.domains/",
-    logoFile: "ENSLogo.svg",
+    partnerName: "UNCHAIN",
+    website: "https://unchain.tech",
+    logoFile: "UNCHAIN_logo.png",
   },
   {
-    partnerName: "MetaMask",
-    website: "https://metamask.io/",
-    logoFile: "MetamaskLogo.svg",
+    partnerName: "mind palace",
+    website: "https://mindpalace.jp/",
+    logoFile: "mind-palace-new (2).svg",
   },
   {
-    partnerName: "The Graph",
-    website: "https://thegraph.com/",
-    logoFile: "TheGraphLogo.svg",
+    partnerName: "Ethereum Jakarta (ethjkt)",
+    website: "https://ethjkt.com/",
+    logoFile: "Logo Outline Tulisan (2).png",
   },
   {
-    partnerName: "1inch",
-    website: "https://1inch.io/",
-    logoFile: "1inchLogo.svg",
+    partnerName: "Curvegrid Inc.",
+    website: "http://www.curvegrid.com",
+    logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
   },
   {
-    partnerName: "Balancer",
-    website: "https://balancer.fi/",
-    logoFile: "BalancerLogo.svg",
+    partnerName: "Shinsei Galverse",
+    website: "https://www.galverse.art/",
+    logoFile: "large.png",
+  },
+  {
+    partnerName: "HAKFLOW",
+    website: "https://hakflow.com",
+    logoFile: "R1RI-LkJ_400x400.jpg",
+  },
+  {
+    partnerName: "Amagi",
+    website: "https://amagi.digital/",
+    logoFile: "AMAGI (Grey).jpg",
+  },
+  {
+    partnerName: "vinyl",
+    website: "https://x.com/vvinyll",
+    logoFile: "PudgyPenguins.png",
   },
 ];
