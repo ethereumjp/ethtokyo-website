@@ -1,3 +1,4 @@
+import { eventPartnersData, mediaPartnersData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import {
   containerStyle,
@@ -6,7 +7,6 @@ import {
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { Temp_formSection } from "./AboutSection";
 
 const PartnersSection: FC = () => {
   const partnersStyle = css`
@@ -80,42 +80,15 @@ const PartnersSection: FC = () => {
         <div css={containerStyle}>
           <h2 css={headingStyle}>Event Partners</h2>
           <div css={partnersLogosGridStyle}>
-            <PartnerLogo
-              partnerType="event"
-              partnerName="Toban"
-              website="https://github.com/hackdays-io/toban/"
-              logoFile="toban-logo-text.svg"
-            />
-            <PartnerLogo
-              partnerType="event"
-              partnerName="KON"
-              website="https://kon.xyz/"
-              logoFile="kon.png"
-            />
-            <PartnerLogo
-              partnerType="event"
-              partnerName="TAIKAI"
-              website="https://taikai.network/"
-              logoFile="taikai.svg"
-            />
-            <PartnerLogo
-              partnerType="event"
-              partnerName="Kismet Casa"
-              website="https://kismetcasa.xyz/"
-              logoFile="kismet_logo.png"
-            />
-            <PartnerLogo
-              partnerType="event"
-              partnerName="ZK Tokyo"
-              website="https://x.com/zk_tokyo"
-              logoFile="zktokyo.png"
-            />
-            <PartnerLogo
-              partnerType="event"
-              partnerName="AKINDO"
-              website="https://akindo.io/"
-              logoFile="akindo.svg"
-            />
+            {eventPartnersData.map((partner) => (
+              <PartnerLogo
+                key={partner.partnerName}
+                partnerType="event"
+                partnerName={partner.partnerName}
+                website={partner.website}
+                logoFile={partner.logoFile}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -124,43 +97,18 @@ const PartnersSection: FC = () => {
         <div css={containerStyle}>
           <h2 css={headingStyle}>Media Partners</h2>
           <div css={partnersLogosGridStyle}>
-            <PartnerLogo
-              partnerType="media"
-              partnerName="neweconomy"
-              website="https://www.neweconomy.jp/"
-              logoFile="neweconomy_bk.png"
-            />
-            <PartnerLogo
-              partnerType="media"
-              partnerName="CoinRank"
-              website="https://www.coinrank.io/"
-              logoFile="coinrank.svg"
-            />
-            <PartnerLogo
-              partnerType="media"
-              partnerName="Crypto Times"
-              website="https://www.cryptotimes.io/"
-              logoFile="cryptotimes.png"
-            />
-            <PartnerLogo
-              partnerType="media"
-              partnerName="CoinPost"
-              website="https://coinpost.jp/"
-              logoFile="coinpost_logo.png"
-            />
-            <PartnerLogo
-              partnerType="media"
-              partnerName="CoinDesk"
-              website="https://www.coindesk.com/"
-              logoFile="coindesk_jp.png"
-            />
+            {mediaPartnersData.map((partner) => (
+              <PartnerLogo
+                key={partner.partnerName}
+                partnerType="media"
+                partnerName={partner.partnerName}
+                website={partner.website}
+                logoFile={partner.logoFile}
+              />
+            ))}
           </div>
         </div>
       </section>
-
-      <div css={css`background: white;`}>
-        <Temp_formSection />
-      </div>
     </>
   );
 };

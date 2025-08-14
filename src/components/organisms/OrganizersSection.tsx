@@ -11,7 +11,7 @@ const OrganizersSection: FC = () => {
   const organizersStyle = css`
     background: white;
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 0rem 2rem 2rem 2rem;
   `;
 
   const organizersLogosStyle = css`

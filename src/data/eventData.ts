@@ -31,6 +31,7 @@ export const speakersData = [
     title: "Founder",
     project: "Ethereum Foundation",
     talkTitle: "",
+    socialLink: "https://x.com/VitalikButerin",
   },
   {
     name: "Aya Miyaguchi",
@@ -39,13 +40,7 @@ export const speakersData = [
     title: "President",
     project: "Ethereum Foundation",
     talkTitle: "",
-  },
-  {
-    name: "Cheeky Gorila",
-    image: "2025/images/speakers/Cheeky Gorila_Protocol Guild.jpg",
-    title: "",
-    project: "Protocol Guild",
-    talkTitle: "",
+    socialLink: "https://x.com/AyaMiyagotchi",
   },
   {
     name: "Charles Lu",
@@ -53,6 +48,7 @@ export const speakersData = [
     title: "",
     project: "Espresso",
     talkTitle: "",
+    socialLink: "https://x.com/charleslu1",
   },
   {
     name: "Maika Isogawa",
@@ -60,6 +56,7 @@ export const speakersData = [
     title: "",
     project: "Webacy",
     talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/maikaisogawa/",
   },
   {
     name: "Jeff Wentworth",
@@ -67,6 +64,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Curvegrid",
     talkTitle: "",
+    socialLink: "https://x.com/JeffInTokyo",
   },
   {
     name: "Alan Scott",
@@ -74,6 +72,7 @@ export const speakersData = [
     title: "Contributor",
     project: "Railgun",
     talkTitle: "",
+    socialLink: "https://x.com/tsu_kareta",
   },
   {
     name: "Gwénolé Martin",
@@ -81,6 +80,7 @@ export const speakersData = [
     title: "Devrel",
     project: "Consensys",
     talkTitle: "",
+    socialLink: "https://x.com/Gwenole_M",
   },
   {
     name: "Mykola Siusko",
@@ -88,6 +88,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Web3Privacy now",
     talkTitle: "",
+    socialLink: "https://x.com/nicksvyaznoy",
   },
   {
     name: "Jack Baldwin",
@@ -95,6 +96,7 @@ export const speakersData = [
     title: "Co-founder",
     project: "Shinsei Galverse",
     talkTitle: "",
+    socialLink: "https://x.com/OnlyWailoaloa",
   },
   {
     name: "Suji Yan",
@@ -102,6 +104,7 @@ export const speakersData = [
     title: "Founder",
     project: "Mask Network",
     talkTitle: "",
+    socialLink: "https://x.com/suji_yan",
   },
   {
     name: "David Casey",
@@ -109,6 +112,7 @@ export const speakersData = [
     title: "CEO",
     project: "Funding the Commons",
     talkTitle: "",
+    socialLink: "https://x.com/david1casey",
   },
   {
     name: "Stefan Piech",
@@ -116,6 +120,7 @@ export const speakersData = [
     title: "",
     project: "Amagi Digital",
     talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/stefan-piech?",
   },
   // {
   //   name: "Sora Suegami",
@@ -130,6 +135,7 @@ export const speakersData = [
     title: "Security Researcher",
     project: "Independent",
     talkTitle: "",
+    socialLink: "https://x.com/NoahJelich",
   },
   {
     name: "Jack Saracco",
@@ -137,6 +143,7 @@ export const speakersData = [
     title: "Founder",
     project: "Plasma Free",
     talkTitle: "",
+    socialLink: "https://x.com/jacksaracco",
   },
   // {
   //   name: "Leona Hioki",
@@ -289,3 +296,169 @@ export const venueData = {
   hours: "9:00 AM - 6:00 PM",
   facilities: "Free Wi-Fi, Cafes, Co-working Spaces",
 };
+
+// イベントパートナーデータ
+export const eventPartnersData = [
+  {
+    partnerName: "Toban",
+    website: "https://github.com/hackdays-io/toban/",
+    logoFile: "toban-logo-text.svg",
+  },
+  {
+    partnerName: "KON",
+    website: "https://kon.xyz/",
+    logoFile: "kon.png",
+  },
+  {
+    partnerName: "TAIKAI",
+    website: "https://taikai.network/",
+    logoFile: "taikai.svg",
+  },
+  {
+    partnerName: "Kismet Casa",
+    website: "https://kismetcasa.xyz/",
+    logoFile: "kismet_logo.png",
+  },
+  {
+    partnerName: "ZK Tokyo",
+    website: "https://x.com/zk_tokyo",
+    logoFile: "zktokyo.png",
+  },
+  {
+    partnerName: "AKINDO",
+    website: "https://akindo.io/",
+    logoFile: "akindo.svg",
+  },
+];
+
+// メディアパートナーデータ
+export const mediaPartnersData = [
+  {
+    partnerName: "neweconomy",
+    website: "https://www.neweconomy.jp/",
+    logoFile: "neweconomy_bk.png",
+  },
+  {
+    partnerName: "CoinRank",
+    website: "https://www.coinrank.io/",
+    logoFile: "coinrank.svg",
+  },
+  {
+    partnerName: "Crypto Times",
+    website: "https://www.cryptotimes.io/",
+    logoFile: "cryptotimes.png",
+  },
+  {
+    partnerName: "CoinPost",
+    website: "https://coinpost.jp/",
+    logoFile: "coinpost_logo.png",
+  },
+  {
+    partnerName: "CoinDesk",
+    website: "https://www.coindesk.com/",
+    logoFile: "coindesk_jp.png",
+  },
+];
+
+// スポンサーデータ
+export const platinumSponsorsData = [
+  {
+    partnerName: "Ethereum Foundation",
+    website: "https://ethereum.org/",
+    logoFile: "EFLogo.png",
+  },
+  {
+    partnerName: "Consensys",
+    website: "https://consensys.net/",
+    logoFile: "ConsensysLogo.svg",
+  },
+];
+
+export const goldSponsorsData = [
+  {
+    partnerName: "Polygon",
+    website: "https://polygon.technology/",
+    logoFile: "PolygonLogo.svg",
+  },
+  {
+    partnerName: "Chainlink",
+    website: "https://chainlinklabs.com/",
+    logoFile: "ChainlinkLogo.svg",
+  },
+  {
+    partnerName: "Uniswap",
+    website: "https://uniswap.org/",
+    logoFile: "UniswapLogo.svg",
+  },
+];
+
+export const silverSponsorsData = [
+  {
+    partnerName: "Aave",
+    website: "https://aave.com/",
+    logoFile: "AaveLogo.svg",
+  },
+  {
+    partnerName: "Compound",
+    website: "https://compound.finance/",
+    logoFile: "CompoundLogo.svg",
+  },
+  {
+    partnerName: "MakerDAO",
+    website: "https://makerdao.com/",
+    logoFile: "MakerDAOLogo.svg",
+  },
+  {
+    partnerName: "Synthetix",
+    website: "https://synthetix.io/",
+    logoFile: "SynthetixLogo.svg",
+  },
+];
+
+export const communitySponsorsData = [
+  {
+    partnerName: "Base Japan",
+    website: "https://basejapan.notion.site/",
+    logoFile: "basejapan_blue_transparent.png",
+  },
+  {
+    partnerName: "UNCHAIN",
+    website: "https://unchain.tech",
+    logoFile: "UNCHAIN_logo.png",
+  },
+  {
+    partnerName: "mind palace",
+    website: "https://mindpalace.jp/",
+    logoFile: "mindpalace.svg",
+  },
+  {
+    partnerName: "ETHJKT",
+    website: "https://ethjkt.com/",
+    logoFile: "tulisan.png",
+  },
+  {
+    partnerName: "Curvegrid Inc.",
+    website: "http://www.curvegrid.com",
+    logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
+  },
+  {
+    partnerName: "Shinsei Galverse",
+    website: "https://www.galverse.art/",
+    logoFile: "large.png",
+  },
+  {
+    partnerName: "HAKFLOW",
+    website: "https://hakflow.com",
+    logoFile: "hakflow.jpg",
+  },
+  {
+    partnerName: "Amagi",
+    website: "https://amagi.digital/",
+    logoFile: "amagidigital.jpg",
+  },
+  {
+    partnerName: "vinyl",
+    website: "https://x.com/vvinyll",
+    logoFile: "PudgyPenguins.png",
+  },
+];
