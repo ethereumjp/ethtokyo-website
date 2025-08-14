@@ -429,12 +429,12 @@ export const communitySponsorsData = [
   {
     partnerName: "mind palace",
     website: "https://mindpalace.jp/",
-    logoFile: "mind-palace-new (2).svg",
+    logoFile: "mindpalace.svg",
   },
   {
-    partnerName: "Ethereum Jakarta (ethjkt)",
+    partnerName: "ETHJKT",
     website: "https://ethjkt.com/",
-    logoFile: "Logo Outline Tulisan (2).png",
+    logoFile: "tulisan.png",
   },
   {
     partnerName: "Curvegrid Inc.",
@@ -449,12 +449,12 @@ export const communitySponsorsData = [
   {
     partnerName: "HAKFLOW",
     website: "https://hakflow.com",
-    logoFile: "R1RI-LkJ_400x400.jpg",
+    logoFile: "hakflow.jpg",
   },
   {
     partnerName: "Amagi",
     website: "https://amagi.digital/",
-    logoFile: "AMAGI (Grey).jpg",
+    logoFile: "amagidigital.jpg",
   },
   {
     partnerName: "vinyl",
