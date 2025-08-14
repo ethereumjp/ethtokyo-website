@@ -4,6 +4,7 @@ import {
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
+import { organizersData } from "@/data/eventData";
 import { css } from "@emotion/react";
 import type { FC } from "react";
 
@@ -49,50 +50,24 @@ const OrganizersSection: FC = () => {
       <div css={containerStyle}>
         <h2 css={headingStyle}>Organizers</h2>
         <div css={organizersLogosStyle}>
-          <a
-            href="https://ethereumjp.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="2025/images/organizers/EJLogoFace_dark_horizontal.png"
-              alt="Organizer Ethereum Japan"
-              css={organizersLogoStyle}
-            />
-          </a>
-          <a
-            href="https://fracton.ventures/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="2025/images/organizers/fracton-rec-white-clear.png"
-              alt="Organizer Fracton Ventures"
-              css={organizersLogoStyle}
-            />
-          </a>
-          <a
-            href="https://centrum.studio/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="2025/images/organizers/logo_black_transparent.png"
-              alt="Organizer Centrum"
-              css={organizersLogoStyle}
-            />
-          </a>
-          <a
-            href="https://intmax.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="2025/images/organizers/intmax.png"
-              alt="Organizer INTMAX"
-              css={intMaxLogoStyle}
-            />
-          </a>
+          {organizersData.map((organizer) => (
+            <a
+              key={organizer.name}
+              href={organizer.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={organizer.logoFile}
+                alt={`Organizer ${organizer.name}`}
+                css={
+                  organizer.logoStyle === "large"
+                    ? intMaxLogoStyle
+                    : organizersLogoStyle
+                }
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>
