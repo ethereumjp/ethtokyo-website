@@ -365,7 +365,7 @@ export const platinumSponsorsData = [
   {
     partnerName: "Japan Smart Chain",
     website: "https://japansmartchain.com/",
-    logoFile: "JSC-Logo.png",
+    logoFile: "JSC-Logo.svg",
   },
 ];
 
