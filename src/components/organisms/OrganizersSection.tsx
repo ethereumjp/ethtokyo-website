@@ -1,12 +1,13 @@
+import { css } from "@emotion/react";
+import type { FC } from "react";
+
+import { organizersData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import {
   containerStyle,
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
-import { organizersData } from "@/data/eventData";
-import { css } from "@emotion/react";
-import type { FC } from "react";
 
 const OrganizersSection: FC = () => {
   const organizersStyle = css`
