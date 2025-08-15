@@ -20,7 +20,7 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta property="og:title" content="ETHTokyo 2025" />
         <meta
           property="og:image"
-          content="https://ethtokyo.org/images/thumbnail.jpg"
+          content="https://ethtokyo.org/2025/images/thumbnail.jpg"
         />
         <meta
           property="og:description"
@@ -30,9 +30,12 @@ const CustomDocument = (props: NoncedDocument) => {
           name="description"
           content="ETHTokyo 2025 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts."
         />
-        <meta name="twitter:card" content="summary" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@Ethereum_JP" />
+        <meta
+          name="twitter:image"
+          content="https://ethtokyo.org/2025/images/thumbnail.jpg"
+        />
         <meta property="csp-nonce" content={props.nonce} />
       </Head>
 
