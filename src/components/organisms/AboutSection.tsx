@@ -4,8 +4,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiDoorOpen, BiIdCard, BiMicrophone, BiMoney } from "react-icons/bi";
-import TaikaiLogoMark from "/public/2025/images/eventPartners/taikai_logomark.svg";
+import { BiIdCard, BiMicrophone, BiMoney } from "react-icons/bi";
 
 const AboutSection: FC = () => {
   const sectionStyle = css`
@@ -188,7 +187,6 @@ const AboutSection: FC = () => {
                 </p>
                 <div css={css`display:flex; justify-content: space-between;`}>
                   <Button
-                    css={css`max-width: 312px; max-height: 44px;`}
                     href="https://app.moongate.id/e/ethtokyo2025"
                     external
                     variant="primary"
@@ -197,7 +195,6 @@ const AboutSection: FC = () => {
                     <span css={css`color: ${neutral.White};`}>Get Tickets</span>
                   </Button>
                   <Button
-                    css={css`max-width: 312px; max-height: 44px;`}
                     href="https://speak.ethtokyo.org/conference-2025/submit"
                     external
                     variant="outline"
@@ -215,9 +212,8 @@ const AboutSection: FC = () => {
                   solutions, and compete for exciting prizes. Open to all skill
                   levels.
                 </p>
-                <div css={css`display:flex; justify-content: space-between;`}>
+                <div css={css`display:flex; justify-content: center;`}>
                   <Button
-                    css={css`max-width: 312px; max-height: 44px;`}
                     href="https://app.moongate.id/e/ethtokyo2025"
                     external
                     variant="primary"
@@ -236,7 +232,7 @@ const AboutSection: FC = () => {
                       max-width: 100%;
                     `}
                   /> */}
-                  <Button
+                  {/* <Button
                     css={css`max-width: 312px; max-height: 44px;`}
                     href="https://taikai.network/en/ethtokyo/hackathons/hackathon-2025/overview"
                     external
@@ -250,7 +246,7 @@ const AboutSection: FC = () => {
                     }
                   >
                     <span css={css``}>Hacker Registration</span>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
