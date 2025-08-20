@@ -304,15 +304,26 @@ export const Temp_formSection = () => {
           ETHTokyo'25 is currently accepting sponsors. Please contact us if you
           are interested in sponsoring the event.
         </p>
-        <Button
-          href="https://ethtokyo.deform.cc/25-sponsor-application"
-          external
-          size="medium"
-          variant="primary"
-          icon={<BiMoney />}
-        >
-          <span css={css`color: ${neutral.White};`}>Sponsor event</span>
-        </Button>
+        <div css={css`display: flex; gap: 1rem; flex-wrap: wrap;`}>
+          <Button
+            href="https://ethtokyo.deform.cc/25-sponsor-application"
+            external
+            size="medium"
+            variant="primary"
+            icon={<BiMoney />}
+          >
+            <span css={css`color: ${neutral.White};`}>Enterprise Sponsor</span>
+          </Button>
+          <Button
+            href="https://app.moongate.id/e/ethtokyo2025"
+            external
+            size="medium"
+            variant="primary"
+            icon={<BiMoney />}
+          >
+            <span css={css`color: ${neutral.White};`}>Community Sponsor</span>
+          </Button>
+        </div>
       </div>
     </div>
   );
