@@ -6,8 +6,8 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import type { FC } from "react";
 import { BiIdCard } from "react-icons/bi";
-import ETHTokyoLogo from "/public/assets/ETHTokyoLogo.png";
 import ThemeImage from "/public/2025/images/keyvisual.png";
+import ETHTokyoLogo from "/public/assets/ETHTokyoLogo.png";
 
 const HeroSection: FC = () => {
   const sectionStyle = css`
