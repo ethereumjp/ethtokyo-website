@@ -386,7 +386,7 @@ export const silverSponsorsData = [
   {
     partnerName: "Stormbit",
     website: "https://stormbit.finance/",
-    logoFile: "Stormbit-logo.svg",
+    logoFile: "logo-q3-logomark.svg",
   },
 ];
 
