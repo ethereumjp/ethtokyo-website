@@ -13,11 +13,10 @@ import {
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiMicrophone } from "react-icons/bi";
+import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineSchedule } from "react-icons/md";
-import { BiIdCard } from "react-icons/bi";
 
 const ConferenceSection: FC = () => {
   // deform url
