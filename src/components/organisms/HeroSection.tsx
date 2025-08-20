@@ -6,6 +6,8 @@ import Image from "next/image";
 import type { FC } from "react";
 import ThemeImage from "/public/2025/images/keyvisual.png";
 import ETHTokyoLogo from "/public/assets/ETHTokyoLogo.png";
+import Button from "@/components/common/Button";
+import { BiIdCard } from "react-icons/bi";
 
 const HeroSection: FC = () => {
   const sectionStyle = css`
@@ -55,23 +57,27 @@ const HeroSection: FC = () => {
     margin: 0 auto;
     max-width: 1280px;
     padding: 0 1rem;
-    padding-top: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
     position: relative;
     text-align: center;
     z-index: 2;
     
     ${mq.mobile} {
       padding: 0 1.5rem;
-      padding-top: 9rem;
+      padding-top: 5rem;
+      padding-bottom: 2.5rem;
     }
     
     ${mq.tablet} {
       padding: 0 2rem;
-      padding-top: 10rem;
+      padding-top: 6rem;
+      padding-bottom: 3rem;
     }
     
     ${mq.laptop} {
-      padding-top: 11rem;
+      padding-top: 7rem;
+      padding-bottom: 4rem;
     }
   `;
 
@@ -172,6 +178,22 @@ const HeroSection: FC = () => {
     ${mq.laptop} {
       margin-bottom: 4rem;
       margin-top: 4rem;
+    }
+  `;
+
+  const buttonContainerStyle = css`
+    margin-top: 1.5rem;
+    
+    ${mq.mobile} {
+      margin-top: 2rem;
+    }
+    
+    ${mq.tablet} {
+      margin-top: 0.5rem;
+    }
+    
+    ${mq.laptop} {
+      margin-top: 0.5rem;
     }
   `;
 
@@ -279,6 +301,22 @@ const HeroSection: FC = () => {
             </svg>
             <span>3000+ Attendees</span>
           </div> */}
+        </div>
+        <div css={buttonContainerStyle}>
+          <Button
+            href="https://app.moongate.id/e/ethtokyo2025"
+            external
+            size="large"
+            icon={<BiIdCard />}
+          >
+            <span
+              css={css`
+                  color: ${neutral.White};
+                `}
+            >
+              Get Ticket
+            </span>
+          </Button>
         </div>
       </div>
     </section>

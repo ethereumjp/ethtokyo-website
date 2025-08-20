@@ -7,6 +7,8 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 import { HiCalendarDays, HiClock, HiOutlineMapPin } from "react-icons/hi2";
 import { IoTicketOutline } from "react-icons/io5";
+import Button from "@/components/common/Button";
+import { BiIdCard } from "react-icons/bi";
 
 interface EventItem {
   time: string;
@@ -188,6 +190,22 @@ const ScheduleSection = () => {
             isExpanded={expandedSchedules.hackathon}
             onToggle={() => toggleSchedule("hackathon")}
           />
+        </div>
+        <div css={buttonContainerStyle}>
+          <Button
+            href="https://app.moongate.id/e/ethtokyo2025"
+            external
+            size="large"
+            icon={<BiIdCard />}
+          >
+            <span
+              css={css`
+                    color: ${neutral.White};
+                  `}
+            >
+              Get Ticket
+            </span>
+          </Button>
         </div>
       </div>
     </section>
@@ -433,6 +451,12 @@ const readMoreButtonStyle = css`
   &:hover {
     color: ${brand.Secondary};
   }
+`;
+
+const buttonContainerStyle = css`
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 `;
 
 export default ScheduleSection;
