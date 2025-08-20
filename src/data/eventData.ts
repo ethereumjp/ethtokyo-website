@@ -384,8 +384,8 @@ export const silverSponsorsData = [
     logoFile: "Myna-logo.png",
   },
   {
-    partnerName: "Stormbit",
-    website: "https://stormbit.finance/",
+    partnerName: "Quantum3labs",
+    website: "https://quantum3labs.com/",
     logoFile: "logo-q3-logomark.svg",
   },
 ];
