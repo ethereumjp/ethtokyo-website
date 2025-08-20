@@ -358,6 +358,16 @@ export const mediaPartnersData = [
     website: "https://www.coindesk.com/",
     logoFile: "coindesk_jp.png",
   },
+  {
+    partnerName: "AllSpark Research",
+    website: "https://allsparkresearch.com/",
+    logoFile: "BlackAllSpark00.png",
+  },
+  {
+    partnerName: "Museigen.io",
+    website: "https://museigen.io/",
+    logoFile: "PNG-wht-v2-transparent-01.png",
+  },
 ];
 
 // スポンサーデータ
