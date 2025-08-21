@@ -13,7 +13,7 @@ import {
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import { BiMicrophone } from "react-icons/bi";
+import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineSchedule } from "react-icons/md";
@@ -259,6 +259,11 @@ const ConferenceSection: FC = () => {
       gap: 16px;
     }
   `;
+  const buttonContainerStyle = css`
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+`;
 
   return (
     <section id="conference" css={sectionStyle}>
@@ -369,6 +374,22 @@ const ConferenceSection: FC = () => {
             icon={<BiMicrophone />}
           >
             Apply Now
+          </Button>
+        </div>
+        <div css={buttonContainerStyle}>
+          <Button
+            href="https://app.moongate.id/e/ethtokyo2025"
+            external
+            size="large"
+            icon={<BiIdCard />}
+          >
+            <span
+              css={css`
+                  color: ${neutral.White};
+                `}
+            >
+              Get Ticket
+            </span>
           </Button>
         </div>
       </div>
