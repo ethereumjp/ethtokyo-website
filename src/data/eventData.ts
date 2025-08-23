@@ -382,6 +382,11 @@ export const goldSponsorsData = [
     website: "https://ens.domains/",
     logoFile: "ens-logo-Blue.svg",
   },
+  {
+    partnerName: "Geodework",
+    website: "https://geodework.com/",
+    logoFile: "Geodework-logo-black.png",
+  },
 ];
 
 export const silverSponsorsData = [
