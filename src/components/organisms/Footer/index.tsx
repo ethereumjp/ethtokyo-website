@@ -163,7 +163,14 @@ const Footer: FC<ComponentProps> = ({ children }) => {
               target="_blank"
               rel="noreferrer"
             >
-              Event sponsorship
+              Enterprise Sponsorship
+            </a>
+            <a
+              href="https://app.moongate.id/e/ethtokyo2025"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Community Sponsorship
             </a>
           </div>
         </div>

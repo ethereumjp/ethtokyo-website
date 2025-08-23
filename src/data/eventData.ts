@@ -358,6 +358,16 @@ export const mediaPartnersData = [
     website: "https://www.coindesk.com/",
     logoFile: "coindesk_jp.png",
   },
+  {
+    partnerName: "AllSpark Research",
+    website: "https://allsparkresearch.com/",
+    logoFile: "BlackAllSpark00.png",
+  },
+  {
+    partnerName: "Museigen.io",
+    website: "https://museigen.io/",
+    logoFile: "PNG-wht-v2-transparent-01.png",
+  },
 ];
 
 // スポンサーデータ
@@ -384,9 +394,9 @@ export const silverSponsorsData = [
     logoFile: "Myna-logo.png",
   },
   {
-    partnerName: "Stormbit",
-    website: "https://stormbit.finance/",
-    logoFile: "Stormbit-logo.svg",
+    partnerName: "Quantum3labs",
+    website: "https://quantum3labs.com/",
+    logoFile: "logo-q3-logomark.svg",
   },
 ];
 
