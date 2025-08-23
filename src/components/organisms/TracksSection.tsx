@@ -93,6 +93,71 @@ const TracksSection: FC = () => {
           title="Hackathon Official Tracks"
           description="Join one of our official tracks and compete for prizes while building the future of Ethereum."
         />
+
+        <div css={imageGalleryStyle}>
+          <div css={imageCardStyle}>
+            <div css={imageWrapperStyle}>
+              <img
+                src="/2025/images/gallery/hackathon-1.jpg"
+                alt="ETHTokyo Hackathon Participants"
+                css={imageStyle}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src =
+                    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop";
+                }}
+              />
+              <div css={imageOverlayStyle}>
+                <h3 css={overlayTitleStyle}>Build the Future</h3>
+                <p css={overlayDescriptionStyle}>
+                  Join hundreds of developers building innovative solutions
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div css={imageCardStyle}>
+            <div css={imageWrapperStyle}>
+              <img
+                src="/2025/images/gallery/hackathon-2.jpg"
+                alt="ETHTokyo Hackathon Mentoring"
+                css={imageStyle}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src =
+                    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop";
+                }}
+              />
+              <div css={imageOverlayStyle}>
+                <h3 css={overlayTitleStyle}>Expert Mentorship</h3>
+                <p css={overlayDescriptionStyle}>
+                  Get guidance from industry leaders and Ethereum experts
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div css={imageCardStyle}>
+            <div css={imageWrapperStyle}>
+              <img
+                src="/2025/images/gallery/hackathon-3.jpg"
+                alt="ETHTokyo Hackathon Presentations"
+                css={imageStyle}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src =
+                    "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=500&fit=crop";
+                }}
+              />
+              <div css={imageOverlayStyle}>
+                <h3 css={overlayTitleStyle}>Demo Day</h3>
+                <p css={overlayDescriptionStyle}>
+                  Present your project to judges and the community
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div css={tracksContainerStyle}>
           {tracksData.map((track) => (
             <TrackCard
@@ -262,6 +327,106 @@ const readMoreButtonStyle = css`
 
 const readLessButtonStyle = css`
   margin-top: 1.5rem;
+`;
+
+const imageGalleryStyle = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+  
+  ${mq.mobileSmall} {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+`;
+
+const imageCardStyle = css`
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: ${neutral.White};
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      ${brand.Primary}20 0%,
+      transparent 50%,
+      ${brand.Secondary}20 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+`;
+
+const imageWrapperStyle = css`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+`;
+
+const imageStyle = css`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  
+  ${imageCardStyle}:hover & {
+    transform: scale(1.1);
+  }
+`;
+
+const imageOverlayStyle = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  );
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  
+  ${imageCardStyle}:hover & {
+    transform: translateY(0);
+  }
+`;
+
+const overlayTitleStyle = css`
+  color: ${neutral.White};
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+`;
+
+const overlayDescriptionStyle = css`
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.4;
 `;
 
 export default TracksSection;

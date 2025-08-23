@@ -78,23 +78,6 @@ const ConferenceSection: FC = () => {
     margin-bottom: 1.5rem;
   `;
 
-  const featureListStyle = css`
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
-    margin: 2rem 0;
-    
-    ${mq.tablet} {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  `;
-
-  const featureItemStyle = css`
-    align-items: flex-start;
-    display: flex;
-    gap: 1rem;
-  `;
-
   const featureIconStyle = css`
     align-items: center;
     background-color: ${themeLight.PrimaryLowContrast};
@@ -260,6 +243,75 @@ const ConferenceSection: FC = () => {
     }
   `;
 
+  const galleryContainerStyle = css`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+  `;
+
+  const featureCardStyle = css`
+    background: ${neutral.White};
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  `;
+
+  const featureContentStyle = css`
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  `;
+
+  const featureDescriptionStyle = css`
+    color: ${neutral.Grey4};
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  `;
+
+  const galleryImageWrapperStyle = css`
+    position: relative;
+    overflow: hidden;
+  `;
+
+  const galleryImageStyle = css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  `;
+
+  const galleryImageInnerStyle = css`
+    aspect-ratio: 16 / 10;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  `;
+
+  const galleryTitleStyle = css`
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: ${neutral.White};
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    
+    ${galleryImageWrapperStyle}:hover & {
+      opacity: 1;
+    }
+  `;
+
   return (
     <section id="conference" css={sectionStyle}>
       <div css={containerStyle}>
@@ -272,30 +324,64 @@ const ConferenceSection: FC = () => {
           opportunities.
         </p>
 
-        <div css={featureListStyle}>
-          <div css={featureItemStyle}>
-            <div css={featureIconStyle}>
-              <MdOutlineSchedule size={24} />
+        <div css={galleryContainerStyle}>
+          <div css={featureCardStyle}>
+            <div css={galleryImageWrapperStyle}>
+              <div css={galleryImageInnerStyle}>
+                <img
+                  src="/2025/images/gallery/event-image-1.jpg"
+                  alt="ETHTokyo Conference Audience"
+                  css={galleryImageStyle}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src =
+                      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
+                  }}
+                />
+                <div css={galleryTitleStyle}>Conference Keynote Sessions</div>
+              </div>
             </div>
-            <div>
-              <h3 css={featureTitleStyle}>Comprehensive Program</h3>
-              <p>
-                Featuring keynote speeches, panel discussions, workshops, and
-                diverse sessions for all experience levels.
-              </p>
+            <div css={featureContentStyle}>
+              <div css={featureIconStyle}>
+                <MdOutlineSchedule size={24} />
+              </div>
+              <div>
+                <h3 css={featureTitleStyle}>Comprehensive Program</h3>
+                <p css={featureDescriptionStyle}>
+                  Featuring keynote speeches, panel discussions, workshops, and
+                  diverse sessions for all experience levels.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div css={featureItemStyle}>
-            <div css={featureIconStyle}>
-              <BiMicrophone size={24} />
+          <div css={featureCardStyle}>
+            <div css={galleryImageWrapperStyle}>
+              <div css={galleryImageInnerStyle}>
+                <img
+                  src="/2025/images/gallery/event-image-2.jpg"
+                  alt="ETHTokyo Conference Speaker"
+                  css={galleryImageStyle}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src =
+                      "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=500&fit=crop";
+                  }}
+                />
+                <div css={galleryTitleStyle}>Ethereum Community Gathering</div>
+              </div>
             </div>
-            <div>
-              <h3 css={featureTitleStyle}>Industry-Leading Speakers</h3>
-              <p>
-                Hear from top experts and builders in the Ethereum Community,
-                major projects, and research institutions.
-              </p>
+            <div css={featureContentStyle}>
+              <div css={featureIconStyle}>
+                <BiMicrophone size={24} />
+              </div>
+              <div>
+                <h3 css={featureTitleStyle}>Industry-Leading Speakers</h3>
+                <p css={featureDescriptionStyle}>
+                  Hear from top experts and builders in the Ethereum Community,
+                  major projects, and research institutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
