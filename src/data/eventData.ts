@@ -321,6 +321,11 @@ export const eventPartnersData = [
     website: "https://akindo.io/",
     logoFile: "akindo.svg",
   },
+  {
+    partnerName: "Moongate",
+    website: "https://www.moongate.id/",
+    logoFile: "Moongate-Logo-Primary-B.png",
+  },
 ];
 
 // メディアパートナーデータ
