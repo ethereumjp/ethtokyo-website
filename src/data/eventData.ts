@@ -114,14 +114,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/david1casey",
   },
-  {
-    name: "Stefan Piech",
-    image: "2025/images/speakers/stefanpiech.jpeg",
-    title: "",
-    project: "Amagi Digital",
-    talkTitle: "",
-    socialLink: "https://www.linkedin.com/in/stefan-piech?",
-  },
   // {
   //   name: "Sora Suegami",
   //   image: "2025/images/speakers/sorasuegami.png",
