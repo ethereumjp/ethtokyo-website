@@ -24,6 +24,8 @@
     "format": "yarn run biome format ./src --write",
     "check": "yarn run biome check ./src",
     "clean": "yarn run biome check ./src --write",
+    "ci": "yarn tsc && yarn run biome ci .",
+    "pre-push": "yarn ci",
     "build-storybook": "storybook build"
   },
   "packageManager": "yarn@3.2.4",
