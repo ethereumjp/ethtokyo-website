@@ -415,6 +415,12 @@ export const silverSponsorsData = [
     website: "https://quantum3labs.com/",
     logoFile: "logo-q3-logomark.svg",
   },
+
+  {
+    partnerName: "Blockchain For Good Alliance",
+    website: "https://chainforgood.org/",
+    logoFile: "Blockchain_For_Good_Alliance_Logo_Primary.png",
+  },
 ];
 
 export const communitySponsorsData = [
