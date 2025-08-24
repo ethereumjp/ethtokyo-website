@@ -397,6 +397,11 @@ export const goldSponsorsData = [
     website: "https://geodework.com/",
     logoFile: "Geodework-logo-black.png",
   },
+  {
+    partnerName: "Eliza OS",
+    website: "https://elizaos.ai/",
+    logoFile: "ElizaOS_Logo_Black_RGB.png",
+  },
 ];
 
 export const silverSponsorsData = [
