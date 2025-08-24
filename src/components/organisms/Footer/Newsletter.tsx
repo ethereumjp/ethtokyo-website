@@ -43,6 +43,10 @@ const Newsletter: FC<ComponentProps> = ({ children }) => {
     margin-left: 0.5rem;
   `;
 
+  const isAirTableEnabled =
+    process.env.NEXT_PUBLIC_AIRTABLE_PAT &&
+    process.env.NEXT_PUBLIC_AIRTABLE_BASE &&
+    process.env.NEXT_PUBLIC_AIRTABLE_TABLE;
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [sendStatus, setSendStatus] = useState<number>(0); // 0: 未送信, 1: 送信中, 2: 送信成功, 3: 送信失敗
 
@@ -98,7 +102,7 @@ const Newsletter: FC<ComponentProps> = ({ children }) => {
             pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
             title="Please enter a valid email address"
             onChange={(e) => setIsValidEmail(e.target.validity.valid)}
-            disabled={[1, 2].includes(sendStatus)}
+            disabled={!isAirTableEnabled || [1, 2].includes(sendStatus)}
           />
           <Button
             size="small"
