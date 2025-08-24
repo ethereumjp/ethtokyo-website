@@ -1,8 +1,3 @@
-import { css } from "@emotion/react";
-import type { NextPage } from "next";
-import Head from "next/head";
-import { useState } from "react";
-import { IoClose, IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
@@ -10,6 +5,11 @@ import {
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
+import { css } from "@emotion/react";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useState } from "react";
+import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 
 interface GalleryImage {
   id: string;
