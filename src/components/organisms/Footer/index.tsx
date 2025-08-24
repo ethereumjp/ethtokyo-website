@@ -1,12 +1,12 @@
+import Newsletter from "@/components/organisms/Footer/Newsletter";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
-import type FC from "react";
+import type { FC } from "react";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
-import Newsletter from "@/components/organisms/Footer/Newsletter";
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`
