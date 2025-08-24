@@ -292,6 +292,11 @@ export const venueData = {
 // イベントパートナーデータ
 export const eventPartnersData = [
   {
+    partnerName: "Digital Garage",
+    website: "https://www.garage.co.jp/",
+    logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
+  },
+  {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
     logoFile: "toban-logo-text.svg",
