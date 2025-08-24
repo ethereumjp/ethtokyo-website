@@ -302,14 +302,24 @@ export const eventPartnersData = [
     logoFile: "kon.png",
   },
   {
+    partnerName: "Kismet Casa",
+    website: "https://kismetcasa.xyz/",
+    logoFile: "kismet_logo.png",
+  },
+  {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
     logoFile: "taikai.svg",
   },
   {
-    partnerName: "Kismet Casa",
-    website: "https://kismetcasa.xyz/",
-    logoFile: "kismet_logo.png",
+    partnerName: "Moongate",
+    website: "https://www.moongate.id/",
+    logoFile: "Moongate-Logo-Primary-B.png",
+  },
+  {
+    partnerName: "Megaphone",
+    website: "https://www.megaphone.xyz/",
+    logoFile: "Megaphone-logo-light.png",
   },
   {
     partnerName: "ZK Tokyo",
@@ -320,11 +330,6 @@ export const eventPartnersData = [
     partnerName: "AKINDO",
     website: "https://akindo.io/",
     logoFile: "akindo.svg",
-  },
-  {
-    partnerName: "Moongate",
-    website: "https://www.moongate.id/",
-    logoFile: "Moongate-Logo-Primary-B.png",
   },
 ];
 
