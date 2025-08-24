@@ -153,7 +153,7 @@ const GallerySection: FC = () => {
 
         <div css={statsContainerStyle}>
           <div css={statItemStyle}>
-            <div css={statNumberStyle}>5</div>
+            <div css={statNumberStyle}>81</div>
             <div css={statLabelStyle}>Photos</div>
           </div>
           <div css={statItemStyle}>
