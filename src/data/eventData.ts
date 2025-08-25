@@ -469,6 +469,11 @@ export const communitySponsorsData = [
     website: "https://x.com/vvinyll",
     logoFile: "PudgyPenguins.png",
   },
+  {
+    partnerName: "web3 Research JAPAN",
+    website: "https://www.web3researchjapan.com/",
+    logoFile: "web3researchjapan.png",
+  },
 ];
 
 // オーガナイザーデータ
