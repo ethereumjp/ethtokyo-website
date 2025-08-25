@@ -53,6 +53,12 @@ const PartnersSection: FC = () => {
     object-fit: contain;
   `;
 
+  const partnersLogoStyleLarge = css`
+    height: 90px;
+    max-width: 100%;
+    object-fit: contain;
+  `;
+
   const PartnerLogo = (props: {
     partnerType:
       | "event"
@@ -64,15 +70,19 @@ const PartnersSection: FC = () => {
     partnerName: string;
     website: string;
     logoFile: string;
-  }) => (
-    <a href={props.website} target="_blank" rel="noopener noreferrer">
-      <img
-        src={`2025/images/${props.partnerType}Partners/${props.logoFile}`}
-        alt={`${props.partnerName} logo`}
-        css={partnersLogoStyle}
-      />
-    </a>
-  );
+  }) => {
+    const logoStyle = partnersLogoStyle;
+
+    return (
+      <a href={props.website} target="_blank" rel="noopener noreferrer">
+        <img
+          src={`2025/images/${props.partnerType}Partners/${props.logoFile}`}
+          alt={`${props.partnerName} logo`}
+          css={logoStyle}
+        />
+      </a>
+    );
+  };
 
   return (
     <>

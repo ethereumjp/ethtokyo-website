@@ -207,6 +207,26 @@ const ScheduleSection = () => {
             </span>
           </Button>
         </div>
+
+        {/* Side Events Calendar Section */}
+        <div css={sideEventsContainerStyle}>
+          <SectionTitle
+            title="Side Events"
+            description="Join our community events and meetups happening around ETHTokyo 2025. Discover workshops, networking events, and more!"
+          />
+          <div css={calendarContainerStyle}>
+            <iframe
+              src="https://lu.ma/embed/calendar/cal-FMaPKHYZLXA2VzT/events"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen
+              title="ETHTokyo Side Events Calendar"
+              aria-label="ETHTokyo Side Events Calendar"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -457,6 +477,26 @@ const buttonContainerStyle = css`
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+`;
+
+const sideEventsContainerStyle = css`
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid ${neutral.Grey3};
+`;
+
+const calendarContainerStyle = css`
+  background-color: ${neutral.White};
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  overflow: hidden;
+  
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 600px;
+  }
 `;
 
 export default ScheduleSection;
