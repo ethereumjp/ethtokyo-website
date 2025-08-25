@@ -1,3 +1,4 @@
+import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
@@ -7,7 +8,7 @@ import {
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
-import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
 import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 
@@ -16,8 +17,8 @@ interface GalleryImage {
   src: string;
   alt: string;
   category: "conference" | "hackathon";
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 const galleryImages: GalleryImage[] = [
@@ -725,37 +726,6 @@ const GalleryPage: NextPage = () => {
     setSelectedImage(filteredImages[prevIndex]);
   };
 
-  const pageStyle = css`
-    min-height: 100vh;
-    background: linear-gradient(135deg, ${themeLight.PrimaryLowContrast} 0%, ${neutral.White} 100%);
-  `;
-
-  const headerStyle = css`
-    background: ${neutral.White};
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  `;
-
-  const backButtonStyle = css`
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: ${brand.Primary};
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    
-    &:hover {
-      background: ${themeLight.PrimaryLowContrast};
-      transform: translateX(-2px);
-    }
-  `;
-
   const categoryFilterStyle = css`
     display: flex;
     justify-content: center;
@@ -784,7 +754,6 @@ const GalleryPage: NextPage = () => {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
     
     ${mq.mobile} {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -798,16 +767,15 @@ const GalleryPage: NextPage = () => {
   `;
 
   const imageCardStyle = css`
+    border: none;  
     background: ${neutral.White};
     border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 0;
     cursor: pointer;
     
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     }
   `;
 
@@ -818,8 +786,6 @@ const GalleryPage: NextPage = () => {
   `;
 
   const imageStyle = css`
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
     
@@ -828,43 +794,13 @@ const GalleryPage: NextPage = () => {
     }
   `;
 
-  const imageOverlayStyle = css`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: ${neutral.White};
-    padding: 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    
-    ${imageCardStyle}:hover & {
-      transform: translateY(0);
-    }
-  `;
-
-  const imageTitleStyle = css`
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  `;
-
-  const imageDescriptionStyle = css`
-    font-size: 0.9rem;
-    opacity: 0.9;
-    line-height: 1.4;
-  `;
-
   const categoryBadgeStyle = (category: string) => css`
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
+    z-index: 999;
     background: ${category === "conference" ? brand.Primary : brand.Secondary};
     color: ${neutral.White};
   `;
@@ -900,26 +836,10 @@ const GalleryPage: NextPage = () => {
   `;
 
   const modalInfoStyle = css`
-    padding: 2rem;
-  `;
-
-  const modalTitleStyle = css`
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: ${brand.Secondary};
-    margin-bottom: 1rem;
-  `;
-
-  const modalDescriptionStyle = css`
-    color: ${neutral.Grey4};
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    padding: 1rem;
   `;
 
   const closeButtonStyle = css`
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     background: rgba(0, 0, 0, 0.7);
     color: ${neutral.White};
     border: none;
@@ -928,7 +848,8 @@ const GalleryPage: NextPage = () => {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-self: right;
+    margin: 0.5rem 0.5rem;
     cursor: pointer;
     z-index: 1001;
     transition: all 0.2s ease;
@@ -940,9 +861,6 @@ const GalleryPage: NextPage = () => {
   `;
 
   const navigationButtonStyle = css`
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: ${neutral.White};
     border: none;
@@ -952,6 +870,7 @@ const GalleryPage: NextPage = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0.5rem 1rem;
     cursor: pointer;
     z-index: 1001;
     transition: all 0.2s ease;
@@ -960,35 +879,11 @@ const GalleryPage: NextPage = () => {
       background: rgba(0, 0, 0, 0.9);
       transform: translateY(-50%) scale(1.1);
     }
-    
-    &.prev {
-      left: 1rem;
-    }
-    
-    &.next {
-      right: 1rem;
-    }
   `;
 
   return (
     <>
-      <Head>
-        <title>Gallery 2024 - ETHTokyo</title>
-        <meta
-          name="description"
-          content="ETHTokyo 2024 Gallery - Conference and Hackathon photos from last year"
-        />
-      </Head>
-
-      <div css={pageStyle}>
-        <header css={headerStyle}>
-          <div css={containerStyle}>
-            <a href="/" css={backButtonStyle}>
-              ← Back to Home
-            </a>
-          </div>
-        </header>
-
+      <Layout pageTitle="Gallery 2024">
         <main css={sectionStyle}>
           <div css={containerStyle}>
             <h1 css={headingStyle}>Gallery 2024</h1>
@@ -1041,25 +936,17 @@ const GalleryPage: NextPage = () => {
                   type="button"
                 >
                   <div css={imageWrapperStyle}>
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
                       css={imageStyle}
+                      fill={true}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src =
                           "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
                       }}
                     />
-                    <div css={categoryBadgeStyle(image.category)}>
-                      {image.category === "conference"
-                        ? "Conference"
-                        : "Hackathon"}
-                    </div>
-                    <div css={imageOverlayStyle}>
-                      <div css={imageTitleStyle}>{image.title}</div>
-                      <div css={imageDescriptionStyle}>{image.description}</div>
-                    </div>
                   </div>
                 </button>
               ))}
@@ -1082,50 +969,60 @@ const GalleryPage: NextPage = () => {
               onClick={(e) => e.stopPropagation()}
               onKeyDown={(e) => e.stopPropagation()}
             >
-              <button type="button" css={closeButtonStyle} onClick={closeModal}>
-                <IoClose size={24} />
-              </button>
-
-              <button
-                type="button"
-                css={[navigationButtonStyle, css`.prev`]}
-                onClick={prevImage}
+              <div
+                css={css`display: flex; justify-content: space-between; align-items: center;`}
               >
-                <IoChevronBack size={24} />
-              </button>
-
-              <button
-                type="button"
-                css={[navigationButtonStyle, css`.next`]}
-                onClick={nextImage}
-              >
-                <IoChevronForward size={24} />
-              </button>
-
-              <img
+                <div css={modalInfoStyle}>
+                  <div css={categoryBadgeStyle(selectedImage.category)}>
+                    {selectedImage.category === "conference"
+                      ? "Conference"
+                      : "Hackathon"}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  css={closeButtonStyle}
+                  onClick={closeModal}
+                >
+                  <IoClose size={24} />
+                </button>
+              </div>
+              <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 css={modalImageStyle}
+                width="100"
+                height="100"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src =
                     "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
                 }}
               />
-
-              <div css={modalInfoStyle}>
-                <h2 css={modalTitleStyle}>{selectedImage.title}</h2>
-                <p css={modalDescriptionStyle}>{selectedImage.description}</p>
-                <div css={categoryBadgeStyle(selectedImage.category)}>
-                  {selectedImage.category === "conference"
-                    ? "Conference"
-                    : "Hackathon"}
-                </div>
+              <div css={css`display: flex; justify-content: space-between;`}>
+                <button
+                  type="button"
+                  css={[navigationButtonStyle, css`.prev`]}
+                  onClick={prevImage}
+                >
+                  <IoChevronBack size={24} />
+                </button>
+                <button
+                  type="button"
+                  css={[
+                    navigationButtonStyle,
+                    css`justify-self: center;`,
+                    css`.next`,
+                  ]}
+                  onClick={nextImage}
+                >
+                  <IoChevronForward size={24} />
+                </button>
               </div>
             </div>
           </div>
         )}
-      </div>
+      </Layout>
     </>
   );
 };
