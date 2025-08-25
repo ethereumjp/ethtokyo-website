@@ -186,26 +186,23 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <span />
           </div>
           <nav css={navLinksStyle}>
-            <Link href="#about" css={navLinkStyle}>
+            <Link href="/#about" css={navLinkStyle}>
               About
             </Link>
-            <Link href="#conference" css={navLinkStyle}>
+            <Link href="/#conference" css={navLinkStyle}>
               Conference
             </Link>
-            <Link href="#tracks" css={navLinkStyle}>
+            <Link href="/#tracks" css={navLinkStyle}>
               Hackathon
             </Link>
-            <Link href="#gallery" css={navLinkStyle}>
+            <Link href="/#gallery" css={navLinkStyle}>
               Gallery
             </Link>
-            <Link href="#schedule" css={navLinkStyle}>
+            <Link href="/#schedule" css={navLinkStyle}>
               Schedule
             </Link>
-            <Link href="#venue" css={navLinkStyle}>
+            <Link href="/#venue" css={navLinkStyle}>
               Venue
-            </Link>
-            <Link href="#apply" css={navLinkStyle}>
-              Apply as a Speaker
             </Link>
           </nav>
         </div>
@@ -240,7 +237,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#about")
+              .querySelector("/#about")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
@@ -252,7 +249,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#conference")
+              .querySelector("/#conference")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
@@ -264,7 +261,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#tracks")
+              .querySelector("/#tracks")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
@@ -276,7 +273,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#gallery")
+              .querySelector("/#gallery")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
@@ -288,7 +285,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#schedule")
+              .querySelector("/#schedule")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
@@ -300,25 +297,12 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#venue")
+              .querySelector("/#venue")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
         >
           Venue
-        </button>
-        <button
-          type="button"
-          css={navLinkStyle}
-          onClick={() => {
-            window.open(
-              "https://speak.ethtokyo.org/conference-2025/submit",
-              "_blank",
-            );
-            closeMenu();
-          }}
-        >
-          Apply as a Speaker
         </button>
       </div>
     </header>
