@@ -187,7 +187,7 @@ export const workshopsData = [
 // トラックデータ
 export const tracksData = [
   {
-    id: "cypherpunks",
+    id: "cypherpunks-anonymous",
     title: "🥷 Cypherpunks Anonymous",
     subtitle: "Privacy & Security",
     description:
@@ -204,28 +204,7 @@ export const tracksData = [
     prize: "$3000",
   },
   {
-    id: "human-protocols",
-    title: "💚 Human Protocols",
-    subtitle: "Social Impact",
-    description:
-      "In today's SaaS market, users are increasingly locked in by marginal improvements and price competition, relying on superficial convenience. The fact that technologies considered outdated—like fax machines—remain entrenched in everyday operations clearly demonstrates that mere tweaks in functionality cannot bring about true innovation.",
-    longDescription:
-      "Human Protocols is a track that directly confronts these daily discontents. We believe that instead of forcing people to adapt to cutting-edge technologies and services, technology should be aligned with humanity and human society. Beyond the pursuit of financial returns or an obsession with state-of-the-art technology, this track leverages the flexibility and programmability of Ethereum's decentralized system to explore innovative solutions grounded in the real world, human experience, social dynamics, and lifestyle. Here, we challenge existing paradigms and aim to return to the core values that users truly need.",
-    additionalInfo:
-      "We believe that the challenge of redefining things from the ground up—rather than settling for superficial improvements—is the key to enhancing our future quality of life. Human Protocols is a space for builders with a critical perspective on the status quo, who approach everyday challenges with fresh ideas. We invite you to join us in challenging conventional wisdom and, together, building a truly enriched society.",
-    requirements: [
-      "Real-World Impact Focus: Projects must tackle tangible everyday challenges—especially those arising from the superficial improvements and lock-in strategies of current SaaS—and offer transformative solutions that enhance real-life quality.",
-      "User-Centric and Inclusive Design: Solutions should be designed from the ground up with genuine user needs in mind, ensuring intuitive, accessible experiences that address overlooked pain points in daily operations.",
-      "Decentralized Innovation: Leverage Ethereum's decentralized infrastructure and smart contract capabilities to build systems that promote transparency, community governance, and flexible, open innovation.",
-      "Feasibility on Decentralized Networks: Proposals must be implementable on Ethereum or other compatible networks, with clear technical pathways from concept to real-world application.",
-      "Social and Ethical Impact: Beyond technical prowess, projects should aim to drive positive social change—challenging entrenched market paradigms, improving fairness, and upholding ethical standards in data privacy and user autonomy.",
-      "Scalability and Sustainability: Solutions should demonstrate a clear vision for long-term viability and scalability, ensuring that the impact can grow from addressing individual pain points to broader societal benefits.",
-      "Innovative and Open-Minded Approach: Embrace radical rethinking of existing systems and encourage an open source ethos, fostering collaborative improvement and creative breakthroughs that redefine what's possible in everyday life.",
-    ],
-    prize: "$3000",
-  },
-  {
-    id: "counterculture",
+    id: "counterculture-capital",
     title: "✊ Counterculture Capital",
     subtitle: "Financial Innovation",
     description:
@@ -241,6 +220,23 @@ export const tracksData = [
       "Cooperative Scaling: Address scaling in ways that distribute benefits across all users rather than concentrating advantages to large capital holders.",
       "Radical Transparency: Go beyond open source to create systems where operations, governance, and economics are comprehensible to average users, not just technical experts.",
       "Regulation Reimagined: Rather than simply complying with existing frameworks which were established far before DeFi existed, articulate how your project might inform a more equitable regulatory future.",
+    ],
+    prize: "$3000",
+  },
+  {
+    id: "actually-intelligent",
+    title: "💚 Actually Intelligent",
+    subtitle: "AI & Society",
+    description:
+      "The well-praised technological breakthrough that is Artificial Intelligence faces a dilemma. Behind the convenience it offers, the technology is increasingly being appropriated into manipulative ad engines and corporate-enterprise surveillance. At ETHTokyo, we're here to flip that.",
+    longDescription:
+      "Actually Intelligent is a track that leverages the programmability of Ethereum's decentralized system and the flexibility of AI systems to explore actually intelligent solutions; grounded in the real world, human experience, social dynamics, and lifestyle. This track embraces AI as a power tool to empower individuals to 10x and 100x, but insists on liberation over manipulation, consent over capture, commons over enclosure. Building systems that make people harder to coerce and easier to coordinate. Private by default. Local-first. Proof-carrying. Forkable. Here, we challenge existing paradigms and aim to return to the core values that users truly need.",
+    requirements: [
+      "Autonomy delta: Core functions must be available via user-owned infra. No GPT wrappers.",
+      "Verifiability: Project must have at least one of the following - (a) zero-knowledge proof of inference/training property, (b) TEE attestation with verifier, or (c) bit-for-bit fully reproducible build.",
+      "Forkability: Project must be able to reasonably run on consumer-grade hardware. If it also has a one-command (`docker compose up` or `make run`) install-flow, even better.",
+      "Composability: Project must support one or more cypherpunk primitives; IPFS for storage, key-based auth (wallets/passkeys); ZKP library interop.",
+      "Innovative and Open-Minded Approach: Embrace radical rethinking of existing systems and encourage an open source ethos, fostering collaborative improvement and creative breakthroughs that redefine what's possible in everyday life.",
     ],
     prize: "$3000",
   },
