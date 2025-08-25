@@ -60,19 +60,21 @@ const SponsorsSection: FC = () => {
 
   const goldLogosGridStyle = css`
     display: grid;
-    grid-template-columns: ${goldSponsorsData.length === 1 ? "1fr" : goldSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
-    max-width: ${goldSponsorsData.length === 1 ? "300px" : goldSponsorsData.length === 2 ? "400px" : "800px"};
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 
     ${mq.mobileSmall} {
-      grid-template-columns: ${goldSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 2rem;
+      max-width: 350px;
+      padding: 0 10px;
     }
   `;
 
@@ -132,6 +134,38 @@ const SponsorsSection: FC = () => {
     height: 100px;
     max-width: 100%;
     object-fit: contain;
+
+    ${mq.mobileSmall} {
+      height: 120px;
+      max-width: 90%;
+    }
+  `;
+
+  const largeGoldLogoStyle = css`
+    height: 140px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    transform: scale(1.2) !important;
+    margin: 20px !important;
+    z-index: 10 !important;
+
+    ${mq.mobileSmall} {
+      height: 120px !important;
+      transform: scale(1.0) !important;
+      margin: 10px !important;
+      max-width: 90% !important;
+    }
+  `;
+
+  const ensLogoStyle = css`
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+
+    ${mq.mobileSmall} {
+      height: 80px !important;
+      max-width: 80% !important;
+    }
   `;
 
   const silverLogoStyle = css`
@@ -163,6 +197,12 @@ const SponsorsSection: FC = () => {
       props.sponsorName === "Ethereum Jakarta (ethjkt)" ||
       props.sponsorName === "Curvegrid Inc.";
 
+    // Geodeworkのロゴを大きく表示
+    const isLargeGoldLogo = props.sponsorName === "Geodework";
+
+    // ensのロゴも特別に処理
+    const isEnsLogo = props.sponsorName === "ens";
+
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
         <img
@@ -172,12 +212,25 @@ const SponsorsSection: FC = () => {
             props.sponsorType === "platinum"
               ? platinumLogoStyle
               : props.sponsorType === "gold"
-                ? goldLogoStyle
+                ? isLargeGoldLogo
+                  ? largeGoldLogoStyle // Geodework専用の大きなサイズを使用
+                  : isEnsLogo
+                    ? ensLogoStyle // ens専用のスタイルを使用
+                    : goldLogoStyle
                 : props.sponsorType === "silver"
                   ? silverLogoStyle
                   : isLargeLogo
                     ? largeCommunityLogoStyle
                     : communityLogoStyle
+          }
+          style={
+            isLargeGoldLogo
+              ? {
+                  maxWidth: "100%",
+                  objectFit: "contain",
+                  zIndex: 10,
+                }
+              : undefined
           }
         />
       </a>

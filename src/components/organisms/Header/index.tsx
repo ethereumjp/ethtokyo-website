@@ -195,6 +195,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
             <Link href="#tracks" css={navLinkStyle}>
               Hackathon
             </Link>
+            <Link href="#gallery" css={navLinkStyle}>
+              Gallery
+            </Link>
             <Link href="#schedule" css={navLinkStyle}>
               Schedule
             </Link>
@@ -261,24 +264,36 @@ const Header: FC<ComponentProps> = ({ children }) => {
           css={navLinkStyle}
           onClick={() => {
             document
-              .querySelector("#schedule")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
-        >
-          Schedule
-        </button>
-        <button
-          type="button"
-          css={navLinkStyle}
-          onClick={() => {
-            document
               .querySelector("#tracks")
               ?.scrollIntoView({ behavior: "smooth" });
             closeMenu();
           }}
         >
           Hackathon
+        </button>
+        <button
+          type="button"
+          css={navLinkStyle}
+          onClick={() => {
+            document
+              .querySelector("#gallery")
+              ?.scrollIntoView({ behavior: "smooth" });
+            closeMenu();
+          }}
+        >
+          Gallery
+        </button>
+        <button
+          type="button"
+          css={navLinkStyle}
+          onClick={() => {
+            document
+              .querySelector("#schedule")
+              ?.scrollIntoView({ behavior: "smooth" });
+            closeMenu();
+          }}
+        >
+          Schedule
         </button>
         <button
           type="button"

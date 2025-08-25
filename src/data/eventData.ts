@@ -114,14 +114,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/david1casey",
   },
-  {
-    name: "Stefan Piech",
-    image: "2025/images/speakers/stefanpiech.jpeg",
-    title: "",
-    project: "Amagi Digital",
-    talkTitle: "",
-    socialLink: "https://www.linkedin.com/in/stefan-piech?",
-  },
   // {
   //   name: "Sora Suegami",
   //   image: "2025/images/speakers/sorasuegami.png",
@@ -300,6 +292,11 @@ export const venueData = {
 // イベントパートナーデータ
 export const eventPartnersData = [
   {
+    partnerName: "Digital Garage",
+    website: "https://www.garage.co.jp/",
+    logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
+  },
+  {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
     logoFile: "toban-logo-text.svg",
@@ -310,14 +307,24 @@ export const eventPartnersData = [
     logoFile: "kon.png",
   },
   {
+    partnerName: "Kismet Casa",
+    website: "https://kismetcasa.xyz/",
+    logoFile: "kismet_logo.png",
+  },
+  {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
     logoFile: "taikai.svg",
   },
   {
-    partnerName: "Kismet Casa",
-    website: "https://kismetcasa.xyz/",
-    logoFile: "kismet_logo.png",
+    partnerName: "Moongate",
+    website: "https://www.moongate.id/",
+    logoFile: "Moongate-Logo-Primary-B.png",
+  },
+  {
+    partnerName: "Megaphone",
+    website: "https://www.megaphone.xyz/",
+    logoFile: "Megaphone-logo-light.png",
   },
   {
     partnerName: "ZK Tokyo",
@@ -385,6 +392,16 @@ export const goldSponsorsData = [
     website: "https://ens.domains/",
     logoFile: "ens-logo-Blue.svg",
   },
+  {
+    partnerName: "Geodework",
+    website: "https://geodework.com/",
+    logoFile: "Geodework-logo-black.png",
+  },
+  {
+    partnerName: "Eliza OS",
+    website: "https://elizaos.ai/",
+    logoFile: "ElizaOS_Logo_Black_RGB.png",
+  },
 ];
 
 export const silverSponsorsData = [
@@ -397,6 +414,12 @@ export const silverSponsorsData = [
     partnerName: "Quantum3labs",
     website: "https://quantum3labs.com/",
     logoFile: "logo-q3-logomark.svg",
+  },
+
+  {
+    partnerName: "Blockchain For Good Alliance",
+    website: "https://chainforgood.org/",
+    logoFile: "Blockchain_For_Good_Alliance_Logo_Primary.png",
   },
 ];
 
