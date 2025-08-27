@@ -219,7 +219,6 @@ const ScheduleSection = () => {
               src="https://lu.ma/embed/calendar/cal-FMaPKHYZLXA2VzT/events"
               width="100%"
               height="600"
-              frameBorder="0"
               style={{ border: 0 }}
               allowFullScreen
               title="ETHTokyo Side Events Calendar"
@@ -494,6 +493,7 @@ const calendarContainerStyle = css`
   
   iframe {
     display: block;
+    color-scheme: light;
     width: 100%;
     min-height: 600px;
   }
