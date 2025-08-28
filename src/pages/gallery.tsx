@@ -1,4 +1,6 @@
+import OptimizedImage from "@/components/common/OptimizedImage";
 import Layout from "@/components/layouts/base";
+import { type GalleryImage, imagesByCategory } from "@/data/galleryData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
@@ -9,722 +11,143 @@ import {
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 
-interface GalleryImage {
-  id: string;
-  src: string;
-  alt: string;
-  category: "conference" | "hackathon";
-  title?: string;
-  description?: string;
-}
-
-const galleryImages: GalleryImage[] = [
-  {
-    id: "event-1",
-    src: "/2025/images/gallery/event-image-1.jpg",
-    alt: "ETHTokyo Conference Audience",
-    category: "conference",
-    title: "Conference Keynote Sessions",
-    description:
-      "Main stage keynote sessions. Many participants are listening attentively.",
-  },
-  {
-    id: "event-2",
-    src: "/2025/images/gallery/event-image-2.jpg",
-    alt: "ETHTokyo Conference Speaker",
-    category: "conference",
-    title: "Ethereum Community Gathering",
-    description:
-      "Interaction between speakers and participants. Active discussions are taking place.",
-  },
-  {
-    id: "event-3",
-    src: "/2025/images/gallery/event-image-3.jpg",
-    alt: "ETHTokyo Conference Networking",
-    category: "conference",
-    title: "Networking Sessions",
-    description:
-      "Participants networking and building connections during breaks.",
-  },
-  {
-    id: "event-4",
-    src: "/2025/images/gallery/event-image-4.jpg",
-    alt: "ETHTokyo Conference Workshop",
-    category: "conference",
-    title: "Interactive Workshops",
-    description:
-      "Hands-on workshops where participants learn practical skills.",
-  },
-  {
-    id: "event-5",
-    src: "/2025/images/gallery/event-image-5.jpg",
-    alt: "ETHTokyo Conference Panel Discussion",
-    category: "conference",
-    title: "Panel Discussions",
-    description: "Expert panels discussing the future of Ethereum and Web3.",
-  },
-  {
-    id: "event-6",
-    src: "/2025/images/gallery/event-image-6.jpg",
-    alt: "ETHTokyo Conference Exhibition",
-    category: "conference",
-    title: "Exhibition Area",
-    description: "Showcase of innovative projects and technologies.",
-  },
-  {
-    id: "event-7",
-    src: "/2025/images/gallery/event-image-7.jpg",
-    alt: "ETHTokyo Conference Community",
-    category: "conference",
-    title: "Community Building",
-    description: "Building strong connections within the Ethereum community.",
-  },
-  {
-    id: "event-8",
-    src: "/2025/images/gallery/event-image-8.jpg",
-    alt: "ETHTokyo Conference Learning",
-    category: "conference",
-    title: "Learning Sessions",
-    description:
-      "Educational sessions covering various aspects of Ethereum development.",
-  },
-  {
-    id: "event-9",
-    src: "/2025/images/gallery/event-image-9.jpg",
-    alt: "ETHTokyo Conference Innovation",
-    category: "conference",
-    title: "Innovation Showcase",
-    description: "Showcasing cutting-edge innovations in the blockchain space.",
-  },
-  {
-    id: "event-10",
-    src: "/2025/images/gallery/event-image-10.jpg",
-    alt: "ETHTokyo Conference Collaboration",
-    category: "conference",
-    title: "Collaborative Sessions",
-    description: "Participants working together on shared challenges.",
-  },
-  {
-    id: "event-11",
-    src: "/2025/images/gallery/event-image-11.jpg",
-    alt: "ETHTokyo Conference Technology",
-    category: "conference",
-    title: "Technology Deep Dive",
-    description: "In-depth technical discussions and presentations.",
-  },
-  {
-    id: "event-12",
-    src: "/2025/images/gallery/event-image-12.jpg",
-    alt: "ETHTokyo Conference Inspiration",
-    category: "conference",
-    title: "Inspirational Talks",
-    description:
-      "Motivational sessions inspiring the next generation of builders.",
-  },
-  {
-    id: "event-13",
-    src: "/2025/images/gallery/event-image-13.jpg",
-    alt: "ETHTokyo Conference Future",
-    category: "conference",
-    title: "Future of Web3",
-    description:
-      "Exploring the future possibilities of decentralized technology.",
-  },
-  {
-    id: "event-14",
-    src: "/2025/images/gallery/event-image-14.jpg",
-    alt: "ETHTokyo Conference Growth",
-    category: "conference",
-    title: "Community Growth",
-    description:
-      "Witnessing the growth and evolution of the Ethereum ecosystem.",
-  },
-  {
-    id: "event-15",
-    src: "/2025/images/gallery/event-image-15.jpg",
-    alt: "ETHTokyo Conference Knowledge",
-    category: "conference",
-    title: "Knowledge Sharing",
-    description:
-      "Sharing valuable insights and experiences across the community.",
-  },
-  {
-    id: "event-16",
-    src: "/2025/images/gallery/event-image-16.jpg",
-    alt: "ETHTokyo Conference Development",
-    category: "conference",
-    title: "Developer Sessions",
-    description: "Technical sessions focused on Ethereum development.",
-  },
-  {
-    id: "event-17",
-    src: "/2025/images/gallery/event-image-17.jpg",
-    alt: "ETHTokyo Conference Ecosystem",
-    category: "conference",
-    title: "Ecosystem Overview",
-    description: "Comprehensive overview of the Ethereum ecosystem.",
-  },
-  {
-    id: "event-18",
-    src: "/2025/images/gallery/event-image-18.jpg",
-    alt: "ETHTokyo Conference Innovation Hub",
-    category: "conference",
-    title: "Innovation Hub",
-    description: "Central hub for innovative ideas and projects.",
-  },
-  {
-    id: "event-19",
-    src: "/2025/images/gallery/event-image-19.jpg",
-    alt: "ETHTokyo Conference Global Community",
-    category: "conference",
-    title: "Global Community",
-    description: "International participants coming together for ETHTokyo.",
-  },
-  {
-    id: "event-20",
-    src: "/2025/images/gallery/event-image-20.jpg",
-    alt: "ETHTokyo Conference Technology Showcase",
-    category: "conference",
-    title: "Technology Showcase",
-    description: "Showcasing the latest technologies and developments.",
-  },
-  {
-    id: "event-21",
-    src: "/2025/images/gallery/event-image-21.jpg",
-    alt: "ETHTokyo Conference Learning Environment",
-    category: "conference",
-    title: "Learning Environment",
-    description: "Creating an optimal environment for learning and growth.",
-  },
-  {
-    id: "event-22",
-    src: "/2025/images/gallery/event-image-22.jpg",
-    alt: "ETHTokyo Conference Networking Hub",
-    category: "conference",
-    title: "Networking Hub",
-    description: "Vibrant networking opportunities throughout the event.",
-  },
-  {
-    id: "event-23",
-    src: "/2025/images/gallery/event-image-23.jpg",
-    alt: "ETHTokyo Conference Collaboration Space",
-    category: "conference",
-    title: "Collaboration Space",
-    description: "Dedicated spaces for collaboration and teamwork.",
-  },
-  {
-    id: "event-24",
-    src: "/2025/images/gallery/event-image-24.jpg",
-    alt: "ETHTokyo Conference Innovation Lab",
-    category: "conference",
-    title: "Innovation Lab",
-    description: "Laboratory environment for testing new ideas and concepts.",
-  },
-  {
-    id: "event-25",
-    src: "/2025/images/gallery/event-image-25.jpg",
-    alt: "ETHTokyo Conference Community Spirit",
-    category: "conference",
-    title: "Community Spirit",
-    description: "Celebrating the strong spirit of the Ethereum community.",
-  },
-  {
-    id: "event-26",
-    src: "/2025/images/gallery/event-image-26.jpg",
-    alt: "ETHTokyo Conference Technology Exchange",
-    category: "conference",
-    title: "Technology Exchange",
-    description: "Exchange of technical knowledge and expertise.",
-  },
-  {
-    id: "event-27",
-    src: "/2025/images/gallery/event-image-27.jpg",
-    alt: "ETHTokyo Conference Future Vision",
-    category: "conference",
-    title: "Future Vision",
-    description: "Envisioning the future of decentralized technology.",
-  },
-  {
-    id: "event-28",
-    src: "/2025/images/gallery/event-image-28.jpg",
-    alt: "ETHTokyo Conference Growth Mindset",
-    category: "conference",
-    title: "Growth Mindset",
-    description: "Fostering a mindset of continuous growth and improvement.",
-  },
-  {
-    id: "event-29",
-    src: "/2025/images/gallery/event-image-29.jpg",
-    alt: "ETHTokyo Conference Knowledge Transfer",
-    category: "conference",
-    title: "Knowledge Transfer",
-    description: "Transferring knowledge from experts to the community.",
-  },
-  {
-    id: "event-30",
-    src: "/2025/images/gallery/event-image-30.jpg",
-    alt: "ETHTokyo Conference Development Focus",
-    category: "conference",
-    title: "Development Focus",
-    description: "Focusing on practical development skills and techniques.",
-  },
-  {
-    id: "event-31",
-    src: "/2025/images/gallery/event-image-31.jpg",
-    alt: "ETHTokyo Conference Ecosystem Growth",
-    category: "conference",
-    title: "Ecosystem Growth",
-    description: "Supporting the growth of the Ethereum ecosystem.",
-  },
-  {
-    id: "event-32",
-    src: "/2025/images/gallery/event-image-32.jpg",
-    alt: "ETHTokyo Conference Innovation Center",
-    category: "conference",
-    title: "Innovation Center",
-    description: "Center for innovation and creative problem solving.",
-  },
-  {
-    id: "event-33",
-    src: "/2025/images/gallery/event-image-33.jpg",
-    alt: "ETHTokyo Conference Global Network",
-    category: "conference",
-    title: "Global Network",
-    description: "Building a global network of Ethereum enthusiasts.",
-  },
-  {
-    id: "event-34",
-    src: "/2025/images/gallery/event-image-34.jpg",
-    alt: "ETHTokyo Conference Technology Leadership",
-    category: "conference",
-    title: "Technology Leadership",
-    description: "Leadership in technology innovation and development.",
-  },
-  {
-    id: "event-35",
-    src: "/2025/images/gallery/event-image-35.jpg",
-    alt: "ETHTokyo Conference Learning Community",
-    category: "conference",
-    title: "Learning Community",
-    description: "Building a community focused on continuous learning.",
-  },
-  {
-    id: "event-36",
-    src: "/2025/images/gallery/event-image-36.jpg",
-    alt: "ETHTokyo Conference Networking Success",
-    category: "conference",
-    title: "Networking Success",
-    description: "Successful networking and relationship building.",
-  },
-  {
-    id: "event-37",
-    src: "/2025/images/gallery/event-image-37.jpg",
-    alt: "ETHTokyo Conference Collaboration Success",
-    category: "conference",
-    title: "Collaboration Success",
-    description: "Successful collaboration and teamwork outcomes.",
-  },
-  {
-    id: "event-38",
-    src: "/2025/images/gallery/event-image-38.jpg",
-    alt: "ETHTokyo Conference Innovation Success",
-    category: "conference",
-    title: "Innovation Success",
-    description: "Successful innovation and creative solutions.",
-  },
-  {
-    id: "event-39",
-    src: "/2025/images/gallery/event-image-39.jpg",
-    alt: "ETHTokyo Conference Community Success",
-    category: "conference",
-    title: "Community Success",
-    description: "Successful community building and engagement.",
-  },
-  {
-    id: "event-40",
-    src: "/2025/images/gallery/event-image-40.jpg",
-    alt: "ETHTokyo Conference Technology Success",
-    category: "conference",
-    title: "Technology Success",
-    description: "Successful technology demonstrations and implementations.",
-  },
-  {
-    id: "event-41",
-    src: "/2025/images/gallery/event-image-41.jpg",
-    alt: "ETHTokyo Conference Future Success",
-    category: "conference",
-    title: "Future Success",
-    description: "Successful planning for the future of Ethereum.",
-  },
-  {
-    id: "event-42",
-    src: "/2025/images/gallery/event-image-42.jpg",
-    alt: "ETHTokyo Conference Growth Success",
-    category: "conference",
-    title: "Growth Success",
-    description: "Successful growth and development initiatives.",
-  },
-  {
-    id: "event-43",
-    src: "/2025/images/gallery/event-image-43.jpg",
-    alt: "ETHTokyo Conference Knowledge Success",
-    category: "conference",
-    title: "Knowledge Success",
-    description: "Successful knowledge sharing and transfer.",
-  },
-  {
-    id: "event-44",
-    src: "/2025/images/gallery/event-image-44.jpg",
-    alt: "ETHTokyo Conference Development Success",
-    category: "conference",
-    title: "Development Success",
-    description: "Successful development projects and initiatives.",
-  },
-  {
-    id: "event-45",
-    src: "/2025/images/gallery/event-image-45.jpg",
-    alt: "ETHTokyo Conference Ecosystem Success",
-    category: "conference",
-    title: "Ecosystem Success",
-    description: "Successful ecosystem development and expansion.",
-  },
-  {
-    id: "event-46",
-    src: "/2025/images/gallery/event-image-46.jpeg",
-    alt: "ETHTokyo Conference Final Celebration",
-    category: "conference",
-    title: "Final Celebration",
-    description: "Celebrating the successful conclusion of ETHTokyo 2024.",
-  },
-  {
-    id: "event-47",
-    src: "/2025/images/gallery/event-image-47.jpg",
-    alt: "ETHTokyo Conference Community Celebration",
-    category: "conference",
-    title: "Community Celebration",
-    description: "Celebrating the vibrant and diverse Ethereum community.",
-  },
-  {
-    id: "event-48",
-    src: "/2025/images/gallery/event-image-48.jpg",
-    alt: "ETHTokyo Conference Innovation Celebration",
-    category: "conference",
-    title: "Innovation Celebration",
-    description: "Celebrating the innovative spirit of the Ethereum ecosystem.",
-  },
-  {
-    id: "hackathon-1",
-    src: "/2025/images/gallery/hackathon-1.jpg",
-    alt: "ETHTokyo Hackathon Team Work",
-    category: "hackathon",
-    title: "Hackathon Team Collaboration",
-    description: "Hackathon teams collaborating on their projects.",
-  },
-  {
-    id: "hackathon-2",
-    src: "/2025/images/gallery/hackathon-2.jpg",
-    alt: "ETHTokyo Hackathon Development",
-    category: "hackathon",
-    title: "Intensive Development Session",
-    description:
-      "Participants working intensively on development. Creative ideas are being born.",
-  },
-  {
-    id: "hackathon-3",
-    src: "/2025/images/gallery/hackathon-3.jpg",
-    alt: "ETHTokyo Hackathon Presentation",
-    category: "hackathon",
-    title: "Project Presentation",
-    description:
-      "Presentation of completed projects. Judges and participants are listening intently.",
-  },
-  {
-    id: "hackathon-4",
-    src: "/2025/images/gallery/hackathon-4.jpg",
-    alt: "ETHTokyo Hackathon Brainstorming",
-    category: "hackathon",
-    title: "Brainstorming Session",
-    description: "Teams brainstorming innovative ideas for their projects.",
-  },
-  {
-    id: "hackathon-5",
-    src: "/2025/images/gallery/hackathon-5.jpg",
-    alt: "ETHTokyo Hackathon Coding",
-    category: "hackathon",
-    title: "Intensive Coding",
-    description:
-      "Developers focused on writing code for their hackathon projects.",
-  },
-  {
-    id: "hackathon-6",
-    src: "/2025/images/gallery/hackathon-6.jpg",
-    alt: "ETHTokyo Hackathon Problem Solving",
-    category: "hackathon",
-    title: "Problem Solving",
-    description:
-      "Teams working together to solve complex technical challenges.",
-  },
-  {
-    id: "hackathon-7",
-    src: "/2025/images/gallery/hackathon-7.jpg",
-    alt: "ETHTokyo Hackathon Innovation",
-    category: "hackathon",
-    title: "Innovation Workshop",
-    description:
-      "Workshop sessions focused on innovative blockchain solutions.",
-  },
-  {
-    id: "hackathon-8",
-    src: "/2025/images/gallery/hackathon-8.jpg",
-    alt: "ETHTokyo Hackathon Mentorship",
-    category: "hackathon",
-    title: "Mentorship Sessions",
-    description: "Experienced mentors guiding hackathon participants.",
-  },
-  {
-    id: "hackathon-9",
-    src: "/2025/images/gallery/hackathon-9.jpg",
-    alt: "ETHTokyo Hackathon Team Building",
-    category: "hackathon",
-    title: "Team Building",
-    description: "Building strong teams and fostering collaboration.",
-  },
-  {
-    id: "hackathon-10",
-    src: "/2025/images/gallery/hackathon-10.jpg",
-    alt: "ETHTokyo Hackathon Development Focus",
-    category: "hackathon",
-    title: "Development Focus",
-    description: "Focused development sessions with clear project goals.",
-  },
-  {
-    id: "hackathon-11",
-    src: "/2025/images/gallery/hackathon-11.jpg",
-    alt: "ETHTokyo Hackathon Creative Process",
-    category: "hackathon",
-    title: "Creative Process",
-    description:
-      "The creative process of building innovative blockchain applications.",
-  },
-  {
-    id: "hackathon-12",
-    src: "/2025/images/gallery/hackathon-12.jpg",
-    alt: "ETHTokyo Hackathon Technical Discussion",
-    category: "hackathon",
-    title: "Technical Discussion",
-    description: "Deep technical discussions about blockchain implementation.",
-  },
-  {
-    id: "hackathon-13",
-    src: "/2025/images/gallery/hackathon-13.jpg",
-    alt: "ETHTokyo Hackathon Prototyping",
-    category: "hackathon",
-    title: "Prototyping",
-    description: "Rapid prototyping of blockchain applications and features.",
-  },
-  {
-    id: "hackathon-14",
-    src: "/2025/images/gallery/hackathon-14.jpg",
-    alt: "ETHTokyo Hackathon Testing",
-    category: "hackathon",
-    title: "Testing & Debugging",
-    description: "Testing and debugging blockchain applications.",
-  },
-  {
-    id: "hackathon-15",
-    src: "/2025/images/gallery/hackathon-15.jpg",
-    alt: "ETHTokyo Hackathon UI/UX Design",
-    category: "hackathon",
-    title: "UI/UX Design",
-    description: "Designing user interfaces for blockchain applications.",
-  },
-  {
-    id: "hackathon-16",
-    src: "/2025/images/gallery/hackathon-16.jpg",
-    alt: "ETHTokyo Hackathon Smart Contract Development",
-    category: "hackathon",
-    title: "Smart Contract Development",
-    description: "Developing and testing smart contracts on Ethereum.",
-  },
-  {
-    id: "hackathon-17",
-    src: "/2025/images/gallery/hackathon-17.jpg",
-    alt: "ETHTokyo Hackathon Frontend Development",
-    category: "hackathon",
-    title: "Frontend Development",
-    description:
-      "Building user-friendly frontends for blockchain applications.",
-  },
-  {
-    id: "hackathon-18",
-    src: "/2025/images/gallery/hackathon-18.jpg",
-    alt: "ETHTokyo Hackathon Backend Development",
-    category: "hackathon",
-    title: "Backend Development",
-    description: "Developing robust backends for blockchain applications.",
-  },
-  {
-    id: "hackathon-19",
-    src: "/2025/images/gallery/hackathon-19.jpg",
-    alt: "ETHTokyo Hackathon Integration",
-    category: "hackathon",
-    title: "System Integration",
-    description: "Integrating various components of blockchain applications.",
-  },
-  {
-    id: "hackathon-20",
-    src: "/2025/images/gallery/hackathon-20.jpg",
-    alt: "ETHTokyo Hackathon Security",
-    category: "hackathon",
-    title: "Security Implementation",
-    description: "Implementing security measures in blockchain applications.",
-  },
-  {
-    id: "hackathon-21",
-    src: "/2025/images/gallery/hackathon-21.jpg",
-    alt: "ETHTokyo Hackathon Performance",
-    category: "hackathon",
-    title: "Performance Optimization",
-    description: "Optimizing performance of blockchain applications.",
-  },
-  {
-    id: "hackathon-22",
-    src: "/2025/images/gallery/hackathon-22.jpg",
-    alt: "ETHTokyo Hackathon Scalability",
-    category: "hackathon",
-    title: "Scalability Solutions",
-    description: "Developing scalable solutions for blockchain applications.",
-  },
-  {
-    id: "hackathon-23",
-    src: "/2025/images/gallery/hackathon-23.jpg",
-    alt: "ETHTokyo Hackathon Interoperability",
-    category: "hackathon",
-    title: "Interoperability Development",
-    description: "Building interoperable blockchain solutions.",
-  },
-  {
-    id: "hackathon-24",
-    src: "/2025/images/gallery/hackathon-24.jpg",
-    alt: "ETHTokyo Hackathon DeFi",
-    category: "hackathon",
-    title: "DeFi Innovation",
-    description: "Innovating in the decentralized finance space.",
-  },
-  {
-    id: "hackathon-25",
-    src: "/2025/images/gallery/hackathon-25.jpg",
-    alt: "ETHTokyo Hackathon NFT",
-    category: "hackathon",
-    title: "NFT Development",
-    description: "Creating innovative NFT applications and platforms.",
-  },
-  {
-    id: "hackathon-26",
-    src: "/2025/images/gallery/hackathon-26.jpg",
-    alt: "ETHTokyo Hackathon DAO",
-    category: "hackathon",
-    title: "DAO Development",
-    description: "Building decentralized autonomous organizations.",
-  },
-  {
-    id: "hackathon-27",
-    src: "/2025/images/gallery/hackathon-27.jpg",
-    alt: "ETHTokyo Hackathon Gaming",
-    category: "hackathon",
-    title: "Blockchain Gaming",
-    description: "Developing blockchain-based gaming applications.",
-  },
-  {
-    id: "hackathon-28",
-    src: "/2025/images/gallery/hackathon-28.jpg",
-    alt: "ETHTokyo Hackathon Social Impact",
-    category: "hackathon",
-    title: "Social Impact Projects",
-    description: "Building blockchain solutions for social impact.",
-  },
-  {
-    id: "hackathon-29",
-    src: "/2025/images/gallery/hackathon-29.jpg",
-    alt: "ETHTokyo Hackathon Sustainability",
-    category: "hackathon",
-    title: "Sustainability Solutions",
-    description: "Developing sustainable blockchain applications.",
-  },
-  {
-    id: "hackathon-30",
-    src: "/2025/images/gallery/hackathon-30.jpg",
-    alt: "ETHTokyo Hackathon Education",
-    category: "hackathon",
-    title: "Educational Tools",
-    description: "Creating educational tools for blockchain learning.",
-  },
-  {
-    id: "hackathon-31",
-    src: "/2025/images/gallery/hackathon-31.jpg",
-    alt: "ETHTokyo Hackathon Healthcare",
-    category: "hackathon",
-    title: "Healthcare Solutions",
-    description: "Developing blockchain solutions for healthcare.",
-  },
-  {
-    id: "hackathon-32",
-    src: "/2025/images/gallery/hackathon-32.jpg",
-    alt: "ETHTokyo Hackathon Supply Chain",
-    category: "hackathon",
-    title: "Supply Chain Solutions",
-    description: "Building blockchain solutions for supply chain management.",
-  },
-  {
-    id: "hackathon-33",
-    src: "/2025/images/gallery/hackathon-33.jpg",
-    alt: "ETHTokyo Hackathon Final Projects",
-    category: "hackathon",
-    title: "Final Project Showcase",
-    description: "Showcasing the final projects from the hackathon.",
-  },
-];
+const ITEMS_PER_PAGE = 12; // 1ページあたりの表示数
 
 const GalleryPage: NextPage = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<
     "all" | "conference" | "hackathon"
   >("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredImages =
-    selectedCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === selectedCategory);
+  // メモ化されたフィルタリング結果
+  const filteredImages = useMemo(() => {
+    return imagesByCategory[selectedCategory];
+  }, [selectedCategory]);
 
-  const openModal = (image: GalleryImage) => {
+  // ページネーション用の画像
+  const paginatedImages = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    return filteredImages.slice(startIndex, endIndex);
+  }, [filteredImages, currentPage]);
+
+  // 総ページ数
+  const totalPages = useMemo(() => {
+    return Math.ceil(filteredImages.length / ITEMS_PER_PAGE);
+  }, [filteredImages.length]);
+
+  // メモ化されたイベントハンドラー
+  const openModal = useCallback((image: GalleryImage) => {
     setSelectedImage(image);
-  };
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setSelectedImage(null);
-  };
+  }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (!selectedImage) return;
-    const currentIndex = filteredImages.findIndex(
+
+    // 現在のページの画像のみを対象にする
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const currentPageImages = filteredImages.slice(startIndex, endIndex);
+
+    const currentIndexInPage = currentPageImages.findIndex(
       (img) => img.id === selectedImage.id,
     );
-    const nextIndex = (currentIndex + 1) % filteredImages.length;
-    setSelectedImage(filteredImages[nextIndex]);
-  };
 
-  const prevImage = () => {
+    // 現在のページに画像がない場合は何もしない
+    if (currentIndexInPage === -1) {
+      return;
+    }
+
+    const nextIndexInPage = (currentIndexInPage + 1) % currentPageImages.length;
+    const nextImage = currentPageImages[nextIndexInPage];
+
+    setSelectedImage(nextImage);
+  }, [selectedImage, filteredImages, currentPage]);
+
+  const prevImage = useCallback(() => {
     if (!selectedImage) return;
-    const currentIndex = filteredImages.findIndex(
+
+    // 現在のページの画像のみを対象にする
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const currentPageImages = filteredImages.slice(startIndex, endIndex);
+
+    const currentIndexInPage = currentPageImages.findIndex(
       (img) => img.id === selectedImage.id,
     );
-    const prevIndex =
-      currentIndex === 0 ? filteredImages.length - 1 : currentIndex - 1;
-    setSelectedImage(filteredImages[prevIndex]);
-  };
+
+    // 現在のページに画像がない場合は何もしない
+    if (currentIndexInPage === -1) {
+      return;
+    }
+
+    const prevIndexInPage =
+      currentIndexInPage === 0
+        ? currentPageImages.length - 1
+        : currentIndexInPage - 1;
+    const prevImage = currentPageImages[prevIndexInPage];
+
+    setSelectedImage(prevImage);
+  }, [selectedImage, filteredImages, currentPage]);
+
+  const handleCategoryChange = useCallback(
+    (category: "all" | "conference" | "hackathon") => {
+      setSelectedCategory(category);
+      setCurrentPage(1); // カテゴリ変更時に1ページ目に戻る
+      // カテゴリ変更時にモーダルを閉じる
+      if (selectedImage) {
+        setSelectedImage(null);
+      }
+    },
+    [selectedImage],
+  );
+
+  const handlePageChange = useCallback(
+    (page: number) => {
+      setCurrentPage(page);
+      // ページ変更時にモーダルを閉じる
+      if (selectedImage) {
+        setSelectedImage(null);
+      }
+    },
+    [selectedImage],
+  );
+
+  // キーボードイベントハンドラー
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+
+      switch (e.key) {
+        case "Escape":
+          closeModal();
+          break;
+        case "ArrowRight":
+          nextImage();
+          break;
+        case "ArrowLeft":
+          prevImage();
+          break;
+      }
+    },
+    [selectedImage, closeModal, nextImage, prevImage],
+  );
+
+  // キーボードイベントリスナーの設定
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }
+  }, [handleKeyDown]);
 
   const categoryFilterStyle = css`
     display: flex;
@@ -738,7 +161,7 @@ const GalleryPage: NextPage = () => {
     padding: 0.75rem 1.5rem;
     border: 2px solid ${isActive ? brand.Primary : neutral.Grey3};
     background: ${isActive ? brand.Primary : neutral.White};
-    color: ${isActive ? neutral.White : brand.Primary};
+    color: ${isActive ? neutral.White : neutral.Grey5};
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
@@ -791,6 +214,37 @@ const GalleryPage: NextPage = () => {
     
     ${imageCardStyle}:hover & {
       transform: scale(1.05);
+    }
+  `;
+
+  const paginationStyle = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+  `;
+
+  const pageButtonStyle = (isActive: boolean) => css`
+    padding: 0.5rem 1rem;
+    border: 2px solid ${isActive ? brand.Primary : neutral.Grey3};
+    background: ${isActive ? brand.Primary : neutral.White};
+    color: ${isActive ? neutral.White : brand.Primary};
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    
+    &:hover {
+      border-color: ${brand.Primary};
+      background: ${isActive ? brand.Primary : themeLight.PrimaryLowContrast};
+    }
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   `;
 
@@ -877,9 +331,45 @@ const GalleryPage: NextPage = () => {
     
     &:hover {
       background: rgba(0, 0, 0, 0.9);
-      transform: translateY(-50%) scale(1.1);
+      transform: scale(1.1);
     }
   `;
+
+  // ページネーションの表示範囲を計算
+  const getPageNumbers = () => {
+    const pages: Array<{ value: number | string; key: string }> = [];
+    const maxVisiblePages = 5;
+
+    if (totalPages <= maxVisiblePages) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push({ value: i, key: `page-${i}` });
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 4; i++) {
+          pages.push({ value: i, key: `page-${i}` });
+        }
+        pages.push({ value: "...", key: "ellipsis-start" });
+        pages.push({ value: totalPages, key: `page-${totalPages}` });
+      } else if (currentPage >= totalPages - 2) {
+        pages.push({ value: 1, key: "page-1" });
+        pages.push({ value: "...", key: "ellipsis-end" });
+        for (let i = totalPages - 3; i <= totalPages; i++) {
+          pages.push({ value: i, key: `page-${i}` });
+        }
+      } else {
+        pages.push({ value: 1, key: "page-1" });
+        pages.push({ value: "...", key: "ellipsis-start" });
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          pages.push({ value: i, key: `page-${i}` });
+        }
+        pages.push({ value: "...", key: "ellipsis-end" });
+        pages.push({ value: totalPages, key: `page-${totalPages}` });
+      }
+    }
+
+    return pages;
+  };
 
   return (
     <>
@@ -907,28 +397,28 @@ const GalleryPage: NextPage = () => {
               <button
                 type="button"
                 css={filterButtonStyle(selectedCategory === "all")}
-                onClick={() => setSelectedCategory("all")}
+                onClick={() => handleCategoryChange("all")}
               >
                 All
               </button>
               <button
                 type="button"
                 css={filterButtonStyle(selectedCategory === "conference")}
-                onClick={() => setSelectedCategory("conference")}
+                onClick={() => handleCategoryChange("conference")}
               >
                 Conference
               </button>
               <button
                 type="button"
                 css={filterButtonStyle(selectedCategory === "hackathon")}
-                onClick={() => setSelectedCategory("hackathon")}
+                onClick={() => handleCategoryChange("hackathon")}
               >
                 Hackathon
               </button>
             </div>
 
             <div css={galleryGridStyle}>
-              {filteredImages.map((image) => (
+              {paginatedImages.map((image, index) => (
                 <button
                   key={image.id}
                   css={imageCardStyle}
@@ -936,21 +426,56 @@ const GalleryPage: NextPage = () => {
                   type="button"
                 >
                   <div css={imageWrapperStyle}>
-                    <Image
+                    <OptimizedImage
                       src={image.src}
                       alt={image.alt}
                       css={imageStyle}
                       fill={true}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src =
-                          "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
-                      }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={currentPage === 1 && index === 0}
                     />
                   </div>
                 </button>
               ))}
             </div>
+
+            {totalPages > 1 && (
+              <div css={paginationStyle}>
+                <button
+                  type="button"
+                  css={pageButtonStyle(false)}
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  <IoChevronBack size={16} />
+                </button>
+
+                {getPageNumbers().map((page) => (
+                  <button
+                    key={page.key}
+                    type="button"
+                    css={pageButtonStyle(page.value === currentPage)}
+                    onClick={() =>
+                      typeof page.value === "number"
+                        ? handlePageChange(page.value)
+                        : undefined
+                    }
+                    disabled={page.value === "..."}
+                  >
+                    {page.value}
+                  </button>
+                ))}
+
+                <button
+                  type="button"
+                  css={pageButtonStyle(false)}
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  <IoChevronForward size={16} />
+                </button>
+              </div>
+            )}
           </div>
         </main>
 
@@ -959,10 +484,11 @@ const GalleryPage: NextPage = () => {
             css={modalOverlayStyle}
             onClick={closeModal}
             onKeyDown={(e) => {
-              if (e.key === "Escape") {
+              if (e.key === "Enter" || e.key === " ") {
                 closeModal();
               }
             }}
+            aria-label="モーダルを閉じる"
           >
             <div
               css={modalContentStyle}
@@ -987,34 +513,46 @@ const GalleryPage: NextPage = () => {
                   <IoClose size={24} />
                 </button>
               </div>
-              <Image
+              <OptimizedImage
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 css={modalImageStyle}
-                width="100"
-                height="100"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
-                }}
+                width={800}
+                height={600}
+                priority={true}
               />
-              <div css={css`display: flex; justify-content: space-between;`}>
+              <div
+                css={css`display: flex; justify-content: space-between; align-items: center; padding: 1rem;`}
+              >
                 <button
                   type="button"
-                  css={[navigationButtonStyle, css`.prev`]}
+                  css={navigationButtonStyle}
                   onClick={prevImage}
+                  aria-label="Previous image"
                 >
                   <IoChevronBack size={24} />
                 </button>
+                <div
+                  css={css`flex: 1; text-align: center; color: ${neutral.Grey4}; font-size: 0.9rem;`}
+                >
+                  {(() => {
+                    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+                    const endIndex = startIndex + ITEMS_PER_PAGE;
+                    const currentPageImages = filteredImages.slice(
+                      startIndex,
+                      endIndex,
+                    );
+                    const currentIndexInPage = currentPageImages.findIndex(
+                      (img) => img.id === selectedImage.id,
+                    );
+                    return `${currentIndexInPage + 1} / ${currentPageImages.length} (Page ${currentPage})`;
+                  })()}
+                </div>
                 <button
                   type="button"
-                  css={[
-                    navigationButtonStyle,
-                    css`justify-self: center;`,
-                    css`.next`,
-                  ]}
+                  css={navigationButtonStyle}
                   onClick={nextImage}
+                  aria-label="Next image"
                 >
                   <IoChevronForward size={24} />
                 </button>
