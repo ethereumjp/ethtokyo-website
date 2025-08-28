@@ -83,15 +83,11 @@ const VenueSection: FC = () => {
                 <div css={venuesContainerStyle}>
                   <div css={venueCardStyle}>
                     <h3 css={venueTitleStyle}>Conference Venue</h3>
-                    <div css={tbaContainerStyle}>
-                      <p css={tbaTextStyle}>
-                        {eventInfo.location.conference.name}
-                      </p>
-                      <p css={venueDescriptionStyle}>
-                        Join us for a day of insightful talks and exchanging
-                        ideas.
-                      </p>
-                    </div>
+                    <p css={venueDescriptionStyle}>
+                      Join us for a day of insightful talks and exchanging
+                      ideas.
+                    </p>
+
                     <div css={venueDetailsGridStyle}>
                       <div css={detailItemStyle}>
                         <HiOutlineMapPin size={24} />
@@ -123,6 +119,17 @@ const VenueSection: FC = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div css={mapContainerStyle}>
+                      <iframe
+                        title="Conference Venue Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5964902582496!2d139.7082801!3d35.662312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f64c267bd%3A0x34ff084390b090a0!2sUnited%20Nations%20University!5e0!3m2!1sen!2sjp!4v1753695224651!5m2!1sen!2sjp"
+                        css={mapIframeStyle}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
                     </div>
                   </div>
 
@@ -168,10 +175,8 @@ const VenueSection: FC = () => {
 
                     <div css={mapContainerStyle}>
                       <iframe
-                        // title="Hackathon Venue Location"
-                        // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7172133535074!2d139.69777457670718!3d35.66247108162841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9c5d23113%3A0xf3a233d2f218acaa!2s15-1%20Udagawacho%2C%20Shibuya%20City%2C%20Tokyo%20150-0042!5e0!3m2!1sen!2sjp!4v1684554239963!5m2!1sen!2sjp"
-                        title="Conference Venue Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5964902582496!2d139.7082801!3d35.662312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f64c267bd%3A0x34ff084390b090a0!2sUnited%20Nations%20University!5e0!3m2!1sen!2sjp!4v1753695224651!5m2!1sen!2sjp"
+                        title="Hackathon Venue Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6042338798015!2d139.69406808784115!3d35.662121260370164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca8e24a397f%3A0xd219046cb159ffdb!2zRGlnaXRhbCBHYXJhZ2Ug4oCcUGFuZ2FlYeKAnQ!5e0!3m2!1sen!2sjp!4v1756411401507!5m2!1sen!2sjp"
                         css={mapIframeStyle}
                         allowFullScreen
                         loading="lazy"
