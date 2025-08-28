@@ -1,9 +1,9 @@
-import {
-  optimizeImageFile,
-  RESPONSIVE_SIZES,
-} from "../src/utils/imageOptimizer";
-import path from "node:path";
 import fs from "node:fs/promises";
+import path from "node:path";
+import {
+  RESPONSIVE_SIZES,
+  optimizeImageFile,
+} from "../src/utils/imageOptimizer";
 
 const GALLERY_IMAGES_DIR = path.join(
   process.cwd(),
