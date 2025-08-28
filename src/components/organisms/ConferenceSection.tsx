@@ -1,22 +1,19 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { speakersData } from "@/data/eventData";
-import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
-  cardHeadingStyle,
-  cardParagraphStyle,
-  cardStyle,
   containerStyle,
   headingStyle,
-  multiGridStyle,
   sectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
+import Image from "next/image";
 import type { FC } from "react";
 import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineSchedule } from "react-icons/md";
+import OptimizedImage from "../atoms/OptimizedImage";
 
 const ConferenceSection: FC = () => {
   // deform url
@@ -97,27 +94,23 @@ const ConferenceSection: FC = () => {
   `;
 
   const speakerCardStyle = css`
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     background: #fff;
     border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 16px;
+    padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 300px;
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     @media (max-width: 768px) {
-      padding: 20px;
-      margin-bottom: 12px;
-    }
-  `;
-
-  const speakerContentStyle = css`
-    display: flex;
-    align-items: center;
-    @media (max-width: 768px) {
       align-items: flex-start;
+      padding: 1rem;
     }
   `;
 
@@ -136,11 +129,10 @@ const ConferenceSection: FC = () => {
     }
   `;
 
-  const speakerLeftStyle = css`
+  const speakerBioStyle = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 0;
     flex: 1;
     gap: 8px;
   `;
@@ -159,7 +151,6 @@ const ConferenceSection: FC = () => {
   const speakerPositionStyle = css`
     font-size: 0.95rem;
     color: #666;
-    margin-bottom: 0;
     @media (max-width: 768px) {
       font-size: 0.9rem;
     }
@@ -230,27 +221,24 @@ const ConferenceSection: FC = () => {
   `;
 
   const speakersGridStyle = css`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin: 2rem 0;
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: start;
+    gap: 1rem;
   `;
+
   const buttonContainerStyle = css`
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-`;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  `;
 
   const galleryContainerStyle = css`
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
     gap: 2rem;
     margin: 3rem 0;
   `;
@@ -258,6 +246,7 @@ const ConferenceSection: FC = () => {
   const featureCardStyle = css`
     background: ${neutral.White};
     border-radius: 20px;
+    max-width: 540px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   `;
@@ -281,32 +270,18 @@ const ConferenceSection: FC = () => {
     overflow: hidden;
   `;
 
-  const galleryImageStyle = css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  `;
-
   const galleryImageInnerStyle = css`
     aspect-ratio: 16 / 10;
     position: relative;
-    width: 100%;
     overflow: hidden;
   `;
 
   const galleryTitleStyle = css`
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
     padding: 0.5rem 1rem;
     color: ${neutral.White};
     font-size: 1.1rem;
     font-weight: 600;
-    opacity: 0;
+    opacity: 100;
     transition: opacity 0.3s ease;
     z-index: 2;
     background: rgba(0, 0, 0, 0.7);
@@ -333,17 +308,21 @@ const ConferenceSection: FC = () => {
           <div css={featureCardStyle}>
             <div css={galleryImageWrapperStyle}>
               <div css={galleryImageInnerStyle}>
-                <img
-                  src="/2025/images/gallery/event-image-1.jpg"
+                <Image
+                  src="/2025/images/gallery/event-image-20.jpg"
                   alt="ETHTokyo Conference Audience"
-                  css={galleryImageStyle}
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src =
-                      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop";
-                  }}
+                  fill
                 />
-                <div css={galleryTitleStyle}>Conference Keynote Sessions</div>
+                <div css={galleryTitleStyle}>
+                  Panel Discussions showcase{" "}
+                  <a
+                    href="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=66ee4cce5378de9b4a6a4f67"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    (video link)
+                  </a>
+                </div>
               </div>
             </div>
             <div css={featureContentStyle}>
@@ -363,17 +342,21 @@ const ConferenceSection: FC = () => {
           <div css={featureCardStyle}>
             <div css={galleryImageWrapperStyle}>
               <div css={galleryImageInnerStyle}>
-                <img
-                  src="/2025/images/gallery/event-image-2.jpg"
+                <Image
+                  src="/2025/images/gallery/event-image-1.jpg"
                   alt="ETHTokyo Conference Speaker"
-                  css={galleryImageStyle}
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src =
-                      "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=500&fit=crop";
-                  }}
+                  fill
                 />
-                <div css={galleryTitleStyle}>Ethereum Community Gathering</div>
+                <div css={galleryTitleStyle}>
+                  Audrey Tang at ETHTokyo'24{" "}
+                  <a
+                    href="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=672458ec24af22d0caf9b37b"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    (video link)
+                  </a>
+                </div>
               </div>
             </div>
             <div css={featureContentStyle}>
@@ -395,48 +378,44 @@ const ConferenceSection: FC = () => {
         <div css={speakersGridStyle}>
           {speakersData.map((speaker) => (
             <div key={speaker.name} css={speakerCardStyle}>
-              <div css={speakerContentStyle}>
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  css={speakerPhotoStyle}
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src =
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face";
-                  }}
-                />
-                <div css={speakerLeftStyle}>
-                  <div css={speakerNameStyle}>{speaker.name}</div>
-                  {speaker.title && (
-                    <div css={speakerPositionStyle}>{speaker.title}</div>
-                  )}
-                  {speaker.project && (
-                    <div css={speakerProjectStyle}>{speaker.project}</div>
-                  )}
-                  {speaker.socialLink && (
-                    <div css={speakerSocialStyle}>
-                      <a
-                        href={speaker.socialLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        css={socialLinkStyle}
-                        aria-label={`${speaker.name}'s social link`}
-                      >
-                        <div css={socialIconStyle}>
-                          {speaker.socialLink.includes("x.com") ||
-                          speaker.socialLink.includes("twitter.com") ? (
-                            <FaXTwitter size={16} />
-                          ) : speaker.socialLink.includes("linkedin.com") ? (
-                            <FaLinkedin size={16} />
-                          ) : (
-                            <FaXTwitter size={16} />
-                          )}
-                        </div>
-                        <span>{extractAccountName(speaker.socialLink)}</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
+              <Image
+                src={speaker.image}
+                alt={speaker.name}
+                css={speakerPhotoStyle}
+                width={100}
+                height={100}
+              />
+              <div css={speakerBioStyle}>
+                <div css={speakerNameStyle}>{speaker.name}</div>
+                {speaker.title && (
+                  <div css={speakerPositionStyle}>{speaker.title}</div>
+                )}
+                {speaker.project && (
+                  <div css={speakerProjectStyle}>{speaker.project}</div>
+                )}
+                {speaker.socialLink && (
+                  <div css={speakerSocialStyle}>
+                    <a
+                      href={speaker.socialLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      css={socialLinkStyle}
+                      aria-label={`${speaker.name}'s social link`}
+                    >
+                      <div css={socialIconStyle}>
+                        {speaker.socialLink.includes("x.com") ||
+                        speaker.socialLink.includes("twitter.com") ? (
+                          <FaXTwitter size={16} />
+                        ) : speaker.socialLink.includes("linkedin.com") ? (
+                          <FaLinkedin size={16} />
+                        ) : (
+                          <FaXTwitter size={16} />
+                        )}
+                      </div>
+                      <span>{extractAccountName(speaker.socialLink)}</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}

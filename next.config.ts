@@ -2,9 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
-  images: { unoptimized: true },
+  // output: "export",
   // i18n: { locales: ["en", "ja"], defaultLocale: "en", localeDetection: false },
+  images: {
+    remotePatterns: [new URL("https://picsum.dev/**")],
+  },
   compiler: {
     emotion: true,
   },

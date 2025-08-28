@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { neutral } from "@/themes/settings/color";

@@ -1,11 +1,12 @@
-import ContentCard from "@/components/common/ContentCard";
-import SectionTitle from "@/components/common/SectionTitle";
+import ContentCard from "@/components/molecules/ContentCard";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import { tracksData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";
+import OptimizedImage from "../atoms/OptimizedImage";
 
 interface TrackCardProps {
   track: (typeof tracksData)[0];
@@ -97,15 +98,12 @@ const TracksSection: FC = () => {
         <div css={imageGalleryStyle}>
           <div css={imageCardStyle}>
             <div css={imageWrapperStyle}>
-              <img
+              <OptimizedImage
                 src="/2025/images/gallery/hackathon-1.jpg"
                 alt="ETHTokyo Hackathon Participants"
                 css={imageStyle}
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop";
-                }}
+                width={100}
+                height={100}
               />
               <div css={imageOverlayStyle}>
                 <h3 css={overlayTitleStyle}>Build the Future</h3>
@@ -118,15 +116,12 @@ const TracksSection: FC = () => {
 
           <div css={imageCardStyle}>
             <div css={imageWrapperStyle}>
-              <img
+              <OptimizedImage
                 src="/2025/images/gallery/hackathon-2.jpg"
                 alt="ETHTokyo Hackathon Mentoring"
                 css={imageStyle}
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop";
-                }}
+                width={100}
+                height={100}
               />
               <div css={imageOverlayStyle}>
                 <h3 css={overlayTitleStyle}>Expert Mentorship</h3>
@@ -139,15 +134,12 @@ const TracksSection: FC = () => {
 
           <div css={imageCardStyle}>
             <div css={imageWrapperStyle}>
-              <img
+              <OptimizedImage
                 src="/2025/images/gallery/hackathon-3.jpg"
                 alt="ETHTokyo Hackathon Presentations"
                 css={imageStyle}
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                    "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=500&fit=crop";
-                }}
+                width={100}
+                height={100}
               />
               <div css={imageOverlayStyle}>
                 <h3 css={overlayTitleStyle}>Demo Day</h3>
@@ -303,7 +295,6 @@ const requirementItemStyle = css`
     font-size: 1.2rem;
     font-weight: bold;
     left: 0;
-    position: absolute;
   }
 `;
 
@@ -330,13 +321,12 @@ const readLessButtonStyle = css`
 `;
 
 const imageGalleryStyle = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
-  margin: 3rem 0 2rem;
   
   ${mq.mobileSmall} {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 `;
@@ -348,6 +338,8 @@ const imageCardStyle = css`
   background: ${neutral.White};
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 42vw;
+  max-width: 360px;
   
   &:hover {
     transform: translateY(-8px) scale(1.02);
@@ -355,12 +347,6 @@ const imageCardStyle = css`
   }
   
   &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: linear-gradient(
       135deg,
       ${brand.Primary}20 0%,
@@ -379,7 +365,6 @@ const imageCardStyle = css`
 
 const imageWrapperStyle = css`
   position: relative;
-  width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
 `;
@@ -396,10 +381,6 @@ const imageStyle = css`
 `;
 
 const imageOverlayStyle = css`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 1.5rem;
   background: linear-gradient(
     to top,

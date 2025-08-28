@@ -1,12 +1,13 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, neutral, themeLight } from "@/themes/settings/color";
+import { brand, neutral } from "@/themes/settings/color";
 import {
   containerStyle,
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
+import Image from "next/image";
 import type { FC } from "react";
 import { IoImages } from "react-icons/io5";
 
@@ -168,15 +169,11 @@ const GallerySection: FC = () => {
 
         <div css={galleryPreviewStyle}>
           <div css={previewImageStyle}>
-            <img
+            <Image
               src="/2025/images/gallery/event-image-1.jpg"
               alt="Conference Keynote Sessions"
               css={imageStyle}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src =
-                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop";
-              }}
+              fill
             />
             <div css={overlayStyle}>
               <div css={imageTitleStyle}>Keynote</div>
@@ -184,15 +181,11 @@ const GallerySection: FC = () => {
           </div>
 
           <div css={previewImageStyle}>
-            <img
+            <Image
               src="/2025/images/gallery/hackathon-1.jpg"
               alt="Hackathon Team Collaboration"
               css={imageStyle}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src =
-                  "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=400&h=250&fit=crop";
-              }}
+              fill
             />
             <div css={overlayStyle}>
               <div css={imageTitleStyle}>Hackathon</div>
@@ -200,15 +193,11 @@ const GallerySection: FC = () => {
           </div>
 
           <div css={previewImageStyle}>
-            <img
+            <Image
               src="/2025/images/gallery/event-image-2.jpg"
               alt="Ethereum Community Gathering"
               css={imageStyle}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src =
-                  "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=400&h=250&fit=crop";
-              }}
+              fill
             />
             <div css={overlayStyle}>
               <div css={imageTitleStyle}>Community</div>
@@ -218,7 +207,7 @@ const GallerySection: FC = () => {
 
         <div css={buttonContainerStyle}>
           <Button href="/gallery" size="large" icon={<IoImages />}>
-            View Gallery
+            <span css={css`color: ${neutral.White};`}>View Gallery</span>
           </Button>
         </div>
       </div>

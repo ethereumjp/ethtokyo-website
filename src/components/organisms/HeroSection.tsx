@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { eventInfoStyle, infoItemStyle } from "@/themes/styles/common";
@@ -6,8 +6,8 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import type { FC } from "react";
 import { BiIdCard } from "react-icons/bi";
-import ThemeImage from "/public/2025/images/keyvisual.png";
-import ETHTokyoLogo from "/public/assets/ETHTokyoLogo.png";
+const ThemeImage = "/2025/images/keyvisual.png";
+const ETHTokyoLogo = "/assets/ETHTokyoLogo.png";
 
 const HeroSection: FC = () => {
   const sectionStyle = css`

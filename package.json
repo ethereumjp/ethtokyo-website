@@ -12,7 +12,8 @@
     "url": "https://github.com/ethereumjp/ethtokyo-website/issues"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx lint-staged",
+    "pre-push": "yarn ci"
   },
   "scripts": {
     "dev": "next dev",
@@ -25,7 +26,6 @@
     "check": "yarn run biome check ./src",
     "clean": "yarn run biome check ./src --write",
     "ci": "yarn tsc && yarn run biome ci .",
-    "pre-push": "yarn ci",
     "build-storybook": "storybook build"
   },
   "packageManager": "yarn@3.2.4",
@@ -69,6 +69,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.0",
+    "tsx": "^4.20.5",
     "typescript": "^5.8.3"
   }
 }
