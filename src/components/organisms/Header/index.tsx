@@ -43,17 +43,13 @@ const Header: FC<ComponentProps> = ({ children }) => {
     backdrop-filter: ${isScrolled ? "blur(8px)" : "none"};
     background-color: ${isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent"};
     box-shadow: ${isScrolled ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" : "none"};
-    left: 0;
     position: fixed;
-    top: 0;
     transition: all 0.3s ease;
     width: 100%;
     z-index: 50;
   `;
 
   const containerStyle = css`
-    margin: 0 auto;
-    max-width: 1280px;
     padding: 0 1rem;
 
     ${mq.tablet} {

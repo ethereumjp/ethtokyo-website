@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   // output: "export",
   // i18n: { locales: ["en", "ja"], defaultLocale: "en", localeDetection: false },
   images: {
-    remotePatterns: [new URL("https://images.unsplash.com")],
+    remotePatterns: [new URL("https://picsum.dev/**")],
   },
   compiler: {
     emotion: true,

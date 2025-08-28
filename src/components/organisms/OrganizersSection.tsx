@@ -8,6 +8,7 @@ import {
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
+import Image from "next/image";
 
 const OrganizersSection: FC = () => {
   const organizersStyle = css`
@@ -58,7 +59,7 @@ const OrganizersSection: FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src={organizer.logoFile}
                 alt={`Organizer ${organizer.name}`}
                 css={
@@ -66,6 +67,8 @@ const OrganizersSection: FC = () => {
                     ? intMaxLogoStyle
                     : organizersLogoStyle
                 }
+                width={240}
+                height={240}
               />
             </a>
           ))}

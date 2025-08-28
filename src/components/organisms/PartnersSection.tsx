@@ -6,6 +6,7 @@ import {
   partnersSectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
+import Image from "next/image";
 import type { FC } from "react";
 
 const PartnersSection: FC = () => {
@@ -75,10 +76,12 @@ const PartnersSection: FC = () => {
 
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
-        <img
-          src={`2025/images/${props.partnerType}Partners/${props.logoFile}`}
+        <Image
+          src={`/2025/images/${props.partnerType}Partners/${props.logoFile}`}
           alt={`${props.partnerName} logo`}
           css={logoStyle}
+          width={180}
+          height={180}
         />
       </a>
     );

@@ -27,7 +27,7 @@ export const scheduleData = [
 export const speakersData = [
   {
     name: "Vitalik Buterin",
-    image: "2025/images/speakers/Vitalik Buterin_Founder_Ethereum.jpg",
+    image: "/2025/images/speakers/Vitalik Buterin_Founder_Ethereum.jpg",
     title: "Founder",
     project: "Ethereum Foundation",
     talkTitle: "",
@@ -36,7 +36,7 @@ export const speakersData = [
   {
     name: "Aya Miyaguchi",
     image:
-      "2025/images/speakers/Aya Miyaguchi_President_Ethereum Foundation.jpg",
+      "/2025/images/speakers/Aya Miyaguchi_President_Ethereum Foundation.jpg",
     title: "President",
     project: "Ethereum Foundation",
     talkTitle: "",
@@ -44,7 +44,7 @@ export const speakersData = [
   },
   {
     name: "Charles Lu",
-    image: "2025/images/speakers/Charles Lu_Espresso.png",
+    image: "/2025/images/speakers/Charles Lu_Espresso.png",
     title: "",
     project: "Espresso",
     talkTitle: "",
@@ -52,7 +52,7 @@ export const speakersData = [
   },
   {
     name: "Maika Isogawa",
-    image: "2025/images/speakers/maikaisogawa.png",
+    image: "/2025/images/speakers/maikaisogawa.png",
     title: "",
     project: "Webacy",
     talkTitle: "",
@@ -60,7 +60,7 @@ export const speakersData = [
   },
   {
     name: "Jeff Wentworth",
-    image: "2025/images/speakers/jeffwentworth.png",
+    image: "/2025/images/speakers/jeffwentworth.png",
     title: "Co-founder",
     project: "Curvegrid",
     talkTitle: "",
@@ -68,7 +68,7 @@ export const speakersData = [
   },
   {
     name: "Alan Scott",
-    image: "2025/images/speakers/alanscott.jpg",
+    image: "/2025/images/speakers/alanscott.jpg",
     title: "Contributor",
     project: "Railgun",
     talkTitle: "",
@@ -76,7 +76,7 @@ export const speakersData = [
   },
   {
     name: "Gwénolé Martin",
-    image: "2025/images/speakers/gwenolemartin.png",
+    image: "/2025/images/speakers/gwenolemartin.png",
     title: "Devrel",
     project: "Consensys",
     talkTitle: "",
@@ -84,7 +84,7 @@ export const speakersData = [
   },
   {
     name: "Mykola Siusko",
-    image: "2025/images/speakers/mykolasiusko.jpg",
+    image: "/2025/images/speakers/mykolasiusko.jpg",
     title: "Co-founder",
     project: "Web3Privacy now",
     talkTitle: "",
@@ -92,7 +92,7 @@ export const speakersData = [
   },
   {
     name: "Jack Baldwin",
-    image: "2025/images/speakers/jackbaldwin.png",
+    image: "/2025/images/speakers/jackbaldwin.png",
     title: "Co-founder",
     project: "Shinsei Galverse",
     talkTitle: "",
@@ -100,7 +100,7 @@ export const speakersData = [
   },
   {
     name: "Suji Yan",
-    image: "2025/images/speakers/sujiyan.jpeg",
+    image: "/2025/images/speakers/sujiyan.jpeg",
     title: "Founder",
     project: "Mask Network",
     talkTitle: "",
@@ -108,7 +108,7 @@ export const speakersData = [
   },
   {
     name: "David Casey",
-    image: "2025/images/speakers/davidcasey.jpeg",
+    image: "/2025/images/speakers/davidcasey.jpeg",
     title: "CEO",
     project: "Funding the Commons",
     talkTitle: "",
@@ -123,7 +123,7 @@ export const speakersData = [
   // },
   {
     name: "Noah Jelich",
-    image: "2025/images/speakers/noahjelich.png",
+    image: "/2025/images/speakers/noahjelich.png",
     title: "Security Researcher",
     project: "Independent",
     talkTitle: "",
@@ -131,7 +131,7 @@ export const speakersData = [
   },
   {
     name: "Jack Saracco",
-    image: "2025/images/speakers/jacksaracco.jpg",
+    image: "/2025/images/speakers/jacksaracco.jpg",
     title: "Founder",
     project: "Plasma Free",
     talkTitle: "",
@@ -378,11 +378,6 @@ export const communitySponsorsData = [
     website: "https://akindo.io/",
     logoFile: "akindo.svg",
   },
-  {
-    partnerName: "HAKFLOW",
-    website: "https://hakflow.com",
-    logoFile: "hakflow.jpg",
-  },
   // {
   //   partnerName: "Amagi",
   //   website: "https://amagi.digital/",
@@ -399,14 +394,19 @@ export const communitySponsorsData = [
     logoFile: "BlockDev.id_logo.png",
   },
   {
-    partnerName: "vinyl",
-    website: "https://x.com/vvinyll",
-    logoFile: "PudgyPenguins.png",
+    partnerName: "HAKFLOW",
+    website: "https://hakflow.com",
+    logoFile: "hakflow.jpg",
   },
   {
     partnerName: "web3 Research JAPAN",
     website: "https://www.web3researchjapan.com/",
     logoFile: "web3researchjapan.png",
+  },
+  {
+    partnerName: "vinyl",
+    website: "https://x.com/vvinyll",
+    logoFile: "PudgyPenguins.png",
   },
 ];
 
@@ -415,25 +415,25 @@ export const organizersData = [
   {
     name: "Ethereum Japan",
     website: "https://ethereumjp.org/",
-    logoFile: "2025/images/organizers/EJLogoFace_dark_horizontal.png",
+    logoFile: "/2025/images/organizers/EJLogoFace_dark_horizontal.png",
     logoStyle: "standard",
   },
   {
     name: "Centrum",
     website: "https://centrum.studio/",
-    logoFile: "2025/images/organizers/logo_black_transparent.png",
+    logoFile: "/2025/images/organizers/logo_black_transparent.png",
     logoStyle: "standard",
   },
   {
     name: "Fracton Ventures",
     website: "https://fracton.ventures/",
-    logoFile: "2025/images/organizers/fracton-rec-white-clear.png",
+    logoFile: "/2025/images/organizers/fracton-rec-white-clear.png",
     logoStyle: "standard",
   },
   {
     name: "INTMAX",
     website: "https://intmax.io/",
-    logoFile: "2025/images/organizers/intmax.png",
+    logoFile: "/2025/images/organizers/intmax.png",
     logoStyle: "large",
   },
 ];

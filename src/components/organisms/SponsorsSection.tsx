@@ -11,6 +11,7 @@ import {
   partnersSectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
+import Image from "next/image";
 import type { FC } from "react";
 import { Temp_formSection } from "./AboutSection";
 
@@ -21,95 +22,60 @@ const SponsorsSection: FC = () => {
     padding-bottom: 2rem;
   `;
 
-  const sponsorsLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 2rem 2.5rem;
-    justify-items: center;
-    align-items: center;
-    margin-top: 2.5rem;
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-
-    ${mq.mobileSmall} {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-  `;
-
   const platinumLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: ${platinumSponsorsData.length === 1 ? "1fr" : platinumSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
+    display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
-    margin-top: 2.5rem;
+    padding-top: 1rem;
     width: 100%;
-    max-width: ${platinumSponsorsData.length === 1 ? "300px" : platinumSponsorsData.length === 2 ? "400px" : "800px"};
-    margin-left: auto;
-    margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: ${platinumSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 2rem;
     }
   `;
 
   const goldLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
-    margin-top: 2.5rem;
     width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
 
     ${mq.mobileSmall} {
       gap: 2rem;
-      max-width: 350px;
-      padding: 0 10px;
     }
   `;
 
   const silverLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: ${silverSponsorsData.length === 1 ? "1fr" : silverSponsorsData.length === 2 ? "repeat(2, 1fr)" : "repeat(3, 1fr)"};
+    display: wrap;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
-    max-width: ${silverSponsorsData.length === 1 ? "300px" : silverSponsorsData.length === 2 ? "400px" : "800px"};
-    margin-left: auto;
-    margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: ${silverSponsorsData.length === 1 ? "1fr" : "repeat(2, 1fr)"};
       gap: 1.5rem;
     }
   `;
 
   const communityLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
-    margin-top: 2.5rem;
     width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 
     ${mq.mobileSmall} {
-      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
   `;
@@ -118,22 +84,18 @@ const SponsorsSection: FC = () => {
     padding-top: 2.5rem;
   `;
 
-  const sponsorLogoStyle = css`
-    height: 60px;
-    max-width: 100%;
-    object-fit: contain;
-  `;
-
   const platinumLogoStyle = css`
     height: 120px;
     max-width: 100%;
     object-fit: contain;
+    padding: 0 40px;
   `;
 
   const goldLogoStyle = css`
     height: 100px;
     max-width: 100%;
     object-fit: contain;
+    padding: 0 20px;
 
     ${mq.mobileSmall} {
       height: 120px;
@@ -205,8 +167,8 @@ const SponsorsSection: FC = () => {
 
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
-        <img
-          src={`2025/images/${props.sponsorType}Sponsors/${props.logoFile}`}
+        <Image
+          src={`/2025/images/${props.sponsorType}Sponsors/${props.logoFile}`}
           alt={`${props.sponsorName} logo`}
           css={
             props.sponsorType === "platinum"
@@ -223,14 +185,23 @@ const SponsorsSection: FC = () => {
                     ? largeCommunityLogoStyle
                     : communityLogoStyle
           }
-          style={
-            isLargeGoldLogo
-              ? {
-                  maxWidth: "100%",
-                  objectFit: "contain",
-                  zIndex: 10,
-                }
-              : undefined
+          width={
+            props.sponsorType === "platinum"
+              ? 300
+              : props.sponsorType === "gold"
+                ? 240
+                : props.sponsorType === "silver"
+                  ? 200
+                  : 160
+          }
+          height={
+            props.sponsorType === "platinum"
+              ? 300
+              : props.sponsorType === "gold"
+                ? 240
+                : props.sponsorType === "silver"
+                  ? 200
+                  : 160
           }
         />
       </a>
