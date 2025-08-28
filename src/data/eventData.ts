@@ -327,11 +327,6 @@ export const eventPartnersData = [
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
   },
-  {
-    partnerName: "AKINDO",
-    website: "https://akindo.io/",
-    logoFile: "akindo.svg",
-  },
 ];
 
 // メディアパートナーデータ
@@ -440,26 +435,31 @@ export const communitySponsorsData = [
     website: "https://ethjkt.com/",
     logoFile: "tulisan.png",
   },
-  {
-    partnerName: "Curvegrid Inc.",
-    website: "http://www.curvegrid.com",
-    logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
-  },
+  // {
+  //   partnerName: "Curvegrid Inc.",
+  //   website: "http://www.curvegrid.com",
+  //   logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
+  // },
   {
     partnerName: "Shinsei Galverse",
     website: "https://www.galverse.art/",
     logoFile: "large.png",
   },
   {
+    partnerName: "AKINDO",
+    website: "https://akindo.io/",
+    logoFile: "akindo.svg",
+  },
+  {
     partnerName: "HAKFLOW",
     website: "https://hakflow.com",
     logoFile: "hakflow.jpg",
   },
-  {
-    partnerName: "Amagi",
-    website: "https://amagi.digital/",
-    logoFile: "amagidigital.jpg",
-  },
+  // {
+  //   partnerName: "Amagi",
+  //   website: "https://amagi.digital/",
+  //   logoFile: "amagidigital.jpg",
+  // },
   {
     partnerName: "vinyl",
     website: "https://x.com/vvinyll",
@@ -469,6 +469,26 @@ export const communitySponsorsData = [
     partnerName: "web3 Research JAPAN",
     website: "https://www.web3researchjapan.com/",
     logoFile: "web3researchjapan.png",
+  },
+  {
+    partnerName: "byteStreame",
+    website: "https://bytestreame.com/",
+    logoFile: "byteStreame.png",
+  },
+  {
+    partnerName: "BGIN",
+    website: "https://bgin-global.org/",
+    logoFile: "BGIN_logo.png",
+  },
+  {
+    partnerName: "BlockDev.id",
+    website: "https://blockdev.id/",
+    logoFile: "BlockDev.id_logo.png",
+  },
+  {
+    partnerName: "TheGraph",
+    website: "https://thegraph.com/ja/",
+    logoFile: "TheGraph-Logo-Dark.png",
   },
 ];
 
