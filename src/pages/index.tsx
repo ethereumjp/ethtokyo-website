@@ -7,7 +7,6 @@ import OrganizersSection from "@/components/organisms/OrganizersSection";
 import PartnersSection from "@/components/organisms/PartnersSection";
 import ScheduleSection from "@/components/organisms/ScheduleSection";
 import SponsorsSection from "@/components/organisms/SponsorsSection";
-import TicketSection from "@/components/organisms/TicketSection";
 import TracksSection from "@/components/organisms/TracksSection";
 import VenueSection from "@/components/organisms/VenueSection";
 import type { PageProps } from "@/types";

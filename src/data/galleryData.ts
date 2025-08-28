@@ -10,7 +10,7 @@ export interface GalleryImage {
 export const galleryImages: GalleryImage[] = [
   {
     id: "event-1",
-    src: "/2025/images/gallery-optimized/event-image-1-medium.webp",
+    src: "/2025/images/gallery/event-image-1.jpg",
     alt: "ETHTokyo Conference Audience",
     category: "conference",
     title: "Conference Keynote Sessions",
@@ -19,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-2",
-    src: "/2025/images/gallery-optimized/event-image-2-medium.webp",
+    src: "/2025/images/gallery/event-image-2.jpg",
     alt: "ETHTokyo Conference Speaker",
     category: "conference",
     title: "Ethereum Community Gathering",
@@ -28,7 +28,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-3",
-    src: "/2025/images/gallery-optimized/event-image-3-medium.webp",
+    src: "/2025/images/gallery/event-image-3.jpg",
     alt: "ETHTokyo Conference Networking",
     category: "conference",
     title: "Networking Sessions",
@@ -37,7 +37,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-4",
-    src: "/2025/images/gallery-optimized/event-image-4-medium.webp",
+    src: "/2025/images/gallery/event-image-4.jpg",
     alt: "ETHTokyo Conference Workshop",
     category: "conference",
     title: "Interactive Workshops",
@@ -46,7 +46,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-5",
-    src: "/2025/images/gallery-optimized/event-image-5-medium.webp",
+    src: "/2025/images/gallery/event-image-5.jpg",
     alt: "ETHTokyo Conference Panel Discussion",
     category: "conference",
     title: "Panel Discussions",
@@ -54,7 +54,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-6",
-    src: "/2025/images/gallery-optimized/event-image-6-medium.webp",
+    src: "/2025/images/gallery/event-image-6.jpg",
     alt: "ETHTokyo Conference Exhibition",
     category: "conference",
     title: "Exhibition Area",
@@ -62,7 +62,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-7",
-    src: "/2025/images/gallery-optimized/event-image-7-medium.webp",
+    src: "/2025/images/gallery/event-image-7.jpg",
     alt: "ETHTokyo Conference Community",
     category: "conference",
     title: "Community Building",
@@ -70,7 +70,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-8",
-    src: "/2025/images/gallery-optimized/event-image-8-medium.webp",
+    src: "/2025/images/gallery/event-image-8.jpg",
     alt: "ETHTokyo Conference Learning",
     category: "conference",
     title: "Learning Sessions",
@@ -79,7 +79,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-9",
-    src: "/2025/images/gallery-optimized/event-image-9-medium.webp",
+    src: "/2025/images/gallery/event-image-9.jpg",
     alt: "ETHTokyo Conference Innovation",
     category: "conference",
     title: "Innovation Showcase",
@@ -87,7 +87,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-10",
-    src: "/2025/images/gallery-optimized/event-image-10-medium.webp",
+    src: "/2025/images/gallery/event-image-10.jpg",
     alt: "ETHTokyo Conference Collaboration",
     category: "conference",
     title: "Collaborative Sessions",
@@ -95,7 +95,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-11",
-    src: "/2025/images/gallery-optimized/event-image-11-medium.webp",
+    src: "/2025/images/gallery/event-image-11.jpg",
     alt: "ETHTokyo Conference Technology",
     category: "conference",
     title: "Technology Deep Dive",
@@ -103,7 +103,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-12",
-    src: "/2025/images/gallery-optimized/event-image-12-medium.webp",
+    src: "/2025/images/gallery/event-image-12.jpg",
     alt: "ETHTokyo Conference Inspiration",
     category: "conference",
     title: "Inspirational Talks",
@@ -112,7 +112,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-13",
-    src: "/2025/images/gallery-optimized/event-image-13-medium.webp",
+    src: "/2025/images/gallery/event-image-13.jpg",
     alt: "ETHTokyo Conference Future",
     category: "conference",
     title: "Future of Web3",
@@ -121,7 +121,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-14",
-    src: "/2025/images/gallery-optimized/event-image-14-medium.webp",
+    src: "/2025/images/gallery/event-image-14.jpg",
     alt: "ETHTokyo Conference Growth",
     category: "conference",
     title: "Community Growth",
@@ -130,7 +130,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-15",
-    src: "/2025/images/gallery-optimized/event-image-15-medium.webp",
+    src: "/2025/images/gallery/event-image-15.jpg",
     alt: "ETHTokyo Conference Knowledge",
     category: "conference",
     title: "Knowledge Sharing",
@@ -139,7 +139,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-16",
-    src: "/2025/images/gallery-optimized/event-image-16-medium.webp",
+    src: "/2025/images/gallery/event-image-16.jpg",
     alt: "ETHTokyo Conference Development",
     category: "conference",
     title: "Developer Sessions",
@@ -147,7 +147,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-17",
-    src: "/2025/images/gallery-optimized/event-image-17-medium.webp",
+    src: "/2025/images/gallery/event-image-17.jpg",
     alt: "ETHTokyo Conference Ecosystem",
     category: "conference",
     title: "Ecosystem Overview",
@@ -155,7 +155,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-18",
-    src: "/2025/images/gallery-optimized/event-image-18-medium.webp",
+    src: "/2025/images/gallery/event-image-18.jpg",
     alt: "ETHTokyo Conference Innovation Hub",
     category: "conference",
     title: "Innovation Hub",
@@ -163,7 +163,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-19",
-    src: "/2025/images/gallery-optimized/event-image-19-medium.webp",
+    src: "/2025/images/gallery/event-image-19.jpg",
     alt: "ETHTokyo Conference Global Community",
     category: "conference",
     title: "Global Community",
@@ -171,7 +171,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-20",
-    src: "/2025/images/gallery-optimized/event-image-20-medium.webp",
+    src: "/2025/images/gallery/event-image-20.jpg",
     alt: "ETHTokyo Conference Technology Showcase",
     category: "conference",
     title: "Technology Showcase",
@@ -179,7 +179,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-21",
-    src: "/2025/images/gallery-optimized/event-image-21-medium.webp",
+    src: "/2025/images/gallery/event-image-21.jpg",
     alt: "ETHTokyo Conference Learning Environment",
     category: "conference",
     title: "Learning Environment",
@@ -187,7 +187,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-22",
-    src: "/2025/images/gallery-optimized/event-image-22-medium.webp",
+    src: "/2025/images/gallery/event-image-22.jpg",
     alt: "ETHTokyo Conference Networking Hub",
     category: "conference",
     title: "Networking Hub",
@@ -195,7 +195,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-23",
-    src: "/2025/images/gallery-optimized/event-image-23-medium.webp",
+    src: "/2025/images/gallery/event-image-23.jpg",
     alt: "ETHTokyo Conference Collaboration Space",
     category: "conference",
     title: "Collaboration Space",
@@ -203,7 +203,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-24",
-    src: "/2025/images/gallery-optimized/event-image-24-medium.webp",
+    src: "/2025/images/gallery/event-image-24.jpg",
     alt: "ETHTokyo Conference Innovation Lab",
     category: "conference",
     title: "Innovation Lab",
@@ -211,7 +211,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-25",
-    src: "/2025/images/gallery-optimized/event-image-25-medium.webp",
+    src: "/2025/images/gallery/event-image-25.jpg",
     alt: "ETHTokyo Conference Community Spirit",
     category: "conference",
     title: "Community Spirit",
@@ -219,7 +219,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-26",
-    src: "/2025/images/gallery-optimized/event-image-26-medium.webp",
+    src: "/2025/images/gallery/event-image-26.jpg",
     alt: "ETHTokyo Conference Technology Exchange",
     category: "conference",
     title: "Technology Exchange",
@@ -227,7 +227,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-27",
-    src: "/2025/images/gallery-optimized/event-image-27-medium.webp",
+    src: "/2025/images/gallery/event-image-27.jpg",
     alt: "ETHTokyo Conference Future Vision",
     category: "conference",
     title: "Future Vision",
@@ -235,7 +235,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-28",
-    src: "/2025/images/gallery-optimized/event-image-28-medium.webp",
+    src: "/2025/images/gallery/event-image-28.jpg",
     alt: "ETHTokyo Conference Growth Mindset",
     category: "conference",
     title: "Growth Mindset",
@@ -243,7 +243,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-29",
-    src: "/2025/images/gallery-optimized/event-image-29-medium.webp",
+    src: "/2025/images/gallery/event-image-29.jpg",
     alt: "ETHTokyo Conference Knowledge Transfer",
     category: "conference",
     title: "Knowledge Transfer",
@@ -251,7 +251,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-30",
-    src: "/2025/images/gallery-optimized/event-image-30-medium.webp",
+    src: "/2025/images/gallery/event-image-30.jpg",
     alt: "ETHTokyo Conference Development Focus",
     category: "conference",
     title: "Development Focus",
@@ -259,7 +259,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-31",
-    src: "/2025/images/gallery-optimized/event-image-31-medium.webp",
+    src: "/2025/images/gallery/event-image-31.jpg",
     alt: "ETHTokyo Conference Ecosystem Growth",
     category: "conference",
     title: "Ecosystem Growth",
@@ -267,7 +267,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-32",
-    src: "/2025/images/gallery-optimized/event-image-32-medium.webp",
+    src: "/2025/images/gallery/event-image-32.jpg",
     alt: "ETHTokyo Conference Innovation Center",
     category: "conference",
     title: "Innovation Center",
@@ -275,7 +275,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-33",
-    src: "/2025/images/gallery-optimized/event-image-33-medium.webp",
+    src: "/2025/images/gallery/event-image-33.jpg",
     alt: "ETHTokyo Conference Global Network",
     category: "conference",
     title: "Global Network",
@@ -283,7 +283,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-34",
-    src: "/2025/images/gallery-optimized/event-image-34-medium.webp",
+    src: "/2025/images/gallery/event-image-34.jpg",
     alt: "ETHTokyo Conference Technology Leadership",
     category: "conference",
     title: "Technology Leadership",
@@ -291,7 +291,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-35",
-    src: "/2025/images/gallery-optimized/event-image-35-medium.webp",
+    src: "/2025/images/gallery/event-image-35.jpg",
     alt: "ETHTokyo Conference Learning Community",
     category: "conference",
     title: "Learning Community",
@@ -299,7 +299,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-36",
-    src: "/2025/images/gallery-optimized/event-image-36-medium.webp",
+    src: "/2025/images/gallery/event-image-36.jpg",
     alt: "ETHTokyo Conference Networking Success",
     category: "conference",
     title: "Networking Success",
@@ -307,7 +307,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-37",
-    src: "/2025/images/gallery-optimized/event-image-37-medium.webp",
+    src: "/2025/images/gallery/event-image-37.jpg",
     alt: "ETHTokyo Conference Collaboration Success",
     category: "conference",
     title: "Collaboration Success",
@@ -315,7 +315,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-38",
-    src: "/2025/images/gallery-optimized/event-image-38-medium.webp",
+    src: "/2025/images/gallery/event-image-38.jpg",
     alt: "ETHTokyo Conference Innovation Success",
     category: "conference",
     title: "Innovation Success",
@@ -323,7 +323,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-39",
-    src: "/2025/images/gallery-optimized/event-image-39-medium.webp",
+    src: "/2025/images/gallery/event-image-39.jpg",
     alt: "ETHTokyo Conference Community Success",
     category: "conference",
     title: "Community Success",
@@ -331,7 +331,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-40",
-    src: "/2025/images/gallery-optimized/event-image-40-medium.webp",
+    src: "/2025/images/gallery/event-image-40.jpg",
     alt: "ETHTokyo Conference Technology Success",
     category: "conference",
     title: "Technology Success",
@@ -339,7 +339,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-41",
-    src: "/2025/images/gallery-optimized/event-image-41-medium.webp",
+    src: "/2025/images/gallery/event-image-41.jpg",
     alt: "ETHTokyo Conference Future Success",
     category: "conference",
     title: "Future Success",
@@ -347,7 +347,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-42",
-    src: "/2025/images/gallery-optimized/event-image-42-medium.webp",
+    src: "/2025/images/gallery/event-image-42.jpg",
     alt: "ETHTokyo Conference Growth Success",
     category: "conference",
     title: "Growth Success",
@@ -355,7 +355,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-43",
-    src: "/2025/images/gallery-optimized/event-image-43-medium.webp",
+    src: "/2025/images/gallery/event-image-43.jpg",
     alt: "ETHTokyo Conference Knowledge Success",
     category: "conference",
     title: "Knowledge Success",
@@ -363,7 +363,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-44",
-    src: "/2025/images/gallery-optimized/event-image-44-medium.webp",
+    src: "/2025/images/gallery/event-image-44.jpg",
     alt: "ETHTokyo Conference Development Success",
     category: "conference",
     title: "Development Success",
@@ -371,7 +371,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-45",
-    src: "/2025/images/gallery-optimized/event-image-45-medium.webp",
+    src: "/2025/images/gallery/event-image-45.jpg",
     alt: "ETHTokyo Conference Ecosystem Success",
     category: "conference",
     title: "Ecosystem Success",
@@ -379,7 +379,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-46",
-    src: "/2025/images/gallery-optimized/event-image-46-medium.webp",
+    src: "/2025/images/gallery/event-image-46.jpg",
     alt: "ETHTokyo Conference Final Celebration",
     category: "conference",
     title: "Final Celebration",
@@ -387,7 +387,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-47",
-    src: "/2025/images/gallery-optimized/event-image-47-medium.webp",
+    src: "/2025/images/gallery/event-image-47.jpg",
     alt: "ETHTokyo Conference Community Celebration",
     category: "conference",
     title: "Community Celebration",
@@ -395,7 +395,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "event-48",
-    src: "/2025/images/gallery-optimized/event-image-48-medium.webp",
+    src: "/2025/images/gallery/event-image-48.jpg",
     alt: "ETHTokyo Conference Innovation Celebration",
     category: "conference",
     title: "Innovation Celebration",
@@ -403,7 +403,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-1",
-    src: "/2025/images/gallery-optimized/hackathon-1-medium.webp",
+    src: "/2025/images/gallery/hackathon-1.jpg",
     alt: "ETHTokyo Hackathon Team Work",
     category: "hackathon",
     title: "Hackathon Team Collaboration",
@@ -411,7 +411,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-2",
-    src: "/2025/images/gallery-optimized/hackathon-2-medium.webp",
+    src: "/2025/images/gallery/hackathon-2.jpg",
     alt: "ETHTokyo Hackathon Development",
     category: "hackathon",
     title: "Intensive Development Session",
@@ -420,7 +420,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-3",
-    src: "/2025/images/gallery-optimized/hackathon-3-medium.webp",
+    src: "/2025/images/gallery/hackathon-3.jpg",
     alt: "ETHTokyo Hackathon Presentation",
     category: "hackathon",
     title: "Project Presentation",
@@ -429,7 +429,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-4",
-    src: "/2025/images/gallery-optimized/hackathon-4-medium.webp",
+    src: "/2025/images/gallery/hackathon-4.jpg",
     alt: "ETHTokyo Hackathon Brainstorming",
     category: "hackathon",
     title: "Brainstorming Session",
@@ -437,7 +437,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-5",
-    src: "/2025/images/gallery-optimized/hackathon-5-medium.webp",
+    src: "/2025/images/gallery/hackathon-5.jpg",
     alt: "ETHTokyo Hackathon Coding",
     category: "hackathon",
     title: "Intensive Coding",
@@ -446,7 +446,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-6",
-    src: "/2025/images/gallery-optimized/hackathon-6-medium.webp",
+    src: "/2025/images/gallery/hackathon-6.jpg",
     alt: "ETHTokyo Hackathon Problem Solving",
     category: "hackathon",
     title: "Problem Solving",
@@ -455,7 +455,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-7",
-    src: "/2025/images/gallery-optimized/hackathon-7-medium.webp",
+    src: "/2025/images/gallery/hackathon-7.jpg",
     alt: "ETHTokyo Hackathon Innovation",
     category: "hackathon",
     title: "Innovation Workshop",
@@ -464,7 +464,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-8",
-    src: "/2025/images/gallery-optimized/hackathon-8-medium.webp",
+    src: "/2025/images/gallery/hackathon-8.jpg",
     alt: "ETHTokyo Hackathon Mentorship",
     category: "hackathon",
     title: "Mentorship Sessions",
@@ -472,7 +472,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-9",
-    src: "/2025/images/gallery-optimized/hackathon-9-medium.webp",
+    src: "/2025/images/gallery/hackathon-9.jpg",
     alt: "ETHTokyo Hackathon Team Building",
     category: "hackathon",
     title: "Team Building",
@@ -480,7 +480,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-10",
-    src: "/2025/images/gallery-optimized/hackathon-10-medium.webp",
+    src: "/2025/images/gallery/hackathon-10.jpg",
     alt: "ETHTokyo Hackathon Development Focus",
     category: "hackathon",
     title: "Development Focus",
@@ -488,7 +488,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-11",
-    src: "/2025/images/gallery-optimized/hackathon-11-medium.webp",
+    src: "/2025/images/gallery/hackathon-11.jpg",
     alt: "ETHTokyo Hackathon Creative Process",
     category: "hackathon",
     title: "Creative Process",
@@ -497,7 +497,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-12",
-    src: "/2025/images/gallery-optimized/hackathon-12-medium.webp",
+    src: "/2025/images/gallery/hackathon-12.jpg",
     alt: "ETHTokyo Hackathon Technical Discussion",
     category: "hackathon",
     title: "Technical Discussion",
@@ -505,7 +505,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-13",
-    src: "/2025/images/gallery-optimized/hackathon-13-medium.webp",
+    src: "/2025/images/gallery/hackathon-13.jpg",
     alt: "ETHTokyo Hackathon Prototyping",
     category: "hackathon",
     title: "Prototyping",
@@ -513,7 +513,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-14",
-    src: "/2025/images/gallery-optimized/hackathon-14-medium.webp",
+    src: "/2025/images/gallery/hackathon-14.jpg",
     alt: "ETHTokyo Hackathon Testing",
     category: "hackathon",
     title: "Testing & Debugging",
@@ -521,7 +521,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-15",
-    src: "/2025/images/gallery-optimized/hackathon-15-medium.webp",
+    src: "/2025/images/gallery/hackathon-15.jpg",
     alt: "ETHTokyo Hackathon UI/UX Design",
     category: "hackathon",
     title: "UI/UX Design",
@@ -529,7 +529,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-16",
-    src: "/2025/images/gallery-optimized/hackathon-16-medium.webp",
+    src: "/2025/images/gallery/hackathon-16.jpg",
     alt: "ETHTokyo Hackathon Smart Contract Development",
     category: "hackathon",
     title: "Smart Contract Development",
@@ -537,7 +537,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-17",
-    src: "/2025/images/gallery-optimized/hackathon-17-medium.webp",
+    src: "/2025/images/gallery/hackathon-17.jpg",
     alt: "ETHTokyo Hackathon Frontend Development",
     category: "hackathon",
     title: "Frontend Development",
@@ -546,7 +546,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-18",
-    src: "/2025/images/gallery-optimized/hackathon-18-medium.webp",
+    src: "/2025/images/gallery/hackathon-18.jpg",
     alt: "ETHTokyo Hackathon Backend Development",
     category: "hackathon",
     title: "Backend Development",
@@ -554,7 +554,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-19",
-    src: "/2025/images/gallery-optimized/hackathon-19-medium.webp",
+    src: "/2025/images/gallery/hackathon-19.jpg",
     alt: "ETHTokyo Hackathon Integration",
     category: "hackathon",
     title: "System Integration",
@@ -562,7 +562,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-20",
-    src: "/2025/images/gallery-optimized/hackathon-20-medium.webp",
+    src: "/2025/images/gallery/hackathon-20.jpg",
     alt: "ETHTokyo Hackathon Security",
     category: "hackathon",
     title: "Security Implementation",
@@ -570,7 +570,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-21",
-    src: "/2025/images/gallery-optimized/hackathon-21-medium.webp",
+    src: "/2025/images/gallery/hackathon-21.jpg",
     alt: "ETHTokyo Hackathon Performance",
     category: "hackathon",
     title: "Performance Optimization",
@@ -578,7 +578,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-22",
-    src: "/2025/images/gallery-optimized/hackathon-22-medium.webp",
+    src: "/2025/images/gallery/hackathon-22.jpg",
     alt: "ETHTokyo Hackathon Scalability",
     category: "hackathon",
     title: "Scalability Solutions",
@@ -586,7 +586,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-23",
-    src: "/2025/images/gallery-optimized/hackathon-23-medium.webp",
+    src: "/2025/images/gallery/hackathon-23.jpg",
     alt: "ETHTokyo Hackathon Interoperability",
     category: "hackathon",
     title: "Interoperability Development",
@@ -594,7 +594,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-24",
-    src: "/2025/images/gallery-optimized/hackathon-24-medium.webp",
+    src: "/2025/images/gallery/hackathon-24.jpg",
     alt: "ETHTokyo Hackathon DeFi",
     category: "hackathon",
     title: "DeFi Innovation",
@@ -602,7 +602,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-25",
-    src: "/2025/images/gallery-optimized/hackathon-25-medium.webp",
+    src: "/2025/images/gallery/hackathon-25.jpg",
     alt: "ETHTokyo Hackathon NFT",
     category: "hackathon",
     title: "NFT Development",
@@ -610,7 +610,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-26",
-    src: "/2025/images/gallery-optimized/hackathon-26-medium.webp",
+    src: "/2025/images/gallery/hackathon-26.jpg",
     alt: "ETHTokyo Hackathon DAO",
     category: "hackathon",
     title: "DAO Development",
@@ -618,7 +618,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-27",
-    src: "/2025/images/gallery-optimized/hackathon-27-medium.webp",
+    src: "/2025/images/gallery/hackathon-27.jpg",
     alt: "ETHTokyo Hackathon Gaming",
     category: "hackathon",
     title: "Blockchain Gaming",
@@ -626,7 +626,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-28",
-    src: "/2025/images/gallery-optimized/hackathon-28-medium.webp",
+    src: "/2025/images/gallery/hackathon-28.jpg",
     alt: "ETHTokyo Hackathon Social Impact",
     category: "hackathon",
     title: "Social Impact Projects",
@@ -634,7 +634,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-29",
-    src: "/2025/images/gallery-optimized/hackathon-29-medium.webp",
+    src: "/2025/images/gallery/hackathon-29.jpg",
     alt: "ETHTokyo Hackathon Sustainability",
     category: "hackathon",
     title: "Sustainability Solutions",
@@ -642,7 +642,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-30",
-    src: "/2025/images/gallery-optimized/hackathon-30-medium.webp",
+    src: "/2025/images/gallery/hackathon-30.jpg",
     alt: "ETHTokyo Hackathon Education",
     category: "hackathon",
     title: "Educational Tools",
@@ -650,7 +650,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-31",
-    src: "/2025/images/gallery-optimized/hackathon-31-medium.webp",
+    src: "/2025/images/gallery/hackathon-31.jpg",
     alt: "ETHTokyo Hackathon Healthcare",
     category: "hackathon",
     title: "Healthcare Solutions",
@@ -658,7 +658,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-32",
-    src: "/2025/images/gallery-optimized/hackathon-32-medium.webp",
+    src: "/2025/images/gallery/hackathon-32.jpg",
     alt: "ETHTokyo Hackathon Supply Chain",
     category: "hackathon",
     title: "Supply Chain Solutions",
@@ -666,7 +666,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "hackathon-33",
-    src: "/2025/images/gallery-optimized/hackathon-33-medium.webp",
+    src: "/2025/images/gallery/hackathon-33.jpg",
     alt: "ETHTokyo Hackathon Final Projects",
     category: "hackathon",
     title: "Final Project Showcase",
