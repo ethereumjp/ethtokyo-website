@@ -431,7 +431,7 @@ const GalleryPage: NextPage = () => {
                       alt={image.alt}
                       css={imageStyle}
                       fill={true}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vh"
                       priority={currentPage === 1 && index === 0}
                     />
                   </div>
@@ -517,8 +517,8 @@ const GalleryPage: NextPage = () => {
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 css={modalImageStyle}
-                width={800}
-                height={600}
+                width={100}
+                height={100}
                 priority={true}
               />
               <div

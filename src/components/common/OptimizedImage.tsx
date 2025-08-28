@@ -21,7 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   fill = false,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 100vh",
   priority = false,
   className,
   onClick,
