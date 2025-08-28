@@ -146,44 +146,6 @@ export const speakersData = [
   // },
 ];
 
-// メンターデータ
-export const mentorsData = [
-  {
-    id: "vitalik",
-    name: "Vitalik Buterin",
-    role: "Ethereum Co-founder",
-  },
-  {
-    id: "aya",
-    name: "Aya Miyaguchi",
-    role: "Executive Director, EF",
-  },
-  {
-    id: "hudson",
-    name: "Hudson Jameson",
-    role: "Ethereum Community",
-  },
-];
-
-// セッションデータ
-export const workshopsData = [
-  {
-    id: "zkp",
-    title: "ZKPs in Practice",
-    description: "Deep dive into Zero-Knowledge Proofs",
-  },
-  {
-    id: "rollups",
-    title: "Rollups vs L2s",
-    description: "Scalability wars continue",
-  },
-  {
-    id: "regulation",
-    title: "Eth & Regulation",
-    description: "Policy shaping the ecosystem",
-  },
-];
-
 // トラックデータ
 export const tracksData = [
   {
@@ -242,49 +204,6 @@ export const tracksData = [
   },
 ];
 
-// ブログデータ
-export const blogData = [
-  {
-    id: "expectations",
-    title: "What to Expect at ETH Tokyo",
-    date: "Jan 2025",
-  },
-  {
-    id: "speakers",
-    title: "Speaker Lineup Announced",
-    date: "Feb 2025",
-  },
-  {
-    id: "preparation",
-    title: "Preparing for Your Visit",
-    date: "Mar 2025",
-  },
-];
-
-// アーカイブデータ
-export const archiveData = [
-  {
-    id: "2024",
-    title: "ETH Tokyo 2024",
-    description: "Recap & Highlights",
-  },
-  {
-    id: "2023",
-    title: "ETH Tokyo 2023",
-    description: "Photos, Videos & Talks",
-  },
-];
-
-// 会場データ
-export const venueData = {
-  name: "Tokyo International Forum",
-  description:
-    "Located in the heart of Tokyo, the International Forum provides a perfect blend of modern facilities and traditional Japanese architecture.",
-  address: "3-5-1 Marunouchi, Chiyoda-ku, Tokyo",
-  hours: "9:00 AM - 6:00 PM",
-  facilities: "Free Wi-Fi, Cafes, Co-working Spaces",
-};
-
 // イベントパートナーデータ
 export const eventPartnersData = [
   {
@@ -337,9 +256,9 @@ export const mediaPartnersData = [
     logoFile: "neweconomy_bk.png",
   },
   {
-    partnerName: "CoinRank",
-    website: "https://www.coinrank.io/",
-    logoFile: "coinrank.svg",
+    partnerName: "CoinDesk",
+    website: "https://www.coindesk.com/",
+    logoFile: "coindesk_jp.png",
   },
   {
     partnerName: "Crypto Times",
@@ -347,24 +266,24 @@ export const mediaPartnersData = [
     logoFile: "cryptotimes.png",
   },
   {
+    partnerName: "CoinRank",
+    website: "https://www.coinrank.io/",
+    logoFile: "coinrank.svg",
+  },
+  {
     partnerName: "CoinPost",
     website: "https://coinpost.jp/",
     logoFile: "coinpost_logo.png",
   },
   {
-    partnerName: "CoinDesk",
-    website: "https://www.coindesk.com/",
-    logoFile: "coindesk_jp.png",
+    partnerName: "Museigen.io",
+    website: "https://museigen.io/",
+    logoFile: "PNG-wht-v2-transparent-01.png",
   },
   {
     partnerName: "AllSpark Research",
     website: "https://allsparkresearch.com/",
     logoFile: "BlackAllSpark00.png",
-  },
-  {
-    partnerName: "Museigen.io",
-    website: "https://museigen.io/",
-    logoFile: "PNG-wht-v2-transparent-01.png",
   },
 ];
 
@@ -406,7 +325,6 @@ export const silverSponsorsData = [
     website: "https://quantum3labs.com/",
     logoFile: "logo-q3-logomark.svg",
   },
-
   {
     partnerName: "Blockchain For Good Alliance",
     website: "https://chainforgood.org/",
@@ -426,14 +344,24 @@ export const communitySponsorsData = [
     logoFile: "UNCHAIN_logo.png",
   },
   {
-    partnerName: "mind palace",
-    website: "https://mindpalace.jp/",
-    logoFile: "mindpalace.svg",
+    partnerName: "TheGraph",
+    website: "https://thegraph.com/ja/",
+    logoFile: "TheGraph-Logo-Dark.png",
   },
   {
     partnerName: "ETHJKT",
     website: "https://ethjkt.com/",
     logoFile: "tulisan.png",
+  },
+  {
+    partnerName: "Shinsei Galverse",
+    website: "https://www.galverse.art/",
+    logoFile: "large.png",
+  },
+  {
+    partnerName: "BGIN",
+    website: "https://bgin-global.org/",
+    logoFile: "BGIN_logo.png",
   },
   // {
   //   partnerName: "Curvegrid Inc.",
@@ -441,9 +369,9 @@ export const communitySponsorsData = [
   //   logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
   // },
   {
-    partnerName: "Shinsei Galverse",
-    website: "https://www.galverse.art/",
-    logoFile: "large.png",
+    partnerName: "mind palace",
+    website: "https://mindpalace.jp/",
+    logoFile: "mindpalace.svg",
   },
   {
     partnerName: "AKINDO",
@@ -461,6 +389,16 @@ export const communitySponsorsData = [
   //   logoFile: "amagidigital.jpg",
   // },
   {
+    partnerName: "byteStreame",
+    website: "https://bytestreame.com/",
+    logoFile: "byteStreame.png",
+  },
+  {
+    partnerName: "BlockDev.id",
+    website: "https://blockdev.id/",
+    logoFile: "BlockDev.id_logo.png",
+  },
+  {
     partnerName: "vinyl",
     website: "https://x.com/vvinyll",
     logoFile: "PudgyPenguins.png",
@@ -469,26 +407,6 @@ export const communitySponsorsData = [
     partnerName: "web3 Research JAPAN",
     website: "https://www.web3researchjapan.com/",
     logoFile: "web3researchjapan.png",
-  },
-  {
-    partnerName: "byteStreame",
-    website: "https://bytestreame.com/",
-    logoFile: "byteStreame.png",
-  },
-  {
-    partnerName: "BGIN",
-    website: "https://bgin-global.org/",
-    logoFile: "BGIN_logo.png",
-  },
-  {
-    partnerName: "BlockDev.id",
-    website: "https://blockdev.id/",
-    logoFile: "BlockDev.id_logo.png",
-  },
-  {
-    partnerName: "TheGraph",
-    website: "https://thegraph.com/ja/",
-    logoFile: "TheGraph-Logo-Dark.png",
   },
 ];
 
@@ -501,15 +419,15 @@ export const organizersData = [
     logoStyle: "standard",
   },
   {
-    name: "Fracton Ventures",
-    website: "https://fracton.ventures/",
-    logoFile: "2025/images/organizers/fracton-rec-white-clear.png",
-    logoStyle: "standard",
-  },
-  {
     name: "Centrum",
     website: "https://centrum.studio/",
     logoFile: "2025/images/organizers/logo_black_transparent.png",
+    logoStyle: "standard",
+  },
+  {
+    name: "Fracton Ventures",
+    website: "https://fracton.ventures/",
+    logoFile: "2025/images/organizers/fracton-rec-white-clear.png",
     logoStyle: "standard",
   },
   {

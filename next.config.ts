@@ -2,8 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
+  // output: "export",
   // i18n: { locales: ["en", "ja"], defaultLocale: "en", localeDetection: false },
+  images: {
+    remotePatterns: [new URL("https://images.unsplash.com")],
+  },
   compiler: {
     emotion: true,
   },
