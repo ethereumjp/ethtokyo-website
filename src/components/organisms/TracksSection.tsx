@@ -1,12 +1,12 @@
-import ContentCard from "@/components/common/ContentCard";
-import SectionTitle from "@/components/common/SectionTitle";
+import ContentCard from "@/components/molecules/ContentCard";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import { tracksData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";
-import OptimizedImage from "../common/OptimizedImage";
+import OptimizedImage from "../atoms/OptimizedImage";
 
 interface TrackCardProps {
   track: (typeof tracksData)[0];
@@ -321,13 +321,12 @@ const readLessButtonStyle = css`
 `;
 
 const imageGalleryStyle = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
-  margin: 3rem 0 2rem;
   
   ${mq.mobileSmall} {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 `;
@@ -339,6 +338,8 @@ const imageCardStyle = css`
   background: ${neutral.White};
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 42vw;
+  max-width: 360px;
   
   &:hover {
     transform: translateY(-8px) scale(1.02);
@@ -364,7 +365,6 @@ const imageCardStyle = css`
 
 const imageWrapperStyle = css`
   position: relative;
-  width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
 `;

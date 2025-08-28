@@ -1,5 +1,5 @@
-import Button from "@/components/common/Button";
-import SectionTitle from "@/components/common/SectionTitle";
+import Button from "@/components/atoms/Button";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";

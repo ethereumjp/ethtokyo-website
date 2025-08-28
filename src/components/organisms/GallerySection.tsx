@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import {

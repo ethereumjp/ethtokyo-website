@@ -1,4 +1,4 @@
-import Layout from "@/components/layouts/base";
+import Layout from "@/components/layouts/BaseLayout";
 import AboutSection from "@/components/organisms/AboutSection";
 import ConferenceSection from "@/components/organisms/ConferenceSection";
 import GallerySection from "@/components/organisms/GallerySection";

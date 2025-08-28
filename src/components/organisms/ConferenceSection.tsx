@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { speakersData } from "@/data/eventData";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import {
@@ -13,7 +13,7 @@ import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineSchedule } from "react-icons/md";
-import OptimizedImage from "../common/OptimizedImage";
+import OptimizedImage from "../atoms/OptimizedImage";
 
 const ConferenceSection: FC = () => {
   // deform url
@@ -94,27 +94,23 @@ const ConferenceSection: FC = () => {
   `;
 
   const speakerCardStyle = css`
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     background: #fff;
     border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 16px;
+    padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 300px;
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     @media (max-width: 768px) {
-      padding: 20px;
-      margin-bottom: 12px;
-    }
-  `;
-
-  const speakerContentStyle = css`
-    display: flex;
-    align-items: center;
-    @media (max-width: 768px) {
       align-items: flex-start;
+      padding: 1rem;
     }
   `;
 
@@ -133,11 +129,10 @@ const ConferenceSection: FC = () => {
     }
   `;
 
-  const speakerLeftStyle = css`
+  const speakerBioStyle = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 0;
     flex: 1;
     gap: 8px;
   `;
@@ -156,7 +151,6 @@ const ConferenceSection: FC = () => {
   const speakerPositionStyle = css`
     font-size: 0.95rem;
     color: #666;
-    margin-bottom: 0;
     @media (max-width: 768px) {
       font-size: 0.9rem;
     }
@@ -227,17 +221,11 @@ const ConferenceSection: FC = () => {
   `;
 
   const speakersGridStyle = css`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin: 2rem 0;
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: start;
+    gap: 1rem;
   `;
 
   const buttonContainerStyle = css`
@@ -258,7 +246,7 @@ const ConferenceSection: FC = () => {
   const featureCardStyle = css`
     background: ${neutral.White};
     border-radius: 20px;
-    width: 45%;
+    max-width: 540px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   `;
@@ -390,46 +378,44 @@ const ConferenceSection: FC = () => {
         <div css={speakersGridStyle}>
           {speakersData.map((speaker) => (
             <div key={speaker.name} css={speakerCardStyle}>
-              <div css={speakerContentStyle}>
-                <Image
-                  src={speaker.image}
-                  alt={speaker.name}
-                  css={speakerPhotoStyle}
-                  width={100}
-                  height={100}
-                />
-                <div css={speakerLeftStyle}>
-                  <div css={speakerNameStyle}>{speaker.name}</div>
-                  {speaker.title && (
-                    <div css={speakerPositionStyle}>{speaker.title}</div>
-                  )}
-                  {speaker.project && (
-                    <div css={speakerProjectStyle}>{speaker.project}</div>
-                  )}
-                  {speaker.socialLink && (
-                    <div css={speakerSocialStyle}>
-                      <a
-                        href={speaker.socialLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        css={socialLinkStyle}
-                        aria-label={`${speaker.name}'s social link`}
-                      >
-                        <div css={socialIconStyle}>
-                          {speaker.socialLink.includes("x.com") ||
-                          speaker.socialLink.includes("twitter.com") ? (
-                            <FaXTwitter size={16} />
-                          ) : speaker.socialLink.includes("linkedin.com") ? (
-                            <FaLinkedin size={16} />
-                          ) : (
-                            <FaXTwitter size={16} />
-                          )}
-                        </div>
-                        <span>{extractAccountName(speaker.socialLink)}</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
+              <Image
+                src={speaker.image}
+                alt={speaker.name}
+                css={speakerPhotoStyle}
+                width={100}
+                height={100}
+              />
+              <div css={speakerBioStyle}>
+                <div css={speakerNameStyle}>{speaker.name}</div>
+                {speaker.title && (
+                  <div css={speakerPositionStyle}>{speaker.title}</div>
+                )}
+                {speaker.project && (
+                  <div css={speakerProjectStyle}>{speaker.project}</div>
+                )}
+                {speaker.socialLink && (
+                  <div css={speakerSocialStyle}>
+                    <a
+                      href={speaker.socialLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      css={socialLinkStyle}
+                      aria-label={`${speaker.name}'s social link`}
+                    >
+                      <div css={socialIconStyle}>
+                        {speaker.socialLink.includes("x.com") ||
+                        speaker.socialLink.includes("twitter.com") ? (
+                          <FaXTwitter size={16} />
+                        ) : speaker.socialLink.includes("linkedin.com") ? (
+                          <FaLinkedin size={16} />
+                        ) : (
+                          <FaXTwitter size={16} />
+                        )}
+                      </div>
+                      <span>{extractAccountName(speaker.socialLink)}</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}

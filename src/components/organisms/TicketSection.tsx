@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/atoms/Button";
 import { brand, info, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import type { FC } from "react";

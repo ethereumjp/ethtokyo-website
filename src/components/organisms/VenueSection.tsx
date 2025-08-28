@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/common/SectionTitle";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";

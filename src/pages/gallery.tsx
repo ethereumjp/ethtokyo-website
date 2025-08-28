@@ -1,5 +1,5 @@
-import OptimizedImage from "@/components/common/OptimizedImage";
-import Layout from "@/components/layouts/base";
+import OptimizedImage from "@/components/atoms/OptimizedImage";
+import Layout from "@/components/layouts/BaseLayout";
 import { type GalleryImage, imagesByCategory } from "@/data/galleryData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";

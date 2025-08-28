@@ -1,6 +1,6 @@
-import Button from "@/components/common/Button";
-import ContentCard from "@/components/common/ContentCard";
-import SectionTitle from "@/components/common/SectionTitle";
+import Button from "@/components/atoms/Button";
+import ContentCard from "@/components/molecules/ContentCard";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
