@@ -1,11 +1,11 @@
-import type { FC } from "react";
-import type { TransportOption } from "@/types/venue";
 import {
   linkStyle,
-  transportOptionsStyle,
   transportOptionStyle,
+  transportOptionsStyle,
   transportTitleStyle,
 } from "@/themes/styles/venue";
+import type { TransportOption } from "@/types/venue";
+import type { FC } from "react";
 
 interface TransportOptionsProps {
   options: TransportOption[];

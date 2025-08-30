@@ -1,17 +1,24 @@
 import SectionTitle from "@/components/molecules/SectionTitle";
-import VenueTabs from "@/components/molecules/venue/VenueTabs";
-import VenueCard from "@/components/molecules/venue/VenueCard";
-import ExpandableCard from "@/components/molecules/venue/ExpandableCard";
-import AirportInfo from "@/components/molecules/venue/AirportInfo";
-import TransportOptions from "@/components/molecules/venue/TransportOptions";
 import AccommodationInfo from "@/components/molecules/venue/AccommodationInfo";
+import AirportInfo from "@/components/molecules/venue/AirportInfo";
+import ExpandableCard from "@/components/molecules/venue/ExpandableCard";
+import TransportOptions from "@/components/molecules/venue/TransportOptions";
+import VenueCard from "@/components/molecules/venue/VenueCard";
+import VenueTabs from "@/components/molecules/venue/VenueTabs";
+import {
+  AIRPORTS,
+  HOTEL_CATEGORIES,
+  TRANSPORT_OPTIONS,
+} from "@/constants/venue";
 import eventInfo from "@/data/eventInfo.json";
 import { useVenueSection } from "@/hooks/useVenueSection";
 import {
-  AIRPORTS,
-  TRANSPORT_OPTIONS,
-  HOTEL_CATEGORIES,
-} from "@/constants/venue";
+  containerStyle,
+  contentContainerStyle,
+  sectionStyle,
+  tabContentStyle,
+  venuesContainerStyle,
+} from "@/themes/styles/venue";
 import type { VenueInfo } from "@/types/venue";
 import type { FC } from "react";
 import {
@@ -19,13 +26,6 @@ import {
   MdOutlineDirectionsSubway,
 } from "react-icons/md";
 import TicketSection from "./TicketSection";
-import {
-  sectionStyle,
-  containerStyle,
-  contentContainerStyle,
-  tabContentStyle,
-  venuesContainerStyle,
-} from "@/themes/styles/venue";
 
 const VenueSection: FC = () => {
   const { state, setActiveTab, toggleItem, toggleImageDescription } =

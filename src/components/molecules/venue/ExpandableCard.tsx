@@ -1,12 +1,12 @@
+import {
+  cardBodyStyle,
+  cardHeaderContentStyle,
+  cardHeaderStyle,
+  cardStyle,
+  cardTitleStyle,
+} from "@/themes/styles/venue";
 import type { FC, ReactNode } from "react";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
-import {
-  cardStyle,
-  cardHeaderStyle,
-  cardHeaderContentStyle,
-  cardTitleStyle,
-  cardBodyStyle,
-} from "@/themes/styles/venue";
 
 interface ExpandableCardProps {
   title: string;

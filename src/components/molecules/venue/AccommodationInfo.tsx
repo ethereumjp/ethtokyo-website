@@ -1,24 +1,24 @@
-import type { FC } from "react";
-import type { HotelCategory } from "@/types/venue";
+import { EXTERNAL_LINKS } from "@/constants/venue";
 import {
-  cardStyle,
-  cardHeaderContentStyle,
-  cardTitleStyle,
-  hotelInfoStyle,
   accommodationDescStyle,
-  hotelCategoriesStyle,
-  hotelCategoryStyle,
-  hotelListStyle,
-  hotelButtonStyle,
   bookingTipStyle,
-  linkStyle,
+  cardHeaderContentStyle,
+  cardStyle,
+  cardTitleStyle,
   comingSoonCardStyle,
   comingSoonContentStyle,
-  comingSoonTitleStyle,
   comingSoonTextStyle,
+  comingSoonTitleStyle,
+  hotelButtonStyle,
+  hotelCategoriesStyle,
+  hotelCategoryStyle,
+  hotelInfoStyle,
+  hotelListStyle,
+  linkStyle,
 } from "@/themes/styles/venue";
+import type { HotelCategory } from "@/types/venue";
+import type { FC } from "react";
 import { MdOutlineHotel } from "react-icons/md";
-import { EXTERNAL_LINKS } from "@/constants/venue";
 
 interface AccommodationInfoProps {
   hasAccommodationInfo: boolean;

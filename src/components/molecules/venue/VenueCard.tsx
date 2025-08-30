@@ -1,32 +1,31 @@
-import Image from "next/image";
-import type { FC } from "react";
-import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
-import { PiTrain } from "react-icons/pi";
-import type { VenueInfo } from "@/types/venue";
 import {
-  venueCardStyle,
-  venueHeaderStyle,
-  venueTitleStyle,
-  venueDescriptionStyle,
-  venueContentGridStyle,
-  venueTextColumnStyle,
-  venueDetailsGridStyle,
   detailItemStyle,
   detailTitleStyle,
   detailValueStyle,
   mapContainerStyle,
   mapIframeStyle,
+  venueCardStyle,
+  venueContentGridStyle,
+  venueDescriptionStyle,
+  venueDescriptionTextStyle,
+  venueDescriptionTitleStyle,
+  venueDescriptionVisibleStyle,
+  venueEmptyPlaceholderStyle,
+  venueHeaderStyle,
+  venueHoverDescriptionStyle,
   venueImageContainerStyle,
   venueImageWrapperStyle,
-  venueHoverDescriptionStyle,
-  venueDescriptionVisibleStyle,
-  venueDescriptionTitleStyle,
-  venueDescriptionTextStyle,
-  venueEmptyPlaceholderStyle,
   venuePlaceholderContentStyle,
-  venuePlaceholderTitleStyle,
   venuePlaceholderTextStyle,
+  venuePlaceholderTitleStyle,
+  venueTextColumnStyle,
+  venueTitleStyle,
 } from "@/themes/styles/venue";
+import type { VenueInfo } from "@/types/venue";
+import Image from "next/image";
+import type { FC } from "react";
+import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
+import { PiTrain } from "react-icons/pi";
 
 interface VenueCardProps {
   venue: VenueInfo;

@@ -1,7 +1,7 @@
 import type {
   AirportInfo,
-  TransportOption,
   HotelCategory,
+  TransportOption,
 } from "@/types/venue";
 import { MdDirectionsBike, MdLocalTaxi } from "react-icons/md";
 

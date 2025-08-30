@@ -1,5 +1,5 @@
+import type { ExpandableItem, TabType, VenueSectionState } from "@/types/venue";
 import { useState } from "react";
-import type { TabType, ExpandableItem, VenueSectionState } from "@/types/venue";
 
 export const useVenueSection = () => {
   const [activeTab, setActiveTab] = useState<TabType>("venue");

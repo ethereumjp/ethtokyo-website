@@ -1,12 +1,12 @@
-import type { FC } from "react";
-import type { AirportInfo } from "@/types/venue";
+import { EXTERNAL_LINKS } from "@/constants/venue";
 import {
-  linkStyle,
-  airportInfoStyle,
   airportCardStyle,
+  airportInfoStyle,
+  linkStyle,
   transportListStyle,
 } from "@/themes/styles/venue";
-import { EXTERNAL_LINKS } from "@/constants/venue";
+import type { AirportInfo } from "@/types/venue";
+import type { FC } from "react";
 
 interface AirportInfoProps {
   airports: AirportInfo[];

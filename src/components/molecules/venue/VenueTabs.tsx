@@ -1,12 +1,12 @@
+import {
+  activeTabStyle,
+  tabStyle,
+  tabsContainerStyle,
+} from "@/themes/styles/venue";
+import type { TabType } from "@/types/venue";
 import type { FC } from "react";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { MdOutlineDirectionsSubway, MdOutlineHotel } from "react-icons/md";
-import type { TabType } from "@/types/venue";
-import {
-  tabsContainerStyle,
-  tabStyle,
-  activeTabStyle,
-} from "@/themes/styles/venue";
 
 interface VenueTabsProps {
   activeTab: TabType;
