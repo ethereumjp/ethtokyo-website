@@ -408,6 +408,11 @@ export const communitySponsorsData = [
     website: "https://x.com/vvinyll",
     logoFile: "PudgyPenguins.png",
   },
+  {
+    partnerName: "TAAKE",
+    website: "https://x.com/taka4198aq",
+    logoFile: "TAAKE_logo.jpeg",
+  },
 ];
 
 // オーガナイザーデータ

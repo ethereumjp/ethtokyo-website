@@ -25,3 +25,6 @@ interface Contributor {
 export interface Mentor extends Contributor {}
 
 export interface Judge extends Contributor {}
+
+// Re-export venue types
+export * from "./venue";

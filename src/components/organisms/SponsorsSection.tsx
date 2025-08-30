@@ -70,7 +70,7 @@ const SponsorsSection: FC = () => {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     width: 100%;
