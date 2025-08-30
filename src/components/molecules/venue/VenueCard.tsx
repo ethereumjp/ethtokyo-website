@@ -10,6 +10,7 @@ import {
   venueDescriptionTextStyle,
   venueDescriptionTitleStyle,
   venueDescriptionVisibleStyle,
+  venueDetailsGridStyle,
   venueEmptyPlaceholderStyle,
   venueHeaderStyle,
   venueHoverDescriptionStyle,
