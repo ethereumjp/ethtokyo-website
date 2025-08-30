@@ -4,7 +4,6 @@ import {
   linkStyle,
   transportOptionsStyle,
   transportOptionStyle,
-  transportIconStyle,
   transportTitleStyle,
 } from "@/themes/styles/venue";
 
