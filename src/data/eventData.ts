@@ -114,13 +114,14 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/david1casey",
   },
-  // {
-  //   name: "Sora Suegami",
-  //   image: "2025/images/speakers/sorasuegami.png",
-  //   title: "",
-  //   project: "",
-  //   talkTitle: "",
-  // },
+  {
+    name: "Sora Suegami",
+    image: "/2025/images/speakers/SoraSuegami.jpg",
+    title: "Co-Founder",
+    project: "ZK Email",
+    talkTitle: "",
+    socialLink: "https://x.com/sorasue77",
+  },
   {
     name: "Noah Jelich",
     image: "/2025/images/speakers/noahjelich.png",
@@ -137,12 +138,108 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/jacksaracco",
   },
+  {
+    name: "Leona Hioki",
+    image: "/2025/images/speakers/LeonaHioki.jpg",
+    title: "Co-Founder",
+    project: "INTMAX",
+    talkTitle: "",
+    socialLink: "https://x.com/HiokiLeona",
+  },
+  {
+    name: "irohas.eth",
+    image: "/2025/images/speakers/irohas.eth.png",
+    title: "Director",
+    project: "ETH Tokyo",
+    talkTitle: "",
+    socialLink: "https://x.com/irohas_eth",
+  },
+  {
+    name: "vita",
+    image: "/2025/images/speakers/vita.jpg",
+    title: "Co-Founder",
+    project: "NyxFoundation",
+    talkTitle: "",
+    socialLink: "https://x.com/keccak255",
+  },
+  {
+    name: "banri",
+    image: "/2025/images/speakers/banri.jpg",
+    title: "Researcher",
+    project: "Nyx Foundation",
+    talkTitle: "",
+    socialLink: "https://x.com/banr1_",
+  },
+
+  {
+    name: "ventali",
+    image: "/2025/images/speakers/ventali.jpeg",
+    title: "Founder",
+    project: "Lita",
+    talkTitle: "",
+    socialLink: "https://x.com/ventali_",
+  },
+
+  {
+    name: "Shin'ichiro Matsuo",
+    image: "/2025/images/speakers/Shin'ichiroMatsuo.jpg",
+    title: "Research Professor",
+    project: "Georgetown University",
+    talkTitle: "",
+    socialLink: "https://x.com/ShaneMatsuo",
+  },
+
+  {
+    name: "Aki",
+    image: "/2025/images/speakers/Aki.jpeg",
+    title: "Co-founder",
+    project: "Mycel",
+    talkTitle: "",
+    socialLink: "https://x.com/rumitoast",
+  },
+
+  {
+    name: "Victoria",
+    image: "/2025/images/speakers/Victoria.jpeg",
+    title: "Operation Leader",
+    project: "Zuitzerland",
+    talkTitle: "",
+    socialLink: "https://x.com/mrs_vcs",
+  },
+
+  {
+    name: "Vaelyn",
+    image: "/2025/images/speakers/Vaelyn.jpeg",
+    title: "",
+    project: "ECH Institute Inc.",
+    talkTitle: "",
+    socialLink: "https://x.com/Cyph3rVae",
+  },
+
+  {
+    name: "Yohei Wakita",
+    image: "/2025/images/speakers/YoheiWakita.png",
+    title: "Co-founder",
+    project: "Kudasai Co., Ltd.",
+    talkTitle: "",
+    socialLink: "https://x.com/yhy1217",
+  },
+
+  {
+    name: "Yuki Kamimoto",
+    image: "/2025/images/speakers/YukiKamimoto.jpeg",
+    title: "CEO",
+    project: "N.Avenue",
+    talkTitle: "",
+    socialLink: "https://x.com/yukikami6",
+  },
   // {
-  //   name: "Leona Hioki",
-  //   image: "2025/images/speakers/leonahioki.png",
+  //   name: "",
+  //   image: "",
   //   title: "",
-  //   project: "INTMAX",
+  //   project: "",
   //   talkTitle: "",
+  //   socialLink: "",
   // },
 ];
 
