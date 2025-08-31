@@ -150,7 +150,7 @@ export const speakersData = [
     name: "irohas.eth",
     image: "/2025/images/speakers/irohas.eth.png",
     title: "Director",
-    project: "ETH Tokyo",
+    project: "ETHTokyo",
     talkTitle: "",
     socialLink: "https://x.com/irohas_eth",
   },
