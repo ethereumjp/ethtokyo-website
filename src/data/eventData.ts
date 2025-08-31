@@ -170,7 +170,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/banr1_",
   },
-
   {
     name: "ventali",
     image: "/2025/images/speakers/ventali.jpeg",
@@ -179,7 +178,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/ventali_",
   },
-
   {
     name: "Shin'ichiro Matsuo",
     image: "/2025/images/speakers/Shin'ichiroMatsuo.jpg",
@@ -188,7 +186,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/ShaneMatsuo",
   },
-
   {
     name: "Aki",
     image: "/2025/images/speakers/Aki.jpeg",
@@ -197,7 +194,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/rumitoast",
   },
-
   {
     name: "Victoria",
     image: "/2025/images/speakers/Victoria.jpeg",
@@ -206,7 +202,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/mrs_vcs",
   },
-
   {
     name: "Vaelyn",
     image: "/2025/images/speakers/Vaelyn.jpeg",
@@ -215,7 +210,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/Cyph3rVae",
   },
-
   {
     name: "Yohei Wakita",
     image: "/2025/images/speakers/YoheiWakita.png",
@@ -224,7 +218,6 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/yhy1217",
   },
-
   {
     name: "Yuki Kamimoto",
     image: "/2025/images/speakers/YukiKamimoto.jpeg",
