@@ -375,6 +375,11 @@ export const mediaPartnersData = [
     website: "https://allsparkresearch.com/",
     logoFile: "BlackAllSpark00.png",
   },
+  {
+    partnerName: "Bitcoin.com",
+    website: "https://www.bitcoin.com/",
+    logoFile: "bitcoin.com.png",
+  },
 ];
 
 // スポンサーデータ
