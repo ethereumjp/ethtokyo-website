@@ -226,6 +226,14 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/yukikami6",
   },
+  {
+    name: "Ivo Betke",
+    image: "/2025/images/speakers/Ivo Betke_molecule-xyz.jpg",
+    title: "COO",
+    project: "Molecule.xyz",
+    talkTitle: "",
+    socialLink: "https://de.linkedin.com/in/ibetke",
+  },
   // {
   //   name: "",
   //   image: "",
