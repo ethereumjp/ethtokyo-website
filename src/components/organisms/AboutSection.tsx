@@ -194,14 +194,6 @@ const AboutSection: FC = () => {
                   >
                     <span css={css`color: ${neutral.White};`}>Get Tickets</span>
                   </Button>
-                  <Button
-                    href="https://speak.ethtokyo.org/conference-2025/submit"
-                    external
-                    variant="outline"
-                    icon={<BiMicrophone />}
-                  >
-                    <span css={css``}>Apply as speaker</span>
-                  </Button>
                 </div>
               </div>
               <div css={overviewCardStyle}>
