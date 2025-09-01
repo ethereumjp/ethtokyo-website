@@ -351,9 +351,9 @@ export const mediaPartnersData = [
     logoFile: "coindesk_jp.png",
   },
   {
-    partnerName: "Crypto Times",
-    website: "https://www.cryptotimes.io/",
-    logoFile: "cryptotimes.png",
+    partnerName: "CoinPost",
+    website: "https://coinpost.jp/",
+    logoFile: "coinpost_logo.png",
   },
   {
     partnerName: "CoinRank",
@@ -361,9 +361,14 @@ export const mediaPartnersData = [
     logoFile: "coinrank.svg",
   },
   {
-    partnerName: "CoinPost",
-    website: "https://coinpost.jp/",
-    logoFile: "coinpost_logo.png",
+    partnerName: "Crypto Times",
+    website: "https://www.cryptotimes.io/",
+    logoFile: "cryptotimes.png",
+  },
+  {
+    partnerName: "Bitcoin.com",
+    website: "https://www.bitcoin.com/",
+    logoFile: "bitcoin.com.png",
   },
   {
     partnerName: "Museigen.io",
