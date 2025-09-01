@@ -185,7 +185,7 @@ const AboutSection: FC = () => {
                   opportunities. Learn about the latest developments in Ethereum
                   and blockchain technology.
                 </p>
-                <div css={css`display:flex; justify-content: space-between;`}>
+                <div css={css`display:flex; justify-content: center;`}>
                   <Button
                     href="https://app.moongate.id/e/ethtokyo2025"
                     external
@@ -193,14 +193,6 @@ const AboutSection: FC = () => {
                     icon={<BiIdCard />}
                   >
                     <span css={css`color: ${neutral.White};`}>Get Tickets</span>
-                  </Button>
-                  <Button
-                    href="https://speak.ethtokyo.org/conference-2025/submit"
-                    external
-                    variant="outline"
-                    icon={<BiMicrophone />}
-                  >
-                    <span css={css``}>Apply as speaker</span>
                   </Button>
                 </div>
               </div>
