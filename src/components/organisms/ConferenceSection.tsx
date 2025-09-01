@@ -421,7 +421,7 @@ const ConferenceSection: FC = () => {
           ))}
         </div>
 
-        <div css={formSectionStyle}>
+        {/* <div css={formSectionStyle}>
           <h3 css={formHeadingStyle}>
             <BiMicrophone size={28} />
             Call for Speakers & Mentors
@@ -440,7 +440,7 @@ const ConferenceSection: FC = () => {
           >
             Apply Now
           </Button>
-        </div>
+        </div> */}
         <div css={buttonContainerStyle}>
           <Button
             href="https://app.moongate.id/e/ethtokyo2025"
