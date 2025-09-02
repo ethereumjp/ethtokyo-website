@@ -20,7 +20,7 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta property="og:title" content="ETHTokyo 2025" />
         <meta
           property="og:image"
-          content="https://ethtokyo.org/2025/images/thumbnail.jpg"
+          content="https://ethtokyo.org/2025/images/thumbnail-simple.png"
         />
         <meta
           property="og:description"
@@ -34,7 +34,7 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta name="twitter:creator" content="@Ethereum_JP" />
         <meta
           name="twitter:image"
-          content="https://ethtokyo.org/2025/images/thumbnail.jpg"
+          content="https://ethtokyo.org/2025/images/thumbnail-simple.png"
         />
         <meta property="csp-nonce" content={props.nonce} />
       </Head>
