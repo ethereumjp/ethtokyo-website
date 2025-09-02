@@ -528,25 +528,25 @@ export const organizersData = [
   {
     name: "Ethereum Japan",
     website: "https://ethereumjp.org/",
-    logoFile: "/2025/images/organizers/EJLogoFace_dark_horizontal.png",
+    logoFile: "/2025/images/orglogos/organizers/EJLogoFace_dark_horizontal.png",
     logoStyle: "standard",
   },
   {
     name: "Centrum",
     website: "https://centrum.studio/",
-    logoFile: "/2025/images/organizers/logo_black_transparent.png",
+    logoFile: "/2025/images/orglogos/organizers/logo_black_transparent.png",
     logoStyle: "standard",
   },
   {
     name: "Fracton Ventures",
     website: "https://fracton.ventures/",
-    logoFile: "/2025/images/organizers/fracton-rec-white-clear.png",
+    logoFile: "/2025/images/orglogos/organizers/fracton-rec-white-clear.png",
     logoStyle: "standard",
   },
   {
     name: "INTMAX",
     website: "https://intmax.io/",
-    logoFile: "/2025/images/organizers/intmax.png",
+    logoFile: "/2025/images/orglogos/organizers/intmax.png",
     logoStyle: "large",
   },
 ];
