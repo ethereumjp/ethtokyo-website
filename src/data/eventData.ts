@@ -206,7 +206,7 @@ export const speakersData = [
     name: "Vaelyn",
     image: "/2025/images/speakers/Vaelyn.jpeg",
     title: "",
-    project: "ECH Institute Inc.",
+    project: "Independent",
     talkTitle: "",
     socialLink: "https://x.com/Cyph3rVae",
   },
