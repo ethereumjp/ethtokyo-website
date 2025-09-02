@@ -388,6 +388,11 @@ export const mediaPartnersData = [
     website: "https://allsparkresearch.com/",
     logoFile: "BlackAllSpark00.png",
   },
+  {
+    partnerName: "CCN",
+    website: "https://www.ccn.com/",
+    logoFile: "ccn.svg",
+  },
 ];
 
 // スポンサーデータ
