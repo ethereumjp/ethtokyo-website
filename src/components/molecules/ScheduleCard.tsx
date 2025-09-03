@@ -1,7 +1,7 @@
+import ContentCard from "@/components/molecules/ContentCard";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import type { ScheduleCardProps } from "@/types/schedule";
 import { css } from "@emotion/react";
-import ContentCard from "@/components/molecules/ContentCard";
 import { HiCalendarDays, HiClock, HiOutlineMapPin } from "react-icons/hi2";
 
 const ScheduleCard = ({

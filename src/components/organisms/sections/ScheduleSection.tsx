@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { BiIdCard } from "react-icons/bi";
-import { css } from "@emotion/react";
 import Button from "@/components/atoms/Button";
 import ScheduleCard from "@/components/molecules/ScheduleCard";
 import SectionTitle from "@/components/molecules/SectionTitle";
@@ -15,6 +12,9 @@ import { useSchedule } from "@/hooks/useSchedule";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { ExpandedSchedules, ScheduleType } from "@/types/schedule";
+import { css } from "@emotion/react";
+import { useState } from "react";
+import { BiIdCard } from "react-icons/bi";
 
 const ScheduleSection = () => {
   const [expandedSchedules, setExpandedSchedules] = useState<ExpandedSchedules>(
