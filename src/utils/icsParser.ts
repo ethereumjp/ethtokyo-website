@@ -11,8 +11,6 @@ export interface Event {
 }
 
 export function parseICSData(icsContent: string): Event[] {
-  console.log("Raw ICS content:", icsContent);
-
   const events: Event[] = [];
 
   // ICSファイルの改行を処理して、フィールドを正しく結合
@@ -21,7 +19,6 @@ export function parseICSData(icsContent: string): Event[] {
     .replace(/\r/g, "\n"); // Mac改行を統一
 
   const lines = normalizedContent.split("\n");
-  console.log("Total lines:", lines.length);
 
   let currentEvent: Partial<Event> = {};
   let inEvent = false;
@@ -30,26 +27,19 @@ export function parseICSData(icsContent: string): Event[] {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    console.log(`Processing line ${i + 1}:`, line);
 
     if (line === "BEGIN:VEVENT") {
       inEvent = true;
       currentEvent = {};
       currentField = "";
       currentValue = "";
-      console.log("=== New event started ===");
     } else if (line === "END:VEVENT") {
       // 最後のフィールドの値を保存
       if (currentField && currentValue) {
-        console.log(
-          `Saving final field before END:VEVENT: ${currentField} = "${currentValue}"`,
-        );
         saveFieldValue(currentEvent, currentField, currentValue);
       }
 
       if (currentEvent.uid && currentEvent.title) {
-        console.log("=== Event completed ===", currentEvent);
-        console.log("Event URL:", currentEvent.url);
         events.push(currentEvent as Event);
       }
       inEvent = false;
@@ -59,23 +49,13 @@ export function parseICSData(icsContent: string): Event[] {
     } else if (inEvent) {
       // 行がスペースで始まる場合は、前のフィールドの続き
       if (/^\s/.test(line)) {
-        console.log("Continuation line detected:", line);
-        console.log("Current field:", currentField);
-        console.log("Current value before:", currentValue);
         // 先頭のスペースを除去して結合
         const trimmedLine = line.replace(/^\s+/, "");
         currentValue += trimmedLine;
-        console.log("Updated currentValue:", currentValue);
-
-        // URLフィールドの場合は特別にログ出力
-        if (currentField === "URL") {
-          console.log(`URL continuation: "${currentValue}"`);
-        }
       } else {
         // 新しいフィールドの開始
         if (currentField && currentValue) {
           // 前のフィールドの値を保存
-          console.log(`Saving field: ${currentField} = "${currentValue}"`);
           saveFieldValue(currentEvent, currentField, currentValue);
         }
 
@@ -84,14 +64,6 @@ export function parseICSData(icsContent: string): Event[] {
         if (colonIndex !== -1) {
           currentField = line.substring(0, colonIndex);
           currentValue = line.substring(colonIndex + 1);
-          console.log(`New field started: ${currentField} = "${currentValue}"`);
-
-          // URLフィールドの場合は特別にログ出力
-          if (currentField === "URL") {
-            console.log(
-              `URL field detected: currentField="${currentField}", currentValue="${currentValue}"`,
-            );
-          }
         }
       }
     }
@@ -99,11 +71,8 @@ export function parseICSData(icsContent: string): Event[] {
 
   // 最後のフィールドの値を保存
   if (currentField && currentValue) {
-    console.log(`Saving final field: ${currentField} = "${currentValue}"`);
     saveFieldValue(currentEvent, currentField, currentValue);
   }
-
-  console.log("Parsed events:", events);
 
   // 開始時刻でソート（より正確なソート）
   const sortedEvents = events.sort((a, b) => {
@@ -113,7 +82,6 @@ export function parseICSData(icsContent: string): Event[] {
     return a.startTime.localeCompare(b.startTime);
   });
 
-  console.log("Sorted events:", sortedEvents);
   return sortedEvents;
 }
 
@@ -122,7 +90,6 @@ function saveFieldValue(
   field: string,
   value: string,
 ) {
-  console.log(`Saving field: ${field} = "${value}"`);
   switch (field) {
     case "UID":
       currentEvent.uid = value;
@@ -145,9 +112,6 @@ function saveFieldValue(
         currentEvent.speakers = "";
       }
 
-      console.log(
-        `Parsed SUMMARY: title="${currentEvent.title}", speakers="${currentEvent.speakers}"`,
-      );
       break;
     }
     case "DESCRIPTION":
@@ -164,18 +128,12 @@ function saveFieldValue(
       currentEvent.location = value;
       break;
     case "URL":
-      console.log(`URL field started: "${value}"`);
-      console.log(`URL field length: ${value.length}`);
-      console.log(`URL field type: ${typeof value}`);
       currentEvent.url = value;
-      console.log(`URL field saved: "${currentEvent.url}"`);
       break;
   }
 }
 
 function formatTime(timeStr: string): string {
-  console.log("formatTime input:", timeStr);
-
   // 20250912T100000 -> 10:00
   if (timeStr.length >= 6) {
     // 時間部分を抽出（Tの後の6文字）
@@ -190,21 +148,16 @@ function formatTime(timeStr: string): string {
 
       if (hourNum >= 0 && hourNum <= 23 && minuteNum >= 0 && minuteNum <= 59) {
         const result = `${hour}:${minute}`;
-        console.log("formatTime result:", result);
         return result;
       }
-      console.warn("Invalid time values:", hour, minute);
       return timeStr;
     }
   }
 
-  console.warn("Invalid time string format:", timeStr);
   return timeStr;
 }
 
 function parseDateTime(dateTimeStr: string): Date | undefined {
-  console.log("parseDateTime input:", dateTimeStr);
-
   // DTSTART;TZID=JST:20250912T100000 の形式を解析
   if (dateTimeStr.includes("T")) {
     const dateTimePart = dateTimeStr.split("T")[1];
@@ -216,27 +169,15 @@ function parseDateTime(dateTimeStr: string): Date | undefined {
       const minute = Number.parseInt(dateTimeStr.substring(11, 13));
       const second = Number.parseInt(dateTimeStr.substring(13, 15));
 
-      console.log("Parsed date components:", {
-        year,
-        month,
-        day,
-        hour,
-        minute,
-        second,
-      });
-
       // 時間の妥当性チェック
       if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59) {
         const date = new Date(year, month, day, hour, minute, second);
-        console.log("Created Date object:", date);
         return date;
       }
-      console.warn("Invalid time values:", hour, minute);
       return undefined;
     }
   }
 
-  console.warn("Invalid dateTime string format:", dateTimeStr);
   return undefined;
 }
 

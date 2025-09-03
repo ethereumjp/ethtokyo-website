@@ -131,16 +131,6 @@ const ScheduleCard = ({
                         </a>
                       </div>
                     )}
-                    {/* デバッグ用: URLの値を表示 */}
-                    <div
-                      style={{
-                        fontSize: "10px",
-                        color: "gray",
-                        marginTop: "5px",
-                      }}
-                    >
-                      Debug - URL: {event.url || "undefined"}
-                    </div>
                   </div>
                 </div>
               ))}
