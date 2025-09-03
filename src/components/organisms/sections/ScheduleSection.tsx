@@ -14,7 +14,8 @@ import { type Event, fetchConferenceSchedule } from "@/utils/icsParser";
 interface EventItem {
   time: string;
   title: string;
-  description?: string;
+  speakers?: string;
+  duration?: string;
   id?: string;
   location?: string;
   url?: string;
@@ -108,15 +109,38 @@ const ScheduleCard = ({
                   css={timelineItemStyle}
                 >
                   <div css={timelineDotStyle} />
-                  <div css={timelineTimeStyle}>
-                    <HiClock size={16} />
-                    <span>{event.time}</span>
-                  </div>
                   <div css={timelineContentStyle}>
+                    <div css={timelineTimeStyle}>
+                      <HiClock size={16} />
+                      <span>{event.time}</span>
+                      <span css={durationStyle}> {event.duration}</span>
+                    </div>
                     <h4 css={eventTitleStyle}>{event.title}</h4>
-                    {event.description && (
-                      <p css={eventDescriptionStyle}>{event.description}</p>
+                    {event.speakers && (
+                      <p css={speakersStyle}>{event.speakers}</p>
                     )}
+                    {event.url && (
+                      <div css={detailButtonContainerStyle}>
+                        <a
+                          href={event.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          css={detailButtonStyle}
+                        >
+                          Detail
+                        </a>
+                      </div>
+                    )}
+                    {/* デバッグ用: URLの値を表示 */}
+                    <div
+                      style={{
+                        fontSize: "10px",
+                        color: "gray",
+                        marginTop: "5px",
+                      }}
+                    >
+                      Debug - URL: {event.url || "undefined"}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -166,10 +190,25 @@ const ScheduleSection = () => {
     }));
   };
 
+  const calculateDuration = (startTime: string, endTime: string): string => {
+    // 時刻を分に変換する関数
+    const timeToMinutes = (timeStr: string): number => {
+      const [hours, minutes] = timeStr.split(":").map(Number);
+      return hours * 60 + minutes;
+    };
+
+    const startMinutes = timeToMinutes(startTime);
+    const endMinutes = timeToMinutes(endTime);
+    const durationMinutes = endMinutes - startMinutes;
+
+    return `${durationMinutes}min`;
+  };
+
   const convertEventToEventItem = (event: Event): EventItem => ({
     time: `${event.startTime}–${event.endTime}`,
     title: event.title,
-    description: event.description,
+    speakers: event.speakers,
+    duration: calculateDuration(event.startTime, event.endTime),
     id: event.uid,
     location: event.location,
     url: event.url,
@@ -411,6 +450,7 @@ const timelineContainerStyle = css`
   animation: fadeIn 0.3s ease;
   margin-top: 2rem;
   position: relative;
+  width: 100%;
   
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
@@ -456,10 +496,38 @@ const timelineTimeStyle = css`
   font-size: 0.9rem;
   font-weight: 600;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   
   svg {
     color: ${brand.Primary};
+  }
+`;
+
+const durationStyle = css`
+  color: ${neutral.Grey4};
+  font-size: 0.8rem;
+  font-weight: 500;
+`;
+
+const detailButtonContainerStyle = css`
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const detailButtonStyle = css`
+  background-color: ${brand.Primary};
+  color: ${neutral.White} !important;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: ${brand.Secondary};
+    color: ${neutral.White} !important;
   }
 `;
 
@@ -467,18 +535,24 @@ const timelineContentStyle = css`
   background-color: ${themeLight.BackgroundHighlight};
   border-radius: 8px;
   padding: 1rem;
+  min-width: 0;
 `;
 
 const eventTitleStyle = css`
   color: ${neutral.Grey5};
   font-size: 1.1rem;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.4;
 `;
 
-const eventDescriptionStyle = css`
+const speakersStyle = css`
   color: ${neutral.Grey4};
   font-size: 0.95rem;
   margin: 0;
+  font-style: italic;
 `;
 
 const readMoreButtonStyle = css`

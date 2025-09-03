@@ -6,6 +6,7 @@ export interface Event {
   endTime: string;
   location: string;
   url: string;
+  speakers: string;
   startDateTime?: Date; // ソート用の開始時刻
 }
 
@@ -13,55 +14,93 @@ export function parseICSData(icsContent: string): Event[] {
   console.log("Raw ICS content:", icsContent);
 
   const events: Event[] = [];
-  const lines = icsContent.split("\n");
+
+  // ICSファイルの改行を処理して、フィールドを正しく結合
+  const normalizedContent = icsContent
+    .replace(/\r\n/g, "\n") // Windows改行を統一
+    .replace(/\r/g, "\n"); // Mac改行を統一
+
+  const lines = normalizedContent.split("\n");
+  console.log("Total lines:", lines.length);
 
   let currentEvent: Partial<Event> = {};
   let inEvent = false;
+  let currentField = "";
+  let currentValue = "";
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const line = lines[i];
+    console.log(`Processing line ${i + 1}:`, line);
 
     if (line === "BEGIN:VEVENT") {
       inEvent = true;
       currentEvent = {};
+      currentField = "";
+      currentValue = "";
+      console.log("=== New event started ===");
     } else if (line === "END:VEVENT") {
+      // 最後のフィールドの値を保存
+      if (currentField && currentValue) {
+        console.log(
+          `Saving final field before END:VEVENT: ${currentField} = "${currentValue}"`,
+        );
+        saveFieldValue(currentEvent, currentField, currentValue);
+      }
+
       if (currentEvent.uid && currentEvent.title) {
+        console.log("=== Event completed ===", currentEvent);
+        console.log("Event URL:", currentEvent.url);
         events.push(currentEvent as Event);
       }
       inEvent = false;
       currentEvent = {};
+      currentField = "";
+      currentValue = "";
     } else if (inEvent) {
-      if (line.startsWith("UID:")) {
-        currentEvent.uid = line.substring(4);
-      } else if (line.startsWith("SUMMARY:")) {
-        currentEvent.title = line.substring(8);
-      } else if (line.startsWith("DESCRIPTION:")) {
-        currentEvent.description = line.substring(12);
-      } else if (line.startsWith("DTSTART;TZID=JST:")) {
-        const timeStr = line.substring(18);
-        console.log("Raw DTSTART line:", line);
-        console.log("Extracted timeStr:", timeStr);
-        currentEvent.startTime = formatTime(timeStr);
-        // ソート用の開始時刻を保存
-        currentEvent.startDateTime = parseDateTime(timeStr);
-        console.log(
-          "Parsed start time:",
-          timeStr,
-          "->",
-          currentEvent.startTime,
-        );
-      } else if (line.startsWith("DTEND;TZID=JST:")) {
-        const timeStr = line.substring(16);
-        console.log("Raw DTEND line:", line);
-        console.log("Extracted timeStr:", timeStr);
-        currentEvent.endTime = formatTime(timeStr);
-        console.log("Parsed end time:", timeStr, "->", currentEvent.endTime);
-      } else if (line.startsWith("LOCATION:")) {
-        currentEvent.location = line.substring(9);
-      } else if (line.startsWith("URL:")) {
-        currentEvent.url = line.substring(4);
+      // 行がスペースで始まる場合は、前のフィールドの続き
+      if (/^\s/.test(line)) {
+        console.log("Continuation line detected:", line);
+        console.log("Current field:", currentField);
+        console.log("Current value before:", currentValue);
+        // 先頭のスペースを除去して結合
+        const trimmedLine = line.replace(/^\s+/, "");
+        currentValue += trimmedLine;
+        console.log("Updated currentValue:", currentValue);
+
+        // URLフィールドの場合は特別にログ出力
+        if (currentField === "URL") {
+          console.log(`URL continuation: "${currentValue}"`);
+        }
+      } else {
+        // 新しいフィールドの開始
+        if (currentField && currentValue) {
+          // 前のフィールドの値を保存
+          console.log(`Saving field: ${currentField} = "${currentValue}"`);
+          saveFieldValue(currentEvent, currentField, currentValue);
+        }
+
+        // 新しいフィールドを解析
+        const colonIndex = line.indexOf(":");
+        if (colonIndex !== -1) {
+          currentField = line.substring(0, colonIndex);
+          currentValue = line.substring(colonIndex + 1);
+          console.log(`New field started: ${currentField} = "${currentValue}"`);
+
+          // URLフィールドの場合は特別にログ出力
+          if (currentField === "URL") {
+            console.log(
+              `URL field detected: currentField="${currentField}", currentValue="${currentValue}"`,
+            );
+          }
+        }
       }
     }
+  }
+
+  // 最後のフィールドの値を保存
+  if (currentField && currentValue) {
+    console.log(`Saving final field: ${currentField} = "${currentValue}"`);
+    saveFieldValue(currentEvent, currentField, currentValue);
   }
 
   console.log("Parsed events:", events);
@@ -76,6 +115,62 @@ export function parseICSData(icsContent: string): Event[] {
 
   console.log("Sorted events:", sortedEvents);
   return sortedEvents;
+}
+
+function saveFieldValue(
+  currentEvent: Partial<Event>,
+  field: string,
+  value: string,
+) {
+  console.log(`Saving field: ${field} = "${value}"`);
+  switch (field) {
+    case "UID":
+      currentEvent.uid = value;
+      break;
+    case "SUMMARY": {
+      // バックスラッシュを削除し、タイトルとスピーカーを分離
+      const cleanValue = value.replace(/\\/g, "");
+
+      // 最後のハイフン（スピーカー名の前）を探す
+      // タイトル内のハイフンは保持し、スピーカー名の前のハイフンのみで分割
+      const lastHyphenIndex = cleanValue.lastIndexOf("-");
+
+      if (lastHyphenIndex !== -1) {
+        currentEvent.title = cleanValue.substring(0, lastHyphenIndex).trim();
+        currentEvent.speakers = cleanValue
+          .substring(lastHyphenIndex + 1)
+          .trim();
+      } else {
+        currentEvent.title = cleanValue;
+        currentEvent.speakers = "";
+      }
+
+      console.log(
+        `Parsed SUMMARY: title="${currentEvent.title}", speakers="${currentEvent.speakers}"`,
+      );
+      break;
+    }
+    case "DESCRIPTION":
+      currentEvent.description = value;
+      break;
+    case "DTSTART;TZID=JST":
+      currentEvent.startTime = formatTime(value);
+      currentEvent.startDateTime = parseDateTime(value);
+      break;
+    case "DTEND;TZID=JST":
+      currentEvent.endTime = formatTime(value);
+      break;
+    case "LOCATION":
+      currentEvent.location = value;
+      break;
+    case "URL":
+      console.log(`URL field started: "${value}"`);
+      console.log(`URL field length: ${value.length}`);
+      console.log(`URL field type: ${typeof value}`);
+      currentEvent.url = value;
+      console.log(`URL field saved: "${currentEvent.url}"`);
+      break;
+  }
 }
 
 function formatTime(timeStr: string): string {
