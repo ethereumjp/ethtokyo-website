@@ -349,6 +349,11 @@ export const eventPartnersData = [
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
   },
+  {
+    partnerName: "Trezor",
+    website: "https://trezor.io/",
+    logoFile: "trezor-main-logo-black-rgb.svg",
+  },
 ];
 
 // メディアパートナーデータ
