@@ -156,6 +156,9 @@ const ScheduleSection = () => {
   const [isLoadingConference, setIsLoadingConference] = useState(true);
   const [hasDetailedSchedule, setHasDetailedSchedule] = useState(false);
 
+  // TODO: HackathonのICSデータが準備できたら、この値をtrueに変更して「View Schedule」表示に戻す
+  const hasHackathonSchedule = false;
+
   useEffect(() => {
     const loadConferenceSchedule = async () => {
       try {
@@ -244,7 +247,7 @@ const ScheduleSection = () => {
             address={eventInfo.location.hackathon.address}
             mapUrl={eventInfo.location.hackathon.map}
             events={hackathonEvents}
-            hasDetailedSchedule={hasDetailedSchedule}
+            hasDetailedSchedule={hasHackathonSchedule}
             isExpanded={expandedSchedules.hackathon}
             onToggle={() => toggleSchedule("hackathon")}
           />
