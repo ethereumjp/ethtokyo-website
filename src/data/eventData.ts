@@ -481,11 +481,11 @@ export const communitySponsorsData = [
     website: "https://bgin-global.org/",
     logoFile: "BGIN_logo.png",
   },
-  // {
-  //   partnerName: "Curvegrid Inc.",
-  //   website: "http://www.curvegrid.com",
-  //   logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
-  // },
+  {
+    partnerName: "Curvegrid Inc.",
+    website: "http://www.curvegrid.com",
+    logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
+  },
   {
     partnerName: "mind palace",
     website: "https://mindpalace.jp/",
