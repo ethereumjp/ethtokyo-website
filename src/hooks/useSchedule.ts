@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
 import type { Event, EventItem } from "@/types/schedule";
 import { fetchConferenceSchedule } from "@/utils/icsParser";
+import { useCallback, useEffect, useState } from "react";
 
 export const useSchedule = () => {
   const [conferenceEvents, setConferenceEvents] = useState<EventItem[]>([]);

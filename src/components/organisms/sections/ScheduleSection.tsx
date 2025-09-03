@@ -1,20 +1,20 @@
+import { useState } from "react";
+import { BiIdCard } from "react-icons/bi";
+import { css } from "@emotion/react";
 import Button from "@/components/atoms/Button";
-import SectionTitle from "@/components/molecules/SectionTitle";
 import ScheduleCard from "@/components/molecules/ScheduleCard";
-import eventInfo from "@/data/eventInfo.json";
-import { useSchedule } from "@/hooks/useSchedule";
+import SectionTitle from "@/components/molecules/SectionTitle";
 import {
   HACKATHON_EVENTS,
   HAS_HACKATHON_SCHEDULE,
-  TICKET_URL,
   SIDE_EVENTS_CALENDAR_URL,
+  TICKET_URL,
 } from "@/constants/schedule";
-import type { ExpandedSchedules, ScheduleType } from "@/types/schedule";
+import eventInfo from "@/data/eventInfo.json";
+import { useSchedule } from "@/hooks/useSchedule";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
-import { css } from "@emotion/react";
-import { useState } from "react";
-import { BiIdCard } from "react-icons/bi";
+import type { ExpandedSchedules, ScheduleType } from "@/types/schedule";
 
 const ScheduleSection = () => {
   const [expandedSchedules, setExpandedSchedules] = useState<ExpandedSchedules>(
