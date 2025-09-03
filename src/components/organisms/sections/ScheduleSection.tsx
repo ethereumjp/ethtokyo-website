@@ -5,16 +5,19 @@ import eventInfo from "@/data/eventInfo.json";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
 import { css } from "@emotion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiIdCard } from "react-icons/bi";
 import { HiCalendarDays, HiClock, HiOutlineMapPin } from "react-icons/hi2";
 import { IoTicketOutline } from "react-icons/io5";
+import { type Event, fetchConferenceSchedule } from "@/utils/icsParser";
 
 interface EventItem {
   time: string;
   title: string;
   description?: string;
   id?: string;
+  location?: string;
+  url?: string;
 }
 
 interface ScheduleCardProps {
@@ -27,6 +30,7 @@ interface ScheduleCardProps {
   hasDetailedSchedule?: boolean;
   isExpanded?: boolean;
   onToggle?: () => void;
+  isLoading?: boolean;
 }
 
 const ScheduleCard = ({
@@ -39,6 +43,7 @@ const ScheduleCard = ({
   hasDetailedSchedule = false,
   isExpanded = false,
   onToggle,
+  isLoading = false,
 }: ScheduleCardProps) => {
   const cardTitle = <h3 css={cardTitleStyle}>{title}</h3>;
 
@@ -67,13 +72,26 @@ const ScheduleCard = ({
         </div>
       </div>
 
-      {!hasDetailedSchedule && (
+      {!hasDetailedSchedule && !isLoading && (
         <div css={comingSoonContainerStyle}>
           <div css={comingSoonContentStyle}>
             <div>
               <h4 css={comingSoonTitleStyle}>Schedule Coming Soon</h4>
               <p css={comingSoonTextStyle}>
                 Stay tuned for detailed event information
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isLoading && (
+        <div css={comingSoonContainerStyle}>
+          <div css={comingSoonContentStyle}>
+            <div>
+              <h4 css={comingSoonTitleStyle}>Loading Schedule...</h4>
+              <p css={comingSoonTextStyle}>
+                Fetching conference schedule from ICS file
               </p>
             </div>
           </div>
@@ -115,12 +133,31 @@ const ScheduleCard = ({
 };
 
 const ScheduleSection = () => {
-  const hasDetailedSchedule = false;
-
   const [expandedSchedules, setExpandedSchedules] = useState({
     conference: false,
     hackathon: false,
   });
+
+  const [conferenceEvents, setConferenceEvents] = useState<EventItem[]>([]);
+  const [isLoadingConference, setIsLoadingConference] = useState(true);
+  const [hasDetailedSchedule, setHasDetailedSchedule] = useState(false);
+
+  useEffect(() => {
+    const loadConferenceSchedule = async () => {
+      try {
+        const events = await fetchConferenceSchedule();
+        const convertedEvents = events.map(convertEventToEventItem);
+        setConferenceEvents(convertedEvents);
+        setHasDetailedSchedule(events.length > 0);
+      } catch (error) {
+        console.error("Failed to load conference schedule:", error);
+      } finally {
+        setIsLoadingConference(false);
+      }
+    };
+
+    loadConferenceSchedule();
+  }, []);
 
   const toggleSchedule = (scheduleType: "conference" | "hackathon") => {
     setExpandedSchedules((prev) => ({
@@ -129,23 +166,14 @@ const ScheduleSection = () => {
     }));
   };
 
-  const conferenceEvents: EventItem[] = [
-    { time: "9:00 - 10:00", title: "Registration Open" },
-    { time: "10:00 - 10:30", title: "Opening Ceremony" },
-    {
-      time: "10:30 - 12:00",
-      title: "Keynote Presentation",
-      description: "The Future of Ethereum",
-    },
-    { time: "12:00 - 13:30", title: "Lunch Break" },
-    {
-      time: "13:30 - 15:00",
-      title: "Technical Sessions",
-      description: "Latest Development Trends",
-    },
-    { time: "15:00 - 16:30", title: "Panel Discussion" },
-    { time: "16:30 - 18:00", title: "Networking Event" },
-  ];
+  const convertEventToEventItem = (event: Event): EventItem => ({
+    time: `${event.startTime}–${event.endTime}`,
+    title: event.title,
+    description: event.description,
+    id: event.uid,
+    location: event.location,
+    url: event.url,
+  });
 
   const hackathonEvents: EventItem[] = [
     { time: "Day 1 - 10:00", title: "Hackathon Starts & Team Formation" },
@@ -177,6 +205,7 @@ const ScheduleSection = () => {
             hasDetailedSchedule={hasDetailedSchedule}
             isExpanded={expandedSchedules.conference}
             onToggle={() => toggleSchedule("conference")}
+            isLoading={isLoadingConference}
           />
 
           <ScheduleCard
