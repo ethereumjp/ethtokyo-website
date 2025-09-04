@@ -618,6 +618,25 @@ export const communitySponsorsData = [
 ];
 
 // オーガナイザーデータ
+export const endorsementsData = [
+  {
+    name: "JCBA",
+    website: "https://cryptocurrency-association.org/",
+    logoFile: "/2025/images/orglogos/endorsements/JCBA-w.webp",
+  },
+  {
+    name: "JBA",
+    website: "https://jba-web.jp/",
+    logoFile: "/2025/images/orglogos/endorsements/JBA-logo.webp",
+  },
+  {
+    name: "BCCC",
+    website: "https://bccc.global/",
+    logoFile:
+      "/2025/images/orglogos/endorsements/bccc-logo-big-1-300x88-300x88.png",
+  },
+];
+
 export const organizersData = [
   {
     name: "Ethereum Japan",
