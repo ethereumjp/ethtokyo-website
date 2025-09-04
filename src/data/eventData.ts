@@ -399,9 +399,9 @@ export const mediaPartnersData = [
     logoFile: "BlackAllSpark00.png",
   },
   {
-    partnerName: "CCN",
-    website: "https://www.ccn.com/",
-    logoFile: "ccn.svg",
+    partnerName: "CoinGabbar",
+    website: "https://www.coingabbar.com/",
+    logoFile: "Gabbar-Logo-black.webp",
   },
 ];
 
