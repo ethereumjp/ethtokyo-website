@@ -371,57 +371,57 @@ export const eventPartnersData = [
   {
     partnerName: "Digital Garage",
     website: "https://www.garage.co.jp/",
-    logoFile: ["Digital_Garage03_Basic_Logo_Blk_Yoko.png"],
+    logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
   },
   {
     partnerName: "Bitbank",
     website: "https://bitbank.cc/",
-    logoFile: ["bitbank_logo_color.png"],
+    logoFile: "bitbank_logo_color.png",
   },
   {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
-    logoFile: ["toban-logo-text.svg"],
+    logoFile: "toban-logo-text.svg",
   },
   {
     partnerName: "KON",
     website: "https://kon.xyz/",
-    logoFile: ["kon.png"],
+    logoFile: "kon.png",
   },
   {
     partnerName: "Kismet Casa",
     website: "https://kismetcasa.xyz/",
-    logoFile: ["kismet_logo.png"],
+    logoFile: "kismet_logo.png",
   },
   {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
-    logoFile: ["taikai.svg"],
+    logoFile: "taikai.svg",
   },
   {
     partnerName: "Moongate",
     website: "https://www.moongate.id/",
-    logoFile: ["Moongate-Logo-Primary-B.png"],
+    logoFile: "Moongate-Logo-Primary-B.png",
   },
   {
     partnerName: "Megaphone",
     website: "https://www.megaphone.xyz/",
-    logoFile: ["Megaphone-logo-light.png"],
+    logoFile: "Megaphone-logo-light.png",
   },
   {
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
-    logoFile: ["zktokyo.png"],
+    logoFile: "zktokyo.png",
   },
   {
     partnerName: "Trezor",
     website: "https://trezor.io/",
-    logoFile: ["trezor-main-logo-black-rgb.svg"],
+    logoFile: "trezor-main-logo-black-rgb.svg",
   },
   {
     partnerName: "Red Bull",
     website: "https://www.redbull.com/",
-    logoFile: ["redbullcom-logo_double-with-text.svg"],
+    logoFile: "redbullcom-logo_double-with-text.svg",
   },
 ];
 
@@ -430,47 +430,47 @@ export const mediaPartnersData = [
   {
     partnerName: "neweconomy",
     website: "https://www.neweconomy.jp/",
-    logoFile: ["neweconomy_bk.png"],
+    logoFile: "neweconomy_bk.png",
   },
   {
     partnerName: "CoinDesk",
     website: "https://www.coindesk.com/",
-    logoFile: ["coindesk_jp.png"],
+    logoFile: "coindesk_jp.png",
   },
   {
     partnerName: "CoinPost",
     website: "https://coinpost.jp/",
-    logoFile: ["coinpost_logo.png"],
+    logoFile: "coinpost_logo.png",
   },
   {
     partnerName: "CoinRank",
     website: "https://www.coinrank.io/",
-    logoFile: ["coinrank.svg"],
+    logoFile: "coinrank.svg",
   },
   {
     partnerName: "Crypto Times",
     website: "https://www.cryptotimes.io/",
-    logoFile: ["cryptotimes.png"],
+    logoFile: "cryptotimes.png",
   },
   {
     partnerName: "Bitcoin.com",
     website: "https://www.bitcoin.com/",
-    logoFile: ["bitcoin.com.png"],
+    logoFile: "bitcoin.com.png",
   },
   {
     partnerName: "Museigen.io",
     website: "https://museigen.io/",
-    logoFile: ["PNG-wht-v2-transparent-01.png"],
+    logoFile: "PNG-wht-v2-transparent-01.png",
   },
   {
     partnerName: "AllSpark Research",
     website: "https://allsparkresearch.com/",
-    logoFile: ["BlackAllSpark00.png"],
+    logoFile: "BlackAllSpark00.png",
   },
   {
     partnerName: "CoinGabbar",
     website: "https://www.coingabbar.com/",
-    logoFile: ["Gabbar-Logo-black.webp"],
+    logoFile: "Gabbar-Logo-black.webp",
   },
 ];
 
