@@ -1,3 +1,4 @@
+import { HAS_CONFERENCE_SCHEDULE } from "@/constants/schedule";
 import type { Event, EventItem } from "@/types/schedule";
 import { fetchConferenceSchedule } from "@/utils/icsParser";
 import { useCallback, useEffect, useState } from "react";
@@ -59,7 +60,12 @@ export const useSchedule = () => {
   }, [convertEventToEventItem]);
 
   useEffect(() => {
-    loadConferenceSchedule();
+    if (HAS_CONFERENCE_SCHEDULE) {
+      loadConferenceSchedule();
+    } else {
+      setIsLoadingConference(false);
+      setHasDetailedSchedule(false);
+    }
   }, [loadConferenceSchedule]);
 
   return {

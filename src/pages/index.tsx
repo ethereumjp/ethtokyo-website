@@ -1,6 +1,7 @@
 import Layout from "@/components/layouts/BaseLayout";
 import AboutSection from "@/components/organisms/sections/AboutSection";
 import ConferenceSection from "@/components/organisms/sections/ConferenceSection";
+import EndorsementsSection from "@/components/organisms/sections/EndorsementsSection";
 import GallerySection from "@/components/organisms/sections/GallerySection";
 import HeroSection from "@/components/organisms/sections/HeroSection";
 import OrganizersSection from "@/components/organisms/sections/OrganizersSection";
@@ -35,6 +36,7 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       <VenueSection />
       <SponsorsSection />
       <PartnersSection />
+      <EndorsementsSection />
       <OrganizersSection />
     </Layout>
   );

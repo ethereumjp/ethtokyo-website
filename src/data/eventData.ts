@@ -43,6 +43,22 @@ export const speakersData = [
     socialLink: "https://x.com/AyaMiyagotchi",
   },
   {
+    name: "Tomasz Stańczak",
+    image: "/2025/images/speakers/Tomasz_Stanczak_Co-Executive_Director_EF.svg",
+    title: "Co-Executive Director, Founder",
+    project: "Ethereum Foundation, Nethermind",
+    talkTitle: "",
+    socialLink: "https://x.com/tkstanczak",
+  },
+  {
+    name: "Hisao-Wei Wang",
+    image: "/2025/images/speakers/Hisao-Wei_Wang_Co-Executive_Director_EF.webp",
+    title: "Co-Executive Director",
+    project: "Ehereum foundation",
+    talkTitle: "",
+    socialLink: "https://x.com/hwwonx",
+  },
+  {
     name: "Charles Lu",
     image: "/2025/images/speakers/Charles Lu_Espresso.png",
     title: "",
@@ -234,6 +250,54 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://de.linkedin.com/in/ibetke",
   },
+  {
+    name: "Manbir",
+    image: "/2025/images/speakers/Manbir.png",
+    title: "Ethereum Ecosystem Builder",
+    project: "Consensys, Ethereum Foundation, MetaMask, Binance, and Morph",
+    talkTitle: "",
+    socialLink: "https://x.com/manbirmarwah",
+  },
+  {
+    name: "Patrick McCorry",
+    image: "/2025/images/speakers/PatrickMcCorry.jpg",
+    title: "CEO",
+    project: "PISA",
+    talkTitle: "",
+    socialLink: "https://x.com/stonecoldpat0",
+  },
+  {
+    name: "Deeptanshu Sankhwar",
+    image: "/2025/images/speakers/DeeptanshuSankhwar.jpg",
+    title: "Builder",
+    project: "MCPChain",
+    talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/deeptanshu-sankhwar-b311b9192",
+  },
+  {
+    name: "Francesco Andreoli",
+    image: "/2025/images/speakers/FrancescoAndreoli.jpg",
+    title: "Director of Developer Relations",
+    project: "Consensys, MetaMask",
+    talkTitle: "",
+    socialLink: "https://x.com/francescoswiss",
+  },
+  {
+    name: "gohan",
+    image: "/2025/images/speakers/gohan.jpg",
+    title: "Hacker",
+    project: "Nyx Foundation",
+    talkTitle: "",
+    socialLink: "https://x.com/grandchildrice",
+  },
+  {
+    name: "Kyle Koshiyama",
+    image: "/2025/images/speakers/KyleKoshiyama.jpeg",
+    title: "Developer",
+    project: "Fhenix.io (fhe +evm)",
+    talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/kyle-koshiyama-8029bb108/",
+  },
   // {
   //   name: "",
   //   image: "",
@@ -354,6 +418,11 @@ export const eventPartnersData = [
     website: "https://trezor.io/",
     logoFile: "trezor-main-logo-black-rgb.svg",
   },
+  {
+    partnerName: "Red Bull",
+    website: "https://www.redbull.com/",
+    logoFile: "redbullcom-logo_double-with-text.svg",
+  },
 ];
 
 // メディアパートナーデータ
@@ -399,9 +468,9 @@ export const mediaPartnersData = [
     logoFile: "BlackAllSpark00.png",
   },
   {
-    partnerName: "CCN",
-    website: "https://www.ccn.com/",
-    logoFile: "ccn.svg",
+    partnerName: "CoinGabbar",
+    website: "https://www.coingabbar.com/",
+    logoFile: "Gabbar-Logo-black.webp",
   },
 ];
 
@@ -434,9 +503,19 @@ export const goldSponsorsData = [
 
 export const silverSponsorsData = [
   {
+    partnerName: "molecule",
+    website: "https://molecule.xyz/",
+    logoFile: "molecule-BIO-logo.svg",
+  },
+  {
     partnerName: "Myna Wallet",
     website: "https://www.mynawallet.jp/",
     logoFile: "Myna-logo.png",
+  },
+  {
+    partnerName: "Kushim",
+    website: "https://kushim.co.jp/",
+    logoFile: "Kushim-logo.webp",
   },
   {
     partnerName: "Quantum3labs",
@@ -447,6 +526,11 @@ export const silverSponsorsData = [
     partnerName: "Blockchain For Good Alliance",
     website: "https://chainforgood.org/",
     logoFile: "Blockchain_For_Good_Alliance_Logo_Primary.png",
+  },
+  {
+    partnerName: "Surf",
+    website: "https://asksurf.ai/",
+    logoFile: "asksurf-logo.svg",
   },
 ];
 
@@ -534,6 +618,25 @@ export const communitySponsorsData = [
 ];
 
 // オーガナイザーデータ
+export const endorsementsData = [
+  {
+    name: "JCBA",
+    website: "https://cryptocurrency-association.org/",
+    logoFile: "/2025/images/orglogos/endorsements/JCBA-w.webp",
+  },
+  {
+    name: "JBA",
+    website: "https://jba-web.jp/",
+    logoFile: "/2025/images/orglogos/endorsements/JBA-logo.webp",
+  },
+  {
+    name: "BCCC",
+    website: "https://bccc.global/",
+    logoFile:
+      "/2025/images/orglogos/endorsements/bccc-logo-big-1-300x88-300x88.png",
+  },
+];
+
 export const organizersData = [
   {
     name: "Ethereum Japan",

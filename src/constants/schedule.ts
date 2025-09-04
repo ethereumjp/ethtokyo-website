@@ -13,6 +13,9 @@ export const HACKATHON_EVENTS: EventItem[] = [
 // TODO: HackathonのICSデータが準備できたら、この値をtrueに変更して「View Schedule」表示に戻す
 export const HAS_HACKATHON_SCHEDULE = false;
 
+// TODO: Conferenceのスケジュールが準備できたら、この値をtrueに変更して「View Schedule」表示に戻す
+export const HAS_CONFERENCE_SCHEDULE = false;
+
 export const SIDE_EVENTS_CALENDAR_URL =
   "https://lu.ma/embed/calendar/cal-FMaPKHYZLXA2VzT/events";
 export const TICKET_URL = "https://app.moongate.id/e/ethtokyo2025";
