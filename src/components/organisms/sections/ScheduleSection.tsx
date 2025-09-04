@@ -4,6 +4,7 @@ import SectionTitle from "@/components/molecules/SectionTitle";
 import {
   HACKATHON_EVENTS,
   HAS_HACKATHON_SCHEDULE,
+  HAS_CONFERENCE_SCHEDULE,
   SIDE_EVENTS_CALENDAR_URL,
   TICKET_URL,
 } from "@/constants/schedule";
@@ -57,7 +58,7 @@ const ScheduleSection = () => {
             address={eventInfo.location.conference.address}
             mapUrl={eventInfo.location.conference.map}
             events={conferenceEvents}
-            hasDetailedSchedule={hasDetailedSchedule}
+            hasDetailedSchedule={HAS_CONFERENCE_SCHEDULE}
             isExpanded={expandedSchedules.conference}
             onToggle={() => toggleSchedule("conference")}
             isLoading={isLoadingConference}
