@@ -617,7 +617,6 @@ export const communitySponsorsData = [
   },
 ];
 
-
 export const endorsementsData = [
   {
     name: "JCBA",
