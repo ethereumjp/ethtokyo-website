@@ -136,7 +136,7 @@ const SponsorsSection: FC = () => {
     object-fit: contain;
   `;
 
-  const asksurfLogoStyle = css`
+  const surfLogoStyle = css`
     height: 90px;
     max-width: 100%;
     object-fit: contain;
@@ -174,8 +174,8 @@ const SponsorsSection: FC = () => {
     // ensのロゴも特別に処理
     const isEnsLogo = props.sponsorName === "ens";
 
-    // Asksurfのロゴを特別に処理
-    const isAsksurfLogo = props.sponsorName === "Asksurf";
+    // Surfのロゴを特別に処理
+    const isSurfLogo = props.sponsorName === "Surf";
 
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
@@ -192,8 +192,8 @@ const SponsorsSection: FC = () => {
                     ? ensLogoStyle // ens専用のスタイルを使用
                     : goldLogoStyle
                 : props.sponsorType === "silver"
-                  ? isAsksurfLogo
-                    ? asksurfLogoStyle // Asksurf専用の黒背景スタイルを使用
+                  ? isSurfLogo
+                    ? surfLogoStyle // Surf専用の黒背景スタイルを使用
                     : silverLogoStyle
                   : isLargeLogo
                     ? largeCommunityLogoStyle
