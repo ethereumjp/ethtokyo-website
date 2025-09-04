@@ -354,6 +354,11 @@ export const eventPartnersData = [
     website: "https://trezor.io/",
     logoFile: "trezor-main-logo-black-rgb.svg",
   },
+  {
+    partnerName: "Red Bull",
+    website: "https://www.redbull.com/",
+    logoFile: "redbullcom-logo_double-with-text.svg",
+  },
 ];
 
 // メディアパートナーデータ
