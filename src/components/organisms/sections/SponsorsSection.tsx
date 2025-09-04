@@ -34,49 +34,48 @@ const SponsorsSection: FC = () => {
 
     ${mq.mobileSmall} {
       gap: 2rem;
+      justify-content: center;
     }
   `;
 
   const goldLogosGridStyle = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
     justify-content: space-around;
     justify-items: center;
     align-items: center;
     width: 100%;
 
     ${mq.mobileSmall} {
-      gap: 2rem;
+      justify-content: center;
     }
   `;
 
   const silverLogosGridStyle = css`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
-    margin-top: 2.5rem;
     width: 100%;
 
     ${mq.mobileSmall} {
-      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      margin-top: 1.5rem;
     }
   `;
 
   const communityLogosGridStyle = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     justify-items: center;
     align-items: center;
     width: 100%;
 
     ${mq.mobileSmall} {
-      gap: 1.5rem;
+      gap: 0.75rem;
     }
   `;
 
@@ -88,33 +87,21 @@ const SponsorsSection: FC = () => {
     height: 120px;
     max-width: 100%;
     object-fit: contain;
-    padding: 0 40px;
   `;
 
   const goldLogoStyle = css`
-    height: 100px;
     max-width: 100%;
     object-fit: contain;
-    padding: 0 20px;
-
-    ${mq.mobileSmall} {
-      height: 120px;
-      max-width: 90%;
-    }
   `;
 
   const largeGoldLogoStyle = css`
-    height: 140px !important;
     max-width: 100% !important;
     object-fit: contain !important;
     transform: scale(1.2) !important;
-    margin: 20px !important;
     z-index: 10 !important;
 
     ${mq.mobileSmall} {
-      height: 120px !important;
       transform: scale(1.0) !important;
-      margin: 10px !important;
       max-width: 90% !important;
     }
   `;
@@ -125,7 +112,7 @@ const SponsorsSection: FC = () => {
     object-fit: contain;
 
     ${mq.mobileSmall} {
-      height: 80px !important;
+      height: 70px !important;
       max-width: 80% !important;
     }
   `;
@@ -134,15 +121,10 @@ const SponsorsSection: FC = () => {
     height: 90px;
     max-width: 100%;
     object-fit: contain;
-  `;
 
-  const surfLogoStyle = css`
-    height: 90px;
-    max-width: 100%;
-    object-fit: contain;
-    background-color: black;
-    padding: 10px;
-    border-radius: 8px;
+    ${mq.mobileSmall} {
+      height: 70px;
+    }
   `;
 
   const communityLogoStyle = css`
@@ -161,7 +143,7 @@ const SponsorsSection: FC = () => {
     sponsorType: "platinum" | "gold" | "silver" | "community";
     sponsorName: string;
     website: string;
-    logoFile: string;
+    logoFile: string[];
   }) => {
     // Ethereum JakartaとCurvegrid Inc.のロゴを大きく表示
     const isLargeLogo =
@@ -174,50 +156,78 @@ const SponsorsSection: FC = () => {
     // ensのロゴも特別に処理
     const isEnsLogo = props.sponsorName === "ens";
 
-    // Surfのロゴを特別に処理
-    const isSurfLogo = props.sponsorName === "Surf";
-
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
-        <Image
-          src={`/2025/images/orglogos/${props.sponsorType}Sponsors/${props.logoFile}`}
-          alt={`${props.sponsorName} logo`}
-          css={
-            props.sponsorType === "platinum"
-              ? platinumLogoStyle
-              : props.sponsorType === "gold"
-                ? isLargeGoldLogo
-                  ? largeGoldLogoStyle // Geodework専用の大きなサイズを使用
-                  : isEnsLogo
-                    ? ensLogoStyle // ens専用のスタイルを使用
-                    : goldLogoStyle
-                : props.sponsorType === "silver"
-                  ? isSurfLogo
-                    ? surfLogoStyle // Surf専用の黒背景スタイルを使用
-                    : silverLogoStyle
-                  : isLargeLogo
-                    ? largeCommunityLogoStyle
-                    : communityLogoStyle
-          }
-          width={
-            props.sponsorType === "platinum"
-              ? 300
-              : props.sponsorType === "gold"
-                ? 240
-                : props.sponsorType === "silver"
-                  ? 200
-                  : 160
-          }
-          height={
-            props.sponsorType === "platinum"
-              ? 300
-              : props.sponsorType === "gold"
-                ? 240
-                : props.sponsorType === "silver"
-                  ? 200
-                  : 160
-          }
-        />
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: ${
+              props.sponsorType === "platinum"
+                ? 360
+                : props.sponsorType === "gold"
+                  ? 320
+                  : props.sponsorType === "silver"
+                    ? 240
+                    : 160
+            }px;
+            ${mq.mobileSmall} {
+              width: ${
+                props.sponsorType === "platinum"
+                  ? 360
+                  : props.sponsorType === "gold"
+                    ? 320
+                    : props.sponsorType === "silver"
+                      ? 240
+                      : 140
+              }px;
+              height: ${props.sponsorType === "community" ? "100" : "120"}px;
+            }
+          `}
+        >
+          {props.logoFile.map((logo, idx) => (
+            <Image
+              key={props.sponsorName}
+              src={`/2025/images/orglogos/${props.sponsorType}Sponsors/${logo}`}
+              alt={`${props.sponsorName} logo${props.logoFile.length > 1 ? ` ${idx + 1}` : ""}`}
+              css={
+                props.sponsorType === "platinum"
+                  ? platinumLogoStyle
+                  : props.sponsorType === "gold"
+                    ? isLargeGoldLogo
+                      ? largeGoldLogoStyle
+                      : isEnsLogo
+                        ? ensLogoStyle
+                        : goldLogoStyle
+                    : props.sponsorType === "silver"
+                      ? silverLogoStyle
+                      : isLargeLogo
+                        ? largeCommunityLogoStyle
+                        : communityLogoStyle
+              }
+              width={
+                props.sponsorType === "platinum"
+                  ? 360
+                  : props.sponsorType === "gold"
+                    ? 320
+                    : props.sponsorType === "silver"
+                      ? 240
+                      : 160
+              }
+              height={
+                props.sponsorType === "platinum"
+                  ? 120
+                  : props.sponsorType === "gold"
+                    ? 100
+                    : props.sponsorType === "silver"
+                      ? 80
+                      : 60
+              }
+            />
+          ))}
+        </div>
       </a>
     );
   };

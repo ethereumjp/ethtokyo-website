@@ -371,57 +371,57 @@ export const eventPartnersData = [
   {
     partnerName: "Digital Garage",
     website: "https://www.garage.co.jp/",
-    logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
+    logoFile: ["Digital_Garage03_Basic_Logo_Blk_Yoko.png"],
   },
   {
     partnerName: "Bitbank",
     website: "https://bitbank.cc/",
-    logoFile: "bitbank_logo_color.png",
+    logoFile: ["bitbank_logo_color.png"],
   },
   {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
-    logoFile: "toban-logo-text.svg",
+    logoFile: ["toban-logo-text.svg"],
   },
   {
     partnerName: "KON",
     website: "https://kon.xyz/",
-    logoFile: "kon.png",
+    logoFile: ["kon.png"],
   },
   {
     partnerName: "Kismet Casa",
     website: "https://kismetcasa.xyz/",
-    logoFile: "kismet_logo.png",
+    logoFile: ["kismet_logo.png"],
   },
   {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
-    logoFile: "taikai.svg",
+    logoFile: ["taikai.svg"],
   },
   {
     partnerName: "Moongate",
     website: "https://www.moongate.id/",
-    logoFile: "Moongate-Logo-Primary-B.png",
+    logoFile: ["Moongate-Logo-Primary-B.png"],
   },
   {
     partnerName: "Megaphone",
     website: "https://www.megaphone.xyz/",
-    logoFile: "Megaphone-logo-light.png",
+    logoFile: ["Megaphone-logo-light.png"],
   },
   {
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
-    logoFile: "zktokyo.png",
+    logoFile: ["zktokyo.png"],
   },
   {
     partnerName: "Trezor",
     website: "https://trezor.io/",
-    logoFile: "trezor-main-logo-black-rgb.svg",
+    logoFile: ["trezor-main-logo-black-rgb.svg"],
   },
   {
     partnerName: "Red Bull",
     website: "https://www.redbull.com/",
-    logoFile: "redbullcom-logo_double-with-text.svg",
+    logoFile: ["redbullcom-logo_double-with-text.svg"],
   },
 ];
 
@@ -430,47 +430,47 @@ export const mediaPartnersData = [
   {
     partnerName: "neweconomy",
     website: "https://www.neweconomy.jp/",
-    logoFile: "neweconomy_bk.png",
+    logoFile: ["neweconomy_bk.png"],
   },
   {
     partnerName: "CoinDesk",
     website: "https://www.coindesk.com/",
-    logoFile: "coindesk_jp.png",
+    logoFile: ["coindesk_jp.png"],
   },
   {
     partnerName: "CoinPost",
     website: "https://coinpost.jp/",
-    logoFile: "coinpost_logo.png",
+    logoFile: ["coinpost_logo.png"],
   },
   {
     partnerName: "CoinRank",
     website: "https://www.coinrank.io/",
-    logoFile: "coinrank.svg",
+    logoFile: ["coinrank.svg"],
   },
   {
     partnerName: "Crypto Times",
     website: "https://www.cryptotimes.io/",
-    logoFile: "cryptotimes.png",
+    logoFile: ["cryptotimes.png"],
   },
   {
     partnerName: "Bitcoin.com",
     website: "https://www.bitcoin.com/",
-    logoFile: "bitcoin.com.png",
+    logoFile: ["bitcoin.com.png"],
   },
   {
     partnerName: "Museigen.io",
     website: "https://museigen.io/",
-    logoFile: "PNG-wht-v2-transparent-01.png",
+    logoFile: ["PNG-wht-v2-transparent-01.png"],
   },
   {
     partnerName: "AllSpark Research",
     website: "https://allsparkresearch.com/",
-    logoFile: "BlackAllSpark00.png",
+    logoFile: ["BlackAllSpark00.png"],
   },
   {
     partnerName: "CoinGabbar",
     website: "https://www.coingabbar.com/",
-    logoFile: "Gabbar-Logo-black.webp",
+    logoFile: ["Gabbar-Logo-black.webp"],
   },
 ];
 
@@ -479,7 +479,7 @@ export const platinumSponsorsData = [
   {
     partnerName: "Japan Smart Chain",
     website: "https://japansmartchain.com/",
-    logoFile: "JSC-Logo.svg",
+    logoFile: ["JSC-Logo.svg"],
   },
 ];
 
@@ -487,50 +487,50 @@ export const goldSponsorsData = [
   {
     partnerName: "ens",
     website: "https://ens.domains/",
-    logoFile: "ens-logo-Blue.svg",
+    logoFile: ["ens-logo-Blue.svg"],
   },
   {
     partnerName: "Geodework",
     website: "https://geodework.com/",
-    logoFile: "Geodework-logo-black.png",
+    logoFile: ["Geodework-logo-black.png"],
   },
   {
     partnerName: "Eliza OS",
     website: "https://elizaos.ai/",
-    logoFile: "ElizaOS_Logo_Black_RGB.png",
+    logoFile: ["ElizaOS_Logo_Black_RGB.png"],
   },
 ];
 
 export const silverSponsorsData = [
   {
-    partnerName: "molecule",
-    website: "https://molecule.xyz/",
-    logoFile: "molecule-BIO-logo.svg",
-  },
-  {
     partnerName: "Myna Wallet",
     website: "https://www.mynawallet.jp/",
-    logoFile: "Myna-logo.png",
-  },
-  {
-    partnerName: "Kushim",
-    website: "https://kushim.co.jp/",
-    logoFile: "Kushim-logo.webp",
+    logoFile: ["Myna-logo.png"],
   },
   {
     partnerName: "Quantum3labs",
     website: "https://quantum3labs.com/",
-    logoFile: "logo-q3-logomark.svg",
+    logoFile: ["logo-q3-logomark.svg"],
   },
   {
     partnerName: "Blockchain For Good Alliance",
     website: "https://chainforgood.org/",
-    logoFile: "Blockchain_For_Good_Alliance_Logo_Primary.png",
+    logoFile: ["Blockchain_For_Good_Alliance_Logo_Primary.png"],
   },
   {
     partnerName: "Surf",
     website: "https://asksurf.ai/",
-    logoFile: "asksurf-logo.svg",
+    logoFile: ["asksurf-logo.svg"],
+  },
+  {
+    partnerName: "molecule",
+    website: "https://molecule.xyz/",
+    logoFile: ["moleculexyz.svg", "bioxyz.svg"],
+  },
+  {
+    partnerName: "Kushim",
+    website: "https://kushim.co.jp/",
+    logoFile: ["Kushim-logo.webp"],
   },
 ];
 
@@ -538,47 +538,47 @@ export const communitySponsorsData = [
   {
     partnerName: "Base Japan",
     website: "https://basejapan.notion.site/",
-    logoFile: "basejapan_blue_transparent.png",
+    logoFile: ["basejapan_blue_transparent.png"],
   },
   {
     partnerName: "UNCHAIN",
     website: "https://unchain.tech",
-    logoFile: "UNCHAIN_logo.png",
+    logoFile: ["UNCHAIN_logo.png"],
   },
   {
     partnerName: "TheGraph",
     website: "https://thegraph.com/ja/",
-    logoFile: "TheGraph-Logo-Dark.png",
+    logoFile: ["TheGraph-Logo-Dark.png"],
   },
   {
     partnerName: "ETHJKT",
     website: "https://ethjkt.com/",
-    logoFile: "tulisan.png",
+    logoFile: ["tulisan.png"],
   },
   {
     partnerName: "Shinsei Galverse",
     website: "https://www.galverse.art/",
-    logoFile: "large.png",
+    logoFile: ["large.png"],
   },
   {
     partnerName: "BGIN",
     website: "https://bgin-global.org/",
-    logoFile: "BGIN_logo.png",
+    logoFile: ["BGIN_logo.png"],
   },
   {
     partnerName: "Curvegrid Inc.",
     website: "http://www.curvegrid.com",
-    logoFile: "curvegrid-logo-horizontal-transparent.svg",
+    logoFile: ["curvegrid-logo-horizontal-transparent.svg"],
   },
   {
     partnerName: "mind palace",
     website: "https://mindpalace.jp/",
-    logoFile: "mindpalace.svg",
+    logoFile: ["mindpalace.svg"],
   },
   {
     partnerName: "AKINDO",
     website: "https://akindo.io/",
-    logoFile: "akindo.svg",
+    logoFile: ["akindo.svg"],
   },
   // {
   //   partnerName: "Amagi",
@@ -588,32 +588,32 @@ export const communitySponsorsData = [
   {
     partnerName: "byteStreame",
     website: "https://bytestreame.com/",
-    logoFile: "byteStreame.png",
+    logoFile: ["byteStreame.png"],
   },
   {
     partnerName: "BlockDev.id",
     website: "https://blockdev.id/",
-    logoFile: "BlockDev.id_logo.png",
+    logoFile: ["BlockDev.id_logo.png"],
   },
   {
     partnerName: "HAKFLOW",
     website: "https://hakflow.com",
-    logoFile: "hakflow.jpg",
+    logoFile: ["hakflow.jpg"],
   },
   {
     partnerName: "web3 Research JAPAN",
     website: "https://www.web3researchjapan.com/",
-    logoFile: "web3researchjapan.png",
+    logoFile: ["web3researchjapan.png"],
   },
   {
     partnerName: "vinyl",
     website: "https://x.com/vvinyll",
-    logoFile: "PudgyPenguins.png",
+    logoFile: ["PudgyPenguins.png"],
   },
   {
     partnerName: "TAAKE",
     website: "https://x.com/taka4198aq",
-    logoFile: "TAAKE_logo.jpeg",
+    logoFile: ["TAAKE_logo.jpeg"],
   },
 ];
 
