@@ -309,11 +309,11 @@ export const eventPartnersData = [
     website: "https://www.garage.co.jp/",
     logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
   },
-  // {
-  //   partnerName: "Bitbank",
-  //   website: "https://bitbank.cc/",
-  //   logoFile: "bitbank_logo_color.png",
-  // },
+  {
+    partnerName: "Bitbank",
+    website: "https://bitbank.cc/",
+    logoFile: "bitbank_logo_color.png",
+  },
   {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
