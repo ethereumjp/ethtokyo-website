@@ -58,6 +58,7 @@ const ScheduleSection = () => {
             address={eventInfo.location.conference.address}
             mapUrl={eventInfo.location.conference.map}
             events={conferenceEvents}
+            schedlink="https://speak.ethtokyo.org/conference-2025/schedule/"
             hasDetailedSchedule={HAS_CONFERENCE_SCHEDULE}
             isExpanded={expandedSchedules.conference}
             onToggle={() => toggleSchedule("conference")}
@@ -71,6 +72,7 @@ const ScheduleSection = () => {
             address={eventInfo.location.hackathon.address}
             mapUrl={eventInfo.location.hackathon.map}
             events={HACKATHON_EVENTS}
+            schedlink="https://taikai.network/ethtokyo/hackathons/hackathon-2025/timeline"
             hasDetailedSchedule={HAS_HACKATHON_SCHEDULE}
             isExpanded={expandedSchedules.hackathon}
             onToggle={() => toggleSchedule("hackathon")}

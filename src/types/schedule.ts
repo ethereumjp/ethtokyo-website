@@ -27,6 +27,7 @@ export interface ScheduleCardProps {
   address: string;
   mapUrl?: string | null;
   events: EventItem[];
+  schedlink?: string;
   hasDetailedSchedule?: boolean;
   isExpanded?: boolean;
   onToggle?: () => void;
