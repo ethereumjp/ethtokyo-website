@@ -439,6 +439,11 @@ export const silverSponsorsData = [
     logoFile: "Myna-logo.png",
   },
   {
+    partnerName: "Kushim",
+    website: "https://kushim.co.jp/",
+    logoFile: "Kushim-logo.webp",
+  },
+  {
     partnerName: "Quantum3labs",
     website: "https://quantum3labs.com/",
     logoFile: "logo-q3-logomark.svg",
