@@ -28,3 +28,6 @@ export interface Judge extends Contributor {}
 
 // Re-export venue types
 export * from "./venue";
+
+// Re-export schedule types
+export * from "./schedule";

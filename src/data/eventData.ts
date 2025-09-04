@@ -309,6 +309,11 @@ export const eventPartnersData = [
     website: "https://www.garage.co.jp/",
     logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
   },
+  // {
+  //   partnerName: "Bitbank",
+  //   website: "https://bitbank.cc/",
+  //   logoFile: "bitbank_logo_color.png",
+  // },
   {
     partnerName: "Toban",
     website: "https://github.com/hackdays-io/toban/",
@@ -343,6 +348,11 @@ export const eventPartnersData = [
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
+  },
+  {
+    partnerName: "Trezor",
+    website: "https://trezor.io/",
+    logoFile: "trezor-main-logo-black-rgb.svg",
   },
 ];
 
@@ -471,11 +481,11 @@ export const communitySponsorsData = [
     website: "https://bgin-global.org/",
     logoFile: "BGIN_logo.png",
   },
-  // {
-  //   partnerName: "Curvegrid Inc.",
-  //   website: "http://www.curvegrid.com",
-  //   logoFile: "curvegrid-logo-horizontal-transparent (2).svg",
-  // },
+  {
+    partnerName: "Curvegrid Inc.",
+    website: "http://www.curvegrid.com",
+    logoFile: "curvegrid-logo-horizontal-transparent.svg",
+  },
   {
     partnerName: "mind palace",
     website: "https://mindpalace.jp/",
