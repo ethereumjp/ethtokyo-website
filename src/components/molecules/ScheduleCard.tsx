@@ -11,6 +11,7 @@ const ScheduleCard = ({
   address,
   mapUrl = null,
   events = [],
+  schedlink = "https://lu.ma/eth-tokyo",
   hasDetailedSchedule = false,
   isExpanded = false,
   onToggle,
@@ -47,10 +48,10 @@ const ScheduleCard = ({
         <div css={comingSoonContainerStyle}>
           <div css={comingSoonContentStyle}>
             <div>
-              <h4 css={comingSoonTitleStyle}>Schedule Coming Soon</h4>
-              <p css={comingSoonTextStyle}>
-                Stay tuned for detailed event information
-              </p>
+              <h4 css={comingSoonTitleStyle}>
+                <a href={schedlink}>Schedule Link</a>
+              </h4>
+              <p css={comingSoonTextStyle}>Sessions are subject to change</p>
             </div>
           </div>
         </div>
