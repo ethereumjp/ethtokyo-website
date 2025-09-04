@@ -3,8 +3,8 @@ import ScheduleCard from "@/components/molecules/ScheduleCard";
 import SectionTitle from "@/components/molecules/SectionTitle";
 import {
   HACKATHON_EVENTS,
-  HAS_HACKATHON_SCHEDULE,
   HAS_CONFERENCE_SCHEDULE,
+  HAS_HACKATHON_SCHEDULE,
   SIDE_EVENTS_CALENDAR_URL,
   TICKET_URL,
 } from "@/constants/schedule";
