@@ -52,16 +52,16 @@ const SponsorsSection: FC = () => {
   `;
 
   const silverLogosGridStyle = css`
-    display: wrap;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    justify-content: space-around;
     justify-items: center;
     align-items: center;
     margin-top: 2.5rem;
     width: 100%;
 
     ${mq.mobileSmall} {
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
   `;
@@ -136,6 +136,15 @@ const SponsorsSection: FC = () => {
     object-fit: contain;
   `;
 
+  const asksurfLogoStyle = css`
+    height: 90px;
+    max-width: 100%;
+    object-fit: contain;
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+  `;
+
   const communityLogoStyle = css`
     height: 80px;
     max-width: 100%;
@@ -165,6 +174,9 @@ const SponsorsSection: FC = () => {
     // ensのロゴも特別に処理
     const isEnsLogo = props.sponsorName === "ens";
 
+    // Asksurfのロゴを特別に処理
+    const isAsksurfLogo = props.sponsorName === "Asksurf";
+
     return (
       <a href={props.website} target="_blank" rel="noopener noreferrer">
         <Image
@@ -180,7 +192,9 @@ const SponsorsSection: FC = () => {
                     ? ensLogoStyle // ens専用のスタイルを使用
                     : goldLogoStyle
                 : props.sponsorType === "silver"
-                  ? silverLogoStyle
+                  ? isAsksurfLogo
+                    ? asksurfLogoStyle // Asksurf専用の黒背景スタイルを使用
+                    : silverLogoStyle
                   : isLargeLogo
                     ? largeCommunityLogoStyle
                     : communityLogoStyle

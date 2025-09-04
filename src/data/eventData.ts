@@ -434,6 +434,11 @@ export const goldSponsorsData = [
 
 export const silverSponsorsData = [
   {
+    partnerName: "molecule",
+    website: "https://molecule.xyz/",
+    logoFile: "molecule-BIO-logo.svg",
+  },
+  {
     partnerName: "Myna Wallet",
     website: "https://www.mynawallet.jp/",
     logoFile: "Myna-logo.png",
@@ -452,6 +457,11 @@ export const silverSponsorsData = [
     partnerName: "Blockchain For Good Alliance",
     website: "https://chainforgood.org/",
     logoFile: "Blockchain_For_Good_Alliance_Logo_Primary.png",
+  },
+  {
+    partnerName: "Surf",
+    website: "https://asksurf.ai/",
+    logoFile: "asksurf-logo.svg",
   },
 ];
 
