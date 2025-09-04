@@ -43,6 +43,22 @@ export const speakersData = [
     socialLink: "https://x.com/AyaMiyagotchi",
   },
   {
+    name: "Tomasz Stańczak",
+    image: "/2025/images/speakers/Tomasz_Stanczak_Co-Executive_Director_EF.svg",
+    title: "Co-Executive Director, Founder",
+    project: "Ethereum Foundation, Nethermind",
+    talkTitle: "",
+    socialLink: "https://x.com/tkstanczak",
+  },
+  {
+    name: "Hisao-Wei Wang",
+    image: "/2025/images/speakers/Hisao-Wei_Wang_Co-Executive_Director_EF.webp",
+    title: "Co-Executive Director",
+    project: "Ehereum foundation",
+    talkTitle: "",
+    socialLink: "https://x.com/hwwonx",
+  },
+  {
     name: "Charles Lu",
     image: "/2025/images/speakers/Charles Lu_Espresso.png",
     title: "",
@@ -233,6 +249,14 @@ export const speakersData = [
     project: "Molecule.xyz",
     talkTitle: "",
     socialLink: "https://de.linkedin.com/in/ibetke",
+  },
+  {
+    name: "",
+    image: "",
+    title: "",
+    project: "",
+    talkTitle: "",
+    socialLink: "",
   },
   // {
   //   name: "",
