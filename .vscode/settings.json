@@ -6,6 +6,9 @@
     "source.fixAll.stylelint": "explicit",
     "source.organizeImports.biome": "explicit"
   },
+  "biome.enabled": true,
+  "biome.configurationPath": "./biome.json",
+  "biome.requireConfiguration": true,
   "css.validate": true,
   "less.validate": false,
   "scss.validate": false,
