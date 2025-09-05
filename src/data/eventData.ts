@@ -477,108 +477,108 @@ export const mediaPartnersData = [
 // スポンサーデータ
 export const platinumSponsorsData = [
   {
-    partnerName: "Japan Smart Chain",
-    website: "https://japansmartchain.com/",
+    partnerName: ["Japan Smart Chain"],
+    website: ["https://japansmartchain.com/"],
     logoFile: ["JSC-Logo.svg"],
   },
 ];
 
 export const goldSponsorsData = [
   {
-    partnerName: "ens",
-    website: "https://ens.domains/",
+    partnerName: ["ens"],
+    website: ["https://ens.domains/"],
     logoFile: ["ens-logo-Blue.svg"],
   },
   {
-    partnerName: "Geodework",
-    website: "https://geodework.com/",
+    partnerName: ["Geodework"],
+    website: ["https://geodework.com/"],
     logoFile: ["Geodework-logo-black.png"],
   },
   {
-    partnerName: "Eliza OS",
-    website: "https://elizaos.ai/",
+    partnerName: ["Eliza OS"],
+    website: ["https://elizaos.ai/"],
     logoFile: ["ElizaOS_Logo_Black_RGB.png"],
   },
 ];
 
 export const silverSponsorsData = [
   {
-    partnerName: "Myna Wallet",
-    website: "https://www.mynawallet.jp/",
+    partnerName: ["Myna Wallet"],
+    website: ["https://www.mynawallet.jp/"],
     logoFile: ["Myna-logo.png"],
   },
   {
-    partnerName: "Quantum3labs",
-    website: "https://quantum3labs.com/",
+    partnerName: ["Quantum3labs"],
+    website: ["https://quantum3labs.com/"],
     logoFile: ["logo-q3-logomark.svg"],
   },
   {
-    partnerName: "Blockchain For Good Alliance",
-    website: "https://chainforgood.org/",
+    partnerName: ["Blockchain For Good Alliance"],
+    website: ["https://chainforgood.org/"],
     logoFile: ["Blockchain_For_Good_Alliance_Logo_Primary.png"],
   },
   {
-    partnerName: "Surf",
-    website: "https://asksurf.ai/",
+    partnerName: ["Surf"],
+    website: ["https://asksurf.ai/"],
     logoFile: ["asksurf-logo.svg"],
   },
   {
-    partnerName: "molecule",
-    website: "https://molecule.xyz/",
+    partnerName: ["Molecule.xyz", "Bio Protocol"],
+    website: ["https://molecule.xyz/", "https://bio.xyz/"],
     logoFile: ["moleculexyz.svg", "bioxyz.svg"],
   },
   {
-    partnerName: "Kushim",
-    website: "https://kushim.co.jp/",
+    partnerName: ["Kushim"],
+    website: ["https://kushim.co.jp/"],
     logoFile: ["Kushim-logo.webp"],
   },
 ];
 
 export const communitySponsorsData = [
   {
-    partnerName: "Base Japan",
-    website: "https://basejapan.notion.site/",
-    logoFile: ["basejapan_blue_transparent.png"],
-  },
-  {
-    partnerName: "UNCHAIN",
-    website: "https://unchain.tech",
-    logoFile: ["UNCHAIN_logo.png"],
-  },
-  {
-    partnerName: "TheGraph",
-    website: "https://thegraph.com/ja/",
-    logoFile: ["TheGraph-Logo-Dark.png"],
-  },
-  {
-    partnerName: "ETHJKT",
-    website: "https://ethjkt.com/",
+    partnerName: ["ETHJKT"],
+    website: ["https://ethjkt.com/"],
     logoFile: ["tulisan.png"],
   },
   {
-    partnerName: "Shinsei Galverse",
-    website: "https://www.galverse.art/",
-    logoFile: ["large.png"],
+    partnerName: ["Base Japan"],
+    website: ["https://basejapan.notion.site/"],
+    logoFile: ["basejapan_blue_transparent.png"],
   },
   {
-    partnerName: "BGIN",
-    website: "https://bgin-global.org/",
-    logoFile: ["BGIN_logo.png"],
+    partnerName: ["UNCHAIN"],
+    website: ["https://unchain.tech"],
+    logoFile: ["UNCHAIN_logo.png"],
   },
   {
-    partnerName: "Curvegrid Inc.",
-    website: "http://www.curvegrid.com",
+    partnerName: ["Curvegrid Inc."],
+    website: ["http://www.curvegrid.com"],
     logoFile: ["curvegrid-logo-horizontal-transparent.svg"],
   },
   {
-    partnerName: "mind palace",
-    website: "https://mindpalace.jp/",
-    logoFile: ["mindpalace.svg"],
+    partnerName: ["TheGraph"],
+    website: ["https://thegraph.com/ja/"],
+    logoFile: ["TheGraph-Logo-Dark.png"],
   },
   {
-    partnerName: "AKINDO",
-    website: "https://akindo.io/",
+    partnerName: ["Shinsei Galverse"],
+    website: ["https://www.galverse.art/"],
+    logoFile: ["large.png"],
+  },
+  {
+    partnerName: ["BGIN"],
+    website: ["https://bgin-global.org/"],
+    logoFile: ["BGIN_logo.png"],
+  },
+  {
+    partnerName: ["AKINDO"],
+    website: ["https://akindo.io/"],
     logoFile: ["akindo.svg"],
+  },
+  {
+    partnerName: ["mind palace"],
+    website: ["https://mindpalace.jp/"],
+    logoFile: ["mindpalace.svg"],
   },
   // {
   //   partnerName: "Amagi",
@@ -586,33 +586,38 @@ export const communitySponsorsData = [
   //   logoFile: "amagidigital.jpg",
   // },
   {
-    partnerName: "byteStreame",
-    website: "https://bytestreame.com/",
+    partnerName: ["byteStreame"],
+    website: ["https://bytestreame.com/"],
     logoFile: ["byteStreame.png"],
   },
   {
-    partnerName: "BlockDev.id",
-    website: "https://blockdev.id/",
+    partnerName: ["BlockDev.id"],
+    website: ["https://blockdev.id/"],
     logoFile: ["BlockDev.id_logo.png"],
   },
   {
-    partnerName: "HAKFLOW",
-    website: "https://hakflow.com",
-    logoFile: ["hakflow.jpg"],
-  },
-  {
-    partnerName: "web3 Research JAPAN",
-    website: "https://www.web3researchjapan.com/",
-    logoFile: ["web3researchjapan.png"],
-  },
-  {
-    partnerName: "vinyl",
-    website: "https://x.com/vvinyll",
+    partnerName: ["vinyl"],
+    website: ["https://x.com/vvinyll"],
     logoFile: ["PudgyPenguins.png"],
   },
   {
-    partnerName: "TAAKE",
-    website: "https://x.com/taka4198aq",
+    partnerName: ["HAKFLOW"],
+    website: ["https://hakflow.com"],
+    logoFile: ["hakflow.jpg"],
+  },
+  {
+    partnerName: ["Far East Blockchain"],
+    website: ["https://fareastblockchain.com/"],
+    logoFile: ["fareastblockchain.png"],
+  },
+  {
+    partnerName: ["web3 Research JAPAN"],
+    website: ["https://www.web3researchjapan.com/"],
+    logoFile: ["web3researchjapan.png"],
+  },
+  {
+    partnerName: ["TAAKE"],
+    website: ["https://x.com/taka4198aq"],
     logoFile: ["TAAKE_logo.jpeg"],
   },
 ];

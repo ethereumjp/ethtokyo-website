@@ -141,25 +141,24 @@ const SponsorsSection: FC = () => {
 
   const SponsorLogo = (props: {
     sponsorType: "platinum" | "gold" | "silver" | "community";
-    sponsorName: string;
-    website: string;
+    sponsorName: string[];
+    website: string[];
     logoFile: string[];
   }) => {
     // Ethereum JakartaとCurvegrid Inc.のロゴを大きく表示
     const isLargeLogo =
-      props.sponsorName === "Ethereum Jakarta (ethjkt)" ||
-      props.sponsorName === "Curvegrid Inc.";
+      props.sponsorName[0] === "Ethereum Jakarta (ethjkt)" ||
+      props.sponsorName[0] === "Curvegrid Inc.";
 
     // Geodeworkのロゴを大きく表示
-    const isLargeGoldLogo = props.sponsorName === "Geodework";
+    const isLargeGoldLogo = props.sponsorName[0] === "Geodework";
 
     // ensのロゴも特別に処理
-    const isEnsLogo = props.sponsorName === "ens";
+    const isEnsLogo = props.sponsorName[0] === "ens";
 
     return (
-      <a href={props.website} target="_blank" rel="noopener noreferrer">
-        <div
-          css={css`
+      <div
+        css={css`
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -186,10 +185,16 @@ const SponsorsSection: FC = () => {
               height: ${props.sponsorType === "community" ? "100" : "120"}px;
             }
           `}
-        >
-          {props.logoFile.map((logo, idx) => (
+      >
+        {props.logoFile.map((logo, idx) => (
+          <a
+            key={props.sponsorName[idx]}
+            href={props.website[idx]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
-              key={props.sponsorName}
+              key={props.sponsorName[idx]}
               src={`/2025/images/orglogos/${props.sponsorType}Sponsors/${logo}`}
               alt={`${props.sponsorName} logo${props.logoFile.length > 1 ? ` ${idx + 1}` : ""}`}
               css={
@@ -226,9 +231,9 @@ const SponsorsSection: FC = () => {
                       : 60
               }
             />
-          ))}
-        </div>
-      </a>
+          </a>
+        ))}
+      </div>
     );
   };
 
@@ -238,9 +243,9 @@ const SponsorsSection: FC = () => {
         <div css={[containerStyle, cs]}>
           <h2 css={headingStyle}>Platinum Sponsors</h2>
           <div css={platinumLogosGridStyle}>
-            {platinumSponsorsData.map((sponsor) => (
+            {platinumSponsorsData.map((sponsor, idx) => (
               <SponsorLogo
-                key={sponsor.partnerName}
+                key={`${sponsor.partnerName[0]}-${idx}`}
                 sponsorType="platinum"
                 sponsorName={sponsor.partnerName}
                 website={sponsor.website}
@@ -255,9 +260,9 @@ const SponsorsSection: FC = () => {
         <div css={containerStyle}>
           <h2 css={headingStyle}>Gold Sponsors</h2>
           <div css={goldLogosGridStyle}>
-            {goldSponsorsData.map((sponsor) => (
+            {goldSponsorsData.map((sponsor, idx) => (
               <SponsorLogo
-                key={sponsor.partnerName}
+                key={`${sponsor.partnerName[0]}-${idx}`}
                 sponsorType="gold"
                 sponsorName={sponsor.partnerName}
                 website={sponsor.website}
@@ -272,9 +277,9 @@ const SponsorsSection: FC = () => {
         <div css={containerStyle}>
           <h2 css={headingStyle}>Silver Sponsors</h2>
           <div css={silverLogosGridStyle}>
-            {silverSponsorsData.map((sponsor) => (
+            {silverSponsorsData.map((sponsor, idx) => (
               <SponsorLogo
-                key={sponsor.partnerName}
+                key={`${sponsor.partnerName[0]}-${idx}`}
                 sponsorType="silver"
                 sponsorName={sponsor.partnerName}
                 website={sponsor.website}
@@ -289,9 +294,9 @@ const SponsorsSection: FC = () => {
         <div css={containerStyle}>
           <h2 css={headingStyle}>Community Sponsors</h2>
           <div css={communityLogosGridStyle}>
-            {communitySponsorsData.map((sponsor) => (
+            {communitySponsorsData.map((sponsor, idx) => (
               <SponsorLogo
-                key={sponsor.partnerName}
+                key={`${sponsor.partnerName[0]}-${idx}`}
                 sponsorType="community"
                 sponsorName={sponsor.partnerName}
                 website={sponsor.website}
