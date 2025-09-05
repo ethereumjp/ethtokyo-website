@@ -51,7 +51,7 @@ export const speakersData = [
     socialLink: "https://x.com/tkstanczak",
   },
   {
-    name: "Hisao-Wei Wang",
+    name: "Hsiao-Wei Wang",
     image: "/2025/images/speakers/Hisao-Wei_Wang_Co-Executive_Director_EF.webp",
     title: "Co-Executive Director",
     project: "Ehereum foundation",
