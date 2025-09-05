@@ -532,6 +532,11 @@ export const silverSponsorsData = [
     website: ["https://kushim.co.jp/"],
     logoFile: ["Kushim-logo.webp"],
   },
+  // {
+  //   partnerName: ["Cyber"],
+  //   website: ["https://cyber.co/"],
+  //   logoFile: ["cyber_logo.svg"],
+  // },
 ];
 
 export const communitySponsorsData = [
