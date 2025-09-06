@@ -253,16 +253,16 @@ export const speakersData = [
   {
     name: "Manbir",
     image: "/2025/images/speakers/Manbir.png",
-    title: "Ethereum Ecosystem Builder",
-    project: "Consensys, Ethereum Foundation, MetaMask, Binance, and Morph",
+    title: "",
+    project: "",
     talkTitle: "",
     socialLink: "https://x.com/manbirmarwah",
   },
   {
     name: "Patrick McCorry",
     image: "/2025/images/speakers/PatrickMcCorry.jpg",
-    title: "CEO",
-    project: "PISA",
+    title: "Researcher",
+    project: "Arbitrum Foundation",
     talkTitle: "",
     socialLink: "https://x.com/stonecoldpat0",
   },
@@ -394,6 +394,16 @@ export const eventPartnersData = [
     logoFile: "kismet_logo.png",
   },
   {
+    partnerName: "Red Bull",
+    website: "https://www.redbull.com/",
+    logoFile: "redbullcom-logo_double-with-text.svg",
+  },
+  {
+    partnerName: "Trezor",
+    website: "https://trezor.io/",
+    logoFile: "trezor-main-logo-black-rgb.svg",
+  },
+  {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
     logoFile: "taikai.svg",
@@ -412,16 +422,6 @@ export const eventPartnersData = [
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
-  },
-  {
-    partnerName: "Trezor",
-    website: "https://trezor.io/",
-    logoFile: "trezor-main-logo-black-rgb.svg",
-  },
-  {
-    partnerName: "Red Bull",
-    website: "https://www.redbull.com/",
-    logoFile: "redbullcom-logo_double-with-text.svg",
   },
 ];
 
@@ -513,6 +513,11 @@ export const silverSponsorsData = [
     logoFile: ["logo-q3-logomark.svg"],
   },
   {
+    partnerName: ["HashHub"],
+    website: ["https://hashhub.tokyo/"],
+    logoFile: ["hashhub_logo_black.png"],
+  },
+  {
     partnerName: ["Blockchain For Good Alliance"],
     website: ["https://chainforgood.org/"],
     logoFile: ["Blockchain_For_Good_Alliance_Logo_Primary.png"],
@@ -594,6 +599,11 @@ export const communitySponsorsData = [
     partnerName: ["BlockDev.id"],
     website: ["https://blockdev.id/"],
     logoFile: ["BlockDev.id_logo.png"],
+  },
+  {
+    partnerName: ["Orbs Japan"],
+    website: ["https://www.orbs.com/"],
+    logoFile: ["ORBS-JAPAN-horizontal-gradiant-logo.svg"],
   },
   {
     partnerName: ["vinyl"],
