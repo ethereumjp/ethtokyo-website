@@ -601,6 +601,11 @@ export const communitySponsorsData = [
     logoFile: ["BlockDev.id_logo.png"],
   },
   {
+    partnerName: ["Orbs Japan"],
+    website: ["https://www.orbs.com/"],
+    logoFile: ["ORBS-JAPAN-horizontal-gradiant-logo.svg"],
+  },
+  {
     partnerName: ["vinyl"],
     website: ["https://x.com/vvinyll"],
     logoFile: ["PudgyPenguins.png"],
