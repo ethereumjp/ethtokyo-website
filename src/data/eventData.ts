@@ -394,6 +394,16 @@ export const eventPartnersData = [
     logoFile: "kismet_logo.png",
   },
   {
+    partnerName: "Red Bull",
+    website: "https://www.redbull.com/",
+    logoFile: "redbullcom-logo_double-with-text.svg",
+  },  
+  {
+    partnerName: "Trezor",
+    website: "https://trezor.io/",
+    logoFile: "trezor-main-logo-black-rgb.svg",
+  },
+  {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
     logoFile: "taikai.svg",
@@ -412,16 +422,6 @@ export const eventPartnersData = [
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
-  },
-  {
-    partnerName: "Trezor",
-    website: "https://trezor.io/",
-    logoFile: "trezor-main-logo-black-rgb.svg",
-  },
-  {
-    partnerName: "Red Bull",
-    website: "https://www.redbull.com/",
-    logoFile: "redbullcom-logo_double-with-text.svg",
   },
 ];
 
@@ -513,6 +513,11 @@ export const silverSponsorsData = [
     logoFile: ["logo-q3-logomark.svg"],
   },
   {
+    partnerName: ["HashHub"],
+    website: ["https://hashhub.tokyo/"],
+    logoFile: ["hashhub_logo_black.png"],
+  },
+  {
     partnerName: ["Blockchain For Good Alliance"],
     website: ["https://chainforgood.org/"],
     logoFile: ["Blockchain_For_Good_Alliance_Logo_Primary.png"],
@@ -531,11 +536,6 @@ export const silverSponsorsData = [
     partnerName: ["Kushim"],
     website: ["https://kushim.co.jp/"],
     logoFile: ["Kushim-logo.webp"],
-  },
-  {
-    partnerName: ["HashHub"],
-    website: ["https://hashhub.tokyo/"],
-    logoFile: ["hashhub_logo_black.png"],
   },
 ];
 
