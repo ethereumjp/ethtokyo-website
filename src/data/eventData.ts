@@ -261,8 +261,8 @@ export const speakersData = [
   {
     name: "Patrick McCorry",
     image: "/2025/images/speakers/PatrickMcCorry.jpg",
-    title: "CEO",
-    project: "PISA",
+    title: "Researcher",
+    project: "Arbitrum Foundation",
     talkTitle: "",
     socialLink: "https://x.com/stonecoldpat0",
   },
