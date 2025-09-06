@@ -397,7 +397,7 @@ export const eventPartnersData = [
     partnerName: "Red Bull",
     website: "https://www.redbull.com/",
     logoFile: "redbullcom-logo_double-with-text.svg",
-  },  
+  },
   {
     partnerName: "Trezor",
     website: "https://trezor.io/",
