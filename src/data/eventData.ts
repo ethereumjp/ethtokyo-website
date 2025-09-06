@@ -253,8 +253,8 @@ export const speakersData = [
   {
     name: "Manbir",
     image: "/2025/images/speakers/Manbir.png",
-    title: "Ethereum Ecosystem Builder",
-    project: "Consensys, Ethereum Foundation, MetaMask, Binance, and Morph",
+    title: "",
+    project: "",
     talkTitle: "",
     socialLink: "https://x.com/manbirmarwah",
   },
