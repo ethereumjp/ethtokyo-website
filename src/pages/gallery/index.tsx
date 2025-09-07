@@ -17,6 +17,7 @@ import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 const ITEMS_PER_PAGE = 12;
 
 // --- Styles ---
+// ... (styles unchanged, omitted for brevity, same as original) ...
 const categoryFilterStyle = css`
   display: flex;
   justify-content: center;
@@ -442,24 +443,37 @@ const GalleryPage: NextPage = () => {
   const nextImage = useCallback(() => {
     if (!selectedImage) return;
     const currentPageImages = getCurrentPageImages();
+    if (currentPageImages.length === 0) return;
     const currentIndex = currentPageImages.findIndex(
       (img) => img.id === selectedImage.id,
     );
     if (currentIndex === -1) return;
-    const nextIndex = (currentIndex + 1) % currentPageImages.length;
-    setSelectedImage(currentPageImages[nextIndex]);
+    if (currentPageImages.length === 1) return;
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= currentPageImages.length) {
+      // Don't wrap around, just stay at last image
+      setSelectedImage(currentPageImages[currentPageImages.length - 1]);
+    } else {
+      setSelectedImage(currentPageImages[nextIndex]);
+    }
   }, [selectedImage, getCurrentPageImages]);
 
   const prevImage = useCallback(() => {
     if (!selectedImage) return;
     const currentPageImages = getCurrentPageImages();
+    if (currentPageImages.length === 0) return;
     const currentIndex = currentPageImages.findIndex(
       (img) => img.id === selectedImage.id,
     );
     if (currentIndex === -1) return;
-    const prevIndex =
-      currentIndex === 0 ? currentPageImages.length - 1 : currentIndex - 1;
-    setSelectedImage(currentPageImages[prevIndex]);
+    if (currentPageImages.length === 1) return;
+    const prevIndex = currentIndex - 1;
+    if (prevIndex < 0) {
+      // Don't wrap around, just stay at first image
+      setSelectedImage(currentPageImages[0]);
+    } else {
+      setSelectedImage(currentPageImages[prevIndex]);
+    }
   }, [selectedImage, getCurrentPageImages]);
 
   const handleCategoryChange = useCallback(
@@ -473,10 +487,12 @@ const GalleryPage: NextPage = () => {
 
   const handlePageChange = useCallback(
     (page: number) => {
+      // Prevent invalid page numbers
+      if (page < 1 || page > totalPages) return;
       setCurrentPage(page);
       if (selectedImage) setSelectedImage(null);
     },
-    [selectedImage],
+    [selectedImage, totalPages],
   );
 
   // Keyboard navigation for modal
