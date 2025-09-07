@@ -1,12 +1,12 @@
+import {
+  otherSpeakersGridStyle,
+  speakersGridStyle,
+  toggleButtonStyle,
+  viewMoreButtonStyle,
+} from "@/themes/styles/ConferenceSection.styles";
+import type { Speaker } from "@/utils/speakerUtils";
 import type { FC } from "react";
 import SpeakerCard from "./SpeakerCard";
-import type { Speaker } from "@/utils/speakerUtils";
-import {
-  speakersGridStyle,
-  otherSpeakersGridStyle,
-  viewMoreButtonStyle,
-  toggleButtonStyle,
-} from "@/themes/styles/ConferenceSection.styles";
 
 interface SpeakerGridProps {
   speakers: Speaker[];

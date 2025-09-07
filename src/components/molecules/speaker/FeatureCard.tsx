@@ -1,15 +1,15 @@
 import OptimizedImage from "@/components/atoms/OptimizedImage";
-import type { FC, ReactNode } from "react";
 import {
   featureCardStyle,
   featureContentStyle,
   featureDescriptionStyle,
   featureIconStyle,
   featureTitleStyle,
-  galleryImageWrapperStyle,
   galleryImageInnerStyle,
+  galleryImageWrapperStyle,
   galleryTitleStyle,
 } from "@/themes/styles/ConferenceSection.styles";
+import type { FC, ReactNode } from "react";
 
 interface FeatureCardProps {
   imageSrc: string;

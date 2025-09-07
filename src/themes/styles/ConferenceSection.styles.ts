@@ -1,5 +1,5 @@
-import { css } from "@emotion/react";
 import { brand, neutral, themeLight } from "@/themes/settings/color";
+import { css } from "@emotion/react";
 
 export const descriptionStyle = css`
   color: ${neutral.Grey4};

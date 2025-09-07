@@ -1,20 +1,20 @@
+import {
+  socialIconStyle,
+  socialLinkStyle,
+  speakerBioStyle,
+  speakerCardStyle,
+  speakerNameStyle,
+  speakerPhotoStyle,
+  speakerPositionStyle,
+  speakerProjectStyle,
+  speakerSocialStyle,
+} from "@/themes/styles/ConferenceSection.styles";
+import { type Speaker, extractAccountName } from "@/utils/speakerUtils";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import type { FC } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { extractAccountName, type Speaker } from "@/utils/speakerUtils";
-import {
-  speakerCardStyle,
-  speakerPhotoStyle,
-  speakerBioStyle,
-  speakerNameStyle,
-  speakerPositionStyle,
-  speakerProjectStyle,
-  speakerSocialStyle,
-  socialLinkStyle,
-  socialIconStyle,
-} from "@/themes/styles/ConferenceSection.styles";
 
 interface SpeakerCardProps {
   speaker: Speaker;

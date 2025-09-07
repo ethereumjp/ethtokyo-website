@@ -8,15 +8,15 @@ import {
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
+import { splitSpeakers } from "@/utils/speakerUtils";
 import { css } from "@emotion/react";
 import type { FC } from "react";
 import { useState } from "react";
 import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { MdOutlineSchedule } from "react-icons/md";
-import { splitSpeakers } from "@/utils/speakerUtils";
 import {
-  descriptionStyle,
   buttonContainerStyle,
+  descriptionStyle,
   galleryContainerStyle,
 } from "../../../themes/styles/ConferenceSection.styles";
 
