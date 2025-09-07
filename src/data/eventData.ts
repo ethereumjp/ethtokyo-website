@@ -368,7 +368,7 @@ export const speakersData = [
     title: "Public Goods Steward",
     project: "ENS DAO",
     talkTitle: "",
-    socialLink: "",
+    socialLink: "https://x.com/Coltron_eth",
   },
   {
     name: "Yung Algorithm",
