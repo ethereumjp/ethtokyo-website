@@ -323,12 +323,12 @@ export const speakersData = [
     socialLink: "https://jp.linkedin.com/in/tolehico",
   },
   {
-    name: "Jules Douméche",
+    name: "Jules Doumeche",
     image: "/2025/images/speakers/JulesDouméche.png",
     title: "Software Engineer",
     project: "Nethermind",
     talkTitle: "",
-    socialLink: "https://linkedin.com/in/jules-doumeche/",
+    socialLink: "https://x.com/julio4__",
   },
   {
     name: "Ingi Kim",
