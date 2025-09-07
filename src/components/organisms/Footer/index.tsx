@@ -134,6 +134,18 @@ const Footer: FC<ComponentProps> = ({ children }) => {
     );
   };
 
+  // Helper to get button label based on sendStatus
+  const getNewsletterButtonLabel = () => {
+    switch (sendStatus) {
+      case 1:
+        return "Sending...";
+      case 2:
+        return "Subscribed";
+      default:
+        return "Subscribe";
+    }
+  };
+
   return (
     <footer css={footerStyle}>
       <div css={containerStyle}>
@@ -204,24 +216,28 @@ const Footer: FC<ComponentProps> = ({ children }) => {
                 css={inputStyle}
                 id="email"
                 required
-                pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
                 title="Please enter a valid email address"
                 onChange={(e) => setIsValidEmail(e.target.validity.valid)}
-                disabled={[1, 2].includes(sendStatus)}
+                disabled={[1, 2, 3].includes(sendStatus)}
               />
               <Button
                 size="small"
                 variant={
-                  !isValidEmail && sendStatus === 0
-                    ? "disabled"
-                    : sendStatus === 2
+                  sendStatus === 0
+                    ? "primary"
+                    : sendStatus === 1
                       ? "secondary"
-                      : "primary"
+                      : sendStatus === 2
+                        ? "disabled"
+                        : sendStatus === 3
+                          ? "disabled"
+                          : "disabled"
                 }
                 type="submit"
                 css={footerButtonStyle}
               >
-                {sendStatus === 2 ? "Subscribed" : "Subscribe"}
+                {getNewsletterButtonLabel()}
               </Button>
             </form>
           </div>

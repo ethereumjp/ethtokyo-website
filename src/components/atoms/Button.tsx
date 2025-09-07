@@ -60,7 +60,7 @@ const Button = ({
     `,
     outline: css`
       background-color: transparent;
-      border: 2px solid ${brand.Primary};
+      outline: 2px solid ${brand.Primary};
       color: ${brand.Primary};
       &:hover {
         background-color: ${themeLight.PrimaryLowContrast};
