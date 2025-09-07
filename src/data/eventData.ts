@@ -387,14 +387,6 @@ export const speakersData = [
     socialLink: "https://x.com/dillchen",
   },
   {
-    name: "Gwénolé Martin",
-    image: "/2025/images/speakers/GwénoléMartin.png",
-    title: "DevRel",
-    project: "Consensys",
-    talkTitle: "",
-    socialLink: "https://www.linkedin.com/in/gwenolemartin/",
-  },
-  {
     name: "Jirachi",
     image: "/2025/images/speakers/Jirachi.png",
     title: "Head of Ecosystem",

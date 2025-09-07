@@ -1,333 +1,36 @@
 import Button from "@/components/atoms/Button";
-import OptimizedImage from "@/components/atoms/OptimizedImage";
+import FeatureCard from "@/components/molecules/speaker/FeatureCard";
+import SpeakerGrid from "@/components/molecules/speaker/SpeakerGrid";
 import { speakersData } from "@/data/eventData";
-import { brand, neutral, themeLight } from "@/themes/settings/color";
+import { neutral } from "@/themes/settings/color";
 import {
   containerStyle,
   headingStyle,
   sectionStyle,
 } from "@/themes/styles/common";
 import { css } from "@emotion/react";
-import Image from "next/image";
 import type { FC } from "react";
 import { useState } from "react";
 import { BiIdCard, BiMicrophone } from "react-icons/bi";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineSchedule } from "react-icons/md";
+import { splitSpeakers } from "@/utils/speakerUtils";
+import {
+  descriptionStyle,
+  buttonContainerStyle,
+  galleryContainerStyle,
+} from "../../../themes/styles/ConferenceSection.styles";
 
 const ConferenceSection: FC = () => {
-  // deform url
-  const speakerFormUrl = "https://speak.ethtokyo.org/conference-2025/submit";
-
   // スピーカー表示状態の管理
   const [showAllSpeakers, setShowAllSpeakers] = useState(false);
 
-  // 上位9人と残りのスピーカーを分離
-  const featuredSpeakers = speakersData.slice(0, 9);
-  const otherSpeakers = speakersData.slice(9);
+  // スピーカーデータを分割
+  const { featured: featuredSpeakers, others: otherSpeakers } =
+    splitSpeakers(speakersData);
 
-  // URLからアカウント名を抽出する関数
-  const extractAccountName = (url: string): string => {
-    try {
-      const urlObj = new URL(url);
-      const pathname = urlObj.pathname;
-
-      // Twitter/Xの場合
-      if (url.includes("x.com") || url.includes("twitter.com")) {
-        const match = pathname.match(/^\/([^\/]+)/);
-        return match ? `@${match[1]}` : "";
-      }
-
-      // LinkedInの場合
-      if (url.includes("linkedin.com")) {
-        const match = pathname.match(/\/in\/([^\/]+)/);
-        return match ? match[1] : "";
-      }
-
-      return "";
-    } catch {
-      return "";
-    }
+  const handleToggleSpeakers = () => {
+    setShowAllSpeakers(!showAllSpeakers);
   };
-
-  const descriptionStyle = css`
-    color: ${neutral.Grey4};
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin: 0 auto 2rem;
-    max-width: 800px;
-    text-align: center;
-  `;
-
-  const formSectionStyle = css`
-    background-color: ${neutral.White};
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 2rem;
-  `;
-
-  const formHeadingStyle = css`
-    align-items: center;
-    color: ${brand.Secondary};
-    display: flex;
-    font-size: 1.5rem;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  `;
-
-  const formDescriptionStyle = css`
-    color: ${neutral.Grey4};
-    margin-bottom: 1.5rem;
-  `;
-
-  const featureIconStyle = css`
-    align-items: center;
-    background-color: ${themeLight.PrimaryLowContrast};
-    border-radius: 50%;
-    color: ${brand.Primary};
-    display: flex;
-    flex-shrink: 0;
-    height: 3rem;
-    justify-content: center;
-    width: 3rem;
-  `;
-
-  const featureTitleStyle = css`
-    color: ${brand.Secondary};
-    font-weight: 600;
-    margin: 0 0 0.5rem;
-  `;
-
-  const speakerCardStyle = css`
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 300px;
-    flex-shrink: 0;
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    @media (max-width: 768px) {
-      align-items: flex-start;
-      padding: 1rem;
-    }
-  `;
-
-  const speakerPhotoStyle = css`
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 3px solid #e9ecef;
-    @media (max-width: 768px) {
-      width: 60px;
-      height: 60px;
-      margin-right: 16px;
-      flex-shrink: 0;
-    }
-  `;
-
-  const speakerBioStyle = css`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    gap: 8px;
-  `;
-
-  const speakerNameStyle = css`
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 4px;
-    @media (max-width: 768px) {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-  `;
-
-  const speakerPositionStyle = css`
-    font-size: 0.95rem;
-    color: #666;
-    @media (max-width: 768px) {
-      font-size: 0.9rem;
-    }
-  `;
-
-  const speakerProjectStyle = css`
-    font-size: 0.9rem;
-    color: #007bff;
-    font-weight: 500;
-    background: #e7f3ff;
-    padding: 4px 12px;
-    border-radius: 16px;
-    display: inline-block;
-    @media (max-width: 768px) {
-      font-size: 0.85rem;
-    }
-  `;
-
-  const speakerSocialStyle = css`
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-  `;
-
-  const socialLinkStyle = css`
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: #f8f9fa;
-    color: #6c757d;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    font-size: 0.85rem;
-    
-    &:hover {
-      background: ${brand.Primary} !important;
-      color: ${neutral.White} !important;
-      transform: translateY(-1px);
-    }
-    
-    &:hover span {
-      color: ${neutral.White} !important;
-    }
-    
-    &:hover div {
-      color: ${neutral.White} !important;
-    }
-    
-    @media (max-width: 768px) {
-      padding: 4px 8px;
-      font-size: 0.8rem;
-      gap: 6px;
-    }
-  `;
-
-  const socialIconStyle = css`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    @media (max-width: 768px) {
-      width: 18px;
-      height: 18px;
-    }
-  `;
-
-  const speakersGridStyle = css`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  `;
-
-  const buttonContainerStyle = css`
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  `;
-
-  const viewMoreButtonStyle = css`
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-  `;
-
-  const otherSpeakersGridStyle = css`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding-top: 1rem;
-  `;
-
-  const toggleButtonStyle = css`
-    background: ${brand.Primary};
-    color: ${neutral.White};
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    &:hover {
-      background: ${brand.Secondary};
-      transform: translateY(-1px);
-    }
-  `;
-
-  const galleryContainerStyle = css`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-items: center;
-    gap: 2rem;
-    margin: 3rem 0;
-  `;
-
-  const featureCardStyle = css`
-    background: ${neutral.White};
-    border-radius: 20px;
-    max-width: 540px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  `;
-
-  const featureContentStyle = css`
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-  `;
-
-  const featureDescriptionStyle = css`
-    color: ${neutral.Grey4};
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-  `;
-
-  const galleryImageWrapperStyle = css`
-    position: relative;
-    overflow: hidden;
-  `;
-
-  const galleryImageInnerStyle = css`
-    aspect-ratio: 16 / 10;
-    position: relative;
-    overflow: hidden;
-  `;
-
-  const galleryTitleStyle = css`
-    padding: 0.5rem 1rem;
-    color: ${neutral.White};
-    font-size: 1.1rem;
-    font-weight: 600;
-    opacity: 100;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    
-    ${galleryImageWrapperStyle}:hover & {
-      opacity: 1;
-    }
-  `;
 
   return (
     <section id="conference" css={sectionStyle}>
@@ -342,195 +45,43 @@ const ConferenceSection: FC = () => {
         </p>
 
         <div css={galleryContainerStyle}>
-          <div css={featureCardStyle}>
-            <div css={galleryImageWrapperStyle}>
-              <div css={galleryImageInnerStyle}>
-                <OptimizedImage
-                  src="/2025/images/gallery/event-image-20.jpg"
-                  alt="ETHTokyo Conference Audience"
-                  fill
-                />
-                <div css={galleryTitleStyle}>
-                  Panel Discussions showcase{" "}
-                  <a
-                    href="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=66ee4cce5378de9b4a6a4f67"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    (video link)
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div css={featureContentStyle}>
-              <div css={featureIconStyle}>
-                <MdOutlineSchedule size={24} />
-              </div>
-              <div>
-                <h3 css={featureTitleStyle}>Comprehensive Program</h3>
-                <p css={featureDescriptionStyle}>
-                  Featuring keynote speeches, panel discussions, workshops, and
-                  diverse sessions for all experience levels.
-                </p>
-              </div>
-            </div>
-          </div>
+          <FeatureCard
+            imageSrc="/2025/images/gallery/event-image-20.jpg"
+            imageAlt="ETHTokyo Conference Audience"
+            title="Panel Discussions showcase"
+            description="Featuring keynote speeches, panel discussions, workshops, and diverse sessions for all experience levels."
+            icon={<MdOutlineSchedule size={24} />}
+            videoLink="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=66ee4cce5378de9b4a6a4f67"
+            videoLinkText="video link"
+          />
 
-          <div css={featureCardStyle}>
-            <div css={galleryImageWrapperStyle}>
-              <div css={galleryImageInnerStyle}>
-                <OptimizedImage
-                  src="/2025/images/gallery/event-image-1.jpg"
-                  alt="ETHTokyo Conference Speaker"
-                  fill
-                />
-                <div css={galleryTitleStyle}>
-                  Audrey Tang at ETHTokyo'24{" "}
-                  <a
-                    href="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=672458ec24af22d0caf9b37b"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    (video link)
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div css={featureContentStyle}>
-              <div css={featureIconStyle}>
-                <BiMicrophone size={24} />
-              </div>
-              <div>
-                <h3 css={featureTitleStyle}>Industry-Leading Speakers</h3>
-                <p css={featureDescriptionStyle}>
-                  Hear from top experts and builders in the Ethereum Community,
-                  major projects, and research institutions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <FeatureCard
+            imageSrc="/2025/images/gallery/event-image-1.jpg"
+            imageAlt="ETHTokyo Conference Speaker"
+            title="Audrey Tang at ETHTokyo'24"
+            description="Hear from top experts and builders in the Ethereum Community, major projects, and research institutions."
+            icon={<BiMicrophone size={24} />}
+            videoLink="https://streameth.org/66c5c689e5d57ae57abf844a/watch?session=672458ec24af22d0caf9b37b"
+            videoLinkText="video link"
+          />
         </div>
 
         <h2 css={headingStyle}>Featured Speakers</h2>
-        <div css={speakersGridStyle}>
-          {featuredSpeakers.map((speaker) => (
-            <div key={speaker.name} css={speakerCardStyle}>
-              <Image
-                src={speaker.image}
-                alt={speaker.name}
-                css={speakerPhotoStyle}
-                width={100}
-                height={100}
-              />
-              <div css={speakerBioStyle}>
-                <div css={speakerNameStyle}>{speaker.name}</div>
-                {speaker.title && (
-                  <div css={speakerPositionStyle}>{speaker.title}</div>
-                )}
-                {speaker.project && (
-                  <div css={speakerProjectStyle}>{speaker.project}</div>
-                )}
-                {speaker.socialLink && (
-                  <div css={speakerSocialStyle}>
-                    <a
-                      href={speaker.socialLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      css={socialLinkStyle}
-                      aria-label={`${speaker.name}'s social link`}
-                    >
-                      <div css={socialIconStyle}>
-                        {speaker.socialLink.includes("x.com") ||
-                        speaker.socialLink.includes("twitter.com") ? (
-                          <FaXTwitter size={16} />
-                        ) : speaker.socialLink.includes("linkedin.com") ? (
-                          <FaLinkedin size={16} />
-                        ) : (
-                          <FaXTwitter size={16} />
-                        )}
-                      </div>
-                      <span>{extractAccountName(speaker.socialLink)}</span>
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+        <SpeakerGrid
+          speakers={featuredSpeakers}
+          showAllSpeakers={showAllSpeakers}
+          onToggleSpeakers={handleToggleSpeakers}
+          hasOtherSpeakers={otherSpeakers.length > 0}
+        />
 
-        {/* View other speakers ボタン */}
-        {otherSpeakers.length > 0 && !showAllSpeakers && (
-          <div css={viewMoreButtonStyle}>
-            <button
-              type="button"
-              css={toggleButtonStyle}
-              onClick={() => setShowAllSpeakers(true)}
-            >
-              View other speakers
-            </button>
-          </div>
-        )}
-
-        {/* 残りのスピーカー */}
         {showAllSpeakers && otherSpeakers.length > 0 && (
-          <>
-            <div css={otherSpeakersGridStyle}>
-              {otherSpeakers.map((speaker) => (
-                <div key={speaker.name} css={speakerCardStyle}>
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.name}
-                    css={speakerPhotoStyle}
-                    width={100}
-                    height={100}
-                  />
-                  <div css={speakerBioStyle}>
-                    <div css={speakerNameStyle}>{speaker.name}</div>
-                    {speaker.title && (
-                      <div css={speakerPositionStyle}>{speaker.title}</div>
-                    )}
-                    {speaker.project && (
-                      <div css={speakerProjectStyle}>{speaker.project}</div>
-                    )}
-                    {speaker.socialLink && (
-                      <div css={speakerSocialStyle}>
-                        <a
-                          href={speaker.socialLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          css={socialLinkStyle}
-                          aria-label={`${speaker.name}'s social link`}
-                        >
-                          <div css={socialIconStyle}>
-                            {speaker.socialLink.includes("x.com") ||
-                            speaker.socialLink.includes("twitter.com") ? (
-                              <FaXTwitter size={16} />
-                            ) : speaker.socialLink.includes("linkedin.com") ? (
-                              <FaLinkedin size={16} />
-                            ) : (
-                              <FaXTwitter size={16} />
-                            )}
-                          </div>
-                          <span>{extractAccountName(speaker.socialLink)}</span>
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* 下部のHide other speakersボタン */}
-            <div css={viewMoreButtonStyle}>
-              <button
-                type="button"
-                css={toggleButtonStyle}
-                onClick={() => setShowAllSpeakers(false)}
-              >
-                Hide other speakers
-              </button>
-            </div>
-          </>
+          <SpeakerGrid
+            speakers={otherSpeakers}
+            showAllSpeakers={showAllSpeakers}
+            onToggleSpeakers={() => setShowAllSpeakers(false)}
+            hasOtherSpeakers={otherSpeakers.length > 0}
+            isOtherSpeakers={true}
+          />
         )}
 
         {/* <div css={formSectionStyle}>
