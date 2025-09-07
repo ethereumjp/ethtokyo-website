@@ -134,7 +134,7 @@ export const speakersData = [
     name: "Sora Suegami",
     image: "/2025/images/speakers/SoraSuegami.jpg",
     title: "Co-Founder",
-    project: "ZK Email",
+    project: "Machina iO",
     talkTitle: "",
     socialLink: "https://x.com/sorasue77",
   },
@@ -643,12 +643,11 @@ export const endorsementsData = [
     website: "https://jba-web.jp/",
     logoFile: "/2025/images/orglogos/endorsements/JBA-logo.webp",
   },
-  // {
-  //   name: "BCCC",
-  //   website: "https://bccc.global/",
-  //   logoFile:
-  //     "/2025/images/orglogos/endorsements/bccc-logo-big-1-300x88-300x88.png",
-  // },
+  {
+    name: "BCCC",
+    website: "https://bccc.global/",
+    logoFile: "/2025/images/orglogos/endorsements/BCCC-logo.webp",
+  },
 ];
 
 export const organizersData = [
