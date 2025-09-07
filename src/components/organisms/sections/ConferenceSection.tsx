@@ -10,6 +10,7 @@ import {
 import { css } from "@emotion/react";
 import Image from "next/image";
 import type { FC } from "react";
+import { useState } from "react";
 import { BiIdCard, BiMicrophone } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -18,6 +19,13 @@ import { MdOutlineSchedule } from "react-icons/md";
 const ConferenceSection: FC = () => {
   // deform url
   const speakerFormUrl = "https://speak.ethtokyo.org/conference-2025/submit";
+
+  // スピーカー表示状態の管理
+  const [showAllSpeakers, setShowAllSpeakers] = useState(false);
+
+  // 上位9人と残りのスピーカーを分離
+  const featuredSpeakers = speakersData.slice(0, 9);
+  const otherSpeakers = speakersData.slice(9);
 
   // URLからアカウント名を抽出する関数
   const extractAccountName = (url: string): string => {
@@ -96,14 +104,13 @@ const ConferenceSection: FC = () => {
   const speakerCardStyle = css`
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     background: #fff;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 300px;
+    flex-shrink: 0;
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -223,8 +230,7 @@ const ConferenceSection: FC = () => {
   const speakersGridStyle = css`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    justify-items: start;
+    justify-content: center;
     gap: 1rem;
   `;
 
@@ -232,6 +238,37 @@ const ConferenceSection: FC = () => {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+  `;
+
+  const viewMoreButtonStyle = css`
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  `;
+
+  const otherSpeakersGridStyle = css`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  `;
+
+  const toggleButtonStyle = css`
+    background: ${brand.Primary};
+    color: ${neutral.White};
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: ${brand.Secondary};
+      transform: translateY(-1px);
+    }
   `;
 
   const galleryContainerStyle = css`
@@ -376,7 +413,7 @@ const ConferenceSection: FC = () => {
 
         <h2 css={headingStyle}>Featured Speakers</h2>
         <div css={speakersGridStyle}>
-          {speakersData.map((speaker) => (
+          {featuredSpeakers.map((speaker) => (
             <div key={speaker.name} css={speakerCardStyle}>
               <Image
                 src={speaker.image}
@@ -420,6 +457,81 @@ const ConferenceSection: FC = () => {
             </div>
           ))}
         </div>
+
+        {/* View other speakers ボタン */}
+        {otherSpeakers.length > 0 && !showAllSpeakers && (
+          <div css={viewMoreButtonStyle}>
+            <button
+              type="button"
+              css={toggleButtonStyle}
+              onClick={() => setShowAllSpeakers(true)}
+            >
+              View other speakers
+            </button>
+          </div>
+        )}
+
+        {/* 残りのスピーカー */}
+        {showAllSpeakers && otherSpeakers.length > 0 && (
+          <>
+            <div css={otherSpeakersGridStyle}>
+              {otherSpeakers.map((speaker) => (
+                <div key={speaker.name} css={speakerCardStyle}>
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name}
+                    css={speakerPhotoStyle}
+                    width={100}
+                    height={100}
+                  />
+                  <div css={speakerBioStyle}>
+                    <div css={speakerNameStyle}>{speaker.name}</div>
+                    {speaker.title && (
+                      <div css={speakerPositionStyle}>{speaker.title}</div>
+                    )}
+                    {speaker.project && (
+                      <div css={speakerProjectStyle}>{speaker.project}</div>
+                    )}
+                    {speaker.socialLink && (
+                      <div css={speakerSocialStyle}>
+                        <a
+                          href={speaker.socialLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          css={socialLinkStyle}
+                          aria-label={`${speaker.name}'s social link`}
+                        >
+                          <div css={socialIconStyle}>
+                            {speaker.socialLink.includes("x.com") ||
+                            speaker.socialLink.includes("twitter.com") ? (
+                              <FaXTwitter size={16} />
+                            ) : speaker.socialLink.includes("linkedin.com") ? (
+                              <FaLinkedin size={16} />
+                            ) : (
+                              <FaXTwitter size={16} />
+                            )}
+                          </div>
+                          <span>{extractAccountName(speaker.socialLink)}</span>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 下部のHide other speakersボタン */}
+            <div css={viewMoreButtonStyle}>
+              <button
+                type="button"
+                css={toggleButtonStyle}
+                onClick={() => setShowAllSpeakers(false)}
+              >
+                Hide other speakers
+              </button>
+            </div>
+          </>
+        )}
 
         {/* <div css={formSectionStyle}>
           <h3 css={formHeadingStyle}>
