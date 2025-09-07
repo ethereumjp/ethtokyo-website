@@ -205,7 +205,7 @@ export const viewMoreButtonStyle = css`
 `;
 
 export const toggleButtonStyle = css`
-  background: ${brand.Primary};
+  background: ${brand.Secondary};
   color: ${neutral.White};
   border: none;
   border-radius: 8px;

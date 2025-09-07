@@ -379,7 +379,7 @@ export const speakersData = [
     socialLink: "https://x.com/yungalgorithm",
   },
   {
-    name: "Dillon",
+    name: "Dillon Chen",
     image: "/2025/images/speakers/Dillon.png",
     title: "Founder / CEO",
     project: "Common.xyz",
