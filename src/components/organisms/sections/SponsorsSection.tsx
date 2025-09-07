@@ -13,7 +13,6 @@ import {
 import { css } from "@emotion/react";
 import Image from "next/image";
 import type { FC } from "react";
-import { Temp_formSection } from "./AboutSection";
 
 const SponsorsSection: FC = () => {
   const sponsorsStyle = css`
@@ -306,9 +305,6 @@ const SponsorsSection: FC = () => {
           </div>
         </div>
       </section>
-      <div css={css`background: white;`}>
-        <Temp_formSection />
-      </div>
     </>
   );
 };

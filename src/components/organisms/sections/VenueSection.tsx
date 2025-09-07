@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import SectionTitle from "@/components/molecules/SectionTitle";
 import AccommodationInfo from "@/components/molecules/venue/AccommodationInfo";
 import AirportInfo from "@/components/molecules/venue/AirportInfo";
@@ -12,6 +13,7 @@ import {
 } from "@/constants/venue";
 import eventInfo from "@/data/eventInfo.json";
 import { useVenueSection } from "@/hooks/useVenueSection";
+import { neutral } from "@/themes/settings/color";
 import {
   containerStyle,
   contentContainerStyle,
@@ -20,12 +22,13 @@ import {
   venuesContainerStyle,
 } from "@/themes/styles/venue";
 import type { VenueInfo } from "@/types/venue";
+import { css } from "@emotion/react";
 import type { FC } from "react";
+import { BiIdCard } from "react-icons/bi";
 import {
   MdOutlineAirplanemodeActive,
   MdOutlineDirectionsSubway,
 } from "react-icons/md";
-import TicketSection from "./TicketSection";
 
 const VenueSection: FC = () => {
   const { state, setActiveTab, toggleItem, toggleImageDescription } =
@@ -129,10 +132,21 @@ const VenueSection: FC = () => {
                 />
               </div>
             )}
+            <div
+              css={css`display:flex; justify-content: center; padding-bottom: 1rem;`}
+            >
+              <Button
+                href="https://app.moongate.id/e/ethtokyo2025"
+                external
+                variant="primary"
+                icon={<BiIdCard />}
+              >
+                <span css={css`color: ${neutral.White};`}>Get Tickets</span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-      <TicketSection />
     </>
   );
 };
