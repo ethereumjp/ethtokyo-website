@@ -134,7 +134,7 @@ export const speakersData = [
     name: "Sora Suegami",
     image: "/2025/images/speakers/SoraSuegami.jpg",
     title: "Co-Founder",
-    project: "ZK Email",
+    project: "Machina iO",
     talkTitle: "",
     socialLink: "https://x.com/sorasue77",
   },
