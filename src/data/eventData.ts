@@ -657,6 +657,11 @@ export const silverSponsorsData = [
     website: ["https://kushim.co.jp/"],
     logoFile: ["Kushim-logo.webp"],
   },
+  {
+    partnerName: ["Market Enterprise"],
+    website: ["https://www.marketenterprise.co.jp/"],
+    logoFile: ["MarketEnterprise-logo.svg"],
+  },
 ];
 
 export const communitySponsorsData = [
