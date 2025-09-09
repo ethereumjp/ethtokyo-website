@@ -67,6 +67,16 @@ const VenueSection: FC = () => {
     nearbyStations: ["Shibuya (渋谷) Station", "Shinsen (神泉) Station"],
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6042338798015!2d139.69406808784115!3d35.662121260370164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca8e24a397f%3A0xd219046cb159ffdb!2zRGlnaXRhbCBHYXJhZ2Ug4oCcUGFuZ2FlYeKAnQ!5e0!3m2!1sen!2sjp!4v1756411401507!5m2!1sen!2sjp",
+    imageUrl: "/2025/images/venue/DG.webp",
+    imageAlt: "Digital Garage Hackathon Venue",
+    hasImageDescription: true,
+    imageDescription: {
+      title: "About Digital Garage",
+      content: [
+        "Digital Garage is a leading technology company founded in 1995, specializing in payment platforms, fintech services, and startup investment.",
+        "Located in Shibuya, their state-of-the-art facilities provide the perfect environment for innovation and collaboration, making it an ideal venue for ETHTokyo's hackathon.",
+      ],
+    },
   };
 
   return (
