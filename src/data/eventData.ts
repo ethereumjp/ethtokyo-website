@@ -423,6 +423,11 @@ export const eventPartnersData = [
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
   },
+  {
+    partnerName: "Remo",
+    website: "https://rimo.app/about/voice",
+    logoFile: "Rimo_Logo.png",
+  },
 ];
 
 // メディアパートナーデータ
@@ -647,6 +652,11 @@ export const endorsementsData = [
     name: "BCCC",
     website: "https://bccc.global/",
     logoFile: "/2025/images/orglogos/endorsements/BCCC-logo.webp",
+  },
+  {
+    name: "Shibuya-ku",
+    website: "https://www.city.shibuya.tokyo.jp/",
+    logoFile: "/2025/images/orglogos/endorsements/shibuya-ku.png",
   },
 ];
 
