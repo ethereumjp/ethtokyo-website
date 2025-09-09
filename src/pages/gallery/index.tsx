@@ -116,7 +116,7 @@ const categoryBadgeStyle = (category: string) => css`
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  z-index: 999;
+  z-index: 50;
   background: ${category === "conference" ? brand.Primary : brand.Secondary};
   color: ${neutral.White};
 `;
@@ -131,7 +131,7 @@ const modalOverlayStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 49;
   padding: 2rem;
 `;
 
@@ -167,7 +167,7 @@ const closeButtonStyle = css`
   justify-self: right;
   margin: 0.5rem 0.5rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 50;
   transition: all 0.2s ease;
   &:hover {
     background: rgba(0, 0, 0, 0.9);
@@ -187,7 +187,7 @@ const navigationButtonStyle = css`
   justify-content: center;
   margin: 0.5rem 1rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 50;
   transition: all 0.2s ease;
   &:hover {
     background: rgba(0, 0, 0, 0.9);

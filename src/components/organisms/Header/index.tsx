@@ -1,8 +1,8 @@
-import Button from "@/components/atoms/Button";
 import { mq } from "@/themes/settings/breakpoints";
-import { brand, neutral } from "@/themes/settings/color";
+import { brand, info, neutral } from "@/themes/settings/color";
 import type { ComponentProps } from "@/types";
 import { css } from "@emotion/react";
+import Hamburger from "hamburger-react";
 import Link from "next/link";
 import { type FC, useCallback, useEffect, useRef, useState } from "react";
 
@@ -17,7 +17,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,12 +25,12 @@ const Header: FC<ComponentProps> = ({ children }) => {
 
   // ESCで閉じる
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeMenu();
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [closeMenu]);
+    window.addEventListener("keydown", handleEscKey);
+    return () => window.removeEventListener("keydown", handleEscKey);
+  }, []);
 
   // フォーカスをドロワーに移す（簡易版）
   useEffect(() => {
@@ -63,8 +63,8 @@ const Header: FC<ComponentProps> = ({ children }) => {
 
   const navContentStyle = css`
     align-items: center;
-    display: flex;
     height: 4rem;
+    display: flex;
     justify-content: space-between;
   `;
 
@@ -88,12 +88,12 @@ const Header: FC<ComponentProps> = ({ children }) => {
 
   const navLinkStyle = css`
     all: unset;
-    color: ${brand.Secondary};
     cursor: pointer;
     display: block;
     font-weight: bold;
     padding: 0.75rem 1rem;
     text-align: center;
+    border-radius: 12px;
 
     &:hover {
       background-color: #eee;
@@ -125,7 +125,8 @@ const Header: FC<ComponentProps> = ({ children }) => {
     pointer-events: ${isMenuOpen ? "auto" : "none"};
     position: fixed;
     transition: opacity 0.3s ease;
-    z-index: 40;
+    height: 100vh;
+    z-index: 98;
   `;
 
   const drawerMenuStyle = css`
@@ -134,7 +135,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
     flex-direction: column;
     gap: 1.5rem;
     height: 100vh;
-    outline: none;
+    width: 40vw;
     overflow-y: auto;
     padding: 2rem 1.5rem 1.5rem;
     position: fixed;
@@ -142,8 +143,7 @@ const Header: FC<ComponentProps> = ({ children }) => {
     top: 0;
     transform: ${isMenuOpen ? "translateX(0)" : "translateX(100%)"};
     transition: transform 0.3s ease;
-    width: 280px;
-    z-index: 50;
+    z-index: 99;
   `;
 
   const closeButtonStyle = css`
@@ -168,36 +168,54 @@ const Header: FC<ComponentProps> = ({ children }) => {
               <span>ETHTokyo</span>
             </div>
           </Link>
-          {/* ハンバーガーアイコン */}
-          <div
-            css={hamburgerStyle}
-            aria-label="Toggle menu"
-            onClick={toggleMenu}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") toggleMenu();
-            }}
-          >
-            <span />
-            <span />
-            <span />
+          <div css={css`${mq.tablet} {display: none;}`}>
+            <Hamburger
+              color={brand.Primary}
+              toggled={isMenuOpen}
+              toggle={setIsMenuOpen}
+            />
           </div>
           <nav css={navLinksStyle}>
-            <Link href="/#about" css={navLinkStyle}>
+            <Link
+              href="/#about"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               About
             </Link>
-            <Link href="/#conference" css={navLinkStyle}>
+            <Link
+              href="/#conference"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               Conference
             </Link>
-            <Link href="/#tracks" css={navLinkStyle}>
+            <Link
+              href="/#tracks"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               Hackathon
             </Link>
-            <Link href="/#gallery" css={navLinkStyle}>
+            <Link
+              href="/#gallery"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               Gallery
             </Link>
-            <Link href="/#schedule" css={navLinkStyle}>
+            <Link
+              href="/#schedule"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               Schedule
             </Link>
-            <Link href="/#venue" css={navLinkStyle}>
+            <Link
+              href="/#venue"
+              css={navLinkStyle}
+              style={{ color: brand.Secondary }}
+            >
               Venue
             </Link>
           </nav>
@@ -207,9 +225,9 @@ const Header: FC<ComponentProps> = ({ children }) => {
       <div
         css={drawerOverlayStyle}
         aria-label="Close menu"
-        onClick={closeMenu}
+        onClick={() => setIsMenuOpen(false)}
         onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") closeMenu();
+          if (e.key === "Enter" || e.key === " ") setIsMenuOpen(false);
         }}
       />
       {/* ドロワーメニュー */}
@@ -220,86 +238,55 @@ const Header: FC<ComponentProps> = ({ children }) => {
         aria-label="Navigation menu"
         tabIndex={-1}
       >
-        <button
-          type="button"
-          onClick={closeMenu}
-          css={closeButtonStyle}
-          aria-label="Close menu"
-        >
-          ×
-        </button>
-        <button
-          type="button"
+        <div css={css`margin-left: auto; margin-right: 0;`}>
+          <Hamburger
+            color={brand.Primary}
+            toggled={isMenuOpen}
+            toggle={setIsMenuOpen}
+          />
+        </div>
+        <Link
+          href="/#about"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#about")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           About
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          href="/#conference"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#conference")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           Conference
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          href="/#tracks"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#tracks")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           Hackathon
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          href="/#gallery"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#gallery")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           Gallery
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          href="/#schedule"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#schedule")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           Schedule
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          href="/#venue"
           css={navLinkStyle}
-          onClick={() => {
-            document
-              .querySelector("/#venue")
-              ?.scrollIntoView({ behavior: "smooth" });
-            closeMenu();
-          }}
+          style={{ color: brand.Secondary }}
         >
           Venue
-        </button>
+        </Link>
       </div>
     </header>
   );
