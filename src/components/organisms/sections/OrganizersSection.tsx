@@ -20,7 +20,7 @@ const OrganizersSection: FC = () => {
   const organizersLogosStyle = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
@@ -33,7 +33,7 @@ const OrganizersSection: FC = () => {
   `;
 
   const organizersLogoStyle = css`
-    height: 60px;
+    height: 100px;
     max-width: 100%;
     object-fit: contain;
   `;

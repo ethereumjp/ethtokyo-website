@@ -509,11 +509,6 @@ export const eventPartnersData = [
     logoFile: "kon.png",
   },
   {
-    partnerName: "Kismet Casa",
-    website: "https://kismetcasa.xyz/",
-    logoFile: "kismet_logo.png",
-  },
-  {
     partnerName: "Red Bull",
     website: "https://www.redbull.com/",
     logoFile: "redbullcom-logo_double-with-text.svg",
@@ -524,9 +519,19 @@ export const eventPartnersData = [
     logoFile: "trezor-main-logo-black-rgb.svg",
   },
   {
+    partnerName: "Kismet Casa",
+    website: "https://kismetcasa.xyz/",
+    logoFile: "kismet_logo.png",
+  },
+  {
     partnerName: "TAIKAI",
     website: "https://taikai.network/",
     logoFile: "taikai.svg",
+  },
+  {
+    partnerName: "Rimo",
+    website: "https://rimo.app/about/voice",
+    logoFile: "Rimo_Logo.png",
   },
   {
     partnerName: "Moongate",
@@ -542,11 +547,6 @@ export const eventPartnersData = [
     partnerName: "ZK Tokyo",
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
-  },
-  {
-    partnerName: "Remo",
-    website: "https://rimo.app/about/voice",
-    logoFile: "Rimo_Logo.png",
   },
 ];
 
@@ -691,9 +691,9 @@ export const communitySponsorsData = [
     logoFile: ["curvegrid-logo-horizontal-transparent.svg"],
   },
   {
-    partnerName: ["TheGraph"],
-    website: ["https://thegraph.com/ja/"],
-    logoFile: ["TheGraph-Logo-Dark.png"],
+    partnerName: ["BGIN"],
+    website: ["https://bgin-global.org/"],
+    logoFile: ["BGIN_logo.png"],
   },
   {
     partnerName: ["Shinsei Galverse"],
@@ -701,9 +701,9 @@ export const communitySponsorsData = [
     logoFile: ["large.png"],
   },
   {
-    partnerName: ["BGIN"],
-    website: ["https://bgin-global.org/"],
-    logoFile: ["BGIN_logo.png"],
+    partnerName: ["TheGraph"],
+    website: ["https://thegraph.com/ja/"],
+    logoFile: ["TheGraph-Logo-Dark.png"],
   },
   {
     partnerName: ["AKINDO"],
@@ -736,6 +736,11 @@ export const communitySponsorsData = [
     logoFile: ["ORBS-JAPAN-horizontal-gradiant-logo.svg"],
   },
   {
+    partnerName: ["Ocean Protocol"],
+    website: ["https://oceanprotocol.com/"],
+    logoFile: ["oceanprotocol.svg"],
+  },
+  {
     partnerName: ["vinyl"],
     website: ["https://x.com/vvinyll"],
     logoFile: ["PudgyPenguins.png"],
@@ -764,6 +769,11 @@ export const communitySponsorsData = [
 
 export const endorsementsData = [
   {
+    name: "Shibuya-ku",
+    website: "https://www.city.shibuya.tokyo.jp/",
+    logoFile: "/2025/images/orglogos/endorsements/shibuya-ku.png",
+  },
+  {
     name: "JCBA",
     website: "https://cryptocurrency-association.org/",
     logoFile: "/2025/images/orglogos/endorsements/JCBA-w.webp",
@@ -771,17 +781,12 @@ export const endorsementsData = [
   {
     name: "JBA",
     website: "https://jba-web.jp/",
-    logoFile: "/2025/images/orglogos/endorsements/JBA-logo.webp",
+    logoFile: "/2025/images/orglogos/endorsements/JBA-logo.png",
   },
   {
     name: "BCCC",
     website: "https://bccc.global/",
     logoFile: "/2025/images/orglogos/endorsements/BCCC-logo.webp",
-  },
-  {
-    name: "Shibuya-ku",
-    website: "https://www.city.shibuya.tokyo.jp/",
-    logoFile: "/2025/images/orglogos/endorsements/shibuya-ku.png",
   },
 ];
 

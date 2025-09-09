@@ -17,13 +17,12 @@ const EndorsementsSection: FC = () => {
     padding: 0rem 2rem 2rem 2rem;
   `;
 
-  const endorsementsLogosStyle = css`
+  const endorsementsContainerStyle = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
 
     ${mq.mobileSmall} {
       display: grid;
@@ -33,7 +32,7 @@ const EndorsementsSection: FC = () => {
   `;
 
   const endorsementLogoStyle = css`
-    height: 80px;
+    height: 100px;
     max-width: 100%;
     object-fit: contain;
   `;
@@ -42,7 +41,7 @@ const EndorsementsSection: FC = () => {
     <section css={[sectionStyle, endorsementsStyle]}>
       <div css={containerStyle}>
         <h2 css={headingStyle}>Endorsements</h2>
-        <div css={endorsementsLogosStyle}>
+        <div css={endorsementsContainerStyle}>
           {endorsementsData.map((endorsement) => (
             <a
               key={endorsement.name}
