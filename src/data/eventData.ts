@@ -699,6 +699,11 @@ export const silverSponsorsData = [
     website: ["https://www.marketenterprise.co.jp/"],
     logoFile: ["MarketEnterprise-logo.svg"],
   },
+  {
+    partnerName: ["Base"],
+    website: ["https://www.base.org/"],
+    logoFile: ["Base_lockup_2color.svg"],
+  },
 ];
 
 export const communitySponsorsData = [
