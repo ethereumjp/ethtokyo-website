@@ -580,6 +580,11 @@ export const eventPartnersData = [
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
   },
+  {
+    partnerName: "DSRV",
+    website: "https://dsrv.com/",
+    logoFile: "dsrv-logo-light-512w.webp",
+  },
 ];
 
 // メディアパートナーデータ
