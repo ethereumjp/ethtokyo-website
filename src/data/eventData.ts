@@ -561,6 +561,11 @@ export const eventPartnersData = [
     logoFile: "taikai.svg",
   },
   {
+    partnerName: "DSRV",
+    website: "https://dsrv.com/",
+    logoFile: "dsrv-logo-light-512w.webp",
+  },
+  {
     partnerName: "Rimo",
     website: "https://rimo.app/about/voice",
     logoFile: "Rimo_Logo.png",
@@ -665,14 +670,19 @@ export const silverSponsorsData = [
     logoFile: ["Myna-logo.png"],
   },
   {
-    partnerName: ["Quantum3labs"],
-    website: ["https://quantum3labs.com/"],
-    logoFile: ["logo-q3-logomark.svg"],
+    partnerName: ["Base"],
+    website: ["https://www.base.org/"],
+    logoFile: ["Base_lockup_2color.svg"],
   },
   {
     partnerName: ["HashHub"],
     website: ["https://hashhub.tokyo/"],
     logoFile: ["hashhub_logo_black.png"],
+  },
+  {
+    partnerName: ["Quantum3labs"],
+    website: ["https://quantum3labs.com/"],
+    logoFile: ["logo-q3-logomark.svg"],
   },
   {
     partnerName: ["Blockchain For Good Alliance"],
