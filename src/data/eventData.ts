@@ -798,6 +798,11 @@ export const silverSponsorsData = [
     logoFile: ["moleculexyz.svg", "bioxyz.svg"],
   },
   {
+    partnerName: ["Bitseek"],
+    website: ["https://bitseek.ai/"],
+    logoFile: ["bitseek.png"],
+  },
+  {
     partnerName: ["Kushim"],
     website: ["https://kushim.co.jp/"],
     logoFile: ["Kushim-logo.webp"],
