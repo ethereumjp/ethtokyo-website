@@ -585,6 +585,11 @@ export const eventPartnersData = [
     website: "https://x.com/zk_tokyo",
     logoFile: "zktokyo.png",
   },
+  {
+    partnerName: "Phiten",
+    website: "https://www.phiten.com/",
+    logoFile: "Phiten-logo.svg",
+  },
 ];
 
 // メディアパートナーデータ
