@@ -13,7 +13,7 @@ Emancipation begins in the mind; let us radically reimagine how we can harness t
 ## Hackathon
 📅 September 13-15 (Sat. - Mon.) 10:00-17:30 \
 📍 [Dragon Gate "Pangaea" / 15−1 Shibuya PARCO Bldg. 10th floor, Udagawacho, Shibuya, Tokyo](https://maps.app.goo.gl/Fboz99qPWxYERKo99)
-⚔️ [Hacaker registration](https://taikai.network/ethtokyo/hackathons/hackathon-2025)
+⚔️ [Hacker registration](https://taikai.network/ethtokyo/hackathons/hackathon-2025)
 
 ## Sponsors
 #### Platinum Sponsors
