@@ -678,6 +678,11 @@ export const eventPartnersData = [
     website: "https://www.phiten.com/",
     logoFile: "Phiten-logo.svg",
   },
+  {
+    partnerName: "PizzaDAO",
+    website: "https://globalpizza.party/",
+    logoFile: "PizzaDAO-Logo-Black.png",
+  },
 ];
 
 // メディアパートナーデータ
