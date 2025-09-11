@@ -9,7 +9,7 @@ Join us at the ETHTokyo'25 Conference for a full day of thought-provoking talks,
 
 
 ## In case of emergency
-- Contact your nearest ETHTokyo staff. They will be wearing staff t-shirts or [ETHTokyo Official Telegram](https://t.me/ethtokyo)
+- Contact your nearest ETHTokyo staff who is wearing an official staff uniform. If you can't find them immediately, reach out via [ETHTokyo Official Telegram](https://t.me/ethtokyo)
 
 
 ## F.A.Q.
