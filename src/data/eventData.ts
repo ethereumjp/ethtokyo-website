@@ -828,6 +828,11 @@ export const communitySponsorsData = [
     website: ["https://x.com/taka4198aq"],
     logoFile: ["TAAKE_logo.jpeg"],
   },
+  {
+    partnerName: ["Pacific Meta"],
+    website: ["https://pacific-meta.co.jp/"],
+    logoFile: ["Pacific_Meta_logo_1.webp"],
+  },
 ];
 
 export const endorsementsData = [
