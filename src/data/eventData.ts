@@ -450,6 +450,22 @@ export const speakersData = [
     talkTitle: "",
     socialLink: "https://x.com/kurotaky",
   },
+  {
+    name: "Daik1",
+    image: "/2025/images/speakers/Daik1.jpg",
+    title: "Lead",
+    project: "Solo Stakers Guild Japan",
+    talkTitle: "",
+    socialLink: "https://x.com/amsofdms",
+  },
+  {
+    name: "Mikihiro Ono",
+    image: "/2025/images/speakers/MikihiroOno.jpg",
+    title: "COO",
+    project: "Next Finance Tech",
+    talkTitle: "",
+    socialLink: "https://www.linkedin.com/in/幹紘-小野-413a19166/",
+  },
   // {
   //   name: "",
   //   image: "",
