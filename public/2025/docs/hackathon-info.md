@@ -8,19 +8,17 @@ Join us at the ETHTokyo'25 Conference for a full day of thought-provoking talks,
 📍 [Dragon Gate "Pangaea" / 15−1 Shibuya PARCO Bldg. 10th floor, Udagawacho, Shibuya, Tokyo](https://maps.app.goo.gl/Fboz99qPWxYERKo99)
 
 
-### Venue map
-- ![Venue map](https://ethtokyo.org/2025/images/*.ext)
-
 ## In case of emergency
-- Contact your nearest ETHTokyo staff. They will be wearing staff t-shirts.
+- Contact your nearest ETHTokyo staff. They will be wearing staff t-shirts or [ETHTokyo Official Telegram](https://t.me/ethtokyo)
+
 
 ## F.A.Q.
 
 > Q. \
-A. 
+A.
 
 > Q. \
-A. 
+A.
 
 > Q. \
-A. 
+A.
