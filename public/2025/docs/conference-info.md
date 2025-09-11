@@ -7,20 +7,17 @@ Join us at the ETHTokyo'25 Conference for a full day of thought-provoking talks,
 📅 September 12 (Fri.) 10:00-17:30 \
 📍 [United Nations University / 5-53-70 Jingumae, Shibuya, Tokyo](https://maps.app.goo.gl/9z41vXGKVTzhFFLFA)
 
-
-### Venue map
-- ![Venue map](https://ethtokyo.org/2025/images/*.ext)
-
 ## In case of emergency
-- Contact your nearest ETHTokyo staff. They will be wearing staff t-shirts.
+- Contact your nearest ETHTokyo staff who is wearing an official staff uniform. If you can't find them immediately, reach out via [ETHTokyo Official Telegram](https://t.me/ethtokyo)
 
 ## F.A.Q.
+> TBU
 
 > Q. \
-A. 
+A.
 
 > Q. \
-A. 
+A.
 
 > Q. \
-A. 
+A.
