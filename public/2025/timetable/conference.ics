@@ -12,6 +12,27 @@ TZOFFSETTO:+0900
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:pretalx-conference-2025-3SUQCX@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T112500
+DTEND;TZID=JST:20250912T115500
+DESCRIPTION:TBD
+DTSTAMP:20250911T053736Z
+LOCATION:Ethreactor Stage
+SUMMARY:On-chain IP & Neo-Culture - Suji Yan\, Founder\, Mask Network\, Tim
+ othy Shen\, Jeff Wentworth
+URL:https://speak.ethtokyo.org/conference-2025/talk/3SUQCX/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-YZDAJG@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T123000
+DTEND;TZID=JST:20250912T123500
+DESCRIPTION:Intro to Ethereum Name Service (ENS)
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] ENS - Mely.eth
+URL:https://speak.ethtokyo.org/conference-2025/talk/YZDAJG/
+END:VEVENT
+BEGIN:VEVENT
 UID:pretalx-conference-2025-KUPG33@speak.ethtokyo.org
 DTSTART;TZID=JST:20250912T113000
 DTEND;TZID=JST:20250912T114500
@@ -22,24 +43,11 @@ DESCRIPTION:Cryptography can’t tell us what is “good\,” but it can pr
  ty checks were enforced. This talk explores how cryptography can’t solve
   ethics\, but can make AI behavior falsifiable\, auditable\, and accountab
  le.
-DTSTAMP:20250831T045842Z
+DTSTAMP:20250911T053736Z
 LOCATION:Plasma Stage
 SUMMARY:Crypto for AI Safety: Verifying “Is”\, not deciding “Ought”
   - ventali
 URL:https://speak.ethtokyo.org/conference-2025/talk/KUPG33/
-END:VEVENT
-BEGIN:VEVENT
-UID:pretalx-conference-2025-KCU7HW@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T111500
-DTEND;TZID=JST:20250912T113000
-DESCRIPTION:lean Consensus(旧Beam Chain)では、現在のBLS署名から
- ハッシュベース署名への刷新が計画されています。耐
- 量子暗号であるハッシュベース署名の基本から最新論
- 文手法の内容まで技術的に深掘りします。
-DTSTAMP:20250831T045842Z
-LOCATION:Plasma Stage
-SUMMARY:コンセンサス層の量子耐性署名スキーム - banri
-URL:https://speak.ethtokyo.org/conference-2025/talk/KCU7HW/
 END:VEVENT
 BEGIN:VEVENT
 UID:pretalx-conference-2025-SZQTCD@speak.ethtokyo.org
@@ -47,53 +55,89 @@ DTSTART;TZID=JST:20250912T133500
 DTEND;TZID=JST:20250912T140500
 DESCRIPTION:Privacy in DeFi - A New Value Proposition\n\nShowing concrete e
  xamples of deep-value use cases for privacy in DeFi
-DTSTAMP:20250831T045842Z
+DTSTAMP:20250911T053736Z
 LOCATION:Plasma Stage
-SUMMARY:Feasibility of a 'Legal Mixer' with Privacy Pools Mainnet - Leona H
- ioki\, Victoria\, Vaelyn Luo
+SUMMARY:No privacy No Crypto - PMF of privacy - Vaelyn Luo\, Alan Scott\, J
+ osh Cowell
 URL:https://speak.ethtokyo.org/conference-2025/talk/SZQTCD/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-EAE98B@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T160000
+DTEND;TZID=JST:20250912T160500
+DESCRIPTION:The “Bitcoin Moment” of AI\nIn his talk\, Gordon will explo
+ re why AI is at a pivotal turning point—similar to Bitcoin’s disruptio
+ n of global finance. Today\, AI is largely controlled by big tech\, creati
+ ng challenges around privacy\, data ownership\, and value distribution. Go
+ rdon will outline how decentralization\, data privacy\, and tokenized ince
+ ntives can unlock a new paradigm for AI that is more open\, secure\, and c
+ ommunity-driven.
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] Bitseek - Gordon Kwok
+URL:https://speak.ethtokyo.org/conference-2025/talk/EAE98B/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-XUSRR8@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T144500
+DTEND;TZID=JST:20250912T151500
+DESCRIPTION:Privacy has long been framed as a “cost of protection.” How
+ ever\, with the latest advances in cryptography and incentive design\, pro
+ tecting privacy is evolving into a mechanism for generating revenue. In th
+ is session\, we will explore privacy mining\, DataDAOs\, and new yield mod
+ els in DeFi\, examining the intersection of privacy × profit. Attendees w
+ ill gain insights into the future of privacy as a money-making product tha
+ t users truly want.
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:From Privacy to yield Generation - Kyle Koshiyama\, Mykola Siusko\,
+  Leona Hioki\, Victoria
+URL:https://speak.ethtokyo.org/conference-2025/talk/XUSRR8/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-QTYNWE@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T160500
+DTEND;TZID=JST:20250912T161000
+DESCRIPTION:Coming Soon!\nComing Soon!\nComing Soon!
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] Stormbit - Carlos Ramos
+URL:https://speak.ethtokyo.org/conference-2025/talk/QTYNWE/
 END:VEVENT
 BEGIN:VEVENT
 UID:pretalx-conference-2025-GKK9QA@speak.ethtokyo.org
 DTSTART;TZID=JST:20250912T141000
 DTEND;TZID=JST:20250912T144000
-DESCRIPTION:AI agents are black boxes\, risky for high-stakes use. MCPChain
-  builds Ethereum's on-chain trust layer\, enabling verifiable\, auditable 
- AI. Discover how to unlock secure\, accountable automation for DeFi & beyo
- nd. Build bots you can prove and trust.
-DTSTAMP:20250831T045842Z
+DESCRIPTION:As AI enters the world of hacking\, security\, privacy\, develo
+ per experience\, and even culture itself are undergoing profound changes. 
+ In this panel\, white-hat hackers\, AI researchers\, and developers will c
+ ome together to discuss a wide range of topics—from the frontlines of AI
+ -driven attacks and defenses\, to new methods of bug hunting\, ecosystem-w
+ ide impacts\, and pressing ethical questions.\nAttendees will walk away wi
+ th both practical insights and forward-looking visions\, gaining a compreh
+ ensive
+DTSTAMP:20250911T053736Z
 LOCATION:Plasma Stage
-SUMMARY:Verifiable AI Agents on Ethereum: Trustless Automation via MCPChain
-  - Deeptanshu Sankhwar
+SUMMARY:When Hackers Meet AI - Deeptanshu Sankhwar\, gohan\, Francesco Andr
+ eoli
 URL:https://speak.ethtokyo.org/conference-2025/talk/GKK9QA/
 END:VEVENT
 BEGIN:VEVENT
 UID:pretalx-conference-2025-FNKECQ@speak.ethtokyo.org
 DTSTART;TZID=JST:20250912T163000
-DTEND;TZID=JST:20250912T173000
-DESCRIPTION:The Future of Corporate Transformation Driven by Ethereum: From
-  Technology to Social Implementation brings together Ethereum Founder Vita
- lik Buterin\, President Aya\, and the Ethereum Foundation Enterprise Team 
- for a special AMA session on how Japanese enterprises can adopt and levera
- ge Ethereum. This is a unique opportunity not only for developers but also
-  for corporate product owners and business leaders to engage directly with
-  key figures from the Ethereum ecosystem. Join us to explore together
-DTSTAMP:20250831T045842Z
+DTEND;TZID=JST:20250912T172500
+DESCRIPTION:This special AMA session will feature Ethereum Founder Vitalik 
+ Buterin\, President Aya\, and members of the Ethereum Foundation Enterpris
+ e Team or Founder Success Team.\n The theme will be: “How can Japanese e
+ nterprises and society adopt and leverage Ethereum?”\nThe session aims t
+ o provide not only developers\, but also corporate product owners and busi
+ ness leaders\, a rare opportunity to engage directly with key figures from
+  the Ethereum ecosystem.
+DTSTAMP:20250911T053736Z
 LOCATION:Plasma Stage
-SUMMARY:The Future of Corporate Transformation Driven by Ethereum: From Tec
- hnology to Social Implementation - Yuki Kamimoto\, Yohei Wakita
+SUMMARY:Ethereum: From Tech to Real - Yuki Kamimoto\, Yohei Wakita\, Aya Mi
+ yaguchi\, Ash Morgan\, Adrian Li\, Vitalik Buterin
 URL:https://speak.ethtokyo.org/conference-2025/talk/FNKECQ/
-END:VEVENT
-BEGIN:VEVENT
-UID:pretalx-conference-2025-FSJBPA@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T104000
-DTEND;TZID=JST:20250912T111000
-DESCRIPTION:Insert abstract
-DTSTAMP:20250831T045842Z
-LOCATION:Plasma Stage
-SUMMARY:Can L2s Become One? What Shared Sequencers and Base Rollups Can Ach
- ieve"L2 - Manbir\, Charles Lu\, vita
-URL:https://speak.ethtokyo.org/conference-2025/talk/FSJBPA/
 END:VEVENT
 BEGIN:VEVENT
 UID:pretalx-conference-2025-W3QPVB@speak.ethtokyo.org
@@ -106,83 +150,401 @@ DESCRIPTION:Indistinguishability obfuscation (iO) has been seen as the "hol
  ation and outline our roadmap toward practical iO. We will also show how i
  O could transform Ethereum into a global platform for privacy-preserving c
  omputation\, opening the ecosystem to entirely new classes of users.
-DTSTAMP:20250831T045842Z
+DTSTAMP:20250911T053736Z
 LOCATION:Plasma Stage
 SUMMARY:Our Roadmap to Practical iO - Sora Suegami
 URL:https://speak.ethtokyo.org/conference-2025/talk/W3QPVB/
 END:VEVENT
 BEGIN:VEVENT
+UID:pretalx-conference-2025-9WFCCN@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T122500
+DTEND;TZID=JST:20250912T123000
+DESCRIPTION:約1\,950本のレポートを配信している「HashHub Research」の使い方とサービスのご紹介。
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] HashHub - 石塚雅之
+URL:https://speak.ethtokyo.org/conference-2025/talk/9WFCCN/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-SFG7AF@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T120000
+DTEND;TZID=JST:20250912T121500
+DESCRIPTION:In 1988\, AKIRA put Japanese anime on the global stage for deca
+ des. Ethereum needs its own AKIRA moment. Jack\, co-founder of Shinsei Gal
+ verse\, reflects on four years of building anime and culture onchain\, and
+  explores how new models of IP can turn Ethereum from financial rails into
+  a cultural force.
+DTSTAMP:20250911T053736Z
+LOCATION:Ethreactor Stage
+SUMMARY:Ethereum’s AKIRA Moment: Building Lasting Onchain Culture - Jack 
+ Baldwin
+URL:https://speak.ethtokyo.org/conference-2025/talk/SFG7AF/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-T8HDHZ@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T141500
+DTEND;TZID=JST:20250912T144500
+DESCRIPTION:TBD
+DTSTAMP:20250911T053736Z
+LOCATION:Ethreactor Stage
+SUMMARY:理念 × 実装で考える：Ethereumとデジタル社会イン
+ フラ - Aya Miyaguchi\, Hiroyuki Tachibana\, Tomo Tagami
+URL:https://speak.ethtokyo.org/conference-2025/talk/T8HDHZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-FSJBPA@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T104000
+DTEND;TZID=JST:20250912T111000
+DESCRIPTION:Rollups play a crucial role in Ethereum’s scaling\, but while
+  they have rapidly diversified\, they also face the challenge of ecosystem
+  fragmentation. This session will explore two key approaches—shared sequ
+ encers and base rollups—clarifying their respective goals and difference
+ s.\n\nWe will further discuss major challenges such as incentive alignment
+  for rollup operators and the overall coherence of the ecosystem\, examini
+ ng how these issues might be solved and whether the costs of doing so are 
+ just
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:Can L2s Become One? What Shared Sequencers and Base Rollups Can Ach
+ ieve"L2 - Manbir\, Charles Lu\, vita
+URL:https://speak.ethtokyo.org/conference-2025/talk/FSJBPA/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-8RFXQN@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T160000
+DTEND;TZID=JST:20250912T163000
+DESCRIPTION:This session will bring together protocol contributors\, resear
+ chers\, and hardware specialists to discuss the importance of individual v
+ alidators (solo stakers) and the future of solo staking.
+DTSTAMP:20250911T053736Z
+LOCATION:Ethreactor Stage
+SUMMARY:Why Individual Validators Matter: Building Resilience and the Path 
+ Ahead - Jules Doumeche\, Daik1\, Pol Lanski\, Mikihiro Ono
+URL:https://speak.ethtokyo.org/conference-2025/talk/8RFXQN/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-PVSSMR@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T122000
+DTEND;TZID=JST:20250912T122500
+DESCRIPTION:Founded by Bybit in 2024\, the Blockchain for Good Alliance (BG
+ A) is a global coalition of innovators\, enterprises\, and institutions co
+ mmitted to advancing public goods and social impact through blockchain. In
+  this session\, we introduce BGA’s vision\, highlight our impact-driven 
+ initiatives\, and share how we foster collaboration across sectors to unlo
+ ck blockchain’s potential for systemic change.
+DTSTAMP:20250911T053736Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] Blockchain for Good Alliance - Mickey Amami
+URL:https://speak.ethtokyo.org/conference-2025/talk/PVSSMR/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-CBNZLW@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T134000
+DTEND;TZID=JST:20250912T141000
+DESCRIPTION:TBD
+DTSTAMP:20250911T053736Z
+LOCATION:Ethreactor Stage
+SUMMARY:Present and future of public goods funding - David Casey\, Eliza Pa
+ ncake\, Hiro Taiyo Hamada
+URL:https://speak.ethtokyo.org/conference-2025/talk/CBNZLW/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-JBDB9C@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T110000
+DTEND;TZID=JST:20250912T112000
+DESCRIPTION:TBD
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:Fusaka and Glamsterdam - what is coming to Ethereum - Tomasz K. Sta
+ ńczak
+URL:https://speak.ethtokyo.org/conference-2025/talk/JBDB9C/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-C3TTES@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T131000
+DTEND;TZID=JST:20250912T134000
+DESCRIPTION:TBD
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:How to protect your on-chain assets? - Maika Isogawa\, Jirachi\, To
+ mas Vaic\, Paul Clemson
+URL:https://speak.ethtokyo.org/conference-2025/talk/C3TTES/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-WRKKKJ@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T123500
+DTEND;TZID=JST:20250912T130500
+DESCRIPTION:TBD
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:Agent-Native Coordination & DAO - Colton Liberacki\, Yung Algorithm
+ \, Dillon Chen\, Gwénolé Martin
+URL:https://speak.ethtokyo.org/conference-2025/talk/WRKKKJ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-9QSFTM@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T155500
+DTEND;TZID=JST:20250912T160000
+DESCRIPTION:Curious about how to get started with elizaOS? This talk is you
+ r entry point. I’ll walk you through the key resources\, tools\, and com
+ munity spaces designed to help you dive into the world of AI agents\, whet
+ her you're just exploring or ready to start building.
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored Session] ElizaOS - Nisita Tappata
+URL:https://speak.ethtokyo.org/conference-2025/talk/9QSFTM/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-SV9PEG@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T161000
+DTEND;TZID=JST:20250912T161500
+DESCRIPTION:DeSci is changing how research is funded\, shared\, validated a
+ nd commercialised using blockchain\, open data\, and new incentives. This 
+ 5-minute speedrun covers the problems in today’s system\, the fixes DeSc
+ i offers\, and where it’s heading—leaving you with a clear snapshot of
+  the movement and what molecule.xyz\, bio.xyz and pump.science are contrib
+ uting to it!
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] #DeSci Speedrun with bio.xyz and molecule.xyz -
+  Ivo Betke
+URL:https://speak.ethtokyo.org/conference-2025/talk/SV9PEG/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-DZG7CC@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T115000
+DTEND;TZID=JST:20250912T122000
+DESCRIPTION:High-speed EVM rollups prioritize performance and compatibility
+ \, but inevitably inherit the constraints of DA. Stateless approaches\, by
+  separating execution from state management\, open up new possibilities\, 
+ yet many open challenges remain.
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:Curing the Rollup Ecosystem’s DA Addiction: High-Speed EVM vs Sta
+ telessness - Leona Hioki\, Jack Saracco\, Patrick McCorry
+URL:https://speak.ethtokyo.org/conference-2025/talk/DZG7CC/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-7QLXED@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T130000
+DTEND;TZID=JST:20250912T133000
+DESCRIPTION:Coming soon !! \nComing soon !! \nComing soon !!
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:Who Holds the Private Key: Reconstructing Wallet UX and Privacy - N
+ oah Jelich\, Aki\, Shin'ichiro Matsuo
+URL:https://speak.ethtokyo.org/conference-2025/talk/7QLXED/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-CSFFWK@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T125000
+DTEND;TZID=JST:20250912T125500
+DESCRIPTION:Japan Smart Chain is a Japan-born\, fully Ethereum-compatible L
+ ayer 1 blockchain. It is validated by leaders of Japanese industry within 
+ Japan and is optimized for Japanese regulations and consumer protection.
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] Japan Smart Chain - Julia Szoradi
+URL:https://speak.ethtokyo.org/conference-2025/talk/CSFFWK/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-9H7X3D@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T152500
+DTEND;TZID=JST:20250912T155500
+DESCRIPTION:This session will focus on the Asian community’s (including C
+ hina and Japan) contribution to Ethereum’s early growth\, reflecting on 
+ how Vitalik and Dan visited Japan around 2016\, interacted with financial 
+ institutions\, and engaged with the local blockchain community.\nThe discu
+ ssion will highlight Asia’s role in bridging East and West and share per
+ spectives on the future of global collaboration.
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:Bridging East and West: Stories from the Early Days of Ethereum and
+  Asia’s Support - Vitalik Buterin\, Andy Dan
+URL:https://speak.ethtokyo.org/conference-2025/talk/9H7X3D/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-VN8BUJ@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T101500
+DTEND;TZID=JST:20250912T104500
+DESCRIPTION:Ethereum’s growth has long depended on local communities\, ha
+ ckathons\, and independent incubators. But these efforts are often fragmen
+ ted\, with limited collaboration across regions and domains. This panel br
+ ings together the founders of Ethreactor to discuss why Ethereum now needs
+  a collective incubator DAO—a global network where incubators unite\, sh
+ are resources\, and coordinate action. Together\, we will explore how this
+  model can amplify impact\, create shared value\, and ensure Ethereum’s 
+ future
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:Why Ethereum Needs a Collective of Incubators - Yudai Suzuki\, Ingi
+  Kim\, Adrian Li
+URL:https://speak.ethtokyo.org/conference-2025/talk/VN8BUJ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-B9LPEM@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T124500
+DTEND;TZID=JST:20250912T125000
+DESCRIPTION:当社クシム（東証2345）の代表の田原と申しま
+ す。\n私はもともとSolidityエンジニアとしても働いてい
+ た経験もあり、弊社のメンバーもほとんどが何かしらEt
+ hereumに関する業務経験のあるメンバーです。\nそんな当
+ 社のご紹介と、現在話題になっている暗号資産トレジ
+ ャリー戦略について、上場会社経営者から見た利点と
+ 限界、そして当社としての方針について簡単にお話し
+ ます。
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:[Sponsored session] 上場会社クシムのご紹介と暗号資
+ 産トレジャリー戦略の今後について - 田原弘貴(Tahara Hir
+ oki)
+URL:https://speak.ethtokyo.org/conference-2025/talk/B9LPEM/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-VWJDHE@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T150500
+DTEND;TZID=JST:20250912T152000
+DESCRIPTION:Allocating capital is how the world decides what matters. d/acc
+  offers principles for what deserves support - but how do we build the fun
+ ding engine around it? \n\nIsla - founder of Zuitzerland shares how they p
+ lan to build a permanent open-source oriented village and society sandbox 
+ in Switzerland to accelerate d/acc aligned builders.
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:d/acc the Swiss Way: Building Physical Hubs to Grow the d/acc Idea 
+ Machine - Isla
+URL:https://speak.ethtokyo.org/conference-2025/talk/VWJDHE/
+END:VEVENT
+BEGIN:VEVENT
 UID:pretalx-conference-2025-8FWXAB@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T173000
-DTEND;TZID=JST:20250912T174500
+DTSTART;TZID=JST:20250912T172500
+DTEND;TZID=JST:20250912T173000
 DESCRIPTION:In this closing remark\, we will reflect on the key insights an
  d inspirations shared throughout ETHTokyo. Beyond the technical breakthrou
  ghs\, we will highlight how the community came together to shape visions f
  or Ethereum’s future. Closing with gratitude and a call to continue buil
  ding\, we aim to carry the spirit of ETHTokyo forward into the broader glo
  bal ecosystem.
-DTSTAMP:20250831T045842Z
+DTSTAMP:20250911T053737Z
 LOCATION:Plasma Stage
 SUMMARY:Closing Remark - Yuta Kurotaki
 URL:https://speak.ethtokyo.org/conference-2025/talk/8FWXAB/
 END:VEVENT
 BEGIN:VEVENT
-UID:pretalx-conference-2025-XUSRR8@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T144500
-DTEND;TZID=JST:20250912T151500
-DESCRIPTION:Insert abstract
-DTSTAMP:20250831T045842Z
+UID:pretalx-conference-2025-SNZ98M@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T123500
+DTEND;TZID=JST:20250912T124000
+DESCRIPTION:# Beyond Speculation: Bridging Ethereum with Societal Trust Sys
+ tems\n\nthereum is often perceived primarily as a speculative tool. Yet it
+ s true potential lies in becoming the coordination layer for public goods 
+ and everyday life. This talk explores how Ethereum can move beyond specula
+ tion by integrating with societal trust systems — national-scale digital
+  identity infrastructures that provide reliable verification and inclusivi
+ ty. By connecting Ethereum’s trustless architecture with existing tru
+DTSTAMP:20250911T053737Z
 LOCATION:Plasma Stage
-SUMMARY:From Privacy to yield Generation - Kyle Koshiyama\, Mykola Siusko\,
-  Leona Hioki
-URL:https://speak.ethtokyo.org/conference-2025/talk/XUSRR8/
+SUMMARY:[Sponsored session] Mynawallet - Hiroyuki Tachibana
+URL:https://speak.ethtokyo.org/conference-2025/talk/SNZ98M/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-JNYTJQ@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T121500
+DTEND;TZID=JST:20250912T123000
+DESCRIPTION:Moving intellectual property as real world asset on chain can o
+ nly be the first building block to achieving true DeSci. By breaking up th
+ e entire scientific process into a composable stack of various scientific 
+ protocols that allow science and scientific DAOs to collaborate freely\, w
+ e might achieve true open science. In my talk Id like to explore what this
+  idea would look like and discuss how we might get there.
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:The State of Decentralised Science and how we might achieve scienti
+ fic composability. - Ivo Betke
+URL:https://speak.ethtokyo.org/conference-2025/talk/JNYTJQ/
 END:VEVENT
 BEGIN:VEVENT
 UID:pretalx-conference-2025-UGXGBU@speak.ethtokyo.org
 DTSTART;TZID=JST:20250912T100000
 DTEND;TZID=JST:20250912T101500
-DESCRIPTION:ETHTokyo is a place where people who share Ethereum’s ideals 
- gather in the city of Tokyo to implement new ideas\, experiment\, and shap
- e the future together. Here\, the discussion goes beyond technical topics 
- to consider how Ethereum can take root in society and culture\, and what n
- ew possibilities may emerge from it.
-DTSTAMP:20250831T045842Z
+DESCRIPTION:ETHTokyo is a vibrant conference and hackathon for the global E
+ thereum community\, bringing together people from diverse backgrounds\, id
+ eas\, and skills to share their love for Ethereum and the world it envisio
+ ns. At this conference\, industry leaders\, developers\, and passionate en
+ thusiasts will gather for a full day of inspiring talks\, panel discussion
+ s\, and networking opportunities. Come and learn about the latest trends i
+ n Ethereum and blockchain technology.
+DTSTAMP:20250911T053737Z
 LOCATION:Plasma Stage
-SUMMARY:Opening Remark - irohas.eth\, Seiya
+SUMMARY:Opening Remark - irohas.eth\, Seiya\, Toshi Kamei\, Mai Fujimoto
 URL:https://speak.ethtokyo.org/conference-2025/talk/UGXGBU/
 END:VEVENT
 BEGIN:VEVENT
-UID:pretalx-conference-2025-G37BYY@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T152000
-DTEND;TZID=JST:20250912T155000
-DESCRIPTION:No privacy No Crypto - PMF of privacy\nNo privacy No Crypto - P
- MF of privacy\nNo privacy No Crypto - PMF of privacy\nNo privacy No Crypto
-  - PMF of privacy
-DTSTAMP:20250831T045842Z
+UID:pretalx-conference-2025-AV7LEM@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T162000
+DTEND;TZID=JST:20250912T163000
+DESCRIPTION:EIP‑2926 introduces a novel chunk-based code merkleization de
+ sign for Ethereum. Instead of proving the entire contract\, bytecodes are 
+ split into fixed-size chunks and committed into a Merkle Patricia Trie (MP
+ T). This approach significantly reduces witness sizes\, lowers resource co
+ nsumption for ZK-EVM provers\, and decreases network bandwidth requirement
+ s for stateless clients.
+DTSTAMP:20250911T053737Z
 LOCATION:Plasma Stage
-SUMMARY:No privacy No Crypto - PMF of privacy - Alan Scott
-URL:https://speak.ethtokyo.org/conference-2025/talk/G37BYY/
+SUMMARY:Chunk Your Code\, Cut the Cost: EIP‑2926 Explained - Wei Han Ng
+URL:https://speak.ethtokyo.org/conference-2025/talk/AV7LEM/
 END:VEVENT
 BEGIN:VEVENT
-UID:pretalx-conference-2025-7QLXED@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T130000
-DTEND;TZID=JST:20250912T133000
-DESCRIPTION:Insert abstract
-DTSTAMP:20250831T045842Z
-LOCATION:Plasma Stage
-SUMMARY:Who Holds the Private Key: Reconstructing Wallet UX and Privacy - N
- oah Jelich\, Aki\, Shin'ichiro Matsuo\, Dayana Aleksandrova
-URL:https://speak.ethtokyo.org/conference-2025/talk/7QLXED/
+UID:pretalx-conference-2025-PHMZRL@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T104500
+DTEND;TZID=JST:20250912T110000
+DESCRIPTION:This talk presents EIP-7923\, which introduces a sparse-page me
+ mory model with linear gas pricing—enabling up to 64MB memory per transa
+ ction. It modernizes EVM memory management while maintaining DoS resistanc
+ e.
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:Introducing EIP-7923: Linearize memory cost with sparse-page-based 
+ memory model - Qi Zhou
+URL:https://speak.ethtokyo.org/conference-2025/talk/PHMZRL/
 END:VEVENT
 BEGIN:VEVENT
-UID:pretalx-conference-2025-DZG7CC@speak.ethtokyo.org
-DTSTART;TZID=JST:20250912T115000
-DTEND;TZID=JST:20250912T122000
-DESCRIPTION:insert abstract
-DTSTAMP:20250831T045842Z
+UID:pretalx-conference-2025-M7FZSG@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T145000
+DTEND;TZID=JST:20250912T150500
+DESCRIPTION:RealFi - Exploring how Ethereum can more effectively engage wit
+ h real-world contexts: what is required\, what remains absent\, and the st
+ rategies that may enable broader adoption. I will reflect on the progress 
+ of the Ethereum ecosystem over the past decade\, consider the structural g
+ aps that still exist\, and share how Funding the Commons is approaching th
+ ese challenges. Finally\, I will situate this in my own trajectory\, begin
+ ning with early work in 2013 building merchant off-ramps for bitcoin\, whi
+DTSTAMP:20250911T053737Z
+LOCATION:Ethreactor Stage
+SUMMARY:RealFi - Exploring how Ethereum can more effectively engage with re
+ al-world contexts - David Casey
+URL:https://speak.ethtokyo.org/conference-2025/talk/M7FZSG/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-9K7PML@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T124000
+DTEND;TZID=JST:20250912T124500
+DESCRIPTION:Overview of Bitbank\n\nビットバンクの概要説明
+DTSTAMP:20250911T053737Z
 LOCATION:Plasma Stage
-SUMMARY:Curing the Rollup Ecosystem’s DA Addiction: High-Speed EVM vs Sta
- telessness - Leona Hioki\, Jack Saracco\, Patrick McCorry
-URL:https://speak.ethtokyo.org/conference-2025/talk/DZG7CC/
+SUMMARY:[Sponsored session] Bitbank - 桑原惇
+URL:https://speak.ethtokyo.org/conference-2025/talk/9K7PML/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-conference-2025-KCU7HW@speak.ethtokyo.org
+DTSTART;TZID=JST:20250912T111500
+DTEND;TZID=JST:20250912T113000
+DESCRIPTION:lean Consensus(旧Beam Chain)では、現在のBLS署名から
+ ハッシュベース署名への刷新が計画されています。耐
+ 量子暗号であるハッシュベース署名の基本から最新論
+ 文手法の内容まで技術的に深掘りします。
+DTSTAMP:20250911T053737Z
+LOCATION:Plasma Stage
+SUMMARY:コンセンサス層の量子耐性署名スキーム - banri
+URL:https://speak.ethtokyo.org/conference-2025/talk/KCU7HW/
 END:VEVENT
 END:VCALENDAR
