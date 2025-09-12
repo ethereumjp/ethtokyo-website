@@ -810,7 +810,7 @@ export const silverSponsorsData = [
   {
     partnerName: ["Market Enterprise"],
     website: ["https://www.marketenterprise.co.jp/"],
-    logoFile: ["MarketEnterprise-logo.svg"],
+    logoFile: ["MarketEnterprise-logo.png"],
   },
 ];
 
