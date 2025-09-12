@@ -609,11 +609,6 @@ export const tracksData = [
 // イベントパートナーデータ
 export const eventPartnersData = [
   {
-    partnerName: "Digital Garage",
-    website: "https://www.garage.co.jp/",
-    logoFile: "Digital_Garage03_Basic_Logo_Blk_Yoko.png",
-  },
-  {
     partnerName: "Bitbank",
     website: "https://bitbank.cc/",
     logoFile: "bitbank_logo_color.png",
@@ -735,6 +730,16 @@ export const mediaPartnersData = [
 ];
 
 // スポンサーデータ
+export const venueSupportData = [
+  {
+    partnerName: ["Digital Garage"],
+    website: ["https://www.garage.co.jp/"],
+    logoFile: [
+      "/2025/images/orglogos/eventPartners/Digital_Garage03_Basic_Logo_Blk_Yoko.png",
+    ],
+  },
+];
+
 export const platinumSponsorsData = [
   {
     partnerName: ["Japan Smart Chain"],
