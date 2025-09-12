@@ -129,9 +129,6 @@ Emancipation begins in the mind; let us radically reimagine how we can harness t
 
 #### Event Partners
 <div class="img-list">
-<a href="https://www.garage.co.jp/">
-  <img src="https://ethtokyo.org/2025/images/orglogos/eventPartners/Digital_Garage03_Basic_Logo_Blk_Yoko.png" alt="Digital Garage">
-</a>
 <a href="https://bitbank.cc/">
   <img src="https://ethtokyo.org/2025/images/orglogos/eventPartners/bitbank_logo_color.png" alt="Bitbank">
 </a>

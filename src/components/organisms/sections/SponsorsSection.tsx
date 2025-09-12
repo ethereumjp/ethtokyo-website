@@ -3,6 +3,7 @@ import {
   goldSponsorsData,
   platinumSponsorsData,
   silverSponsorsData,
+  venueSupportData,
 } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import {
@@ -34,6 +35,20 @@ const SponsorsSection: FC = () => {
     ${mq.mobileSmall} {
       gap: 2rem;
       justify-content: center;
+    }
+  `;
+
+  const venueLogosGridStyle = css`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+
+    ${mq.mobileSmall} {
+      gap: 2rem;
     }
   `;
 
@@ -83,6 +98,12 @@ const SponsorsSection: FC = () => {
   `;
 
   const platinumLogoStyle = css`
+    height: 120px;
+    max-width: 100%;
+    object-fit: contain;
+  `;
+
+  const venueLogoStyle = css`
     height: 120px;
     max-width: 100%;
     object-fit: contain;
@@ -139,7 +160,7 @@ const SponsorsSection: FC = () => {
   `;
 
   const SponsorLogo = (props: {
-    sponsorType: "platinum" | "gold" | "silver" | "community";
+    sponsorType: "venue" | "platinum" | "gold" | "silver" | "community";
     sponsorName: string[];
     website: string[];
     logoFile: string[];
@@ -163,25 +184,35 @@ const SponsorsSection: FC = () => {
             align-items: center;
             justify-content: center;
             width: ${
-              props.sponsorType === "platinum"
+              props.sponsorType === "venue"
                 ? 360
-                : props.sponsorType === "gold"
-                  ? 320
-                  : props.sponsorType === "silver"
-                    ? 240
-                    : 160
-            }px;
-            ${mq.mobileSmall} {
-              width: ${
-                props.sponsorType === "platinum"
+                : props.sponsorType === "platinum"
                   ? 360
                   : props.sponsorType === "gold"
                     ? 320
                     : props.sponsorType === "silver"
                       ? 240
-                      : 140
+                      : 160
+            }px;
+            ${mq.mobileSmall} {
+              width: ${
+                props.sponsorType === "venue"
+                  ? 360
+                  : props.sponsorType === "platinum"
+                    ? 360
+                    : props.sponsorType === "gold"
+                      ? 320
+                      : props.sponsorType === "silver"
+                        ? 240
+                        : 140
               }px;
-              height: ${props.sponsorType === "community" ? "100" : "120"}px;
+              height: ${
+                props.sponsorType === "venue"
+                  ? "120"
+                  : props.sponsorType === "community"
+                    ? "100"
+                    : "120"
+              }px;
             }
           `}
       >
@@ -194,40 +225,50 @@ const SponsorsSection: FC = () => {
           >
             <Image
               key={props.sponsorName[idx]}
-              src={`/2025/images/orglogos/${props.sponsorType}Sponsors/${logo}`}
+              src={
+                logo.startsWith("/")
+                  ? logo
+                  : `/2025/images/orglogos/${props.sponsorType}Sponsors/${logo}`
+              }
               alt={`${props.sponsorName} logo${props.logoFile.length > 1 ? ` ${idx + 1}` : ""}`}
               css={
-                props.sponsorType === "platinum"
-                  ? platinumLogoStyle
-                  : props.sponsorType === "gold"
-                    ? isLargeGoldLogo
-                      ? largeGoldLogoStyle
-                      : isEnsLogo
-                        ? ensLogoStyle
-                        : goldLogoStyle
-                    : props.sponsorType === "silver"
-                      ? silverLogoStyle
-                      : isLargeLogo
-                        ? largeCommunityLogoStyle
-                        : communityLogoStyle
+                props.sponsorType === "venue"
+                  ? venueLogoStyle
+                  : props.sponsorType === "platinum"
+                    ? platinumLogoStyle
+                    : props.sponsorType === "gold"
+                      ? isLargeGoldLogo
+                        ? largeGoldLogoStyle
+                        : isEnsLogo
+                          ? ensLogoStyle
+                          : goldLogoStyle
+                      : props.sponsorType === "silver"
+                        ? silverLogoStyle
+                        : isLargeLogo
+                          ? largeCommunityLogoStyle
+                          : communityLogoStyle
               }
               width={
-                props.sponsorType === "platinum"
+                props.sponsorType === "venue"
                   ? 360
-                  : props.sponsorType === "gold"
-                    ? 320
-                    : props.sponsorType === "silver"
-                      ? 240
-                      : 160
+                  : props.sponsorType === "platinum"
+                    ? 360
+                    : props.sponsorType === "gold"
+                      ? 320
+                      : props.sponsorType === "silver"
+                        ? 240
+                        : 160
               }
               height={
-                props.sponsorType === "platinum"
+                props.sponsorType === "venue"
                   ? 120
-                  : props.sponsorType === "gold"
-                    ? 100
-                    : props.sponsorType === "silver"
-                      ? 80
-                      : 60
+                  : props.sponsorType === "platinum"
+                    ? 120
+                    : props.sponsorType === "gold"
+                      ? 100
+                      : props.sponsorType === "silver"
+                        ? 80
+                        : 60
               }
             />
           </a>
@@ -238,6 +279,23 @@ const SponsorsSection: FC = () => {
 
   return (
     <>
+      <section css={[partnersSectionStyle, sponsorsStyle]}>
+        <div css={[containerStyle, cs]}>
+          <h2 css={headingStyle}>Venue Support</h2>
+          <div css={venueLogosGridStyle}>
+            {venueSupportData.map((sponsor, idx) => (
+              <SponsorLogo
+                key={`${sponsor.partnerName[0]}-${idx}`}
+                sponsorType="venue"
+                sponsorName={sponsor.partnerName}
+                website={sponsor.website}
+                logoFile={sponsor.logoFile}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section css={[partnersSectionStyle, sponsorsStyle]}>
         <div css={[containerStyle, cs]}>
           <h2 css={headingStyle}>Platinum Sponsors</h2>
