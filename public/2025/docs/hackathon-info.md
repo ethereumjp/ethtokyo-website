@@ -11,14 +11,10 @@ Join us at the ETHTokyo'25 Conference for a full day of thought-provoking talks,
 ## In case of emergency
 - Contact your nearest ETHTokyo staff who is wearing an official staff uniform. If you can't find them immediately, reach out via [ETHTokyo Official Telegram](https://t.me/ethtokyo)
 
+## Notice
+- Registration on Taikai starts at 9am on September 15 and closes at 10am. Please be careful not to miss the deadline.
+- The first-floor door of the hackathon venue building does not open automatically between 9:30pm. and 7:30am. Staffs are stationed on the 10th and 18th floors, so please mention on Telegram group to have the door opened.
 
-## F.A.Q.
-
-> Q. \
-A.
-
-> Q. \
-A.
-
-> Q. \
-A.
+## お知らせ
+- Taikaiでのプロジェクトの登録は、9/15 9amスタート、10amがリミットです。気をつけてください。
+- Hackathon会場ビルの1Fドアは、夜間9:30pm〜翌7:30amは自動では空きません。スタッフは10F、18Fに待機していますので、telegram groupに呼びかけて開けてください。
