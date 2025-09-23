@@ -25,29 +25,37 @@ interface TrackCardProps {
 }
 
 const FinalistCard: FC<FinalistCardProps> = ({ finalist }) => {
+  const hasImage = finalist.image && finalist.image.trim() !== "";
+
   return (
     <div css={finalistCardStyle}>
       <div css={finalistImageWrapperStyle}>
-        <OptimizedImage
-          src={finalist.image}
-          alt={finalist.name}
-          css={finalistImageStyle}
-          width={80}
-          height={80}
-        />
+        {hasImage ? (
+          <OptimizedImage
+            src={finalist.image}
+            alt={finalist.name}
+            css={finalistImageStyle}
+            width={80}
+            height={80}
+          />
+        ) : (
+          <div css={finalistPlaceholderStyle}>🍕</div>
+        )}
         <div css={finalistPrizeBadgeStyle}>{finalist.prize}</div>
       </div>
       <div css={finalistInfoStyle}>
         <h4 css={finalistNameStyle}>{finalist.name}</h4>
         <p css={finalistDescriptionStyle}>{finalist.description}</p>
-        <a
-          href={finalist.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          css={finalistLinkStyle}
-        >
-          View Project →
-        </a>
+        {finalist.link && finalist.link.trim() !== "" && (
+          <a
+            href={finalist.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            css={finalistLinkStyle}
+          >
+            View Project →
+          </a>
+        )}
       </div>
     </div>
   );
@@ -206,9 +214,9 @@ const TracksSection: FC = () => {
                     <div css={finalistsGridStyle}>
                       {finalistsData[
                         track.id as keyof typeof finalistsData
-                      ].map((finalist, index) => (
+                      ].map((finalist) => (
                         <FinalistCard
-                          key={`finalist-${track.id}-${index}`}
+                          key={`finalist-${track.id}-${finalist.name}`}
                           finalist={finalist}
                         />
                       ))}
@@ -217,6 +225,69 @@ const TracksSection: FC = () => {
                 )}
             </div>
           ))}
+
+          {/* Sponsor Track Finalists */}
+          <div css={sponsorTracksContainerStyle}>
+            <h3 css={sponsorTracksTitleStyle}>Sponsor Track Finalists</h3>
+
+            {/* PizzaDAO Track */}
+            {finalistsData["PizzaDAO" as keyof typeof finalistsData] &&
+              finalistsData["PizzaDAO" as keyof typeof finalistsData].length >
+                0 && (
+                <div css={sponsorTrackStyle}>
+                  <h4 css={sponsorTrackTitleStyle}>🍕 PizzaDAO Track</h4>
+                  <div css={finalistsGridStyle}>
+                    {finalistsData[
+                      "PizzaDAO" as keyof typeof finalistsData
+                    ].map((finalist) => (
+                      <FinalistCard
+                        key={`pizzadao-finalist-${finalist.name}`}
+                        finalist={finalist}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+            {/* ENS Track */}
+            {finalistsData["ens" as keyof typeof finalistsData] &&
+              finalistsData["ens" as keyof typeof finalistsData].length > 0 && (
+                <div css={sponsorTrackStyle}>
+                  <h4 css={sponsorTrackTitleStyle}>🌐 ENS Track</h4>
+                  <div css={finalistsGridStyle}>
+                    {finalistsData["ens" as keyof typeof finalistsData].map(
+                      (finalist) => (
+                        <FinalistCard
+                          key={`ens-finalist-${finalist.name}`}
+                          finalist={finalist}
+                        />
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+
+            {/* JAPAN SMART CHAIN Track */}
+            {finalistsData["JAPAN SMART CHAIN" as keyof typeof finalistsData] &&
+              finalistsData["JAPAN SMART CHAIN" as keyof typeof finalistsData]
+                .length > 0 && (
+                <div css={sponsorTrackStyle}>
+                  <h4 css={sponsorTrackTitleStyle}>
+                    🏗️ JAPAN SMART CHAIN Track
+                  </h4>
+                  <div css={finalistsGridStyle}>
+                    {finalistsData[
+                      "JAPAN SMART CHAIN" as keyof typeof finalistsData
+                    ].map((finalist) => (
+                      <FinalistCard
+                        key={`jsc-finalist-${finalist.name}`}
+                        finalist={finalist}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+          </div>
         </div>
       </div>
     </section>
@@ -533,6 +604,19 @@ const finalistImageStyle = css`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
+const finalistPlaceholderStyle = css`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: ${neutral.Grey2};
+  border: 3px solid ${neutral.Grey4};
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+`;
+
 const finalistPrizeBadgeStyle = css`
   position: absolute;
   top: -12px;
@@ -578,6 +662,45 @@ const finalistLinkStyle = css`
   &:hover {
     color: ${brand.Secondary};
     text-decoration: underline;
+  }
+`;
+
+// Sponsor Track styles
+const sponsorTracksContainerStyle = css`
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid ${brand.Primary}20;
+`;
+
+const sponsorTracksTitleStyle = css`
+  color: ${neutral.Grey6};
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 2rem;
+  
+  ${mq.mobileSmall} {
+    font-size: 1.5rem;
+  }
+`;
+
+const sponsorTrackStyle = css`
+  margin-bottom: 2.5rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const sponsorTrackTitleStyle = css`
+  color: ${brand.Secondary};
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  
+  ${mq.mobileSmall} {
+    font-size: 1.2rem;
   }
 `;
 

@@ -1033,6 +1033,89 @@ export const finalistsData = {
       prize: "2nd Place",
     },
   ],
+  PizzaDAO: [
+    {
+      name: "𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸",
+      image: "/2025/images/orglogos/finalists/𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸.png",
+      description:
+        "A DeFi vault that reallocates $ETH deposits between higher risk $ETH and lower-risk $USDC Lazy Summer Protocol vaults based on live Pentagon Pizza Index signals.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfk8u72a04lm9gzupebp3i29/idea",
+      prize: "1st Place",
+    },
+    {
+      name: "Pizza Roulette Game",
+      image: "",
+      description: "",
+      link: "",
+      prize: "2nd Place",
+    },
+    {
+      name: "DJ DOGE - Eat Pizza Collect Stamps",
+      image: "",
+      description: "",
+      link: "",
+      prize: "3rd Place",
+    },
+  ],
+  ens: [
+    {
+      name: "World Context Machine",
+      image: "/2025/images/orglogos/finalists/WorldContextMachine.png",
+      description: "ethereum == world state machine == world context machine",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfkaaz3d04kppo3lvjyj4hln/idea",
+      prize: "Finalist",
+    },
+    {
+      name: "zk-IoT",
+      image: "/2025/images/orglogos/finalists/zkIoT.png",
+      description:
+        "zkIoT is a framework to enable IoT devices to prove compliance with rules or thresholds without revealing raw sensor data.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfjagbr104fr9gzu8sau6etz/idea",
+      prize: "Finalist",
+    },
+    {
+      name: "MizuPass",
+      image: "/2025/images/orglogos/finalists/MizuPass.png",
+      description:
+        "Universal privacy first ticketing platform: ENS DID + ZKPassport verification + stealth JPYM payments + offline ZK proofs for seamless cross-border event access.",
+      link: "https://www.mizupass.com/",
+      prize: "Finalist",
+    },
+    {
+      name: "Luft Deck",
+      image: "/2025/images/orglogos/finalists/LuftDeck.png",
+      description:
+        "A privacy-preserving, proximity-based business card sharing app built with zero-knowledge proofs and P2P networking.",
+      link: "https://testflight.apple.com/join/X1bwDXqD",
+      prize: "Finalist",
+    },
+  ],
+  "JAPAN SMART CHAIN": [
+    {
+      name: "Mamizu Cash",
+      image: "/2025/images/orglogos/finalists/MamizuCash.png",
+      description:
+        "Shielded pool for B2B payments: unlinkable transfers via zkSNARKs, KYB/KYC enforced with ZK Email (UNTI/ERC-6268) and Mizuhiki. Audit-ready privacy for enterprises without sacrificing compliance.",
+      link: "https://github.com/Mamizu-Cash/Mamizu-Cash",
+      prize: "Privacy-Preserving DeFi",
+    },
+    {
+      name: "MizuPass",
+      image: "/2025/images/orglogos/finalists/MizuPass.png",
+      description:
+        "Universal privacy first ticketing platform: ENS DID + ZKPassport verification + stealth JPYM payments + offline ZK proofs for seamless cross-border event access.",
+      link: "https://www.mizupass.com/",
+      prize: "Ticketing",
+    },
+    {
+      name: "zk-IoT",
+      image: "/2025/images/orglogos/finalists/zkIoT.png",
+      description:
+        "zkIoT is a framework to enable IoT devices to prove compliance with rules or thresholds without revealing raw sensor data.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfjagbr104fr9gzu8sau6etz/idea",
+      prize: "Special Award",
+    },
+  ],
 };
 
 export const organizersData = [
