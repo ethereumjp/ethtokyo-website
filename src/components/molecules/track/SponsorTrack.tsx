@@ -1,8 +1,8 @@
 import FinalistCard from "@/components/molecules/track/FinalistCard";
 import { brand, neutral } from "@/themes/settings/color";
+import type { Finalist, SponsorTrackId } from "@/types/finalists";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import type { Finalist, SponsorTrackId } from "@/types/finalists";
 
 interface SponsorTrackProps {
   trackId: SponsorTrackId;

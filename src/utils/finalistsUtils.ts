@@ -1,4 +1,4 @@
-import type { FinalistData, TrackId, SponsorTrackId } from "@/types/finalists";
+import type { FinalistData, SponsorTrackId, TrackId } from "@/types/finalists";
 
 /**
  * 指定されたトラックのファイナリストを取得

@@ -1,13 +1,13 @@
 import OptimizedImage from "@/components/atoms/OptimizedImage";
 import ContentCard from "@/components/molecules/ContentCard";
-import FinalistCard from "@/components/molecules/track/FinalistCard";
 import SectionTitle from "@/components/molecules/SectionTitle";
+import FinalistCard from "@/components/molecules/track/FinalistCard";
 import SponsorTrack from "@/components/molecules/track/SponsorTrack";
-import { tracksData, finalistsData } from "@/data/eventData";
+import { finalistsData, tracksData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import type { TrackId } from "@/types/finalists";
-import { getTrackFinalists, SPONSOR_TRACKS } from "@/utils/finalistsUtils";
+import { SPONSOR_TRACKS, getTrackFinalists } from "@/utils/finalistsUtils";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";

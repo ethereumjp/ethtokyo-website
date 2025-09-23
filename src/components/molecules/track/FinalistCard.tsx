@@ -1,8 +1,8 @@
 import OptimizedImage from "@/components/atoms/OptimizedImage";
 import { brand, neutral } from "@/themes/settings/color";
+import type { Finalist } from "@/types/finalists";
 import { css } from "@emotion/react";
 import type { FC } from "react";
-import type { Finalist } from "@/types/finalists";
 
 interface FinalistCardProps {
   finalist: Finalist;
