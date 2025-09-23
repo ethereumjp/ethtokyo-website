@@ -535,8 +535,9 @@ const finalistImageStyle = css`
 
 const finalistPrizeBadgeStyle = css`
   position: absolute;
-  top: -8px;
-  right: calc(50% - 70px);
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(135deg, ${brand.Primary} 0%, ${brand.Secondary} 100%);
   color: ${neutral.White};
   font-size: 0.75rem;
@@ -544,6 +545,8 @@ const finalistPrizeBadgeStyle = css`
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 1;
 `;
 
 const finalistInfoStyle = css`
