@@ -566,11 +566,6 @@ const finalistDescriptionStyle = css`
   font-size: 0.9rem;
   line-height: 1.4;
   margin: 0 0 1rem;
-  min-height: 2.8rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 `;
 
 const finalistLinkStyle = css`
