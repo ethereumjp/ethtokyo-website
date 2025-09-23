@@ -47,7 +47,7 @@ const FinalistCard: FC<FinalistCardProps> = ({ finalist }) => {
 
 // Styles
 const finalistCardStyle = css`
-  background: linear-gradient(135deg, ${neutral.White} 0%, ${neutral.Grey1} 100%);
+  background-color: ${neutral.Grey1};
   border-radius: 12px;
   padding: 1.25rem;
   border: 1px solid ${brand.Primary}20;

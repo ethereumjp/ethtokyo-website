@@ -61,8 +61,12 @@ const sponsorTrackTitleStyle = css`
 
 const finalistsGridStyle = css`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

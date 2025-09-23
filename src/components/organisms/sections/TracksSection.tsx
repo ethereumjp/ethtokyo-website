@@ -487,8 +487,10 @@ const finalistsGridStyle = css`
 
 // Sponsor Track styles
 const sponsorTracksContainerStyle = css`
+  background-color: ${neutral.White};
   margin-top: 3rem;
-  padding-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
   border-top: 2px solid ${brand.Primary}20;
 `;
 
