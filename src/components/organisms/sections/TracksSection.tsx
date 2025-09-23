@@ -1,18 +1,57 @@
 import OptimizedImage from "@/components/atoms/OptimizedImage";
 import ContentCard from "@/components/molecules/ContentCard";
 import SectionTitle from "@/components/molecules/SectionTitle";
-import { tracksData } from "@/data/eventData";
+import { tracksData, finalistsData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";
 
+interface FinalistCardProps {
+  finalist: {
+    name: string;
+    image: string;
+    description: string;
+    link: string;
+    prize: string;
+  };
+}
+
 interface TrackCardProps {
   track: (typeof tracksData)[0];
   isExpanded: boolean;
   onToggle: () => void;
 }
+
+const FinalistCard: FC<FinalistCardProps> = ({ finalist }) => {
+  return (
+    <div css={finalistCardStyle}>
+      <div css={finalistImageWrapperStyle}>
+        <OptimizedImage
+          src={finalist.image}
+          alt={finalist.name}
+          css={finalistImageStyle}
+          width={80}
+          height={80}
+        />
+        <div css={finalistPrizeBadgeStyle}>{finalist.prize}</div>
+      </div>
+      <div css={finalistInfoStyle}>
+        <h4 css={finalistNameStyle}>{finalist.name}</h4>
+        <p css={finalistDescriptionStyle}>{finalist.description}</p>
+        <a
+          href={finalist.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          css={finalistLinkStyle}
+        >
+          View Project →
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const TrackCard: FC<TrackCardProps> = ({ track, isExpanded, onToggle }) => {
   const trackTitle = (
@@ -152,12 +191,31 @@ const TracksSection: FC = () => {
         </div>
         <div css={tracksContainerStyle}>
           {tracksData.map((track) => (
-            <TrackCard
-              key={track.id}
-              track={track}
-              isExpanded={!!expandedTracks[track.id]}
-              onToggle={() => toggleTrack(track.id)}
-            />
+            <div key={track.id} css={trackWithFinalistsStyle}>
+              <TrackCard
+                track={track}
+                isExpanded={!!expandedTracks[track.id]}
+                onToggle={() => toggleTrack(track.id)}
+              />
+
+              {finalistsData[track.id as keyof typeof finalistsData] &&
+                finalistsData[track.id as keyof typeof finalistsData].length >
+                  0 && (
+                  <div css={finalistsContainerStyle}>
+                    <h4 css={finalistsTitleStyle}>Finalists</h4>
+                    <div css={finalistsGridStyle}>
+                      {finalistsData[
+                        track.id as keyof typeof finalistsData
+                      ].map((finalist, index) => (
+                        <FinalistCard
+                          key={`finalist-${track.id}-${index}`}
+                          finalist={finalist}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+            </div>
           ))}
         </div>
       </div>
@@ -184,6 +242,12 @@ const tracksContainerStyle = css`
   flex-direction: column;
   gap: 2.5rem;
   margin-top: 2rem;
+`;
+
+const trackWithFinalistsStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `;
 
 const trackTitleStyle = css`
@@ -408,6 +472,115 @@ const overlayDescriptionStyle = css`
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.4;
+`;
+
+// Finalists styles
+const finalistsContainerStyle = css`
+  background-color: ${neutral.White};
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 2px solid ${brand.Primary}20;
+`;
+
+const finalistsTitleStyle = css`
+  color: ${brand.Secondary};
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  text-align: center;
+`;
+
+const finalistsGridStyle = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  
+  ${mq.mobileSmall} {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+`;
+
+const finalistCardStyle = css`
+  background: linear-gradient(135deg, ${neutral.White} 0%, ${neutral.Grey1} 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid ${brand.Primary}20;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: ${brand.Primary}40;
+  }
+`;
+
+const finalistImageWrapperStyle = css`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+`;
+
+const finalistImageStyle = css`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid ${brand.Primary};
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+`;
+
+const finalistPrizeBadgeStyle = css`
+  position: absolute;
+  top: -8px;
+  right: calc(50% - 70px);
+  background: linear-gradient(135deg, ${brand.Primary} 0%, ${brand.Secondary} 100%);
+  color: ${neutral.White};
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+`;
+
+const finalistInfoStyle = css`
+  text-align: center;
+`;
+
+const finalistNameStyle = css`
+  color: ${neutral.Grey6};
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+`;
+
+const finalistDescriptionStyle = css`
+  color: ${neutral.Grey5};
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0 0 1rem;
+  min-height: 2.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+`;
+
+const finalistLinkStyle = css`
+  color: ${brand.Primary};
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: ${brand.Secondary};
+    text-decoration: underline;
+  }
 `;
 
 export default TracksSection;

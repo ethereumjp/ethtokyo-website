@@ -945,6 +945,96 @@ export const endorsementsData = [
   },
 ];
 
+// ファイナリストデータ
+export const finalistsData = {
+  "cypherpunks-anonymous": [
+    {
+      name: "Anastasia",
+      image: "/2025/images/orglogos/finalists/Anastasia.png",
+      description:
+        "Anastasia is a zero-knowledge system that proves the validity of X.509 certificate chains while revealing only the minimum information required.",
+      link: "https://github.com/yamdan/anastasia",
+      prize: "1st Place",
+    },
+    {
+      name: "Wrapped Monero",
+      image: "/2025/images/orglogos/finalists/WrappedMonero.png",
+      description:
+        "A privacy-focused bridge between Monero (XMR) and Ethereum, featuring encrypted balances using Fhenix's Fully Homomorphic Encryption (FHE).",
+      link: "https://wrapped-monero.netlify.app/",
+      prize: "2nd Place",
+    },
+    {
+      name: "zkPay",
+      image: "/2025/images/orglogos/finalists/zkPay.png",
+      description:
+        "Shielded pools and zk-KYC allow KYC-verified users to transfer anonymously while complying with AML/CFT, and enable instant, low-fee payments in Japan.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfk1laq804s0sibl9kcpc7z5/idea",
+      prize: "3rd Place",
+    },
+    {
+      name: "ZK-Location Proof",
+      image: "/2025/images/orglogos/finalists/ZK-LocationProof.jpg",
+      description:
+        "Securely verify your location in a designated area without exposing your exact location. Prove you are in Tokyo, while hiding that you are in Shibuya.",
+      link: "https://github.com/Shunsuke0205/zk-location",
+      prize: "Nominary mention",
+    },
+    {
+      name: "zkPerks",
+      image: "/2025/images/orglogos/finalists/zkPerks.png",
+      description:
+        "A privacy-preserving marketplace where users claim verified rewards using zero-knowledge proofs of email authenticity without revealing personal information.",
+      link: "https://zkperks.vercel.app/",
+      prize: "Nominary mention",
+    },
+  ],
+  "counterculture-capital": [
+    {
+      name: "ShinoBee",
+      image: "/2025/images/orglogos/finalists/ShinoBee.png",
+      description:
+        "Hide the edge, share the returns. Shinobee turns private trading strategies into verifiable DeFi vaults.",
+      link: "https://shinobee-frontend.vercel.app/",
+      prize: "1st Place",
+    },
+    {
+      name: "Cyclone Cash",
+      image: "/2025/images/orglogos/finalists/CycloneCash.png",
+      description:
+        "Gas optimized tornado cash using Hash chain + Nova folding scheme",
+      link: "https://github.com/TornadoOpt",
+      prize: "2nd Place",
+    },
+    {
+      name: "World to Peer",
+      image: "/2025/images/orglogos/finalists/WorldtoPeer.png",
+      description:
+        "Unsecured × Personal × DeFi Lending A new unsecured lending system that addresses financial inclusion and minimum disclosure.",
+      link: "https://github.com/GomA16/W2P-ETHTokyo",
+      prize: "3rd Place",
+    },
+  ],
+  "actually-intelligent": [
+    {
+      name: "Toku Kaigan",
+      image: "/2025/images/orglogos/finalists/TokuKaigan.jpg",
+      description:
+        "Empowering accessible mental wellness with a gamified anime style AI psychiatrist that delivers personalized, adaptive care and real-time progress insights in a TEE(Trusted Execution Environment)",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfkcqt5104d5gq91wggvle9k/idea",
+      prize: "1st Place",
+    },
+    {
+      name: "Prompt Pieper",
+      image: "/2025/images/orglogos/finalists/PromptPiper.png",
+      description:
+        "Prompt compression for LLMs: cut token usage and costs, unlock larger context windows, and build faster without interruptions",
+      link: "https://promptpiper.xyz/",
+      prize: "2nd Place",
+    },
+  ],
+};
+
 export const organizersData = [
   {
     name: "Ethereum Japan",
