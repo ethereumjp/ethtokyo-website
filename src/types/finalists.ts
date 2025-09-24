@@ -14,5 +14,5 @@ export type TrackId =
   | "cypherpunks-anonymous"
   | "counterculture-capital"
   | "actually-intelligent";
-export type SponsorTrackId = "PizzaDAO" | "ens" | "JAPAN SMART CHAIN";
+export type SponsorTrackId = "pizzadao" | "ens" | "jsc";
 export type AllTrackId = TrackId | SponsorTrackId;

@@ -1033,7 +1033,7 @@ export const finalistsData = {
       prize: "2nd Place",
     },
   ],
-  PizzaDAO: [
+  pizzadao: [
     {
       name: "𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸",
       image: "/2025/images/orglogos/finalists/𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸.png",
@@ -1045,8 +1045,9 @@ export const finalistsData = {
     {
       name: "Pizza Roulette Game",
       image: "",
-      description: "",
-      link: "",
+      description:
+        "Pizza Roulette Game is a single-screen Web3 mini-game that runs as a Farcaster MiniApp. Players tap a rotating 12-slice pizza board to complete a pizza and, based on their final score, can mint a rank-based NFT on Base Sepolia.",
+      link: "https://pizza-dao-mini-hackathon.vercel.app",
       prize: "2nd Place",
     },
     {
@@ -1090,7 +1091,7 @@ export const finalistsData = {
       prize: "Finalist",
     },
   ],
-  "JAPAN SMART CHAIN": [
+  jsc: [
     {
       name: "Mamizu Cash",
       image: "/2025/images/orglogos/finalists/MamizuCash.png",

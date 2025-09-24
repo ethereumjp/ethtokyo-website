@@ -36,9 +36,9 @@ export const hasFinalists = (
  */
 export const SPONSOR_TRACKS = [
   {
-    id: "PizzaDAO" as const,
-    title: "PizzaDAO",
-    emoji: "🍕",
+    id: "jsc" as const,
+    title: "Japan Smart Chain",
+    emoji: "🏗️",
   },
   {
     id: "ens" as const,
@@ -46,9 +46,9 @@ export const SPONSOR_TRACKS = [
     emoji: "🌐",
   },
   {
-    id: "JAPAN SMART CHAIN" as const,
-    title: "JAPAN SMART CHAIN",
-    emoji: "🏗️",
+    id: "pizzadao" as const,
+    title: "PizzaDAO",
+    emoji: "🍕",
   },
 ] as const;
 

@@ -109,12 +109,6 @@ const TracksSection: FC = () => {
                 width={100}
                 height={100}
               />
-              <div css={imageOverlayStyle}>
-                <h3 css={overlayTitleStyle}>Build the Future</h3>
-                <p css={overlayDescriptionStyle}>
-                  Join hundreds of developers building innovative solutions
-                </p>
-              </div>
             </div>
           </div>
 
@@ -127,12 +121,6 @@ const TracksSection: FC = () => {
                 width={100}
                 height={100}
               />
-              <div css={imageOverlayStyle}>
-                <h3 css={overlayTitleStyle}>Expert Mentorship</h3>
-                <p css={overlayDescriptionStyle}>
-                  Get guidance from industry leaders and Ethereum experts
-                </p>
-              </div>
             </div>
           </div>
 
@@ -145,12 +133,6 @@ const TracksSection: FC = () => {
                 width={100}
                 height={100}
               />
-              <div css={imageOverlayStyle}>
-                <h3 css={overlayTitleStyle}>Demo Day</h3>
-                <p css={overlayDescriptionStyle}>
-                  Present your project to judges and the community
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -171,7 +153,7 @@ const TracksSection: FC = () => {
                 return (
                   finalists.length > 0 && (
                     <div css={finalistsContainerStyle}>
-                      <h4 css={finalistsTitleStyle}>Finalists</h4>
+                      <h4 css={finalistsTitleStyle}>{track.title} Finalists</h4>
                       <div css={finalistsGridStyle}>
                         {finalists.map((finalist) => (
                           <FinalistCard
