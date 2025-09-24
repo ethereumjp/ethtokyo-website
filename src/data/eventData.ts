@@ -945,6 +945,179 @@ export const endorsementsData = [
   },
 ];
 
+// ファイナリストデータ
+export const finalistsData = {
+  "cypherpunks-anonymous": [
+    {
+      name: "Anastasia",
+      image: "/2025/images/orglogos/finalists/Anastasia.png",
+      description:
+        "Anastasia is a zero-knowledge system that proves the validity of X.509 certificate chains while revealing only the minimum information required.",
+      link: "https://github.com/yamdan/anastasia",
+      prize: "1st Place",
+    },
+    {
+      name: "Wrapped Monero",
+      image: "/2025/images/orglogos/finalists/WrappedMonero.png",
+      description:
+        "A privacy-focused bridge between Monero (XMR) and Ethereum, featuring encrypted balances using Fhenix's Fully Homomorphic Encryption (FHE).",
+      link: "https://wrapped-monero.netlify.app/",
+      prize: "2nd Place",
+    },
+    {
+      name: "zkPay",
+      image: "/2025/images/orglogos/finalists/zkPay.png",
+      description:
+        "Shielded pools and zk-KYC allow KYC-verified users to transfer anonymously while complying with AML/CFT, and enable instant, low-fee payments in Japan.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfk1laq804s0sibl9kcpc7z5/idea",
+      prize: "3rd Place",
+    },
+    {
+      name: "ZK-Location Proof",
+      image: "/2025/images/orglogos/finalists/ZK-LocationProof.jpg",
+      description:
+        "Securely verify your location in a designated area without exposing your exact location. Prove you are in Tokyo, while hiding that you are in Shibuya.",
+      link: "https://github.com/Shunsuke0205/zk-location",
+      prize: "Nominary mention",
+    },
+    {
+      name: "zkPerks",
+      image: "/2025/images/orglogos/finalists/zkPerks.png",
+      description:
+        "A privacy-preserving marketplace where users claim verified rewards using zero-knowledge proofs of email authenticity without revealing personal information.",
+      link: "https://zkperks.vercel.app/",
+      prize: "Nominary mention",
+    },
+  ],
+  "counterculture-capital": [
+    {
+      name: "ShinoBee",
+      image: "/2025/images/orglogos/finalists/ShinoBee.png",
+      description:
+        "Hide the edge, share the returns. Shinobee turns private trading strategies into verifiable DeFi vaults.",
+      link: "https://shinobee-frontend.vercel.app/",
+      prize: "1st Place",
+    },
+    {
+      name: "Cyclone Cash",
+      image: "/2025/images/orglogos/finalists/CycloneCash.png",
+      description:
+        "Gas optimized tornado cash using Hash chain + Nova folding scheme",
+      link: "https://github.com/TornadoOpt",
+      prize: "2nd Place",
+    },
+    {
+      name: "World to Peer",
+      image: "/2025/images/orglogos/finalists/WorldtoPeer.png",
+      description:
+        "Unsecured × Personal × DeFi Lending A new unsecured lending system that addresses financial inclusion and minimum disclosure.",
+      link: "https://github.com/GomA16/W2P-ETHTokyo",
+      prize: "3rd Place",
+    },
+  ],
+  "actually-intelligent": [
+    {
+      name: "Toku Kaigan",
+      image: "/2025/images/orglogos/finalists/TokuKaigan.jpg",
+      description:
+        "Empowering accessible mental wellness with a gamified anime style AI psychiatrist that delivers personalized, adaptive care and real-time progress insights in a TEE(Trusted Execution Environment)",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfkcqt5104d5gq91wggvle9k/idea",
+      prize: "1st Place",
+    },
+    {
+      name: "Prompt Pieper",
+      image: "/2025/images/orglogos/finalists/PromptPiper.png",
+      description:
+        "Prompt compression for LLMs: cut token usage and costs, unlock larger context windows, and build faster without interruptions",
+      link: "https://promptpiper.xyz/",
+      prize: "2nd Place",
+    },
+  ],
+  PizzaDAO: [
+    {
+      name: "𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸",
+      image: "/2025/images/orglogos/finalists/𝕐𝕀𝔼𝕃𝔻𝔼ℝ𝕀𝕋𝔸.png",
+      description:
+        "A DeFi vault that reallocates $ETH deposits between higher risk $ETH and lower-risk $USDC Lazy Summer Protocol vaults based on live Pentagon Pizza Index signals.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfk8u72a04lm9gzupebp3i29/idea",
+      prize: "1st Place",
+    },
+    {
+      name: "Pizza Roulette Game",
+      image: "",
+      description: "",
+      link: "",
+      prize: "2nd Place",
+    },
+    {
+      name: "DJ DOGE - Eat Pizza Collect Stamps",
+      image: "",
+      description: "",
+      link: "",
+      prize: "3rd Place",
+    },
+  ],
+  ens: [
+    {
+      name: "World Context Machine",
+      image: "/2025/images/orglogos/finalists/WorldContextMachine.png",
+      description: "ethereum == world state machine == world context machine",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfkaaz3d04kppo3lvjyj4hln/idea",
+      prize: "Finalist",
+    },
+    {
+      name: "zk-IoT",
+      image: "/2025/images/orglogos/finalists/zkIoT.png",
+      description:
+        "zkIoT is a framework to enable IoT devices to prove compliance with rules or thresholds without revealing raw sensor data.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfjagbr104fr9gzu8sau6etz/idea",
+      prize: "Finalist",
+    },
+    {
+      name: "MizuPass",
+      image: "/2025/images/orglogos/finalists/MizuPass.png",
+      description:
+        "Universal privacy first ticketing platform: ENS DID + ZKPassport verification + stealth JPYM payments + offline ZK proofs for seamless cross-border event access.",
+      link: "https://www.mizupass.com/",
+      prize: "Finalist",
+    },
+    {
+      name: "Luft Deck",
+      image: "/2025/images/orglogos/finalists/LuftDeck.png",
+      description:
+        "A privacy-preserving, proximity-based business card sharing app built with zero-knowledge proofs and P2P networking.",
+      link: "https://testflight.apple.com/join/X1bwDXqD",
+      prize: "Finalist",
+    },
+  ],
+  "JAPAN SMART CHAIN": [
+    {
+      name: "Mamizu Cash",
+      image: "/2025/images/orglogos/finalists/MamizuCash.png",
+      description:
+        "Shielded pool for B2B payments: unlinkable transfers via zkSNARKs, KYB/KYC enforced with ZK Email (UNTI/ERC-6268) and Mizuhiki. Audit-ready privacy for enterprises without sacrificing compliance.",
+      link: "https://github.com/Mamizu-Cash/Mamizu-Cash",
+      prize: "Privacy-Preserving DeFi",
+    },
+    {
+      name: "MizuPass",
+      image: "/2025/images/orglogos/finalists/MizuPass.png",
+      description:
+        "Universal privacy first ticketing platform: ENS DID + ZKPassport verification + stealth JPYM payments + offline ZK proofs for seamless cross-border event access.",
+      link: "https://www.mizupass.com/",
+      prize: "Ticketing",
+    },
+    {
+      name: "zk-IoT",
+      image: "/2025/images/orglogos/finalists/zkIoT.png",
+      description:
+        "zkIoT is a framework to enable IoT devices to prove compliance with rules or thresholds without revealing raw sensor data.",
+      link: "https://taikai.network/ethtokyo/hackathons/hackathon-2025/projects/cmfjagbr104fr9gzu8sau6etz/idea",
+      prize: "Special Award",
+    },
+  ],
+};
+
 export const organizersData = [
   {
     name: "Ethereum Japan",

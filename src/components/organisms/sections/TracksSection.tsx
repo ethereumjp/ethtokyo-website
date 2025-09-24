@@ -1,9 +1,13 @@
 import OptimizedImage from "@/components/atoms/OptimizedImage";
 import ContentCard from "@/components/molecules/ContentCard";
 import SectionTitle from "@/components/molecules/SectionTitle";
-import { tracksData } from "@/data/eventData";
+import FinalistCard from "@/components/molecules/track/FinalistCard";
+import SponsorTrack from "@/components/molecules/track/SponsorTrack";
+import { finalistsData, tracksData } from "@/data/eventData";
 import { mq } from "@/themes/settings/breakpoints";
 import { brand, neutral } from "@/themes/settings/color";
+import type { TrackId } from "@/types/finalists";
+import { SPONSOR_TRACKS, getTrackFinalists } from "@/utils/finalistsUtils";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import type { FC } from "react";
@@ -152,13 +156,50 @@ const TracksSection: FC = () => {
         </div>
         <div css={tracksContainerStyle}>
           {tracksData.map((track) => (
-            <TrackCard
-              key={track.id}
-              track={track}
-              isExpanded={!!expandedTracks[track.id]}
-              onToggle={() => toggleTrack(track.id)}
-            />
+            <div key={track.id} css={trackWithFinalistsStyle}>
+              <TrackCard
+                track={track}
+                isExpanded={!!expandedTracks[track.id]}
+                onToggle={() => toggleTrack(track.id)}
+              />
+
+              {(() => {
+                const finalists = getTrackFinalists(
+                  finalistsData,
+                  track.id as TrackId,
+                );
+                return (
+                  finalists.length > 0 && (
+                    <div css={finalistsContainerStyle}>
+                      <h4 css={finalistsTitleStyle}>Finalists</h4>
+                      <div css={finalistsGridStyle}>
+                        {finalists.map((finalist) => (
+                          <FinalistCard
+                            key={`finalist-${track.id}-${finalist.name}`}
+                            finalist={finalist}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )
+                );
+              })()}
+            </div>
           ))}
+
+          {/* Sponsor Track Finalists */}
+          <div css={sponsorTracksContainerStyle}>
+            <h3 css={sponsorTracksTitleStyle}>Sponsor Track Finalists</h3>
+            {SPONSOR_TRACKS.map((track) => (
+              <SponsorTrack
+                key={track.id}
+                trackId={track.id}
+                title={track.title}
+                emoji={track.emoji}
+                finalists={finalistsData[track.id] || []}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -184,6 +225,12 @@ const tracksContainerStyle = css`
   flex-direction: column;
   gap: 2.5rem;
   margin-top: 2rem;
+`;
+
+const trackWithFinalistsStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `;
 
 const trackTitleStyle = css`
@@ -408,6 +455,55 @@ const overlayDescriptionStyle = css`
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.4;
+`;
+
+// Finalists styles
+const finalistsContainerStyle = css`
+  background-color: ${neutral.White};
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 2px solid ${brand.Primary}20;
+`;
+
+const finalistsTitleStyle = css`
+  color: ${brand.Secondary};
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  text-align: center;
+`;
+
+const finalistsGridStyle = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  
+  ${mq.mobileSmall} {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+`;
+
+// Sponsor Track styles
+const sponsorTracksContainerStyle = css`
+  background-color: ${neutral.White};
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 12px;
+  border-top: 2px solid ${brand.Primary}20;
+`;
+
+const sponsorTracksTitleStyle = css`
+  color: ${neutral.Grey6};
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 2rem;
+  
+  ${mq.mobileSmall} {
+    font-size: 1.5rem;
+  }
 `;
 
 export default TracksSection;
