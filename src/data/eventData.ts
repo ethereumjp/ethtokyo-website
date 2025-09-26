@@ -1044,9 +1044,9 @@ export const finalistsData = {
     },
     {
       name: "Pizza Roulette Game",
-      image: "",
-      description: "",
-      link: "",
+      image: "/2025/images/orglogos/finalists/PizzaRouletteGame.png",
+      description: "Pizza Roulette Game is a single-screen Web3 mini-game that runs as a Farcaster MiniApp.",
+      link: "https://farcaster.xyz/miniapps/__UcwcJwPaVN/mini-pizza-game",
       prize: "2nd Place",
     },
     {
